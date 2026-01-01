@@ -35,6 +35,29 @@
             this.Upload_photo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.registration_panel = new System.Windows.Forms.Panel();
+            this.submit_button = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Designation_label = new System.Windows.Forms.Label();
+            this.employee_id_textbox = new System.Windows.Forms.TextBox();
+            this.employee_id = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.blood_group_label = new System.Windows.Forms.Label();
+            this.emergency_number_textbox = new System.Windows.Forms.TextBox();
+            this.emergency_number = new System.Windows.Forms.Label();
+            this.marital_status_textbox = new System.Windows.Forms.TextBox();
+            this.Marital_Status_lebel = new System.Windows.Forms.Label();
+            this.relegion_textbox = new System.Windows.Forms.TextBox();
+            this.relegion_label = new System.Windows.Forms.Label();
+            this.Gender_groupbox = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.others_gender_radiobutton = new System.Windows.Forms.RadioButton();
+            this.Female_radioButton = new System.Windows.Forms.RadioButton();
+            this.male_radioButton = new System.Windows.Forms.RadioButton();
+            this.gender_label = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.permanent_address_label = new System.Windows.Forms.Label();
+            this.Address_textbox = new System.Windows.Forms.TextBox();
+            this.address_label = new System.Windows.Forms.Label();
             this.mothers_textbox = new System.Windows.Forms.TextBox();
             this.fathers_textbox = new System.Windows.Forms.TextBox();
             this.nid_textbox = new System.Windows.Forms.TextBox();
@@ -55,29 +78,7 @@
             this.fathers_name_label = new System.Windows.Forms.Label();
             this.Lastname_label = new System.Windows.Forms.Label();
             this.Registration_lebel = new System.Windows.Forms.Label();
-            this.address_label = new System.Windows.Forms.Label();
-            this.Address_textbox = new System.Windows.Forms.TextBox();
-            this.permanent_address_label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.gender_label = new System.Windows.Forms.Label();
-            this.Gender_groupbox = new System.Windows.Forms.GroupBox();
-            this.male_radioButton = new System.Windows.Forms.RadioButton();
-            this.Female_radioButton = new System.Windows.Forms.RadioButton();
-            this.others_gender_radiobutton = new System.Windows.Forms.RadioButton();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.relegion_label = new System.Windows.Forms.Label();
-            this.relegion_textbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Marital_Status_lebel = new System.Windows.Forms.Label();
-            this.marital_status_textbox = new System.Windows.Forms.TextBox();
-            this.emergency_number = new System.Windows.Forms.Label();
-            this.emergency_number_textbox = new System.Windows.Forms.TextBox();
-            this.blood_group_label = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.employee_id = new System.Windows.Forms.Label();
-            this.employee_id_textbox = new System.Windows.Forms.TextBox();
-            this.Designation_label = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.registration_panel.SuspendLayout();
             this.Gender_groupbox.SuspendLayout();
@@ -90,8 +91,8 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::Project_one.Properties.Resources.Portrait_Placeholder;
-            this.pictureBox1.Location = new System.Drawing.Point(137, 53);
+            this.pictureBox1.Image = global::Project_one.Properties.Resources._new;
+            this.pictureBox1.Location = new System.Drawing.Point(123, 56);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
             this.pictureBox1.TabIndex = 0;
@@ -121,7 +122,7 @@
             // 
             this.Upload_photo.BackColor = System.Drawing.SystemColors.Info;
             this.Upload_photo.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Upload_photo.Location = new System.Drawing.Point(162, 262);
+            this.Upload_photo.Location = new System.Drawing.Point(144, 260);
             this.Upload_photo.Name = "Upload_photo";
             this.Upload_photo.Size = new System.Drawing.Size(111, 34);
             this.Upload_photo.TabIndex = 3;
@@ -147,6 +148,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.registration_panel.BackgroundImage = global::Project_one.Properties.Resources.light;
+            this.registration_panel.Controls.Add(this.submit_button);
             this.registration_panel.Controls.Add(this.textBox2);
             this.registration_panel.Controls.Add(this.Designation_label);
             this.registration_panel.Controls.Add(this.employee_id_textbox);
@@ -188,9 +190,243 @@
             this.registration_panel.Controls.Add(this.label1);
             this.registration_panel.Location = new System.Drawing.Point(0, 0);
             this.registration_panel.Name = "registration_panel";
-            this.registration_panel.Size = new System.Drawing.Size(685, 839);
+            this.registration_panel.Size = new System.Drawing.Size(744, 839);
             this.registration_panel.TabIndex = 9;
             this.registration_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.registration_panel_Paint);
+            // 
+            // submit_button
+            // 
+            this.submit_button.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.submit_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submit_button.Location = new System.Drawing.Point(257, 691);
+            this.submit_button.Name = "submit_button";
+            this.submit_button.Size = new System.Drawing.Size(157, 41);
+            this.submit_button.TabIndex = 43;
+            this.submit_button.Text = "Submit";
+            this.submit_button.UseVisualStyleBackColor = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(184, 589);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(193, 20);
+            this.textBox2.TabIndex = 42;
+            // 
+            // Designation_label
+            // 
+            this.Designation_label.AutoSize = true;
+            this.Designation_label.BackColor = System.Drawing.Color.Transparent;
+            this.Designation_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Designation_label.ForeColor = System.Drawing.Color.Black;
+            this.Designation_label.Location = new System.Drawing.Point(17, 588);
+            this.Designation_label.Name = "Designation_label";
+            this.Designation_label.Size = new System.Drawing.Size(107, 21);
+            this.Designation_label.TabIndex = 41;
+            this.Designation_label.Text = "Designation :";
+            // 
+            // employee_id_textbox
+            // 
+            this.employee_id_textbox.Location = new System.Drawing.Point(184, 552);
+            this.employee_id_textbox.Name = "employee_id_textbox";
+            this.employee_id_textbox.Size = new System.Drawing.Size(193, 20);
+            this.employee_id_textbox.TabIndex = 40;
+            // 
+            // employee_id
+            // 
+            this.employee_id.AutoSize = true;
+            this.employee_id.BackColor = System.Drawing.Color.Transparent;
+            this.employee_id.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employee_id.ForeColor = System.Drawing.Color.Black;
+            this.employee_id.Location = new System.Drawing.Point(17, 552);
+            this.employee_id.Name = "employee_id";
+            this.employee_id.Size = new System.Drawing.Size(114, 21);
+            this.employee_id.TabIndex = 39;
+            this.employee_id.Text = "Employee ID :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(243, 408);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(74, 21);
+            this.comboBox1.TabIndex = 38;
+            // 
+            // blood_group_label
+            // 
+            this.blood_group_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.blood_group_label.AutoSize = true;
+            this.blood_group_label.BackColor = System.Drawing.Color.Transparent;
+            this.blood_group_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blood_group_label.ForeColor = System.Drawing.Color.Black;
+            this.blood_group_label.Location = new System.Drawing.Point(19, 408);
+            this.blood_group_label.Name = "blood_group_label";
+            this.blood_group_label.Size = new System.Drawing.Size(114, 21);
+            this.blood_group_label.TabIndex = 37;
+            this.blood_group_label.Text = "Blood Group :";
+            // 
+            // emergency_number_textbox
+            // 
+            this.emergency_number_textbox.Location = new System.Drawing.Point(184, 203);
+            this.emergency_number_textbox.Name = "emergency_number_textbox";
+            this.emergency_number_textbox.Size = new System.Drawing.Size(230, 20);
+            this.emergency_number_textbox.TabIndex = 36;
+            // 
+            // emergency_number
+            // 
+            this.emergency_number.AutoSize = true;
+            this.emergency_number.BackColor = System.Drawing.Color.Transparent;
+            this.emergency_number.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emergency_number.ForeColor = System.Drawing.Color.Black;
+            this.emergency_number.Location = new System.Drawing.Point(17, 203);
+            this.emergency_number.Name = "emergency_number";
+            this.emergency_number.Size = new System.Drawing.Size(164, 21);
+            this.emergency_number.TabIndex = 35;
+            this.emergency_number.Text = "Emergency Number :";
+            // 
+            // marital_status_textbox
+            // 
+            this.marital_status_textbox.Location = new System.Drawing.Point(184, 441);
+            this.marital_status_textbox.Name = "marital_status_textbox";
+            this.marital_status_textbox.Size = new System.Drawing.Size(230, 20);
+            this.marital_status_textbox.TabIndex = 34;
+            // 
+            // Marital_Status_lebel
+            // 
+            this.Marital_Status_lebel.AutoSize = true;
+            this.Marital_Status_lebel.BackColor = System.Drawing.Color.Transparent;
+            this.Marital_Status_lebel.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Marital_Status_lebel.ForeColor = System.Drawing.Color.Black;
+            this.Marital_Status_lebel.Location = new System.Drawing.Point(19, 440);
+            this.Marital_Status_lebel.Name = "Marital_Status_lebel";
+            this.Marital_Status_lebel.Size = new System.Drawing.Size(120, 21);
+            this.Marital_Status_lebel.TabIndex = 33;
+            this.Marital_Status_lebel.Text = "Marital Status :";
+            // 
+            // relegion_textbox
+            // 
+            this.relegion_textbox.Location = new System.Drawing.Point(184, 340);
+            this.relegion_textbox.Name = "relegion_textbox";
+            this.relegion_textbox.Size = new System.Drawing.Size(230, 20);
+            this.relegion_textbox.TabIndex = 32;
+            // 
+            // relegion_label
+            // 
+            this.relegion_label.AutoSize = true;
+            this.relegion_label.BackColor = System.Drawing.Color.Transparent;
+            this.relegion_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relegion_label.ForeColor = System.Drawing.Color.Black;
+            this.relegion_label.Location = new System.Drawing.Point(17, 340);
+            this.relegion_label.Name = "relegion_label";
+            this.relegion_label.Size = new System.Drawing.Size(84, 21);
+            this.relegion_label.TabIndex = 31;
+            this.relegion_label.Text = "Relegion :";
+            // 
+            // Gender_groupbox
+            // 
+            this.Gender_groupbox.BackColor = System.Drawing.Color.Transparent;
+            this.Gender_groupbox.Controls.Add(this.maskedTextBox1);
+            this.Gender_groupbox.Controls.Add(this.others_gender_radiobutton);
+            this.Gender_groupbox.Controls.Add(this.Female_radioButton);
+            this.Gender_groupbox.Controls.Add(this.male_radioButton);
+            this.Gender_groupbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gender_groupbox.Location = new System.Drawing.Point(184, 371);
+            this.Gender_groupbox.Name = "Gender_groupbox";
+            this.Gender_groupbox.Size = new System.Drawing.Size(404, 36);
+            this.Gender_groupbox.TabIndex = 30;
+            this.Gender_groupbox.TabStop = false;
+            this.Gender_groupbox.Enter += new System.EventHandler(this.Gender_groupbox_Enter);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(279, 8);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(105, 20);
+            this.maskedTextBox1.TabIndex = 3;
+            // 
+            // others_gender_radiobutton
+            // 
+            this.others_gender_radiobutton.AutoSize = true;
+            this.others_gender_radiobutton.Location = new System.Drawing.Point(209, 7);
+            this.others_gender_radiobutton.Name = "others_gender_radiobutton";
+            this.others_gender_radiobutton.Size = new System.Drawing.Size(64, 17);
+            this.others_gender_radiobutton.TabIndex = 2;
+            this.others_gender_radiobutton.TabStop = true;
+            this.others_gender_radiobutton.Text = "Other :";
+            this.others_gender_radiobutton.UseVisualStyleBackColor = true;
+            // 
+            // Female_radioButton
+            // 
+            this.Female_radioButton.AutoSize = true;
+            this.Female_radioButton.Location = new System.Drawing.Point(110, 8);
+            this.Female_radioButton.Name = "Female_radioButton";
+            this.Female_radioButton.Size = new System.Drawing.Size(65, 17);
+            this.Female_radioButton.TabIndex = 1;
+            this.Female_radioButton.TabStop = true;
+            this.Female_radioButton.Text = "Female";
+            this.Female_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // male_radioButton
+            // 
+            this.male_radioButton.AutoSize = true;
+            this.male_radioButton.Location = new System.Drawing.Point(22, 8);
+            this.male_radioButton.Name = "male_radioButton";
+            this.male_radioButton.Size = new System.Drawing.Size(52, 17);
+            this.male_radioButton.TabIndex = 0;
+            this.male_radioButton.TabStop = true;
+            this.male_radioButton.Text = "Male";
+            this.male_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // gender_label
+            // 
+            this.gender_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gender_label.AutoSize = true;
+            this.gender_label.BackColor = System.Drawing.Color.Transparent;
+            this.gender_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gender_label.ForeColor = System.Drawing.Color.Black;
+            this.gender_label.Location = new System.Drawing.Point(17, 376);
+            this.gender_label.Name = "gender_label";
+            this.gender_label.Size = new System.Drawing.Size(73, 21);
+            this.gender_label.TabIndex = 29;
+            this.gender_label.Text = "Gender :";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(184, 314);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(230, 20);
+            this.textBox1.TabIndex = 28;
+            // 
+            // permanent_address_label
+            // 
+            this.permanent_address_label.AutoSize = true;
+            this.permanent_address_label.BackColor = System.Drawing.Color.Transparent;
+            this.permanent_address_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.permanent_address_label.ForeColor = System.Drawing.Color.Black;
+            this.permanent_address_label.Location = new System.Drawing.Point(17, 314);
+            this.permanent_address_label.Name = "permanent_address_label";
+            this.permanent_address_label.Size = new System.Drawing.Size(161, 21);
+            this.permanent_address_label.TabIndex = 27;
+            this.permanent_address_label.Text = "Permanent Address :";
+            // 
+            // Address_textbox
+            // 
+            this.Address_textbox.Location = new System.Drawing.Point(184, 288);
+            this.Address_textbox.Name = "Address_textbox";
+            this.Address_textbox.Size = new System.Drawing.Size(230, 20);
+            this.Address_textbox.TabIndex = 26;
+            // 
+            // address_label
+            // 
+            this.address_label.AutoSize = true;
+            this.address_label.BackColor = System.Drawing.Color.Transparent;
+            this.address_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.address_label.ForeColor = System.Drawing.Color.Black;
+            this.address_label.Location = new System.Drawing.Point(19, 287);
+            this.address_label.Name = "address_label";
+            this.address_label.Size = new System.Drawing.Size(78, 21);
+            this.address_label.TabIndex = 25;
+            this.address_label.Text = "Address :";
             // 
             // mothers_textbox
             // 
@@ -242,7 +478,7 @@
             // 
             this.month_combobox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.month_combobox.FormattingEnabled = true;
-            this.month_combobox.Location = new System.Drawing.Point(526, 145);
+            this.month_combobox.Location = new System.Drawing.Point(585, 145);
             this.month_combobox.Name = "month_combobox";
             this.month_combobox.Size = new System.Drawing.Size(92, 21);
             this.month_combobox.TabIndex = 19;
@@ -255,14 +491,14 @@
             this.year_combobox.FormattingEnabled = true;
             this.year_combobox.Location = new System.Drawing.Point(605, 145);
             this.year_combobox.Name = "year_combobox";
-            this.year_combobox.Size = new System.Drawing.Size(64, 21);
+            this.year_combobox.Size = new System.Drawing.Size(123, 21);
             this.year_combobox.TabIndex = 18;
             // 
             // day_combobox
             // 
             this.day_combobox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.day_combobox.FormattingEnabled = true;
-            this.day_combobox.Location = new System.Drawing.Point(474, 145);
+            this.day_combobox.Location = new System.Drawing.Point(533, 145);
             this.day_combobox.Name = "day_combobox";
             this.day_combobox.Size = new System.Drawing.Size(57, 21);
             this.day_combobox.TabIndex = 17;
@@ -275,7 +511,7 @@
             this.birthdate_label.BackColor = System.Drawing.Color.Transparent;
             this.birthdate_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.birthdate_label.ForeColor = System.Drawing.Color.Black;
-            this.birthdate_label.Location = new System.Drawing.Point(362, 143);
+            this.birthdate_label.Location = new System.Drawing.Point(421, 143);
             this.birthdate_label.Name = "birthdate_label";
             this.birthdate_label.Size = new System.Drawing.Size(89, 21);
             this.birthdate_label.TabIndex = 16;
@@ -284,7 +520,7 @@
             // last_name_textbox
             // 
             this.last_name_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.last_name_textbox.Location = new System.Drawing.Point(474, 115);
+            this.last_name_textbox.Location = new System.Drawing.Point(533, 115);
             this.last_name_textbox.Name = "last_name_textbox";
             this.last_name_textbox.Size = new System.Drawing.Size(195, 20);
             this.last_name_textbox.TabIndex = 15;
@@ -292,7 +528,7 @@
             // nickname_textbox
             // 
             this.nickname_textbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.nickname_textbox.Location = new System.Drawing.Point(153, 142);
+            this.nickname_textbox.Location = new System.Drawing.Point(183, 142);
             this.nickname_textbox.Name = "nickname_textbox";
             this.nickname_textbox.Size = new System.Drawing.Size(189, 20);
             this.nickname_textbox.TabIndex = 14;
@@ -300,7 +536,7 @@
             // phone_number_textbox
             // 
             this.phone_number_textbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.phone_number_textbox.Location = new System.Drawing.Point(153, 168);
+            this.phone_number_textbox.Location = new System.Drawing.Point(183, 168);
             this.phone_number_textbox.Name = "phone_number_textbox";
             this.phone_number_textbox.Size = new System.Drawing.Size(189, 20);
             this.phone_number_textbox.TabIndex = 13;
@@ -316,7 +552,7 @@
             // first_name_textbox
             // 
             this.first_name_textbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.first_name_textbox.Location = new System.Drawing.Point(153, 116);
+            this.first_name_textbox.Location = new System.Drawing.Point(183, 116);
             this.first_name_textbox.Name = "first_name_textbox";
             this.first_name_textbox.Size = new System.Drawing.Size(189, 20);
             this.first_name_textbox.TabIndex = 11;
@@ -365,7 +601,7 @@
             this.fathers_name_label.BackColor = System.Drawing.Color.Transparent;
             this.fathers_name_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fathers_name_label.ForeColor = System.Drawing.Color.Black;
-            this.fathers_name_label.Location = new System.Drawing.Point(21, 488);
+            this.fathers_name_label.Location = new System.Drawing.Point(17, 488);
             this.fathers_name_label.Name = "fathers_name_label";
             this.fathers_name_label.Size = new System.Drawing.Size(118, 21);
             this.fathers_name_label.TabIndex = 7;
@@ -378,7 +614,7 @@
             this.Lastname_label.BackColor = System.Drawing.Color.Transparent;
             this.Lastname_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lastname_label.ForeColor = System.Drawing.Color.Black;
-            this.Lastname_label.Location = new System.Drawing.Point(362, 114);
+            this.Lastname_label.Location = new System.Drawing.Point(421, 114);
             this.Lastname_label.Name = "Lastname_label";
             this.Lastname_label.Size = new System.Drawing.Size(95, 21);
             this.Lastname_label.TabIndex = 6;
@@ -390,136 +626,11 @@
             this.Registration_lebel.AutoSize = true;
             this.Registration_lebel.BackColor = System.Drawing.Color.Transparent;
             this.Registration_lebel.Font = new System.Drawing.Font("Lucida Bright", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registration_lebel.Location = new System.Drawing.Point(198, 20);
+            this.Registration_lebel.Location = new System.Drawing.Point(228, 20);
             this.Registration_lebel.Name = "Registration_lebel";
             this.Registration_lebel.Size = new System.Drawing.Size(207, 24);
             this.Registration_lebel.TabIndex = 0;
             this.Registration_lebel.Text = "Registration Form";
-            // 
-            // address_label
-            // 
-            this.address_label.AutoSize = true;
-            this.address_label.BackColor = System.Drawing.Color.Transparent;
-            this.address_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.address_label.ForeColor = System.Drawing.Color.Black;
-            this.address_label.Location = new System.Drawing.Point(19, 287);
-            this.address_label.Name = "address_label";
-            this.address_label.Size = new System.Drawing.Size(78, 21);
-            this.address_label.TabIndex = 25;
-            this.address_label.Text = "Address :";
-            // 
-            // Address_textbox
-            // 
-            this.Address_textbox.Location = new System.Drawing.Point(184, 288);
-            this.Address_textbox.Name = "Address_textbox";
-            this.Address_textbox.Size = new System.Drawing.Size(230, 20);
-            this.Address_textbox.TabIndex = 26;
-            // 
-            // permanent_address_label
-            // 
-            this.permanent_address_label.AutoSize = true;
-            this.permanent_address_label.BackColor = System.Drawing.Color.Transparent;
-            this.permanent_address_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.permanent_address_label.ForeColor = System.Drawing.Color.Black;
-            this.permanent_address_label.Location = new System.Drawing.Point(17, 314);
-            this.permanent_address_label.Name = "permanent_address_label";
-            this.permanent_address_label.Size = new System.Drawing.Size(161, 21);
-            this.permanent_address_label.TabIndex = 27;
-            this.permanent_address_label.Text = "Permanent Address :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(184, 314);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 20);
-            this.textBox1.TabIndex = 28;
-            // 
-            // gender_label
-            // 
-            this.gender_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gender_label.AutoSize = true;
-            this.gender_label.BackColor = System.Drawing.Color.Transparent;
-            this.gender_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gender_label.ForeColor = System.Drawing.Color.Black;
-            this.gender_label.Location = new System.Drawing.Point(17, 375);
-            this.gender_label.Name = "gender_label";
-            this.gender_label.Size = new System.Drawing.Size(73, 21);
-            this.gender_label.TabIndex = 29;
-            this.gender_label.Text = "Gender :";
-            // 
-            // Gender_groupbox
-            // 
-            this.Gender_groupbox.BackColor = System.Drawing.Color.Transparent;
-            this.Gender_groupbox.Controls.Add(this.maskedTextBox1);
-            this.Gender_groupbox.Controls.Add(this.others_gender_radiobutton);
-            this.Gender_groupbox.Controls.Add(this.Female_radioButton);
-            this.Gender_groupbox.Controls.Add(this.male_radioButton);
-            this.Gender_groupbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gender_groupbox.Location = new System.Drawing.Point(184, 371);
-            this.Gender_groupbox.Name = "Gender_groupbox";
-            this.Gender_groupbox.Size = new System.Drawing.Size(404, 36);
-            this.Gender_groupbox.TabIndex = 30;
-            this.Gender_groupbox.TabStop = false;
-            this.Gender_groupbox.Enter += new System.EventHandler(this.Gender_groupbox_Enter);
-            // 
-            // male_radioButton
-            // 
-            this.male_radioButton.AutoSize = true;
-            this.male_radioButton.Location = new System.Drawing.Point(22, 8);
-            this.male_radioButton.Name = "male_radioButton";
-            this.male_radioButton.Size = new System.Drawing.Size(52, 17);
-            this.male_radioButton.TabIndex = 0;
-            this.male_radioButton.TabStop = true;
-            this.male_radioButton.Text = "Male";
-            this.male_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // Female_radioButton
-            // 
-            this.Female_radioButton.AutoSize = true;
-            this.Female_radioButton.Location = new System.Drawing.Point(110, 8);
-            this.Female_radioButton.Name = "Female_radioButton";
-            this.Female_radioButton.Size = new System.Drawing.Size(65, 17);
-            this.Female_radioButton.TabIndex = 1;
-            this.Female_radioButton.TabStop = true;
-            this.Female_radioButton.Text = "Female";
-            this.Female_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // others_gender_radiobutton
-            // 
-            this.others_gender_radiobutton.AutoSize = true;
-            this.others_gender_radiobutton.Location = new System.Drawing.Point(209, 7);
-            this.others_gender_radiobutton.Name = "others_gender_radiobutton";
-            this.others_gender_radiobutton.Size = new System.Drawing.Size(64, 17);
-            this.others_gender_radiobutton.TabIndex = 2;
-            this.others_gender_radiobutton.TabStop = true;
-            this.others_gender_radiobutton.Text = "Other :";
-            this.others_gender_radiobutton.UseVisualStyleBackColor = true;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(279, 8);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(105, 20);
-            this.maskedTextBox1.TabIndex = 3;
-            // 
-            // relegion_label
-            // 
-            this.relegion_label.AutoSize = true;
-            this.relegion_label.BackColor = System.Drawing.Color.Transparent;
-            this.relegion_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.relegion_label.ForeColor = System.Drawing.Color.Black;
-            this.relegion_label.Location = new System.Drawing.Point(17, 340);
-            this.relegion_label.Name = "relegion_label";
-            this.relegion_label.Size = new System.Drawing.Size(84, 21);
-            this.relegion_label.TabIndex = 31;
-            this.relegion_label.Text = "Relegion :";
-            // 
-            // relegion_textbox
-            // 
-            this.relegion_textbox.Location = new System.Drawing.Point(184, 340);
-            this.relegion_textbox.Name = "relegion_textbox";
-            this.relegion_textbox.Size = new System.Drawing.Size(230, 20);
-            this.relegion_textbox.TabIndex = 32;
             // 
             // panel1
             // 
@@ -528,108 +639,10 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.Upload_photo);
             this.panel1.Controls.Add(this.photo_size_lebel);
-            this.panel1.Location = new System.Drawing.Point(683, 0);
+            this.panel1.Location = new System.Drawing.Point(740, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(422, 839);
+            this.panel1.Size = new System.Drawing.Size(365, 839);
             this.panel1.TabIndex = 10;
-            // 
-            // Marital_Status_lebel
-            // 
-            this.Marital_Status_lebel.AutoSize = true;
-            this.Marital_Status_lebel.BackColor = System.Drawing.Color.Transparent;
-            this.Marital_Status_lebel.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Marital_Status_lebel.ForeColor = System.Drawing.Color.Black;
-            this.Marital_Status_lebel.Location = new System.Drawing.Point(19, 440);
-            this.Marital_Status_lebel.Name = "Marital_Status_lebel";
-            this.Marital_Status_lebel.Size = new System.Drawing.Size(120, 21);
-            this.Marital_Status_lebel.TabIndex = 33;
-            this.Marital_Status_lebel.Text = "Marital Status :";
-            // 
-            // marital_status_textbox
-            // 
-            this.marital_status_textbox.Location = new System.Drawing.Point(184, 441);
-            this.marital_status_textbox.Name = "marital_status_textbox";
-            this.marital_status_textbox.Size = new System.Drawing.Size(230, 20);
-            this.marital_status_textbox.TabIndex = 34;
-            // 
-            // emergency_number
-            // 
-            this.emergency_number.AutoSize = true;
-            this.emergency_number.BackColor = System.Drawing.Color.Transparent;
-            this.emergency_number.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emergency_number.ForeColor = System.Drawing.Color.Black;
-            this.emergency_number.Location = new System.Drawing.Point(17, 203);
-            this.emergency_number.Name = "emergency_number";
-            this.emergency_number.Size = new System.Drawing.Size(164, 21);
-            this.emergency_number.TabIndex = 35;
-            this.emergency_number.Text = "Emergency Number :";
-            // 
-            // emergency_number_textbox
-            // 
-            this.emergency_number_textbox.Location = new System.Drawing.Point(184, 203);
-            this.emergency_number_textbox.Name = "emergency_number_textbox";
-            this.emergency_number_textbox.Size = new System.Drawing.Size(230, 20);
-            this.emergency_number_textbox.TabIndex = 36;
-            // 
-            // blood_group_label
-            // 
-            this.blood_group_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.blood_group_label.AutoSize = true;
-            this.blood_group_label.BackColor = System.Drawing.Color.Transparent;
-            this.blood_group_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blood_group_label.ForeColor = System.Drawing.Color.Black;
-            this.blood_group_label.Location = new System.Drawing.Point(21, 408);
-            this.blood_group_label.Name = "blood_group_label";
-            this.blood_group_label.Size = new System.Drawing.Size(114, 21);
-            this.blood_group_label.TabIndex = 37;
-            this.blood_group_label.Text = "Blood Group :";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(184, 408);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(74, 21);
-            this.comboBox1.TabIndex = 38;
-            // 
-            // employee_id
-            // 
-            this.employee_id.AutoSize = true;
-            this.employee_id.BackColor = System.Drawing.Color.Transparent;
-            this.employee_id.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employee_id.ForeColor = System.Drawing.Color.Black;
-            this.employee_id.Location = new System.Drawing.Point(19, 552);
-            this.employee_id.Name = "employee_id";
-            this.employee_id.Size = new System.Drawing.Size(114, 21);
-            this.employee_id.TabIndex = 39;
-            this.employee_id.Text = "Employee ID :";
-            // 
-            // employee_id_textbox
-            // 
-            this.employee_id_textbox.Location = new System.Drawing.Point(184, 552);
-            this.employee_id_textbox.Name = "employee_id_textbox";
-            this.employee_id_textbox.Size = new System.Drawing.Size(193, 20);
-            this.employee_id_textbox.TabIndex = 40;
-            // 
-            // Designation_label
-            // 
-            this.Designation_label.AutoSize = true;
-            this.Designation_label.BackColor = System.Drawing.Color.Transparent;
-            this.Designation_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Designation_label.ForeColor = System.Drawing.Color.Black;
-            this.Designation_label.Location = new System.Drawing.Point(19, 589);
-            this.Designation_label.Name = "Designation_label";
-            this.Designation_label.Size = new System.Drawing.Size(107, 21);
-            this.Designation_label.TabIndex = 41;
-            this.Designation_label.Text = "Designation :";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(184, 589);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 20);
-            this.textBox2.TabIndex = 42;
             // 
             // Registration_Page_For_Employee
             // 
@@ -707,5 +720,6 @@
         private System.Windows.Forms.Label Designation_label;
         private System.Windows.Forms.TextBox employee_id_textbox;
         private System.Windows.Forms.Label employee_id;
+        private System.Windows.Forms.Button submit_button;
     }
 }
