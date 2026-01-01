@@ -36,5 +36,10 @@ namespace Project_one
         {
 
         }
+
+        private void Admin_Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
