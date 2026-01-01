@@ -8,7 +8,7 @@ namespace Project_one
 {
     internal static class Program
     {
-        //Hi there 
+        //Hi there this is a test comment
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
