@@ -15,6 +15,7 @@ namespace Project_one
         public Admin_Dashboard()
         {
             InitializeComponent();
+            AdminProfile_panel.Visible = false;
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -29,12 +30,12 @@ namespace Project_one
 
         private void admin_Profile_button_Click(object sender, EventArgs e)
         {
-
+            AdminProfile_panel.Visible = true;
         }
 
         private void Hire_Employe_button_Click(object sender, EventArgs e)
         {
-
+            AdminProfile_panel.Visible = false;
         }
 
         private void Admin_Dashboard_Load(object sender, EventArgs e)
