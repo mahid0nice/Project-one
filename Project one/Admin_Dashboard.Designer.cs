@@ -39,28 +39,36 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.AdminProfile_panel = new System.Windows.Forms.Panel();
-            this.emergency_number_textbox = new System.Windows.Forms.TextBox();
-            this.emergency_number = new System.Windows.Forms.Label();
-            this.relegion_textbox = new System.Windows.Forms.TextBox();
-            this.relegion_label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.permanent_address_label = new System.Windows.Forms.Label();
-            this.Address_textbox = new System.Windows.Forms.TextBox();
-            this.address_label = new System.Windows.Forms.Label();
-            this.nid_textbox = new System.Windows.Forms.TextBox();
-            this.nid_label = new System.Windows.Forms.Label();
-            this.Gmail_label = new System.Windows.Forms.Label();
-            this.nickname_textbox = new System.Windows.Forms.TextBox();
-            this.phone_number_textbox = new System.Windows.Forms.TextBox();
-            this.gmail_textbox = new System.Windows.Forms.TextBox();
-            this.first_name_textbox = new System.Windows.Forms.TextBox();
-            this.number_label = new System.Windows.Forms.Label();
-            this.Nick_name_label = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.adminProfileBloodGroup_textBox = new System.Windows.Forms.TextBox();
+            this.adminProfileMaritalStatus_textBox = new System.Windows.Forms.TextBox();
+            this.adminProfileBloodGroup_label = new System.Windows.Forms.Label();
+            this.adminProfileMaritalStatus_lebel = new System.Windows.Forms.Label();
+            this.adminProfileRelegion_textbox = new System.Windows.Forms.TextBox();
+            this.adminProfileRelegion_label = new System.Windows.Forms.Label();
+            this.adminProfileGender_groupbox = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.others_gender_radiobutton = new System.Windows.Forms.RadioButton();
+            this.Female_radioButton = new System.Windows.Forms.RadioButton();
+            this.male_radioButton = new System.Windows.Forms.RadioButton();
+            this.adminProfileGender_label = new System.Windows.Forms.Label();
+            this.adminProfileMotherName_textbox = new System.Windows.Forms.TextBox();
+            this.adminProfileFatherName_textbox = new System.Windows.Forms.TextBox();
+            this.adminProfileMotherName_label = new System.Windows.Forms.Label();
+            this.adminProfileFatherName_label = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.HireEmployee_panel = new System.Windows.Forms.Panel();
+            this.adminProfileAddress_textbox = new System.Windows.Forms.TextBox();
+            this.adminProfileAddress_label = new System.Windows.Forms.Label();
+            this.adminProfileNid_textbox = new System.Windows.Forms.TextBox();
+            this.adminProfileNid_label = new System.Windows.Forms.Label();
+            this.adminProfileGmail_label = new System.Windows.Forms.Label();
+            this.adminProfileNumber_textbox = new System.Windows.Forms.TextBox();
+            this.adminProfileGmail_textbox = new System.Windows.Forms.TextBox();
+            this.adminProfileName_textbox = new System.Windows.Forms.TextBox();
+            this.adminProfileNumber_label = new System.Windows.Forms.Label();
+            this.adminProfileName_label = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.AdminProfile_panel.SuspendLayout();
+            this.adminProfileGender_groupbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,204 +198,197 @@
             // 
             // AdminProfile_panel
             // 
-            this.AdminProfile_panel.Controls.Add(this.HireEmployee_panel);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileBloodGroup_textBox);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileMaritalStatus_textBox);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileBloodGroup_label);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileMaritalStatus_lebel);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileRelegion_textbox);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileRelegion_label);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileGender_groupbox);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileGender_label);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileMotherName_textbox);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileFatherName_textbox);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileMotherName_label);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileFatherName_label);
             this.AdminProfile_panel.Controls.Add(this.pictureBox1);
-            this.AdminProfile_panel.Controls.Add(this.emergency_number_textbox);
-            this.AdminProfile_panel.Controls.Add(this.emergency_number);
-            this.AdminProfile_panel.Controls.Add(this.relegion_textbox);
-            this.AdminProfile_panel.Controls.Add(this.relegion_label);
-            this.AdminProfile_panel.Controls.Add(this.textBox1);
-            this.AdminProfile_panel.Controls.Add(this.permanent_address_label);
-            this.AdminProfile_panel.Controls.Add(this.Address_textbox);
-            this.AdminProfile_panel.Controls.Add(this.address_label);
-            this.AdminProfile_panel.Controls.Add(this.nid_textbox);
-            this.AdminProfile_panel.Controls.Add(this.nid_label);
-            this.AdminProfile_panel.Controls.Add(this.Gmail_label);
-            this.AdminProfile_panel.Controls.Add(this.nickname_textbox);
-            this.AdminProfile_panel.Controls.Add(this.phone_number_textbox);
-            this.AdminProfile_panel.Controls.Add(this.gmail_textbox);
-            this.AdminProfile_panel.Controls.Add(this.first_name_textbox);
-            this.AdminProfile_panel.Controls.Add(this.number_label);
-            this.AdminProfile_panel.Controls.Add(this.Nick_name_label);
-            this.AdminProfile_panel.Controls.Add(this.label1);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileAddress_textbox);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileAddress_label);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileNid_textbox);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileNid_label);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileGmail_label);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileNumber_textbox);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileGmail_textbox);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileName_textbox);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileNumber_label);
+            this.AdminProfile_panel.Controls.Add(this.adminProfileName_label);
             this.AdminProfile_panel.Location = new System.Drawing.Point(308, 0);
             this.AdminProfile_panel.Name = "AdminProfile_panel";
-            this.AdminProfile_panel.Size = new System.Drawing.Size(762, 670);
+            this.AdminProfile_panel.Size = new System.Drawing.Size(773, 684);
             this.AdminProfile_panel.TabIndex = 3;
+            this.AdminProfile_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.AdminProfile_panel_Paint);
             // 
-            // emergency_number_textbox
+            // adminProfileBloodGroup_textBox
             // 
-            this.emergency_number_textbox.Location = new System.Drawing.Point(295, 367);
-            this.emergency_number_textbox.Name = "emergency_number_textbox";
-            this.emergency_number_textbox.Size = new System.Drawing.Size(230, 20);
-            this.emergency_number_textbox.TabIndex = 54;
+            this.adminProfileBloodGroup_textBox.Location = new System.Drawing.Point(215, 607);
+            this.adminProfileBloodGroup_textBox.Name = "adminProfileBloodGroup_textBox";
+            this.adminProfileBloodGroup_textBox.Size = new System.Drawing.Size(230, 20);
+            this.adminProfileBloodGroup_textBox.TabIndex = 68;
             // 
-            // emergency_number
+            // adminProfileMaritalStatus_textBox
             // 
-            this.emergency_number.AutoSize = true;
-            this.emergency_number.BackColor = System.Drawing.Color.Transparent;
-            this.emergency_number.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emergency_number.ForeColor = System.Drawing.Color.Black;
-            this.emergency_number.Location = new System.Drawing.Point(128, 367);
-            this.emergency_number.Name = "emergency_number";
-            this.emergency_number.Size = new System.Drawing.Size(164, 21);
-            this.emergency_number.TabIndex = 53;
-            this.emergency_number.Text = "Emergency Number :";
+            this.adminProfileMaritalStatus_textBox.Location = new System.Drawing.Point(214, 534);
+            this.adminProfileMaritalStatus_textBox.Name = "adminProfileMaritalStatus_textBox";
+            this.adminProfileMaritalStatus_textBox.Size = new System.Drawing.Size(230, 20);
+            this.adminProfileMaritalStatus_textBox.TabIndex = 67;
             // 
-            // relegion_textbox
+            // adminProfileBloodGroup_label
             // 
-            this.relegion_textbox.Location = new System.Drawing.Point(295, 504);
-            this.relegion_textbox.Name = "relegion_textbox";
-            this.relegion_textbox.Size = new System.Drawing.Size(230, 20);
-            this.relegion_textbox.TabIndex = 52;
+            this.adminProfileBloodGroup_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminProfileBloodGroup_label.AutoSize = true;
+            this.adminProfileBloodGroup_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileBloodGroup_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileBloodGroup_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileBloodGroup_label.Location = new System.Drawing.Point(92, 605);
+            this.adminProfileBloodGroup_label.Name = "adminProfileBloodGroup_label";
+            this.adminProfileBloodGroup_label.Size = new System.Drawing.Size(114, 21);
+            this.adminProfileBloodGroup_label.TabIndex = 65;
+            this.adminProfileBloodGroup_label.Text = "Blood Group :";
             // 
-            // relegion_label
+            // adminProfileMaritalStatus_lebel
             // 
-            this.relegion_label.AutoSize = true;
-            this.relegion_label.BackColor = System.Drawing.Color.Transparent;
-            this.relegion_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.relegion_label.ForeColor = System.Drawing.Color.Black;
-            this.relegion_label.Location = new System.Drawing.Point(128, 504);
-            this.relegion_label.Name = "relegion_label";
-            this.relegion_label.Size = new System.Drawing.Size(84, 21);
-            this.relegion_label.TabIndex = 51;
-            this.relegion_label.Text = "Relegion :";
+            this.adminProfileMaritalStatus_lebel.AutoSize = true;
+            this.adminProfileMaritalStatus_lebel.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileMaritalStatus_lebel.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileMaritalStatus_lebel.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileMaritalStatus_lebel.Location = new System.Drawing.Point(83, 532);
+            this.adminProfileMaritalStatus_lebel.Name = "adminProfileMaritalStatus_lebel";
+            this.adminProfileMaritalStatus_lebel.Size = new System.Drawing.Size(120, 21);
+            this.adminProfileMaritalStatus_lebel.TabIndex = 64;
+            this.adminProfileMaritalStatus_lebel.Text = "Marital Status :";
             // 
-            // textBox1
+            // adminProfileRelegion_textbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(295, 478);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 20);
-            this.textBox1.TabIndex = 50;
+            this.adminProfileRelegion_textbox.Location = new System.Drawing.Point(215, 490);
+            this.adminProfileRelegion_textbox.Name = "adminProfileRelegion_textbox";
+            this.adminProfileRelegion_textbox.Size = new System.Drawing.Size(230, 20);
+            this.adminProfileRelegion_textbox.TabIndex = 63;
             // 
-            // permanent_address_label
+            // adminProfileRelegion_label
             // 
-            this.permanent_address_label.AutoSize = true;
-            this.permanent_address_label.BackColor = System.Drawing.Color.Transparent;
-            this.permanent_address_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.permanent_address_label.ForeColor = System.Drawing.Color.Black;
-            this.permanent_address_label.Location = new System.Drawing.Point(128, 478);
-            this.permanent_address_label.Name = "permanent_address_label";
-            this.permanent_address_label.Size = new System.Drawing.Size(161, 21);
-            this.permanent_address_label.TabIndex = 49;
-            this.permanent_address_label.Text = "Permanent Address :";
+            this.adminProfileRelegion_label.AutoSize = true;
+            this.adminProfileRelegion_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileRelegion_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileRelegion_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileRelegion_label.Location = new System.Drawing.Point(83, 490);
+            this.adminProfileRelegion_label.Name = "adminProfileRelegion_label";
+            this.adminProfileRelegion_label.Size = new System.Drawing.Size(84, 21);
+            this.adminProfileRelegion_label.TabIndex = 62;
+            this.adminProfileRelegion_label.Text = "Relegion :";
             // 
-            // Address_textbox
+            // adminProfileGender_groupbox
             // 
-            this.Address_textbox.Location = new System.Drawing.Point(295, 452);
-            this.Address_textbox.Name = "Address_textbox";
-            this.Address_textbox.Size = new System.Drawing.Size(230, 20);
-            this.Address_textbox.TabIndex = 48;
+            this.adminProfileGender_groupbox.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileGender_groupbox.Controls.Add(this.maskedTextBox1);
+            this.adminProfileGender_groupbox.Controls.Add(this.others_gender_radiobutton);
+            this.adminProfileGender_groupbox.Controls.Add(this.Female_radioButton);
+            this.adminProfileGender_groupbox.Controls.Add(this.male_radioButton);
+            this.adminProfileGender_groupbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileGender_groupbox.Location = new System.Drawing.Point(215, 560);
+            this.adminProfileGender_groupbox.Name = "adminProfileGender_groupbox";
+            this.adminProfileGender_groupbox.Size = new System.Drawing.Size(404, 36);
+            this.adminProfileGender_groupbox.TabIndex = 61;
+            this.adminProfileGender_groupbox.TabStop = false;
             // 
-            // address_label
+            // maskedTextBox1
             // 
-            this.address_label.AutoSize = true;
-            this.address_label.BackColor = System.Drawing.Color.Transparent;
-            this.address_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.address_label.ForeColor = System.Drawing.Color.Black;
-            this.address_label.Location = new System.Drawing.Point(130, 451);
-            this.address_label.Name = "address_label";
-            this.address_label.Size = new System.Drawing.Size(78, 21);
-            this.address_label.TabIndex = 47;
-            this.address_label.Text = "Address :";
+            this.maskedTextBox1.Location = new System.Drawing.Point(279, 8);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(105, 20);
+            this.maskedTextBox1.TabIndex = 3;
             // 
-            // nid_textbox
+            // others_gender_radiobutton
             // 
-            this.nid_textbox.Location = new System.Drawing.Point(295, 426);
-            this.nid_textbox.Name = "nid_textbox";
-            this.nid_textbox.Size = new System.Drawing.Size(230, 20);
-            this.nid_textbox.TabIndex = 46;
+            this.others_gender_radiobutton.AutoSize = true;
+            this.others_gender_radiobutton.Location = new System.Drawing.Point(209, 7);
+            this.others_gender_radiobutton.Name = "others_gender_radiobutton";
+            this.others_gender_radiobutton.Size = new System.Drawing.Size(64, 17);
+            this.others_gender_radiobutton.TabIndex = 2;
+            this.others_gender_radiobutton.TabStop = true;
+            this.others_gender_radiobutton.Text = "Other :";
+            this.others_gender_radiobutton.UseVisualStyleBackColor = true;
             // 
-            // nid_label
+            // Female_radioButton
             // 
-            this.nid_label.AutoSize = true;
-            this.nid_label.BackColor = System.Drawing.Color.Transparent;
-            this.nid_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nid_label.ForeColor = System.Drawing.Color.Black;
-            this.nid_label.Location = new System.Drawing.Point(128, 424);
-            this.nid_label.Name = "nid_label";
-            this.nid_label.Size = new System.Drawing.Size(80, 21);
-            this.nid_label.TabIndex = 45;
-            this.nid_label.Text = "NID NO :";
+            this.Female_radioButton.AutoSize = true;
+            this.Female_radioButton.Location = new System.Drawing.Point(110, 8);
+            this.Female_radioButton.Name = "Female_radioButton";
+            this.Female_radioButton.Size = new System.Drawing.Size(65, 17);
+            this.Female_radioButton.TabIndex = 1;
+            this.Female_radioButton.TabStop = true;
+            this.Female_radioButton.Text = "Female";
+            this.Female_radioButton.UseVisualStyleBackColor = true;
             // 
-            // Gmail_label
+            // male_radioButton
             // 
-            this.Gmail_label.AutoSize = true;
-            this.Gmail_label.BackColor = System.Drawing.Color.Transparent;
-            this.Gmail_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gmail_label.ForeColor = System.Drawing.Color.Black;
-            this.Gmail_label.Location = new System.Drawing.Point(130, 399);
-            this.Gmail_label.Name = "Gmail_label";
-            this.Gmail_label.Size = new System.Drawing.Size(63, 21);
-            this.Gmail_label.TabIndex = 44;
-            this.Gmail_label.Text = "Gmail :";
+            this.male_radioButton.AutoSize = true;
+            this.male_radioButton.Location = new System.Drawing.Point(22, 8);
+            this.male_radioButton.Name = "male_radioButton";
+            this.male_radioButton.Size = new System.Drawing.Size(52, 17);
+            this.male_radioButton.TabIndex = 0;
+            this.male_radioButton.TabStop = true;
+            this.male_radioButton.Text = "Male";
+            this.male_radioButton.UseVisualStyleBackColor = true;
             // 
-            // nickname_textbox
+            // adminProfileGender_label
             // 
-            this.nickname_textbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.nickname_textbox.Location = new System.Drawing.Point(294, 306);
-            this.nickname_textbox.Name = "nickname_textbox";
-            this.nickname_textbox.Size = new System.Drawing.Size(189, 20);
-            this.nickname_textbox.TabIndex = 43;
+            this.adminProfileGender_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminProfileGender_label.AutoSize = true;
+            this.adminProfileGender_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileGender_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileGender_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileGender_label.Location = new System.Drawing.Point(93, 568);
+            this.adminProfileGender_label.Name = "adminProfileGender_label";
+            this.adminProfileGender_label.Size = new System.Drawing.Size(73, 21);
+            this.adminProfileGender_label.TabIndex = 60;
+            this.adminProfileGender_label.Text = "Gender :";
             // 
-            // phone_number_textbox
+            // adminProfileMotherName_textbox
             // 
-            this.phone_number_textbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.phone_number_textbox.Location = new System.Drawing.Point(294, 332);
-            this.phone_number_textbox.Name = "phone_number_textbox";
-            this.phone_number_textbox.Size = new System.Drawing.Size(189, 20);
-            this.phone_number_textbox.TabIndex = 42;
+            this.adminProfileMotherName_textbox.Location = new System.Drawing.Point(214, 347);
+            this.adminProfileMotherName_textbox.Name = "adminProfileMotherName_textbox";
+            this.adminProfileMotherName_textbox.Size = new System.Drawing.Size(231, 20);
+            this.adminProfileMotherName_textbox.TabIndex = 59;
             // 
-            // gmail_textbox
+            // adminProfileFatherName_textbox
             // 
-            this.gmail_textbox.Location = new System.Drawing.Point(295, 400);
-            this.gmail_textbox.Name = "gmail_textbox";
-            this.gmail_textbox.Size = new System.Drawing.Size(230, 20);
-            this.gmail_textbox.TabIndex = 41;
+            this.adminProfileFatherName_textbox.Location = new System.Drawing.Point(214, 312);
+            this.adminProfileFatherName_textbox.Name = "adminProfileFatherName_textbox";
+            this.adminProfileFatherName_textbox.Size = new System.Drawing.Size(231, 20);
+            this.adminProfileFatherName_textbox.TabIndex = 58;
             // 
-            // first_name_textbox
+            // adminProfileMotherName_label
             // 
-            this.first_name_textbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.first_name_textbox.Location = new System.Drawing.Point(294, 280);
-            this.first_name_textbox.Name = "first_name_textbox";
-            this.first_name_textbox.Size = new System.Drawing.Size(189, 20);
-            this.first_name_textbox.TabIndex = 40;
+            this.adminProfileMotherName_label.AutoSize = true;
+            this.adminProfileMotherName_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileMotherName_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileMotherName_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileMotherName_label.Location = new System.Drawing.Point(82, 347);
+            this.adminProfileMotherName_label.Name = "adminProfileMotherName_label";
+            this.adminProfileMotherName_label.Size = new System.Drawing.Size(126, 21);
+            this.adminProfileMotherName_label.TabIndex = 57;
+            this.adminProfileMotherName_label.Text = "Mothers Name :";
             // 
-            // number_label
+            // adminProfileFatherName_label
             // 
-            this.number_label.AutoSize = true;
-            this.number_label.BackColor = System.Drawing.Color.Transparent;
-            this.number_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.number_label.ForeColor = System.Drawing.Color.Black;
-            this.number_label.Location = new System.Drawing.Point(128, 332);
-            this.number_label.Name = "number_label";
-            this.number_label.Size = new System.Drawing.Size(130, 21);
-            this.number_label.TabIndex = 39;
-            this.number_label.Text = "Phone Number :";
-            // 
-            // Nick_name_label
-            // 
-            this.Nick_name_label.AutoSize = true;
-            this.Nick_name_label.BackColor = System.Drawing.Color.Transparent;
-            this.Nick_name_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nick_name_label.ForeColor = System.Drawing.Color.Black;
-            this.Nick_name_label.Location = new System.Drawing.Point(130, 304);
-            this.Nick_name_label.Name = "Nick_name_label";
-            this.Nick_name_label.Size = new System.Drawing.Size(93, 21);
-            this.Nick_name_label.TabIndex = 38;
-            this.Nick_name_label.Text = "Nickname :";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(130, 277);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 21);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "First Name :";
+            this.adminProfileFatherName_label.AutoSize = true;
+            this.adminProfileFatherName_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileFatherName_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileFatherName_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileFatherName_label.Location = new System.Drawing.Point(82, 312);
+            this.adminProfileFatherName_label.Name = "adminProfileFatherName_label";
+            this.adminProfileFatherName_label.Size = new System.Drawing.Size(118, 21);
+            this.adminProfileFatherName_label.TabIndex = 56;
+            this.adminProfileFatherName_label.Text = "Fathers Name :";
             // 
             // pictureBox1
             // 
@@ -396,18 +397,109 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::Project_one.Properties.Resources._new;
-            this.pictureBox1.Location = new System.Drawing.Point(305, 85);
+            this.pictureBox1.Location = new System.Drawing.Point(306, 36);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // HireEmployee_panel
+            // adminProfileAddress_textbox
             // 
-            this.HireEmployee_panel.Location = new System.Drawing.Point(3, 3);
-            this.HireEmployee_panel.Name = "HireEmployee_panel";
-            this.HireEmployee_panel.Size = new System.Drawing.Size(759, 620);
-            this.HireEmployee_panel.TabIndex = 56;
+            this.adminProfileAddress_textbox.Location = new System.Drawing.Point(215, 458);
+            this.adminProfileAddress_textbox.Name = "adminProfileAddress_textbox";
+            this.adminProfileAddress_textbox.Size = new System.Drawing.Size(230, 20);
+            this.adminProfileAddress_textbox.TabIndex = 48;
+            // 
+            // adminProfileAddress_label
+            // 
+            this.adminProfileAddress_label.AutoSize = true;
+            this.adminProfileAddress_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileAddress_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileAddress_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileAddress_label.Location = new System.Drawing.Point(82, 457);
+            this.adminProfileAddress_label.Name = "adminProfileAddress_label";
+            this.adminProfileAddress_label.Size = new System.Drawing.Size(78, 21);
+            this.adminProfileAddress_label.TabIndex = 47;
+            this.adminProfileAddress_label.Text = "Address :";
+            // 
+            // adminProfileNid_textbox
+            // 
+            this.adminProfileNid_textbox.Location = new System.Drawing.Point(214, 279);
+            this.adminProfileNid_textbox.Name = "adminProfileNid_textbox";
+            this.adminProfileNid_textbox.Size = new System.Drawing.Size(231, 20);
+            this.adminProfileNid_textbox.TabIndex = 46;
+            // 
+            // adminProfileNid_label
+            // 
+            this.adminProfileNid_label.AutoSize = true;
+            this.adminProfileNid_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileNid_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileNid_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileNid_label.Location = new System.Drawing.Point(83, 277);
+            this.adminProfileNid_label.Name = "adminProfileNid_label";
+            this.adminProfileNid_label.Size = new System.Drawing.Size(80, 21);
+            this.adminProfileNid_label.TabIndex = 45;
+            this.adminProfileNid_label.Text = "NID NO :";
+            // 
+            // adminProfileGmail_label
+            // 
+            this.adminProfileGmail_label.AutoSize = true;
+            this.adminProfileGmail_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileGmail_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileGmail_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileGmail_label.Location = new System.Drawing.Point(83, 421);
+            this.adminProfileGmail_label.Name = "adminProfileGmail_label";
+            this.adminProfileGmail_label.Size = new System.Drawing.Size(63, 21);
+            this.adminProfileGmail_label.TabIndex = 44;
+            this.adminProfileGmail_label.Text = "Gmail :";
+            // 
+            // adminProfileNumber_textbox
+            // 
+            this.adminProfileNumber_textbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.adminProfileNumber_textbox.Location = new System.Drawing.Point(219, 382);
+            this.adminProfileNumber_textbox.Name = "adminProfileNumber_textbox";
+            this.adminProfileNumber_textbox.Size = new System.Drawing.Size(231, 20);
+            this.adminProfileNumber_textbox.TabIndex = 42;
+            // 
+            // adminProfileGmail_textbox
+            // 
+            this.adminProfileGmail_textbox.Location = new System.Drawing.Point(215, 421);
+            this.adminProfileGmail_textbox.Name = "adminProfileGmail_textbox";
+            this.adminProfileGmail_textbox.Size = new System.Drawing.Size(230, 20);
+            this.adminProfileGmail_textbox.TabIndex = 41;
+            // 
+            // adminProfileName_textbox
+            // 
+            this.adminProfileName_textbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.adminProfileName_textbox.Location = new System.Drawing.Point(219, 241);
+            this.adminProfileName_textbox.Name = "adminProfileName_textbox";
+            this.adminProfileName_textbox.Size = new System.Drawing.Size(231, 20);
+            this.adminProfileName_textbox.TabIndex = 40;
+            // 
+            // adminProfileNumber_label
+            // 
+            this.adminProfileNumber_label.AutoSize = true;
+            this.adminProfileNumber_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileNumber_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileNumber_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileNumber_label.Location = new System.Drawing.Point(82, 382);
+            this.adminProfileNumber_label.Name = "adminProfileNumber_label";
+            this.adminProfileNumber_label.Size = new System.Drawing.Size(130, 21);
+            this.adminProfileNumber_label.TabIndex = 39;
+            this.adminProfileNumber_label.Text = "Phone Number :";
+            // 
+            // adminProfileName_label
+            // 
+            this.adminProfileName_label.AutoSize = true;
+            this.adminProfileName_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileName_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileName_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileName_label.Location = new System.Drawing.Point(82, 241);
+            this.adminProfileName_label.Name = "adminProfileName_label";
+            this.adminProfileName_label.Size = new System.Drawing.Size(61, 21);
+            this.adminProfileName_label.TabIndex = 37;
+            this.adminProfileName_label.Text = "Name :";
             // 
             // Admin_Dashboard
             // 
@@ -423,6 +515,8 @@
             this.panel1.ResumeLayout(false);
             this.AdminProfile_panel.ResumeLayout(false);
             this.AdminProfile_panel.PerformLayout();
+            this.adminProfileGender_groupbox.ResumeLayout(false);
+            this.adminProfileGender_groupbox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -439,25 +533,32 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button Hire_Employe_button;
         private System.Windows.Forms.Panel AdminProfile_panel;
-        private System.Windows.Forms.TextBox emergency_number_textbox;
-        private System.Windows.Forms.Label emergency_number;
-        private System.Windows.Forms.TextBox relegion_textbox;
-        private System.Windows.Forms.Label relegion_label;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label permanent_address_label;
-        private System.Windows.Forms.TextBox Address_textbox;
-        private System.Windows.Forms.Label address_label;
-        private System.Windows.Forms.TextBox nid_textbox;
-        private System.Windows.Forms.Label nid_label;
-        private System.Windows.Forms.Label Gmail_label;
-        private System.Windows.Forms.TextBox nickname_textbox;
-        private System.Windows.Forms.TextBox phone_number_textbox;
-        private System.Windows.Forms.TextBox gmail_textbox;
-        private System.Windows.Forms.TextBox first_name_textbox;
-        private System.Windows.Forms.Label number_label;
-        private System.Windows.Forms.Label Nick_name_label;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox adminProfileAddress_textbox;
+        private System.Windows.Forms.Label adminProfileAddress_label;
+        private System.Windows.Forms.TextBox adminProfileNid_textbox;
+        private System.Windows.Forms.Label adminProfileNid_label;
+        private System.Windows.Forms.Label adminProfileGmail_label;
+        private System.Windows.Forms.TextBox adminProfileNumber_textbox;
+        private System.Windows.Forms.TextBox adminProfileGmail_textbox;
+        private System.Windows.Forms.TextBox adminProfileName_textbox;
+        private System.Windows.Forms.Label adminProfileNumber_label;
+        private System.Windows.Forms.Label adminProfileName_label;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel HireEmployee_panel;
+        private System.Windows.Forms.TextBox adminProfileMotherName_textbox;
+        private System.Windows.Forms.TextBox adminProfileFatherName_textbox;
+        private System.Windows.Forms.Label adminProfileMotherName_label;
+        private System.Windows.Forms.Label adminProfileFatherName_label;
+        private System.Windows.Forms.TextBox adminProfileBloodGroup_textBox;
+        private System.Windows.Forms.TextBox adminProfileMaritalStatus_textBox;
+        private System.Windows.Forms.Label adminProfileBloodGroup_label;
+        private System.Windows.Forms.Label adminProfileMaritalStatus_lebel;
+        private System.Windows.Forms.TextBox adminProfileRelegion_textbox;
+        private System.Windows.Forms.Label adminProfileRelegion_label;
+        private System.Windows.Forms.GroupBox adminProfileGender_groupbox;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.RadioButton others_gender_radiobutton;
+        private System.Windows.Forms.RadioButton Female_radioButton;
+        private System.Windows.Forms.RadioButton male_radioButton;
+        private System.Windows.Forms.Label adminProfileGender_label;
     }
 }

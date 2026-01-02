@@ -121,7 +121,7 @@
             // Upload_photo
             // 
             this.Upload_photo.BackColor = System.Drawing.SystemColors.Info;
-            this.Upload_photo.Font = new System.Drawing.Font("Microsoft Uighur", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Upload_photo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Upload_photo.Location = new System.Drawing.Point(144, 260);
             this.Upload_photo.Name = "Upload_photo";
             this.Upload_photo.Size = new System.Drawing.Size(111, 34);
@@ -631,6 +631,7 @@
             this.Registration_lebel.Size = new System.Drawing.Size(207, 24);
             this.Registration_lebel.TabIndex = 0;
             this.Registration_lebel.Text = "Registration Form";
+            this.Registration_lebel.Click += new System.EventHandler(this.Registration_lebel_Click);
             // 
             // panel1
             // 

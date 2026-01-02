@@ -16,7 +16,9 @@ namespace Project_one
         {
             InitializeComponent();
             AdminProfile_panel.Visible = false;
-            HireEmployee_panel.Visible = false;
+            
+
+
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -32,16 +34,72 @@ namespace Project_one
         private void admin_Profile_button_Click(object sender, EventArgs e)
         {
             AdminProfile_panel.Visible = true;
-            HireEmployee_panel.Visible = false;
+            
+
+
         }
 
         private void Hire_Employe_button_Click(object sender, EventArgs e)
         {
             AdminProfile_panel.Visible = false;
-            HireEmployee_panel.Visible = true;
+           
+
         }
 
         private void Admin_Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminHireEmployeeManager_button_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Registration_Page_For_Employee R = new Registration_Page_For_Employee();
+            R.Visible = true;
+        }
+
+        private void adminHireEmployeeSupervisor_button_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Registration_Page_For_Employee R = new Registration_Page_For_Employee();
+            R.Visible = true;
+        }
+
+        private void adminHireEmployeeTeamLeader_button_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Registration_Page_For_Employee R = new Registration_Page_For_Employee();
+            R.Visible = true;
+        }
+
+        private void adminHireEmployeeStaff_button_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Registration_Page_For_Employee R = new Registration_Page_For_Employee();
+            R.Visible = true;
+        }
+
+        private void HireEmployee_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AdminProfile_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void HireEmployee_panel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void adminHireEmployeeManager_button_Click_1(object sender, EventArgs e)
         {
 
         }

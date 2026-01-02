@@ -71,5 +71,10 @@ namespace Project_one
         {
 
         }
+
+        private void Registration_lebel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
