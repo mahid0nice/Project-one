@@ -58,6 +58,7 @@
             this.Nick_name_label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.HireEmployee_panel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.AdminProfile_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -189,6 +190,7 @@
             // 
             // AdminProfile_panel
             // 
+            this.AdminProfile_panel.Controls.Add(this.HireEmployee_panel);
             this.AdminProfile_panel.Controls.Add(this.pictureBox1);
             this.AdminProfile_panel.Controls.Add(this.emergency_number_textbox);
             this.AdminProfile_panel.Controls.Add(this.emergency_number);
@@ -400,6 +402,13 @@
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
             // 
+            // HireEmployee_panel
+            // 
+            this.HireEmployee_panel.Location = new System.Drawing.Point(3, 3);
+            this.HireEmployee_panel.Name = "HireEmployee_panel";
+            this.HireEmployee_panel.Size = new System.Drawing.Size(759, 620);
+            this.HireEmployee_panel.TabIndex = 56;
+            // 
             // Admin_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,5 +458,6 @@
         private System.Windows.Forms.Label Nick_name_label;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel HireEmployee_panel;
     }
 }
