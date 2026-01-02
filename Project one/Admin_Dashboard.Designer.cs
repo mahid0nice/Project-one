@@ -66,10 +66,17 @@
             this.adminProfileName_textbox = new System.Windows.Forms.TextBox();
             this.adminProfileNumber_label = new System.Windows.Forms.Label();
             this.adminProfileName_label = new System.Windows.Forms.Label();
+            this.adminHireEmployee_panel = new System.Windows.Forms.Panel();
+            this.Designation_label = new System.Windows.Forms.Label();
+            this.adminHireStaff_button = new System.Windows.Forms.Button();
+            this.adminHireTeamLeader_button = new System.Windows.Forms.Button();
+            this.adminHireSupervisor_button = new System.Windows.Forms.Button();
+            this.adminHireManager_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.AdminProfile_panel.SuspendLayout();
             this.adminProfileGender_groupbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.adminHireEmployee_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // admin_Profile_button
@@ -195,6 +202,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // AdminProfile_panel
             // 
@@ -221,11 +229,10 @@
             this.AdminProfile_panel.Controls.Add(this.adminProfileName_textbox);
             this.AdminProfile_panel.Controls.Add(this.adminProfileNumber_label);
             this.AdminProfile_panel.Controls.Add(this.adminProfileName_label);
-            this.AdminProfile_panel.Location = new System.Drawing.Point(308, 0);
+            this.AdminProfile_panel.Location = new System.Drawing.Point(3, 3);
             this.AdminProfile_panel.Name = "AdminProfile_panel";
-            this.AdminProfile_panel.Size = new System.Drawing.Size(773, 684);
+            this.AdminProfile_panel.Size = new System.Drawing.Size(761, 682);
             this.AdminProfile_panel.TabIndex = 3;
-            this.AdminProfile_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.AdminProfile_panel_Paint);
             // 
             // adminProfileBloodGroup_textBox
             // 
@@ -248,7 +255,7 @@
             this.adminProfileBloodGroup_label.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileBloodGroup_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileBloodGroup_label.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileBloodGroup_label.Location = new System.Drawing.Point(92, 605);
+            this.adminProfileBloodGroup_label.Location = new System.Drawing.Point(80, 605);
             this.adminProfileBloodGroup_label.Name = "adminProfileBloodGroup_label";
             this.adminProfileBloodGroup_label.Size = new System.Drawing.Size(114, 21);
             this.adminProfileBloodGroup_label.TabIndex = 65;
@@ -346,7 +353,7 @@
             this.adminProfileGender_label.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileGender_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileGender_label.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileGender_label.Location = new System.Drawing.Point(93, 568);
+            this.adminProfileGender_label.Location = new System.Drawing.Point(81, 568);
             this.adminProfileGender_label.Name = "adminProfileGender_label";
             this.adminProfileGender_label.Size = new System.Drawing.Size(73, 21);
             this.adminProfileGender_label.TabIndex = 60;
@@ -397,7 +404,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::Project_one.Properties.Resources._new;
-            this.pictureBox1.Location = new System.Drawing.Point(306, 36);
+            this.pictureBox1.Location = new System.Drawing.Point(294, 36);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
             this.pictureBox1.TabIndex = 55;
@@ -457,7 +464,7 @@
             // adminProfileNumber_textbox
             // 
             this.adminProfileNumber_textbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.adminProfileNumber_textbox.Location = new System.Drawing.Point(219, 382);
+            this.adminProfileNumber_textbox.Location = new System.Drawing.Point(213, 382);
             this.adminProfileNumber_textbox.Name = "adminProfileNumber_textbox";
             this.adminProfileNumber_textbox.Size = new System.Drawing.Size(231, 20);
             this.adminProfileNumber_textbox.TabIndex = 42;
@@ -472,7 +479,7 @@
             // adminProfileName_textbox
             // 
             this.adminProfileName_textbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.adminProfileName_textbox.Location = new System.Drawing.Point(219, 241);
+            this.adminProfileName_textbox.Location = new System.Drawing.Point(213, 241);
             this.adminProfileName_textbox.Name = "adminProfileName_textbox";
             this.adminProfileName_textbox.Size = new System.Drawing.Size(231, 20);
             this.adminProfileName_textbox.TabIndex = 40;
@@ -501,12 +508,92 @@
             this.adminProfileName_label.TabIndex = 37;
             this.adminProfileName_label.Text = "Name :";
             // 
+            // adminHireEmployee_panel
+            // 
+            this.adminHireEmployee_panel.Controls.Add(this.AdminProfile_panel);
+            this.adminHireEmployee_panel.Controls.Add(this.Designation_label);
+            this.adminHireEmployee_panel.Controls.Add(this.adminHireStaff_button);
+            this.adminHireEmployee_panel.Controls.Add(this.adminHireTeamLeader_button);
+            this.adminHireEmployee_panel.Controls.Add(this.adminHireSupervisor_button);
+            this.adminHireEmployee_panel.Controls.Add(this.adminHireManager_button);
+            this.adminHireEmployee_panel.Location = new System.Drawing.Point(307, 2);
+            this.adminHireEmployee_panel.Name = "adminHireEmployee_panel";
+            this.adminHireEmployee_panel.Size = new System.Drawing.Size(764, 682);
+            this.adminHireEmployee_panel.TabIndex = 3;
+            // 
+            // Designation_label
+            // 
+            this.Designation_label.BackColor = System.Drawing.Color.Transparent;
+            this.Designation_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Designation_label.ForeColor = System.Drawing.Color.Black;
+            this.Designation_label.Location = new System.Drawing.Point(119, 251);
+            this.Designation_label.Name = "Designation_label";
+            this.Designation_label.Size = new System.Drawing.Size(211, 28);
+            this.Designation_label.TabIndex = 42;
+            this.Designation_label.Text = "Select Designation :";
+            // 
+            // adminHireStaff_button
+            // 
+            this.adminHireStaff_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.adminHireStaff_button.BackColor = System.Drawing.Color.SteelBlue;
+            this.adminHireStaff_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminHireStaff_button.ForeColor = System.Drawing.Color.Black;
+            this.adminHireStaff_button.Location = new System.Drawing.Point(352, 392);
+            this.adminHireStaff_button.Name = "adminHireStaff_button";
+            this.adminHireStaff_button.Size = new System.Drawing.Size(217, 38);
+            this.adminHireStaff_button.TabIndex = 8;
+            this.adminHireStaff_button.Text = "Staff";
+            this.adminHireStaff_button.UseVisualStyleBackColor = false;
+            this.adminHireStaff_button.Click += new System.EventHandler(this.adminHireStaff_button_Click);
+            // 
+            // adminHireTeamLeader_button
+            // 
+            this.adminHireTeamLeader_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.adminHireTeamLeader_button.BackColor = System.Drawing.Color.SteelBlue;
+            this.adminHireTeamLeader_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminHireTeamLeader_button.ForeColor = System.Drawing.Color.Black;
+            this.adminHireTeamLeader_button.Location = new System.Drawing.Point(113, 392);
+            this.adminHireTeamLeader_button.Name = "adminHireTeamLeader_button";
+            this.adminHireTeamLeader_button.Size = new System.Drawing.Size(217, 38);
+            this.adminHireTeamLeader_button.TabIndex = 7;
+            this.adminHireTeamLeader_button.Text = "Team Leader";
+            this.adminHireTeamLeader_button.UseVisualStyleBackColor = false;
+            this.adminHireTeamLeader_button.Click += new System.EventHandler(this.adminHireTeamLeader_button_Click);
+            // 
+            // adminHireSupervisor_button
+            // 
+            this.adminHireSupervisor_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.adminHireSupervisor_button.BackColor = System.Drawing.Color.SteelBlue;
+            this.adminHireSupervisor_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminHireSupervisor_button.ForeColor = System.Drawing.Color.Black;
+            this.adminHireSupervisor_button.Location = new System.Drawing.Point(352, 305);
+            this.adminHireSupervisor_button.Name = "adminHireSupervisor_button";
+            this.adminHireSupervisor_button.Size = new System.Drawing.Size(217, 38);
+            this.adminHireSupervisor_button.TabIndex = 6;
+            this.adminHireSupervisor_button.Text = "Supervisor";
+            this.adminHireSupervisor_button.UseVisualStyleBackColor = false;
+            this.adminHireSupervisor_button.Click += new System.EventHandler(this.adminHireSupervisor_button_Click);
+            // 
+            // adminHireManager_button
+            // 
+            this.adminHireManager_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.adminHireManager_button.BackColor = System.Drawing.Color.SteelBlue;
+            this.adminHireManager_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminHireManager_button.ForeColor = System.Drawing.Color.Black;
+            this.adminHireManager_button.Location = new System.Drawing.Point(113, 304);
+            this.adminHireManager_button.Name = "adminHireManager_button";
+            this.adminHireManager_button.Size = new System.Drawing.Size(217, 38);
+            this.adminHireManager_button.TabIndex = 5;
+            this.adminHireManager_button.Text = "Manager";
+            this.adminHireManager_button.UseVisualStyleBackColor = false;
+            this.adminHireManager_button.Click += new System.EventHandler(this.adminHireManager_button_Click);
+            // 
             // Admin_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 682);
-            this.Controls.Add(this.AdminProfile_panel);
+            this.Controls.Add(this.adminHireEmployee_panel);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_Dashboard";
@@ -518,6 +605,7 @@
             this.adminProfileGender_groupbox.ResumeLayout(false);
             this.adminProfileGender_groupbox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.adminHireEmployee_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -560,5 +648,11 @@
         private System.Windows.Forms.RadioButton Female_radioButton;
         private System.Windows.Forms.RadioButton male_radioButton;
         private System.Windows.Forms.Label adminProfileGender_label;
+        private System.Windows.Forms.Panel adminHireEmployee_panel;
+        private System.Windows.Forms.Button adminHireStaff_button;
+        private System.Windows.Forms.Button adminHireTeamLeader_button;
+        private System.Windows.Forms.Button adminHireSupervisor_button;
+        private System.Windows.Forms.Button adminHireManager_button;
+        private System.Windows.Forms.Label Designation_label;
     }
 }

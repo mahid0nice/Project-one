@@ -16,7 +16,8 @@ namespace Project_one
         {
             InitializeComponent();
             AdminProfile_panel.Visible = false;
-            
+            adminHireEmployee_panel.Visible = false;
+
 
 
         }
@@ -33,17 +34,8 @@ namespace Project_one
 
         private void admin_Profile_button_Click(object sender, EventArgs e)
         {
+            adminHireEmployee_panel.Visible = true;
             AdminProfile_panel.Visible = true;
-            
-
-
-        }
-
-        private void Hire_Employe_button_Click(object sender, EventArgs e)
-        {
-            AdminProfile_panel.Visible = false;
-           
-
         }
 
         private void Admin_Dashboard_Load(object sender, EventArgs e)
@@ -56,32 +48,10 @@ namespace Project_one
 
         }
 
-        private void adminHireEmployeeManager_button_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            Registration_Page_For_Employee R = new Registration_Page_For_Employee();
-            R.Visible = true;
-        }
-
-        private void adminHireEmployeeSupervisor_button_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            Registration_Page_For_Employee R = new Registration_Page_For_Employee();
-            R.Visible = true;
-        }
-
-        private void adminHireEmployeeTeamLeader_button_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            Registration_Page_For_Employee R = new Registration_Page_For_Employee();
-            R.Visible = true;
-        }
-
+ 
         private void adminHireEmployeeStaff_button_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            Registration_Page_For_Employee R = new Registration_Page_For_Employee();
-            R.Visible = true;
+            
         }
 
         private void HireEmployee_panel_Paint(object sender, PaintEventArgs e)
@@ -102,6 +72,46 @@ namespace Project_one
         private void adminHireEmployeeManager_button_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void adminHireManager_button_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Registration_Page_For_Employee R = new Registration_Page_For_Employee();
+            R.Visible = true;
+        }
+
+        private void adminHireSupervisor_button_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Registration_Page_For_Employee R = new Registration_Page_For_Employee();
+            R.Visible = true;
+        }
+
+        private void adminHireTeamLeader_button_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Registration_Page_For_Employee R = new Registration_Page_For_Employee();
+            R.Visible = true;
+        }
+
+        private void adminHireStaff_button_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Registration_Page_For_Employee R = new Registration_Page_For_Employee();
+            R.Visible = true;
+        }
+
+        private void Hire_Employe_button_Click(object sender, EventArgs e)
+        {
+            AdminProfile_panel.Visible = false;
+            adminHireEmployee_panel.Visible = true;
+            
         }
     }
 }
