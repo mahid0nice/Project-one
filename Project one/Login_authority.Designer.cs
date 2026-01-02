@@ -3,6 +3,7 @@
     partial class Admin_Login
     {
         /// <summary>
+        /// arghya 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
