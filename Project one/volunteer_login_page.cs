@@ -16,5 +16,10 @@ namespace Project_one
         {
             InitializeComponent();
         }
+
+        private void log_in_2_timer_Tick(object sender, EventArgs e)
+        {
+            Timer_3_label.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }

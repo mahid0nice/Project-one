@@ -122,7 +122,7 @@
             // 
             this.Upload_photo.BackColor = System.Drawing.SystemColors.Info;
             this.Upload_photo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Upload_photo.Location = new System.Drawing.Point(144, 260);
+            this.Upload_photo.Location = new System.Drawing.Point(143, 262);
             this.Upload_photo.Name = "Upload_photo";
             this.Upload_photo.Size = new System.Drawing.Size(111, 34);
             this.Upload_photo.TabIndex = 3;
@@ -478,6 +478,19 @@
             // 
             this.month_combobox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.month_combobox.FormattingEnabled = true;
+            this.month_combobox.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
             this.month_combobox.Location = new System.Drawing.Point(585, 145);
             this.month_combobox.Name = "month_combobox";
             this.month_combobox.Size = new System.Drawing.Size(92, 21);
@@ -489,15 +502,47 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.year_combobox.FormattingEnabled = true;
-            this.year_combobox.Location = new System.Drawing.Point(605, 145);
+            this.year_combobox.Location = new System.Drawing.Point(674, 145);
             this.year_combobox.Name = "year_combobox";
-            this.year_combobox.Size = new System.Drawing.Size(123, 21);
+            this.year_combobox.Size = new System.Drawing.Size(60, 21);
             this.year_combobox.TabIndex = 18;
             // 
             // day_combobox
             // 
             this.day_combobox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.day_combobox.FormattingEnabled = true;
+            this.day_combobox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
             this.day_combobox.Location = new System.Drawing.Point(533, 145);
             this.day_combobox.Name = "day_combobox";
             this.day_combobox.Size = new System.Drawing.Size(57, 21);

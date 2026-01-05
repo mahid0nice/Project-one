@@ -57,7 +57,7 @@
             this.Log_In_page.Cursor = System.Windows.Forms.Cursors.Cross;
             this.Log_In_page.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Log_In_page.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Log_In_page.Location = new System.Drawing.Point(341, 115);
+            this.Log_In_page.Location = new System.Drawing.Point(271, 115);
             this.Log_In_page.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Log_In_page.Name = "Log_In_page";
             this.Log_In_page.Size = new System.Drawing.Size(580, 55);
@@ -84,7 +84,7 @@
             this.Log_in_panel.Controls.Add(this.username_textbox);
             this.Log_in_panel.Controls.Add(this.User_name_label);
             this.Log_in_panel.Controls.Add(this.label1);
-            this.Log_in_panel.Location = new System.Drawing.Point(367, 232);
+            this.Log_in_panel.Location = new System.Drawing.Point(297, 232);
             this.Log_in_panel.Name = "Log_in_panel";
             this.Log_in_panel.Size = new System.Drawing.Size(538, 515);
             this.Log_in_panel.TabIndex = 3;
@@ -231,7 +231,7 @@
             this.AutoSize = true;
             this.BackgroundImage = global::Project_one.Properties.Resources._360_F_588241010_cdQJ2QTsyDtt36jZsAFR45aAXICnPAzR;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1244, 807);
+            this.ClientSize = new System.Drawing.Size(1104, 839);
             this.Controls.Add(this.Log_In_page);
             this.Controls.Add(this.Log_in_panel);
             this.Cursor = System.Windows.Forms.Cursors.Default;

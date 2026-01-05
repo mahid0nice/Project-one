@@ -55,7 +55,6 @@
             this.adminProfileFatherName_textbox = new System.Windows.Forms.TextBox();
             this.adminProfileMotherName_label = new System.Windows.Forms.Label();
             this.adminProfileFatherName_label = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.adminProfileAddress_textbox = new System.Windows.Forms.TextBox();
             this.adminProfileAddress_label = new System.Windows.Forms.Label();
             this.adminProfileNid_textbox = new System.Windows.Forms.TextBox();
@@ -72,11 +71,12 @@
             this.adminHireTeamLeader_button = new System.Windows.Forms.Button();
             this.adminHireSupervisor_button = new System.Windows.Forms.Button();
             this.adminHireManager_button = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.AdminProfile_panel.SuspendLayout();
             this.adminProfileGender_groupbox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.adminHireEmployee_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // admin_Profile_button
@@ -85,7 +85,7 @@
             this.admin_Profile_button.BackColor = System.Drawing.Color.SteelBlue;
             this.admin_Profile_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admin_Profile_button.ForeColor = System.Drawing.Color.Black;
-            this.admin_Profile_button.Location = new System.Drawing.Point(44, 116);
+            this.admin_Profile_button.Location = new System.Drawing.Point(48, 193);
             this.admin_Profile_button.Name = "admin_Profile_button";
             this.admin_Profile_button.Size = new System.Drawing.Size(217, 38);
             this.admin_Profile_button.TabIndex = 0;
@@ -107,7 +107,7 @@
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(301, 684);
+            this.panel1.Size = new System.Drawing.Size(309, 839);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -117,7 +117,7 @@
             this.button8.BackColor = System.Drawing.Color.SteelBlue;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Location = new System.Drawing.Point(44, 501);
+            this.button8.Location = new System.Drawing.Point(48, 578);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(217, 43);
             this.button8.TabIndex = 7;
@@ -130,7 +130,7 @@
             this.button7.BackColor = System.Drawing.Color.SteelBlue;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(44, 443);
+            this.button7.Location = new System.Drawing.Point(48, 520);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(217, 41);
             this.button7.TabIndex = 6;
@@ -143,7 +143,7 @@
             this.Hire_Employe_button.BackColor = System.Drawing.Color.SteelBlue;
             this.Hire_Employe_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hire_Employe_button.ForeColor = System.Drawing.Color.Black;
-            this.Hire_Employe_button.Location = new System.Drawing.Point(44, 170);
+            this.Hire_Employe_button.Location = new System.Drawing.Point(48, 247);
             this.Hire_Employe_button.Name = "Hire_Employe_button";
             this.Hire_Employe_button.Size = new System.Drawing.Size(217, 38);
             this.Hire_Employe_button.TabIndex = 1;
@@ -157,7 +157,7 @@
             this.button6.BackColor = System.Drawing.Color.SteelBlue;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(44, 386);
+            this.button6.Location = new System.Drawing.Point(48, 463);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(217, 39);
             this.button6.TabIndex = 5;
@@ -170,7 +170,7 @@
             this.button5.BackColor = System.Drawing.Color.SteelBlue;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(44, 331);
+            this.button5.Location = new System.Drawing.Point(48, 408);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(217, 38);
             this.button5.TabIndex = 4;
@@ -183,7 +183,7 @@
             this.button4.BackColor = System.Drawing.Color.SteelBlue;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(44, 277);
+            this.button4.Location = new System.Drawing.Point(48, 354);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(217, 39);
             this.button4.TabIndex = 3;
@@ -196,7 +196,7 @@
             this.button3.BackColor = System.Drawing.Color.SteelBlue;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(44, 223);
+            this.button3.Location = new System.Drawing.Point(48, 300);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(217, 39);
             this.button3.TabIndex = 2;
@@ -229,21 +229,21 @@
             this.AdminProfile_panel.Controls.Add(this.adminProfileName_textbox);
             this.AdminProfile_panel.Controls.Add(this.adminProfileNumber_label);
             this.AdminProfile_panel.Controls.Add(this.adminProfileName_label);
-            this.AdminProfile_panel.Location = new System.Drawing.Point(3, 3);
+            this.AdminProfile_panel.Location = new System.Drawing.Point(310, 0);
             this.AdminProfile_panel.Name = "AdminProfile_panel";
-            this.AdminProfile_panel.Size = new System.Drawing.Size(761, 682);
+            this.AdminProfile_panel.Size = new System.Drawing.Size(794, 839);
             this.AdminProfile_panel.TabIndex = 3;
             // 
             // adminProfileBloodGroup_textBox
             // 
-            this.adminProfileBloodGroup_textBox.Location = new System.Drawing.Point(215, 607);
+            this.adminProfileBloodGroup_textBox.Location = new System.Drawing.Point(258, 605);
             this.adminProfileBloodGroup_textBox.Name = "adminProfileBloodGroup_textBox";
             this.adminProfileBloodGroup_textBox.Size = new System.Drawing.Size(230, 20);
             this.adminProfileBloodGroup_textBox.TabIndex = 68;
             // 
             // adminProfileMaritalStatus_textBox
             // 
-            this.adminProfileMaritalStatus_textBox.Location = new System.Drawing.Point(214, 534);
+            this.adminProfileMaritalStatus_textBox.Location = new System.Drawing.Point(257, 534);
             this.adminProfileMaritalStatus_textBox.Name = "adminProfileMaritalStatus_textBox";
             this.adminProfileMaritalStatus_textBox.Size = new System.Drawing.Size(230, 20);
             this.adminProfileMaritalStatus_textBox.TabIndex = 67;
@@ -255,7 +255,7 @@
             this.adminProfileBloodGroup_label.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileBloodGroup_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileBloodGroup_label.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileBloodGroup_label.Location = new System.Drawing.Point(80, 605);
+            this.adminProfileBloodGroup_label.Location = new System.Drawing.Point(83, 605);
             this.adminProfileBloodGroup_label.Name = "adminProfileBloodGroup_label";
             this.adminProfileBloodGroup_label.Size = new System.Drawing.Size(114, 21);
             this.adminProfileBloodGroup_label.TabIndex = 65;
@@ -275,7 +275,7 @@
             // 
             // adminProfileRelegion_textbox
             // 
-            this.adminProfileRelegion_textbox.Location = new System.Drawing.Point(215, 490);
+            this.adminProfileRelegion_textbox.Location = new System.Drawing.Point(257, 492);
             this.adminProfileRelegion_textbox.Name = "adminProfileRelegion_textbox";
             this.adminProfileRelegion_textbox.Size = new System.Drawing.Size(230, 20);
             this.adminProfileRelegion_textbox.TabIndex = 63;
@@ -308,15 +308,15 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(279, 8);
+            this.maskedTextBox1.Location = new System.Drawing.Point(313, 5);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(105, 20);
+            this.maskedTextBox1.Size = new System.Drawing.Size(91, 20);
             this.maskedTextBox1.TabIndex = 3;
             // 
             // others_gender_radiobutton
             // 
             this.others_gender_radiobutton.AutoSize = true;
-            this.others_gender_radiobutton.Location = new System.Drawing.Point(209, 7);
+            this.others_gender_radiobutton.Location = new System.Drawing.Point(243, 8);
             this.others_gender_radiobutton.Name = "others_gender_radiobutton";
             this.others_gender_radiobutton.Size = new System.Drawing.Size(64, 17);
             this.others_gender_radiobutton.TabIndex = 2;
@@ -327,7 +327,7 @@
             // Female_radioButton
             // 
             this.Female_radioButton.AutoSize = true;
-            this.Female_radioButton.Location = new System.Drawing.Point(110, 8);
+            this.Female_radioButton.Location = new System.Drawing.Point(140, 6);
             this.Female_radioButton.Name = "Female_radioButton";
             this.Female_radioButton.Size = new System.Drawing.Size(65, 17);
             this.Female_radioButton.TabIndex = 1;
@@ -338,7 +338,7 @@
             // male_radioButton
             // 
             this.male_radioButton.AutoSize = true;
-            this.male_radioButton.Location = new System.Drawing.Point(22, 8);
+            this.male_radioButton.Location = new System.Drawing.Point(60, 6);
             this.male_radioButton.Name = "male_radioButton";
             this.male_radioButton.Size = new System.Drawing.Size(52, 17);
             this.male_radioButton.TabIndex = 0;
@@ -353,7 +353,7 @@
             this.adminProfileGender_label.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileGender_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileGender_label.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileGender_label.Location = new System.Drawing.Point(81, 568);
+            this.adminProfileGender_label.Location = new System.Drawing.Point(87, 568);
             this.adminProfileGender_label.Name = "adminProfileGender_label";
             this.adminProfileGender_label.Size = new System.Drawing.Size(73, 21);
             this.adminProfileGender_label.TabIndex = 60;
@@ -361,14 +361,14 @@
             // 
             // adminProfileMotherName_textbox
             // 
-            this.adminProfileMotherName_textbox.Location = new System.Drawing.Point(214, 347);
+            this.adminProfileMotherName_textbox.Location = new System.Drawing.Point(257, 347);
             this.adminProfileMotherName_textbox.Name = "adminProfileMotherName_textbox";
             this.adminProfileMotherName_textbox.Size = new System.Drawing.Size(231, 20);
             this.adminProfileMotherName_textbox.TabIndex = 59;
             // 
             // adminProfileFatherName_textbox
             // 
-            this.adminProfileFatherName_textbox.Location = new System.Drawing.Point(214, 312);
+            this.adminProfileFatherName_textbox.Location = new System.Drawing.Point(257, 311);
             this.adminProfileFatherName_textbox.Name = "adminProfileFatherName_textbox";
             this.adminProfileFatherName_textbox.Size = new System.Drawing.Size(231, 20);
             this.adminProfileFatherName_textbox.TabIndex = 58;
@@ -397,23 +397,9 @@
             this.adminProfileFatherName_label.TabIndex = 56;
             this.adminProfileFatherName_label.Text = "Fathers Name :";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::Project_one.Properties.Resources._new;
-            this.pictureBox1.Location = new System.Drawing.Point(294, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.TabIndex = 55;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // adminProfileAddress_textbox
             // 
-            this.adminProfileAddress_textbox.Location = new System.Drawing.Point(215, 458);
+            this.adminProfileAddress_textbox.Location = new System.Drawing.Point(257, 457);
             this.adminProfileAddress_textbox.Name = "adminProfileAddress_textbox";
             this.adminProfileAddress_textbox.Size = new System.Drawing.Size(230, 20);
             this.adminProfileAddress_textbox.TabIndex = 48;
@@ -432,7 +418,7 @@
             // 
             // adminProfileNid_textbox
             // 
-            this.adminProfileNid_textbox.Location = new System.Drawing.Point(214, 279);
+            this.adminProfileNid_textbox.Location = new System.Drawing.Point(257, 277);
             this.adminProfileNid_textbox.Name = "adminProfileNid_textbox";
             this.adminProfileNid_textbox.Size = new System.Drawing.Size(231, 20);
             this.adminProfileNid_textbox.TabIndex = 46;
@@ -464,14 +450,14 @@
             // adminProfileNumber_textbox
             // 
             this.adminProfileNumber_textbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.adminProfileNumber_textbox.Location = new System.Drawing.Point(213, 382);
+            this.adminProfileNumber_textbox.Location = new System.Drawing.Point(257, 382);
             this.adminProfileNumber_textbox.Name = "adminProfileNumber_textbox";
             this.adminProfileNumber_textbox.Size = new System.Drawing.Size(231, 20);
             this.adminProfileNumber_textbox.TabIndex = 42;
             // 
             // adminProfileGmail_textbox
             // 
-            this.adminProfileGmail_textbox.Location = new System.Drawing.Point(215, 421);
+            this.adminProfileGmail_textbox.Location = new System.Drawing.Point(257, 419);
             this.adminProfileGmail_textbox.Name = "adminProfileGmail_textbox";
             this.adminProfileGmail_textbox.Size = new System.Drawing.Size(230, 20);
             this.adminProfileGmail_textbox.TabIndex = 41;
@@ -479,7 +465,7 @@
             // adminProfileName_textbox
             // 
             this.adminProfileName_textbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.adminProfileName_textbox.Location = new System.Drawing.Point(213, 241);
+            this.adminProfileName_textbox.Location = new System.Drawing.Point(257, 241);
             this.adminProfileName_textbox.Name = "adminProfileName_textbox";
             this.adminProfileName_textbox.Size = new System.Drawing.Size(231, 20);
             this.adminProfileName_textbox.TabIndex = 40;
@@ -510,7 +496,6 @@
             // 
             // adminHireEmployee_panel
             // 
-            this.adminHireEmployee_panel.Controls.Add(this.AdminProfile_panel);
             this.adminHireEmployee_panel.Controls.Add(this.Designation_label);
             this.adminHireEmployee_panel.Controls.Add(this.adminHireStaff_button);
             this.adminHireEmployee_panel.Controls.Add(this.adminHireTeamLeader_button);
@@ -518,7 +503,7 @@
             this.adminHireEmployee_panel.Controls.Add(this.adminHireManager_button);
             this.adminHireEmployee_panel.Location = new System.Drawing.Point(307, 2);
             this.adminHireEmployee_panel.Name = "adminHireEmployee_panel";
-            this.adminHireEmployee_panel.Size = new System.Drawing.Size(764, 682);
+            this.adminHireEmployee_panel.Size = new System.Drawing.Size(797, 837);
             this.adminHireEmployee_panel.TabIndex = 3;
             // 
             // Designation_label
@@ -538,7 +523,7 @@
             this.adminHireStaff_button.BackColor = System.Drawing.Color.SteelBlue;
             this.adminHireStaff_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminHireStaff_button.ForeColor = System.Drawing.Color.Black;
-            this.adminHireStaff_button.Location = new System.Drawing.Point(352, 392);
+            this.adminHireStaff_button.Location = new System.Drawing.Point(368, 469);
             this.adminHireStaff_button.Name = "adminHireStaff_button";
             this.adminHireStaff_button.Size = new System.Drawing.Size(217, 38);
             this.adminHireStaff_button.TabIndex = 8;
@@ -552,7 +537,7 @@
             this.adminHireTeamLeader_button.BackColor = System.Drawing.Color.SteelBlue;
             this.adminHireTeamLeader_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminHireTeamLeader_button.ForeColor = System.Drawing.Color.Black;
-            this.adminHireTeamLeader_button.Location = new System.Drawing.Point(113, 392);
+            this.adminHireTeamLeader_button.Location = new System.Drawing.Point(129, 469);
             this.adminHireTeamLeader_button.Name = "adminHireTeamLeader_button";
             this.adminHireTeamLeader_button.Size = new System.Drawing.Size(217, 38);
             this.adminHireTeamLeader_button.TabIndex = 7;
@@ -566,7 +551,7 @@
             this.adminHireSupervisor_button.BackColor = System.Drawing.Color.SteelBlue;
             this.adminHireSupervisor_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminHireSupervisor_button.ForeColor = System.Drawing.Color.Black;
-            this.adminHireSupervisor_button.Location = new System.Drawing.Point(352, 305);
+            this.adminHireSupervisor_button.Location = new System.Drawing.Point(368, 382);
             this.adminHireSupervisor_button.Name = "adminHireSupervisor_button";
             this.adminHireSupervisor_button.Size = new System.Drawing.Size(217, 38);
             this.adminHireSupervisor_button.TabIndex = 6;
@@ -580,7 +565,7 @@
             this.adminHireManager_button.BackColor = System.Drawing.Color.SteelBlue;
             this.adminHireManager_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminHireManager_button.ForeColor = System.Drawing.Color.Black;
-            this.adminHireManager_button.Location = new System.Drawing.Point(113, 304);
+            this.adminHireManager_button.Location = new System.Drawing.Point(129, 381);
             this.adminHireManager_button.Name = "adminHireManager_button";
             this.adminHireManager_button.Size = new System.Drawing.Size(217, 38);
             this.adminHireManager_button.TabIndex = 5;
@@ -588,11 +573,26 @@
             this.adminHireManager_button.UseVisualStyleBackColor = false;
             this.adminHireManager_button.Click += new System.EventHandler(this.adminHireManager_button_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::Project_one.Properties.Resources._new;
+            this.pictureBox1.Location = new System.Drawing.Point(327, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.TabIndex = 55;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Admin_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 682);
+            this.ClientSize = new System.Drawing.Size(1104, 839);
+            this.Controls.Add(this.AdminProfile_panel);
             this.Controls.Add(this.adminHireEmployee_panel);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -604,8 +604,8 @@
             this.AdminProfile_panel.PerformLayout();
             this.adminProfileGender_groupbox.ResumeLayout(false);
             this.adminProfileGender_groupbox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.adminHireEmployee_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
