@@ -222,7 +222,7 @@
             this.log_in_2_timer.Interval = 1000;
             this.log_in_2_timer.Tick += new System.EventHandler(this.log_in_2_timer_Tick);
             // 
-            // volunteer_login_page
+            // User_login_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -232,8 +232,8 @@
             this.Controls.Add(this.Log_in_Page_panel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "volunteer_login_page";
-            this.Text = "Volunteer login page";
+            this.Name = "User_login_page";
+            this.Text = "User Log In page";
             this.Log_in_Page_panel.ResumeLayout(false);
             this.Log_in_Page_panel.PerformLayout();
             this.ResumeLayout(false);
