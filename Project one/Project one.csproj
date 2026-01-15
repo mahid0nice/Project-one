@@ -66,11 +66,23 @@
     <Compile Include="Registration_Page_For_Employee.Designer.cs">
       <DependentUpon>Registration_Page_For_Employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="volunteer_login_page.cs">
+    <Compile Include="Volunteer_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="volunteer_login_page.Designer.cs">
-      <DependentUpon>volunteer_login_page.cs</DependentUpon>
+    <Compile Include="Volunteer_Dashboard.Designer.cs">
+      <DependentUpon>Volunteer_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_login_page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_login_page.Designer.cs">
+      <DependentUpon>User_login_page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Volunteer_registration_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Volunteer_registration_form.Designer.cs">
+      <DependentUpon>Volunteer_registration_form.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin_Dashboard.resx">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
@@ -91,8 +103,14 @@
     <EmbeddedResource Include="Registration_Page_For_Employee.resx">
       <DependentUpon>Registration_Page_For_Employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="volunteer_login_page.resx">
-      <DependentUpon>volunteer_login_page.cs</DependentUpon>
+    <EmbeddedResource Include="Volunteer_Dashboard.resx">
+      <DependentUpon>Volunteer_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_login_page.resx">
+      <DependentUpon>User_login_page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Volunteer_registration_form.resx">
+      <DependentUpon>Volunteer_registration_form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -124,6 +142,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\new.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

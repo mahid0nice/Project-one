@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Project_one
 {
-    public partial class volunteer_login_page : Form
+    public partial class Volunteer_registration_form : Form
     {
-        public volunteer_login_page()
+        public Volunteer_registration_form()
         {
             InitializeComponent();
-        }
-
-        private void log_in_2_timer_Tick(object sender, EventArgs e)
-        {
-            Timer_3_label.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

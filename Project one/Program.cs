@@ -19,7 +19,8 @@ namespace Project_one
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Admin_Login());
             //Application.Run(new Admin_Login());
-            Application.Run(new volunteer_login_page());
+            //Application.Run(new volunteer_login_page());
+            Application.Run(new Volunteer_Dashboard());
         }
     }
 }
