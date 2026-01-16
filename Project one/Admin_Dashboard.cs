@@ -17,16 +17,13 @@ namespace Project_one
             InitializeComponent();
             AdminProfile_panel.Visible = false;
             adminHireEmployee_panel.Visible = false;
-
-
-
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
+        // string c = Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Project-one-db;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30,
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
