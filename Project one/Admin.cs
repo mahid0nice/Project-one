@@ -83,26 +83,11 @@ namespace Project_one
                     };
                 }
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Database error occurred.\n" + ex.Message);
-                return null;
-            }
-            catch (InvalidCastException ex)
-            {
-                MessageBox.Show("Data type mismatch while reading admin data.\n" + ex.Message);
-                return null;
-            }
-            catch (NullReferenceException ex)
-            {
-                MessageBox.Show("Required admin data is missing.\n" + ex.Message);
-                return null;
-            }
             catch (Exception ex)
-            {
-                MessageBox.Show("Unexpected error occurred.\n" + ex.Message);
+            { 
                 return null;
             }
+
         }
 
     }

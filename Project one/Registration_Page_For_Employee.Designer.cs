@@ -35,6 +35,7 @@
             this.Upload_photo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.registration_panel = new System.Windows.Forms.Panel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.submit_button = new System.Windows.Forms.Button();
             this.DesignationText = new System.Windows.Forms.TextBox();
             this.Designation_label = new System.Windows.Forms.Label();
@@ -54,7 +55,7 @@
             this.Female_radioButton = new System.Windows.Forms.RadioButton();
             this.male_radioButton = new System.Windows.Forms.RadioButton();
             this.gender_label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.parAddress_textbox = new System.Windows.Forms.TextBox();
             this.permanent_address_label = new System.Windows.Forms.Label();
             this.Address_textbox = new System.Windows.Forms.TextBox();
             this.address_label = new System.Windows.Forms.Label();
@@ -63,9 +64,6 @@
             this.nid_textbox = new System.Windows.Forms.TextBox();
             this.nid_label = new System.Windows.Forms.Label();
             this.Gmail_label = new System.Windows.Forms.Label();
-            this.month_combobox = new System.Windows.Forms.ComboBox();
-            this.year_combobox = new System.Windows.Forms.ComboBox();
-            this.day_combobox = new System.Windows.Forms.ComboBox();
             this.birthdate_label = new System.Windows.Forms.Label();
             this.last_name_textbox = new System.Windows.Forms.TextBox();
             this.nickname_textbox = new System.Windows.Forms.TextBox();
@@ -148,6 +146,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.registration_panel.BackgroundImage = global::Project_one.Properties.Resources.light;
+            this.registration_panel.Controls.Add(this.dateTimePicker2);
             this.registration_panel.Controls.Add(this.submit_button);
             this.registration_panel.Controls.Add(this.DesignationText);
             this.registration_panel.Controls.Add(this.Designation_label);
@@ -163,7 +162,7 @@
             this.registration_panel.Controls.Add(this.relegion_label);
             this.registration_panel.Controls.Add(this.Gender_groupbox);
             this.registration_panel.Controls.Add(this.gender_label);
-            this.registration_panel.Controls.Add(this.textBox1);
+            this.registration_panel.Controls.Add(this.parAddress_textbox);
             this.registration_panel.Controls.Add(this.permanent_address_label);
             this.registration_panel.Controls.Add(this.Address_textbox);
             this.registration_panel.Controls.Add(this.address_label);
@@ -172,9 +171,6 @@
             this.registration_panel.Controls.Add(this.nid_textbox);
             this.registration_panel.Controls.Add(this.nid_label);
             this.registration_panel.Controls.Add(this.Gmail_label);
-            this.registration_panel.Controls.Add(this.month_combobox);
-            this.registration_panel.Controls.Add(this.year_combobox);
-            this.registration_panel.Controls.Add(this.day_combobox);
             this.registration_panel.Controls.Add(this.birthdate_label);
             this.registration_panel.Controls.Add(this.last_name_textbox);
             this.registration_panel.Controls.Add(this.nickname_textbox);
@@ -194,6 +190,13 @@
             this.registration_panel.TabIndex = 9;
             this.registration_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.registration_panel_Paint);
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(528, 144);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 45;
+            // 
             // submit_button
             // 
             this.submit_button.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -204,6 +207,7 @@
             this.submit_button.TabIndex = 43;
             this.submit_button.Text = "Submit";
             this.submit_button.UseVisualStyleBackColor = false;
+            this.submit_button.Click += new System.EventHandler(this.submit_button_Click);
             // 
             // DesignationText
             // 
@@ -247,6 +251,15 @@
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "A+",
+            "A-",
+            "B+",
+            "B-",
+            "AB+",
+            "AB-",
+            "O+",
+            "O-"});
             this.comboBox1.Location = new System.Drawing.Point(243, 408);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(74, 21);
@@ -390,12 +403,12 @@
             this.gender_label.TabIndex = 29;
             this.gender_label.Text = "Gender :";
             // 
-            // textBox1
+            // parAddress_textbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(184, 314);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 20);
-            this.textBox1.TabIndex = 28;
+            this.parAddress_textbox.Location = new System.Drawing.Point(184, 314);
+            this.parAddress_textbox.Name = "parAddress_textbox";
+            this.parAddress_textbox.Size = new System.Drawing.Size(230, 20);
+            this.parAddress_textbox.TabIndex = 28;
             // 
             // permanent_address_label
             // 
@@ -473,81 +486,6 @@
             this.Gmail_label.Size = new System.Drawing.Size(63, 21);
             this.Gmail_label.TabIndex = 20;
             this.Gmail_label.Text = "Gmail :";
-            // 
-            // month_combobox
-            // 
-            this.month_combobox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.month_combobox.FormattingEnabled = true;
-            this.month_combobox.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.month_combobox.Location = new System.Drawing.Point(585, 145);
-            this.month_combobox.Name = "month_combobox";
-            this.month_combobox.Size = new System.Drawing.Size(92, 21);
-            this.month_combobox.TabIndex = 19;
-            // 
-            // year_combobox
-            // 
-            this.year_combobox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.year_combobox.FormattingEnabled = true;
-            this.year_combobox.Location = new System.Drawing.Point(674, 145);
-            this.year_combobox.Name = "year_combobox";
-            this.year_combobox.Size = new System.Drawing.Size(60, 21);
-            this.year_combobox.TabIndex = 18;
-            // 
-            // day_combobox
-            // 
-            this.day_combobox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.day_combobox.FormattingEnabled = true;
-            this.day_combobox.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.day_combobox.Location = new System.Drawing.Point(533, 145);
-            this.day_combobox.Name = "day_combobox";
-            this.day_combobox.Size = new System.Drawing.Size(57, 21);
-            this.day_combobox.TabIndex = 17;
-            this.day_combobox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // birthdate_label
             // 
@@ -735,9 +673,6 @@
         private System.Windows.Forms.TextBox gmail_textbox;
         private System.Windows.Forms.TextBox first_name_textbox;
         private System.Windows.Forms.Label birthdate_label;
-        private System.Windows.Forms.ComboBox month_combobox;
-        private System.Windows.Forms.ComboBox year_combobox;
-        private System.Windows.Forms.ComboBox day_combobox;
         private System.Windows.Forms.Label Gmail_label;
         private System.Windows.Forms.TextBox nid_textbox;
         private System.Windows.Forms.Label nid_label;
@@ -746,7 +681,7 @@
         private System.Windows.Forms.Label permanent_address_label;
         private System.Windows.Forms.TextBox Address_textbox;
         private System.Windows.Forms.Label address_label;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox parAddress_textbox;
         private System.Windows.Forms.Label gender_label;
         private System.Windows.Forms.GroupBox Gender_groupbox;
         private System.Windows.Forms.RadioButton others_gender_radiobutton;
@@ -767,5 +702,6 @@
         private System.Windows.Forms.TextBox employee_id_textbox;
         private System.Windows.Forms.Label employee_id;
         private System.Windows.Forms.Button submit_button;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }
