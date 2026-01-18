@@ -10,7 +10,6 @@ namespace Project_one
 {
     internal class Admin
     {
-        string connection = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Project-One-DB;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30";
         public int Id { get; set; }
         public string Name { get; set; }
         public long NID { get; set; }

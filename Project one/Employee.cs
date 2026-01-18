@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Project_one
 {
     internal class Employee
     {
-        string connection = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Project-One-DB;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30";
         public int Id { get; set; }
         public string Designation { get; set; }
         public string Name { get; set; }
@@ -28,8 +22,10 @@ namespace Project_one
         public string MaritalStatus { get; set; }
         public string Gender { get; set; }
         public string BloodGroup { get; set; }
-        public string Dob { get; set; }
+        public DateTime Dob { get; set; }
+
         public Employee() { }
+
         public Employee(int id, string name, long nId, string fatherName, string motherName, long phoneNumber, string gmail, string address, string religion, string maritalStatus, string gender, string bloodGroup)
         {
             Id = id;
@@ -49,10 +45,23 @@ namespace Project_one
         public int insert(Employee ee)
         {
             int success = 0;
+            string connection = @"Data Source=(localdb)\MSSQLLocalDB;
+                           Initial Catalog=Project-One-DB;
+                           Integrated Security=True;
+                           TrustServerCertificate=True";
             SqlConnection sqc = new SqlConnection(connection);
+
             try
             {
-                string q = @"INSERT INTO Employee (E_Id, E_Name, E_NickName E_Designation, E_NID, E_FatherName, E_MotherName, E_Number, E_Emergency_Number, E_Gmail, E_Address, E_Parmanent_Address, E_Religion, E_MaritalStatus, E_Gender, E_DOB, E_BloodGroup) VALUES (@Id, @Name, @NickName @Designation, @NID, @FatherName, @MotherName, @Number, @EmergencyNumber, @Gmail, @Address, @ParmanentAddress, @Religion, @MaritalStatus, @Gender, @DOB, @BloodGroup)";
+                string q = @"INSERT INTO Employee (
+                                E_Id, E_Name, E_NickName, E_Designation, E_NID, E_FatherName, E_MotherName,
+                                E_Number, E_Emergency_Number, E_Gmail, E_Address, E_Parmanent_Address,
+                                E_Religion, E_MaritalStatus, E_Gender, E_DOB, E_BloodGroup
+                            ) VALUES (
+                                @Id, @Name, @NickName, @Designation, @NID, @FatherName, @MotherName,
+                                @Number, @EmergencyNumber, @Gmail, @Address, @ParmanentAddress,
+                                @Religion, @MaritalStatus, @Gender, @DOB, @BloodGroup
+                            )";
 
                 sqc.Open();
                 SqlCommand cmd = new SqlCommand(q, sqc);
@@ -61,38 +70,39 @@ namespace Project_one
                 cmd.Parameters.AddWithValue("@Name", ee.Name);
                 cmd.Parameters.AddWithValue("@NickName", ee.NickName);
                 cmd.Parameters.AddWithValue("@Designation", ee.Designation);
-                cmd.Parameters.AddWithValue("@NID", ee.NID);
+                cmd.Parameters.Add("@NID", SqlDbType.BigInt).Value = ee.NID;
                 cmd.Parameters.AddWithValue("@FatherName", ee.FatherName);
                 cmd.Parameters.AddWithValue("@MotherName", ee.MotherName);
-                cmd.Parameters.AddWithValue("@Number", ee.PhoneNumber);
-                cmd.Parameters.AddWithValue("@EmergencyNumber", ee.EmergencyNumber);
+                cmd.Parameters.Add("@Number", SqlDbType.BigInt).Value = ee.PhoneNumber;
+                cmd.Parameters.Add("@EmergencyNumber", SqlDbType.BigInt).Value = ee.EmergencyNumber;
                 cmd.Parameters.AddWithValue("@Gmail", ee.Gmail);
                 cmd.Parameters.AddWithValue("@Address", ee.Address);
                 cmd.Parameters.AddWithValue("@ParmanentAddress", ee.ParmanentAddress);
                 cmd.Parameters.AddWithValue("@Religion", ee.Religion);
                 cmd.Parameters.AddWithValue("@MaritalStatus", ee.MaritalStatus);
                 cmd.Parameters.AddWithValue("@Gender", ee.Gender);
-                cmd.Parameters.AddWithValue("@BloodGroup", ee.BloodGroup);
                 cmd.Parameters.Add("@DOB", SqlDbType.Date).Value = ee.Dob;
+                cmd.Parameters.AddWithValue("@BloodGroup", ee.BloodGroup);
+
                 int row = cmd.ExecuteNonQuery();
                 if (row > 0)
                 {
                     success = 1;
                 }
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
                 return 2;
             }
-            catch (InvalidCastException ex)
+            catch (InvalidCastException)
             {
                 return 3;
             }
-            catch (NullReferenceException ex)
+            catch (NullReferenceException)
             {
                 return 4;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 5;
             }
@@ -102,9 +112,5 @@ namespace Project_one
             }
             return success;
         }
-
     }
-
 }
-
-

@@ -35,7 +35,7 @@
             this.Upload_photo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.registration_panel = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.DobPicker = new System.Windows.Forms.DateTimePicker();
             this.submit_button = new System.Windows.Forms.Button();
             this.DesignationText = new System.Windows.Forms.TextBox();
             this.Designation_label = new System.Windows.Forms.Label();
@@ -146,7 +146,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.registration_panel.BackgroundImage = global::Project_one.Properties.Resources.light;
-            this.registration_panel.Controls.Add(this.dateTimePicker2);
+            this.registration_panel.Controls.Add(this.DobPicker);
             this.registration_panel.Controls.Add(this.submit_button);
             this.registration_panel.Controls.Add(this.DesignationText);
             this.registration_panel.Controls.Add(this.Designation_label);
@@ -190,12 +190,12 @@
             this.registration_panel.TabIndex = 9;
             this.registration_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.registration_panel_Paint);
             // 
-            // dateTimePicker2
+            // DobPicker
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(528, 144);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 45;
+            this.DobPicker.Location = new System.Drawing.Point(528, 144);
+            this.DobPicker.Name = "DobPicker";
+            this.DobPicker.Size = new System.Drawing.Size(200, 20);
+            this.DobPicker.TabIndex = 45;
             // 
             // submit_button
             // 
@@ -702,6 +702,6 @@
         private System.Windows.Forms.TextBox employee_id_textbox;
         private System.Windows.Forms.Label employee_id;
         private System.Windows.Forms.Button submit_button;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker DobPicker;
     }
 }
