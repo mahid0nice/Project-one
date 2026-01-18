@@ -10,6 +10,10 @@ namespace Project_one
 {
     internal class Admin
     {
+        string connection = @"Data Source=(localdb)\MSSQLLocalDB;
+                           Initial Catalog=Project-One-DB;
+                           Integrated Security=True;
+                           TrustServerCertificate=True";
         public int Id { get; set; }
         public string Name { get; set; }
         public long NID { get; set; }
@@ -24,7 +28,7 @@ namespace Project_one
         public string BloodGroup { get; set; }
         public string Dob { get; set; }
         public Admin() { }
-        public Admin(int id,string name, long nId,string fatherName,string motherName, long phoneNumber,string gmail,string address,string religion,string maritalStatus,string gender,string bloodGroup)
+        public Admin(int id, string name, long nId, string fatherName, string motherName, long phoneNumber, string gmail, string address, string religion, string maritalStatus, string gender, string bloodGroup)
         {
             Id = id;
             Name = name;
@@ -42,16 +46,14 @@ namespace Project_one
 
         public static Admin showAdminDetails(int ID)
         {
-            string connection = @"Data Source=(localdb)\MSSQLLocalDB;
+            string query = "SELECT * FROM Admin WHERE Admin_Id = @ID";
+            string connectionn = @"Data Source=(localdb)\MSSQLLocalDB;
                            Initial Catalog=Project-One-DB;
                            Integrated Security=True;
                            TrustServerCertificate=True";
-
-            string query = "SELECT * FROM Admin WHERE Admin_Id = @ID";
-
             try
             {
-                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlConnection con = new SqlConnection(connectionn))
                 using (SqlDataAdapter da = new SqlDataAdapter(query, con))
                 {
                     da.SelectCommand.Parameters.AddWithValue("@ID", ID);
@@ -77,17 +79,46 @@ namespace Project_one
                         Religion = row["Admin_Religion"].ToString(),
                         MaritalStatus = row["Admin_MaritalStatus"] == DBNull.Value ? null : row["Admin_MaritalStatus"].ToString(),
                         Gender = row["Admin_Gender"].ToString(),
-                        Dob= row["Admin_Dob"] == DBNull.Value ? null : row["Admin_Dob"].ToString(),
+                        Dob = row["Admin_Dob"] == DBNull.Value ? null : row["Admin_Dob"].ToString(),
                         BloodGroup = row["Admin_BloodGroup"].ToString()
                     };
                 }
             }
-            catch (Exception ex)
-            { 
+            catch (Exception)
+            {
                 return null;
             }
 
         }
 
+        public int UpdateAdmin(Admin ad)
+        {
+            string query = @"UPDATE Admin SET Admin_Name = @Name, Admin_NID = @NID, Admin_FatherName = @FatherName, Admin_MotherName = @MotherName, Admin_PhoneNumber = @PhoneNumber, Admin_Gmail = @Gmail,Admin_Address = @Address, Admin_Religion = @Religion, Admin_MaritalStatus = @MaritalStatus, Admin_Gender = @Gender, Admin_BloodGroup = @BloodGroup, Admin_Dob = @Dob WHERE Admin_Id = 1";
+            try
+            {
+                using (SqlConnection sqc = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, sqc))
+                {
+                    cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 40).Value = ad.Name;
+                    cmd.Parameters.Add("@NID", SqlDbType.BigInt).Value = ad.NID;
+                    cmd.Parameters.Add("@FatherName", SqlDbType.NVarChar, 40).Value = (object)ad.FatherName ?? DBNull.Value;
+                    cmd.Parameters.Add("@MotherName", SqlDbType.NVarChar, 40).Value = (object)ad.MotherName ?? DBNull.Value;
+                    cmd.Parameters.Add("@PhoneNumber", SqlDbType.BigInt).Value = ad.PhoneNumber;
+                    cmd.Parameters.Add("@Gmail", SqlDbType.NVarChar, 60).Value = ad.Gmail;
+                    cmd.Parameters.Add("@Address", SqlDbType.NVarChar, 200).Value = (object)ad.Address ?? DBNull.Value;
+                    cmd.Parameters.Add("@Religion", SqlDbType.NVarChar, 20).Value = ad.Religion;
+                    cmd.Parameters.Add("@MaritalStatus", SqlDbType.NVarChar, 20).Value = (object)ad.MaritalStatus ?? DBNull.Value;
+                    cmd.Parameters.Add("@Gender", SqlDbType.NVarChar, 20).Value = ad.Gender;
+                    cmd.Parameters.Add("@BloodGroup", SqlDbType.NVarChar, 2).Value = ad.BloodGroup;
+                    cmd.Parameters.Add("@Dob", SqlDbType.Date).Value = string.IsNullOrWhiteSpace(ad.Dob) ? (object)DBNull.Value : DateTime.Parse(ad.Dob);
+                    sqc.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
     }
 }

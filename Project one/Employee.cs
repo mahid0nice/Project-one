@@ -25,7 +25,10 @@ namespace Project_one
         public DateTime Dob { get; set; }
 
         public Employee() { }
-
+        string connection = @"Data Source=(localdb)\MSSQLLocalDB;
+                           Initial Catalog=Project-One-DB;
+                           Integrated Security=True;
+                           TrustServerCertificate=True";
         public Employee(int id, string name, long nId, string fatherName, string motherName, long phoneNumber, string gmail, string address, string religion, string maritalStatus, string gender, string bloodGroup)
         {
             Id = id;
@@ -45,10 +48,6 @@ namespace Project_one
         public int insert(Employee ee)
         {
             int success = 0;
-            string connection = @"Data Source=(localdb)\MSSQLLocalDB;
-                           Initial Catalog=Project-One-DB;
-                           Integrated Security=True;
-                           TrustServerCertificate=True";
             SqlConnection sqc = new SqlConnection(connection);
 
             try
