@@ -23,6 +23,7 @@ namespace Project_one
         public string MaritalStatus { get; set; }
         public string Gender { get; set; }
         public string BloodGroup { get; set; }
+        public string Dob { get; set; }
         public Admin() { }
         public Admin(int id,string name, long nId,string fatherName,string motherName, long phoneNumber,string gmail,string address,string religion,string maritalStatus,string gender,string bloodGroup)
         {
@@ -77,6 +78,7 @@ namespace Project_one
                         Religion = row["Admin_Religion"].ToString(),
                         MaritalStatus = row["Admin_MaritalStatus"] == DBNull.Value ? null : row["Admin_MaritalStatus"].ToString(),
                         Gender = row["Admin_Gender"].ToString(),
+                        Dob= row["Admin_Dob"] == DBNull.Value ? null : row["Admin_Dob"].ToString(),
                         BloodGroup = row["Admin_BloodGroup"].ToString()
                     };
                 }

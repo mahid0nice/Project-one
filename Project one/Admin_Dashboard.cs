@@ -44,6 +44,8 @@ namespace Project_one
             adminMaritalText.Text = ad.MaritalStatus;
             adminBloodText.Text = ad.Gender;
             adminBloodText.Text = ad.BloodGroup;
+            adminDobText.Text = ad.Dob;
+            adminGenderText.Text = ad.Gender;
             adminHireEmployee_panel.Visible = false;
             AdminProfile_panel.Visible = true;
         }
