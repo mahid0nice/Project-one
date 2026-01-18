@@ -113,6 +113,7 @@ namespace Project_one
                     cmd.Parameters.Add("@Dob", SqlDbType.Date).Value = string.IsNullOrWhiteSpace(ad.Dob) ? (object)DBNull.Value : DateTime.Parse(ad.Dob);
                     sqc.Open();
                     return cmd.ExecuteNonQuery();
+                    sqc.Close();
                 }
             }
             catch (Exception)
