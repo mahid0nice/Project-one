@@ -57,17 +57,17 @@
             this.adminProfileMaritalStatus_lebel = new System.Windows.Forms.Label();
             this.adminProfileBloodGroup_label = new System.Windows.Forms.Label();
             this.AdminProfile_panel = new System.Windows.Forms.Panel();
-            this.adminNameText = new System.Windows.Forms.Label();
-            this.adminNidText = new System.Windows.Forms.Label();
-            this.adminFatherText = new System.Windows.Forms.Label();
-            this.adminMotherText = new System.Windows.Forms.Label();
-            this.adminPhoneText = new System.Windows.Forms.Label();
-            this.adminGmailText = new System.Windows.Forms.Label();
-            this.adminAddressText = new System.Windows.Forms.Label();
-            this.adminReligionText = new System.Windows.Forms.Label();
-            this.adminMaritalText = new System.Windows.Forms.Label();
-            this.adminGenderText = new System.Windows.Forms.Label();
             this.adminBloodText = new System.Windows.Forms.Label();
+            this.adminMaritalText = new System.Windows.Forms.Label();
+            this.adminReligionText = new System.Windows.Forms.Label();
+            this.adminAddressText = new System.Windows.Forms.Label();
+            this.adminGmailText = new System.Windows.Forms.Label();
+            this.adminPhoneText = new System.Windows.Forms.Label();
+            this.adminMotherText = new System.Windows.Forms.Label();
+            this.adminFatherText = new System.Windows.Forms.Label();
+            this.adminNidText = new System.Windows.Forms.Label();
+            this.adminNameText = new System.Windows.Forms.Label();
+            this.adminGenderText = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.adminHireEmployee_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -206,9 +206,9 @@
             this.adminHireEmployee_panel.Controls.Add(this.adminHireTeamLeader_button);
             this.adminHireEmployee_panel.Controls.Add(this.adminHireSupervisor_button);
             this.adminHireEmployee_panel.Controls.Add(this.adminHireManager_button);
-            this.adminHireEmployee_panel.Location = new System.Drawing.Point(3, 6);
+            this.adminHireEmployee_panel.Location = new System.Drawing.Point(3, 3);
             this.adminHireEmployee_panel.Name = "adminHireEmployee_panel";
-            this.adminHireEmployee_panel.Size = new System.Drawing.Size(796, 697);
+            this.adminHireEmployee_panel.Size = new System.Drawing.Size(796, 735);
             this.adminHireEmployee_panel.TabIndex = 3;
             // 
             // Designation_label
@@ -228,7 +228,7 @@
             this.adminHireStaff_button.BackColor = System.Drawing.Color.SteelBlue;
             this.adminHireStaff_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminHireStaff_button.ForeColor = System.Drawing.Color.Black;
-            this.adminHireStaff_button.Location = new System.Drawing.Point(368, 399);
+            this.adminHireStaff_button.Location = new System.Drawing.Point(368, 418);
             this.adminHireStaff_button.Name = "adminHireStaff_button";
             this.adminHireStaff_button.Size = new System.Drawing.Size(217, 38);
             this.adminHireStaff_button.TabIndex = 8;
@@ -242,7 +242,7 @@
             this.adminHireTeamLeader_button.BackColor = System.Drawing.Color.SteelBlue;
             this.adminHireTeamLeader_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminHireTeamLeader_button.ForeColor = System.Drawing.Color.Black;
-            this.adminHireTeamLeader_button.Location = new System.Drawing.Point(129, 399);
+            this.adminHireTeamLeader_button.Location = new System.Drawing.Point(129, 418);
             this.adminHireTeamLeader_button.Name = "adminHireTeamLeader_button";
             this.adminHireTeamLeader_button.Size = new System.Drawing.Size(217, 38);
             this.adminHireTeamLeader_button.TabIndex = 7;
@@ -256,7 +256,7 @@
             this.adminHireSupervisor_button.BackColor = System.Drawing.Color.SteelBlue;
             this.adminHireSupervisor_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminHireSupervisor_button.ForeColor = System.Drawing.Color.Black;
-            this.adminHireSupervisor_button.Location = new System.Drawing.Point(368, 312);
+            this.adminHireSupervisor_button.Location = new System.Drawing.Point(368, 331);
             this.adminHireSupervisor_button.Name = "adminHireSupervisor_button";
             this.adminHireSupervisor_button.Size = new System.Drawing.Size(217, 38);
             this.adminHireSupervisor_button.TabIndex = 6;
@@ -270,7 +270,7 @@
             this.adminHireManager_button.BackColor = System.Drawing.Color.SteelBlue;
             this.adminHireManager_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminHireManager_button.ForeColor = System.Drawing.Color.Black;
-            this.adminHireManager_button.Location = new System.Drawing.Point(129, 311);
+            this.adminHireManager_button.Location = new System.Drawing.Point(129, 330);
             this.adminHireManager_button.Name = "adminHireManager_button";
             this.adminHireManager_button.Size = new System.Drawing.Size(217, 38);
             this.adminHireManager_button.TabIndex = 5;
@@ -284,7 +284,7 @@
             this.adminProfileName_label.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileName_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileName_label.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileName_label.Location = new System.Drawing.Point(237, 247);
+            this.adminProfileName_label.Location = new System.Drawing.Point(158, 220);
             this.adminProfileName_label.Name = "adminProfileName_label";
             this.adminProfileName_label.Size = new System.Drawing.Size(61, 21);
             this.adminProfileName_label.TabIndex = 37;
@@ -296,7 +296,7 @@
             this.adminProfileNumber_label.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileNumber_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileNumber_label.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileNumber_label.Location = new System.Drawing.Point(237, 388);
+            this.adminProfileNumber_label.Location = new System.Drawing.Point(158, 361);
             this.adminProfileNumber_label.Name = "adminProfileNumber_label";
             this.adminProfileNumber_label.Size = new System.Drawing.Size(130, 21);
             this.adminProfileNumber_label.TabIndex = 39;
@@ -308,7 +308,7 @@
             this.adminProfileGmail_label.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileGmail_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileGmail_label.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileGmail_label.Location = new System.Drawing.Point(238, 427);
+            this.adminProfileGmail_label.Location = new System.Drawing.Point(159, 400);
             this.adminProfileGmail_label.Name = "adminProfileGmail_label";
             this.adminProfileGmail_label.Size = new System.Drawing.Size(63, 21);
             this.adminProfileGmail_label.TabIndex = 44;
@@ -320,7 +320,7 @@
             this.adminProfileNid_label.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileNid_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileNid_label.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileNid_label.Location = new System.Drawing.Point(238, 283);
+            this.adminProfileNid_label.Location = new System.Drawing.Point(159, 256);
             this.adminProfileNid_label.Name = "adminProfileNid_label";
             this.adminProfileNid_label.Size = new System.Drawing.Size(80, 21);
             this.adminProfileNid_label.TabIndex = 45;
@@ -332,7 +332,7 @@
             this.adminProfileAddress_label.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileAddress_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileAddress_label.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileAddress_label.Location = new System.Drawing.Point(237, 463);
+            this.adminProfileAddress_label.Location = new System.Drawing.Point(158, 436);
             this.adminProfileAddress_label.Name = "adminProfileAddress_label";
             this.adminProfileAddress_label.Size = new System.Drawing.Size(78, 21);
             this.adminProfileAddress_label.TabIndex = 47;
@@ -358,7 +358,7 @@
             this.adminProfileFatherName_label.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileFatherName_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileFatherName_label.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileFatherName_label.Location = new System.Drawing.Point(237, 318);
+            this.adminProfileFatherName_label.Location = new System.Drawing.Point(158, 291);
             this.adminProfileFatherName_label.Name = "adminProfileFatherName_label";
             this.adminProfileFatherName_label.Size = new System.Drawing.Size(118, 21);
             this.adminProfileFatherName_label.TabIndex = 56;
@@ -370,7 +370,7 @@
             this.adminProfileMotherName_label.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileMotherName_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileMotherName_label.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileMotherName_label.Location = new System.Drawing.Point(237, 353);
+            this.adminProfileMotherName_label.Location = new System.Drawing.Point(158, 326);
             this.adminProfileMotherName_label.Name = "adminProfileMotherName_label";
             this.adminProfileMotherName_label.Size = new System.Drawing.Size(126, 21);
             this.adminProfileMotherName_label.TabIndex = 57;
@@ -383,7 +383,7 @@
             this.adminProfileGender_label.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileGender_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileGender_label.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileGender_label.Location = new System.Drawing.Point(250, 574);
+            this.adminProfileGender_label.Location = new System.Drawing.Point(171, 547);
             this.adminProfileGender_label.Name = "adminProfileGender_label";
             this.adminProfileGender_label.Size = new System.Drawing.Size(73, 21);
             this.adminProfileGender_label.TabIndex = 60;
@@ -395,7 +395,7 @@
             this.adminProfileRelegion_label.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileRelegion_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileRelegion_label.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileRelegion_label.Location = new System.Drawing.Point(238, 496);
+            this.adminProfileRelegion_label.Location = new System.Drawing.Point(159, 469);
             this.adminProfileRelegion_label.Name = "adminProfileRelegion_label";
             this.adminProfileRelegion_label.Size = new System.Drawing.Size(84, 21);
             this.adminProfileRelegion_label.TabIndex = 62;
@@ -407,7 +407,7 @@
             this.adminProfileMaritalStatus_lebel.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileMaritalStatus_lebel.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileMaritalStatus_lebel.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileMaritalStatus_lebel.Location = new System.Drawing.Point(238, 538);
+            this.adminProfileMaritalStatus_lebel.Location = new System.Drawing.Point(159, 511);
             this.adminProfileMaritalStatus_lebel.Name = "adminProfileMaritalStatus_lebel";
             this.adminProfileMaritalStatus_lebel.Size = new System.Drawing.Size(120, 21);
             this.adminProfileMaritalStatus_lebel.TabIndex = 64;
@@ -420,7 +420,7 @@
             this.adminProfileBloodGroup_label.BackColor = System.Drawing.Color.Transparent;
             this.adminProfileBloodGroup_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminProfileBloodGroup_label.ForeColor = System.Drawing.Color.Black;
-            this.adminProfileBloodGroup_label.Location = new System.Drawing.Point(246, 611);
+            this.adminProfileBloodGroup_label.Location = new System.Drawing.Point(167, 584);
             this.adminProfileBloodGroup_label.Name = "adminProfileBloodGroup_label";
             this.adminProfileBloodGroup_label.Size = new System.Drawing.Size(114, 21);
             this.adminProfileBloodGroup_label.TabIndex = 65;
@@ -429,9 +429,9 @@
             // AdminProfile_panel
             // 
             this.AdminProfile_panel.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.AdminProfile_panel.Controls.Add(this.adminBloodText);
             this.AdminProfile_panel.Controls.Add(this.adminHireEmployee_panel);
             this.AdminProfile_panel.Controls.Add(this.adminGenderText);
+            this.AdminProfile_panel.Controls.Add(this.adminBloodText);
             this.AdminProfile_panel.Controls.Add(this.adminMaritalText);
             this.AdminProfile_panel.Controls.Add(this.adminReligionText);
             this.AdminProfile_panel.Controls.Add(this.adminAddressText);
@@ -455,129 +455,129 @@
             this.AdminProfile_panel.Controls.Add(this.adminProfileName_label);
             this.AdminProfile_panel.Location = new System.Drawing.Point(308, 0);
             this.AdminProfile_panel.Name = "AdminProfile_panel";
-            this.AdminProfile_panel.Size = new System.Drawing.Size(802, 729);
+            this.AdminProfile_panel.Size = new System.Drawing.Size(802, 741);
             this.AdminProfile_panel.TabIndex = 3;
-            // 
-            // adminNameText
-            // 
-            this.adminNameText.BackColor = System.Drawing.Color.Transparent;
-            this.adminNameText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminNameText.ForeColor = System.Drawing.Color.Black;
-            this.adminNameText.Location = new System.Drawing.Point(377, 247);
-            this.adminNameText.Name = "adminNameText";
-            this.adminNameText.Size = new System.Drawing.Size(235, 21);
-            this.adminNameText.TabIndex = 69;
-            this.adminNameText.Text = "...";
-            // 
-            // adminNidText
-            // 
-            this.adminNidText.BackColor = System.Drawing.Color.Transparent;
-            this.adminNidText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminNidText.ForeColor = System.Drawing.Color.Black;
-            this.adminNidText.Location = new System.Drawing.Point(377, 279);
-            this.adminNidText.Name = "adminNidText";
-            this.adminNidText.Size = new System.Drawing.Size(235, 21);
-            this.adminNidText.TabIndex = 70;
-            this.adminNidText.Text = "...";
-            // 
-            // adminFatherText
-            // 
-            this.adminFatherText.BackColor = System.Drawing.Color.Transparent;
-            this.adminFatherText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminFatherText.ForeColor = System.Drawing.Color.Black;
-            this.adminFatherText.Location = new System.Drawing.Point(377, 318);
-            this.adminFatherText.Name = "adminFatherText";
-            this.adminFatherText.Size = new System.Drawing.Size(235, 21);
-            this.adminFatherText.TabIndex = 71;
-            this.adminFatherText.Text = "...";
-            // 
-            // adminMotherText
-            // 
-            this.adminMotherText.BackColor = System.Drawing.Color.Transparent;
-            this.adminMotherText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminMotherText.ForeColor = System.Drawing.Color.Black;
-            this.adminMotherText.Location = new System.Drawing.Point(377, 353);
-            this.adminMotherText.Name = "adminMotherText";
-            this.adminMotherText.Size = new System.Drawing.Size(235, 21);
-            this.adminMotherText.TabIndex = 72;
-            this.adminMotherText.Text = "...";
-            // 
-            // adminPhoneText
-            // 
-            this.adminPhoneText.BackColor = System.Drawing.Color.Transparent;
-            this.adminPhoneText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminPhoneText.ForeColor = System.Drawing.Color.Black;
-            this.adminPhoneText.Location = new System.Drawing.Point(377, 388);
-            this.adminPhoneText.Name = "adminPhoneText";
-            this.adminPhoneText.Size = new System.Drawing.Size(235, 21);
-            this.adminPhoneText.TabIndex = 73;
-            this.adminPhoneText.Text = "...";
-            // 
-            // adminGmailText
-            // 
-            this.adminGmailText.BackColor = System.Drawing.Color.Transparent;
-            this.adminGmailText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminGmailText.ForeColor = System.Drawing.Color.Black;
-            this.adminGmailText.Location = new System.Drawing.Point(377, 425);
-            this.adminGmailText.Name = "adminGmailText";
-            this.adminGmailText.Size = new System.Drawing.Size(235, 21);
-            this.adminGmailText.TabIndex = 75;
-            this.adminGmailText.Text = "...";
-            // 
-            // adminAddressText
-            // 
-            this.adminAddressText.BackColor = System.Drawing.Color.Transparent;
-            this.adminAddressText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminAddressText.ForeColor = System.Drawing.Color.Black;
-            this.adminAddressText.Location = new System.Drawing.Point(377, 463);
-            this.adminAddressText.Name = "adminAddressText";
-            this.adminAddressText.Size = new System.Drawing.Size(235, 21);
-            this.adminAddressText.TabIndex = 76;
-            this.adminAddressText.Text = "...";
-            // 
-            // adminReligionText
-            // 
-            this.adminReligionText.BackColor = System.Drawing.Color.Transparent;
-            this.adminReligionText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminReligionText.ForeColor = System.Drawing.Color.Black;
-            this.adminReligionText.Location = new System.Drawing.Point(377, 496);
-            this.adminReligionText.Name = "adminReligionText";
-            this.adminReligionText.Size = new System.Drawing.Size(235, 21);
-            this.adminReligionText.TabIndex = 77;
-            this.adminReligionText.Text = "...";
-            // 
-            // adminMaritalText
-            // 
-            this.adminMaritalText.BackColor = System.Drawing.Color.Transparent;
-            this.adminMaritalText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminMaritalText.ForeColor = System.Drawing.Color.Black;
-            this.adminMaritalText.Location = new System.Drawing.Point(377, 538);
-            this.adminMaritalText.Name = "adminMaritalText";
-            this.adminMaritalText.Size = new System.Drawing.Size(235, 21);
-            this.adminMaritalText.TabIndex = 78;
-            this.adminMaritalText.Text = "...";
-            // 
-            // adminGenderText
-            // 
-            this.adminGenderText.BackColor = System.Drawing.Color.Transparent;
-            this.adminGenderText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminGenderText.ForeColor = System.Drawing.Color.Black;
-            this.adminGenderText.Location = new System.Drawing.Point(379, 574);
-            this.adminGenderText.Name = "adminGenderText";
-            this.adminGenderText.Size = new System.Drawing.Size(233, 21);
-            this.adminGenderText.TabIndex = 79;
-            this.adminGenderText.Text = "...";
             // 
             // adminBloodText
             // 
             this.adminBloodText.BackColor = System.Drawing.Color.Transparent;
             this.adminBloodText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminBloodText.ForeColor = System.Drawing.Color.Black;
-            this.adminBloodText.Location = new System.Drawing.Point(379, 611);
+            this.adminBloodText.Location = new System.Drawing.Point(293, 584);
             this.adminBloodText.Name = "adminBloodText";
             this.adminBloodText.Size = new System.Drawing.Size(233, 21);
-            this.adminBloodText.TabIndex = 80;
+            this.adminBloodText.TabIndex = 79;
             this.adminBloodText.Text = "...";
+            // 
+            // adminMaritalText
+            // 
+            this.adminMaritalText.BackColor = System.Drawing.Color.Transparent;
+            this.adminMaritalText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminMaritalText.ForeColor = System.Drawing.Color.Black;
+            this.adminMaritalText.Location = new System.Drawing.Point(298, 511);
+            this.adminMaritalText.Name = "adminMaritalText";
+            this.adminMaritalText.Size = new System.Drawing.Size(235, 21);
+            this.adminMaritalText.TabIndex = 78;
+            this.adminMaritalText.Text = "...";
+            // 
+            // adminReligionText
+            // 
+            this.adminReligionText.BackColor = System.Drawing.Color.Transparent;
+            this.adminReligionText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminReligionText.ForeColor = System.Drawing.Color.Black;
+            this.adminReligionText.Location = new System.Drawing.Point(298, 469);
+            this.adminReligionText.Name = "adminReligionText";
+            this.adminReligionText.Size = new System.Drawing.Size(235, 21);
+            this.adminReligionText.TabIndex = 77;
+            this.adminReligionText.Text = "...";
+            // 
+            // adminAddressText
+            // 
+            this.adminAddressText.BackColor = System.Drawing.Color.Transparent;
+            this.adminAddressText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminAddressText.ForeColor = System.Drawing.Color.Black;
+            this.adminAddressText.Location = new System.Drawing.Point(298, 436);
+            this.adminAddressText.Name = "adminAddressText";
+            this.adminAddressText.Size = new System.Drawing.Size(235, 21);
+            this.adminAddressText.TabIndex = 76;
+            this.adminAddressText.Text = "...";
+            // 
+            // adminGmailText
+            // 
+            this.adminGmailText.BackColor = System.Drawing.Color.Transparent;
+            this.adminGmailText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminGmailText.ForeColor = System.Drawing.Color.Black;
+            this.adminGmailText.Location = new System.Drawing.Point(298, 398);
+            this.adminGmailText.Name = "adminGmailText";
+            this.adminGmailText.Size = new System.Drawing.Size(235, 21);
+            this.adminGmailText.TabIndex = 75;
+            this.adminGmailText.Text = "...";
+            // 
+            // adminPhoneText
+            // 
+            this.adminPhoneText.BackColor = System.Drawing.Color.Transparent;
+            this.adminPhoneText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminPhoneText.ForeColor = System.Drawing.Color.Black;
+            this.adminPhoneText.Location = new System.Drawing.Point(298, 361);
+            this.adminPhoneText.Name = "adminPhoneText";
+            this.adminPhoneText.Size = new System.Drawing.Size(235, 21);
+            this.adminPhoneText.TabIndex = 73;
+            this.adminPhoneText.Text = "...";
+            // 
+            // adminMotherText
+            // 
+            this.adminMotherText.BackColor = System.Drawing.Color.Transparent;
+            this.adminMotherText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminMotherText.ForeColor = System.Drawing.Color.Black;
+            this.adminMotherText.Location = new System.Drawing.Point(298, 326);
+            this.adminMotherText.Name = "adminMotherText";
+            this.adminMotherText.Size = new System.Drawing.Size(235, 21);
+            this.adminMotherText.TabIndex = 72;
+            this.adminMotherText.Text = "...";
+            // 
+            // adminFatherText
+            // 
+            this.adminFatherText.BackColor = System.Drawing.Color.Transparent;
+            this.adminFatherText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminFatherText.ForeColor = System.Drawing.Color.Black;
+            this.adminFatherText.Location = new System.Drawing.Point(298, 291);
+            this.adminFatherText.Name = "adminFatherText";
+            this.adminFatherText.Size = new System.Drawing.Size(235, 21);
+            this.adminFatherText.TabIndex = 71;
+            this.adminFatherText.Text = "...";
+            // 
+            // adminNidText
+            // 
+            this.adminNidText.BackColor = System.Drawing.Color.Transparent;
+            this.adminNidText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminNidText.ForeColor = System.Drawing.Color.Black;
+            this.adminNidText.Location = new System.Drawing.Point(298, 252);
+            this.adminNidText.Name = "adminNidText";
+            this.adminNidText.Size = new System.Drawing.Size(235, 21);
+            this.adminNidText.TabIndex = 70;
+            this.adminNidText.Text = "...";
+            // 
+            // adminNameText
+            // 
+            this.adminNameText.BackColor = System.Drawing.Color.Transparent;
+            this.adminNameText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminNameText.ForeColor = System.Drawing.Color.Black;
+            this.adminNameText.Location = new System.Drawing.Point(298, 220);
+            this.adminNameText.Name = "adminNameText";
+            this.adminNameText.Size = new System.Drawing.Size(235, 21);
+            this.adminNameText.TabIndex = 69;
+            this.adminNameText.Text = "...";
+            // 
+            // adminGenderText
+            // 
+            this.adminGenderText.BackColor = System.Drawing.Color.Transparent;
+            this.adminGenderText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminGenderText.ForeColor = System.Drawing.Color.Black;
+            this.adminGenderText.Location = new System.Drawing.Point(293, 547);
+            this.adminGenderText.Name = "adminGenderText";
+            this.adminGenderText.Size = new System.Drawing.Size(235, 21);
+            this.adminGenderText.TabIndex = 80;
+            this.adminGenderText.Text = "...";
             // 
             // Admin_Dashboard
             // 
@@ -637,7 +637,7 @@
         private System.Windows.Forms.Label adminNidText;
         private System.Windows.Forms.Label adminNameText;
         private System.Windows.Forms.Label adminBloodText;
-        private System.Windows.Forms.Label adminGenderText;
         private System.Windows.Forms.Label adminMaritalText;
+        private System.Windows.Forms.Label adminGenderText;
     }
 }

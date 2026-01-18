@@ -42,7 +42,7 @@ namespace Project_one
             adminAddressText.Text = ad.Address;
             adminReligionText.Text = ad.Religion;
             adminMaritalText.Text = ad.MaritalStatus;
-            adminGenderText.Text = ad.Gender;
+            adminBloodText.Text = ad.Gender;
             adminBloodText.Text = ad.BloodGroup;
             adminHireEmployee_panel.Visible = false;
             AdminProfile_panel.Visible = true;
