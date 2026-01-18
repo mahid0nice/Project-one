@@ -31,7 +31,20 @@ namespace Project_one
 
         private void admin_Profile_button_Click(object sender, EventArgs e)
         {
-            adminHireEmployee_panel.Visible = true;
+            Admin ad = new Admin();
+            ad = Admin.showAdminDetails(1);
+            adminNameText.Text = ad.Name;
+            adminNidText.Text = ad.NID.ToString();
+            adminFatherText.Text = ad.FatherName;
+            adminMotherText.Text = ad.MotherName;
+            adminPhoneText.Text = ad.PhoneNumber.ToString();
+            adminGmailText.Text = ad.Gmail;
+            adminAddressText.Text = ad.Address;
+            adminReligionText.Text = ad.Religion;
+            adminMaritalText.Text = ad.MaritalStatus;
+            adminGenderText.Text = ad.Gender;
+            adminBloodText.Text = ad.BloodGroup;
+            adminHireEmployee_panel.Visible = false;
             AdminProfile_panel.Visible = true;
         }
 
@@ -106,7 +119,7 @@ namespace Project_one
 
         private void Hire_Employe_button_Click(object sender, EventArgs e)
         {
-            AdminProfile_panel.Visible = false;
+            AdminProfile_panel.Visible = true;
             adminHireEmployee_panel.Visible = true;
             
         }

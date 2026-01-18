@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.registration_panel = new System.Windows.Forms.Panel();
             this.submit_button = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.DesignationText = new System.Windows.Forms.TextBox();
             this.Designation_label = new System.Windows.Forms.Label();
             this.employee_id_textbox = new System.Windows.Forms.TextBox();
             this.employee_id = new System.Windows.Forms.Label();
@@ -149,7 +149,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.registration_panel.BackgroundImage = global::Project_one.Properties.Resources.light;
             this.registration_panel.Controls.Add(this.submit_button);
-            this.registration_panel.Controls.Add(this.textBox2);
+            this.registration_panel.Controls.Add(this.DesignationText);
             this.registration_panel.Controls.Add(this.Designation_label);
             this.registration_panel.Controls.Add(this.employee_id_textbox);
             this.registration_panel.Controls.Add(this.employee_id);
@@ -205,12 +205,12 @@
             this.submit_button.Text = "Submit";
             this.submit_button.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // DesignationText
             // 
-            this.textBox2.Location = new System.Drawing.Point(184, 589);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 20);
-            this.textBox2.TabIndex = 42;
+            this.DesignationText.Location = new System.Drawing.Point(184, 589);
+            this.DesignationText.Name = "DesignationText";
+            this.DesignationText.Size = new System.Drawing.Size(193, 20);
+            this.DesignationText.TabIndex = 42;
             // 
             // Designation_label
             // 
@@ -762,7 +762,7 @@
         private System.Windows.Forms.Label emergency_number;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label blood_group_label;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox DesignationText;
         private System.Windows.Forms.Label Designation_label;
         private System.Windows.Forms.TextBox employee_id_textbox;
         private System.Windows.Forms.Label employee_id;
