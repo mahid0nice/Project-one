@@ -74,6 +74,12 @@
     <Compile Include="Registration_Page_For_Employee.Designer.cs">
       <DependentUpon>Registration_Page_For_Employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registration_Page_for_volunteer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration_Page_for_volunteer.Designer.cs">
+      <DependentUpon>Registration_Page_for_volunteer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Volunteer_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </Compile>
     <EmbeddedResource Include="Registration_Page_For_Employee.resx">
       <DependentUpon>Registration_Page_For_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration_Page_for_volunteer.resx">
+      <DependentUpon>Registration_Page_for_volunteer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Volunteer_Dashboard.resx">
       <DependentUpon>Volunteer_Dashboard.cs</DependentUpon>
