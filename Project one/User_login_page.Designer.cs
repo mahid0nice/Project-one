@@ -113,6 +113,7 @@
             this.Log_in_user_button.TabIndex = 9;
             this.Log_in_user_button.Text = "Log In";
             this.Log_in_user_button.UseVisualStyleBackColor = false;
+            this.Log_in_user_button.Click += new System.EventHandler(this.Log_in_user_button_Click);
             // 
             // log_is_as_combobox
             // 

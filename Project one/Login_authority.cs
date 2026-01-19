@@ -125,7 +125,7 @@ namespace Project_one
 
                 if (emp.CheckValidation())
                 {
-                    new Employee_Dashboard().Show();
+                    new Employee_Dashboard(id).Show();
                     this.Hide();
                 }
                 else

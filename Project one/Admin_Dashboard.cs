@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -33,6 +34,8 @@ namespace Project_one
             AdminProfile_panel.Visible = panel > 0;
             adminHireEmployee_panel.Visible = panel > 1;
             adminEmployee_panel.Visible = panel > 2;
+            Rules_panel.Visible = panel > 3;
+            UpdatePassword.Visible = panel > 4;
         }
 
 
@@ -486,6 +489,337 @@ namespace Project_one
                 row.ReadOnly = true;
             }
             employe_gridView.ClearSelection();
+        }
+
+        private void LogOut_button_Click(object sender, EventArgs e)
+        {
+            
+            this.Hide();
+            new Admin_Login().Show();
+
+        }
+
+        private void RulesButton_Click(object sender, EventArgs e)
+        {
+            ShowPanels(4);
+            ShowPanels(4);
+            ShowRulesGrid();
+        }
+        private void ShowRulesGrid()
+        {
+            try
+            {
+                Admin ad = new Admin();
+                DataTable dt = ad.ShowRules();
+                RulesGrid.DataSource = dt;
+
+                no_text.Visible = false;
+                rulesText.Visible = false;
+                RRefresh_button.Visible = false;
+
+                foreach (DataGridViewRow row in RulesGrid.Rows)
+                {
+                    row.ReadOnly = true;
+                }
+                RulesGrid.ClearSelection();
+                RUpdate_button.Visible = true;
+                RDelete_button.Visible = true;
+                RSave_button.Visible = false;
+                RCancel_button.Visible = false;
+                RSave1_button.Visible = false;
+                RulesGrid.Columns["No"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                RulesGrid.Columns["Rules"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                RulesGrid.Columns["Rules"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                RulesGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells; 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading rules: " + ex.Message);
+            }
+        }
+
+
+        private void RRefresh_button_Click(object sender, EventArgs e)
+        {
+            rulesSearch_text.Clear();
+            ShowRulesGrid();
+        }
+
+        private void RCancel_button_Click(object sender, EventArgs e)
+        {
+            ShowRulesGrid();
+            RAdd_button.Visible = true;
+        }
+
+        private void RUpdate_button_Click(object sender, EventArgs e)
+        {
+            if (RulesGrid.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Please select a single rule to edit.");
+                return;
+            }
+            RulesGrid.ReadOnly = false;
+            RAdd_button.Visible = false;
+            RUpdate_button.Visible = false;
+            RDelete_button.Visible = false;
+            RSave_button.Visible = true;
+            RSave1_button.Visible = false;
+            RCancel_button.Visible = true;
+            foreach (DataGridViewRow row in RulesGrid.Rows)
+            {
+                row.ReadOnly = true;
+            }
+            int row_index = RulesGrid.SelectedRows[0].Index;
+            RulesGrid.Rows[row_index].ReadOnly = false;
+            RulesGrid.Rows[row_index].Cells["No"].ReadOnly = true;
+            RulesGrid.CurrentCell = RulesGrid.Rows[row_index].Cells["Rules"];
+
+            MessageBox.Show("You can now edit the selected rule text.");
+        }
+
+        
+
+        private void RSave_button_Click(object sender, EventArgs e)
+        {
+            if (RulesGrid.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Please select a rule to save.");
+                return;
+            }
+
+            int row_index = RulesGrid.SelectedRows[0].Index;
+            DataGridViewRow row = RulesGrid.Rows[row_index];
+
+            try
+            {
+                if (row.Cells["Rules"].Value == null || string.IsNullOrWhiteSpace(row.Cells["Rules"].Value.ToString()))
+                {
+                    MessageBox.Show("Rule text cannot be empty.");
+                    return;
+                }
+
+                Admin ad = new Admin();
+                int no = Convert.ToInt32(row.Cells["No"].Value);
+                string ruleText = row.Cells["Rules"].Value.ToString();
+
+                int result = ad.UpdateRules(no, ruleText);
+
+                if (result == 1)
+                {
+                    MessageBox.Show("Rule updated successfully.");
+                    row.ReadOnly = true;
+                    RUpdate_button.Visible = true;
+                    RDelete_button.Visible = true;
+                    RSave_button.Visible = false;
+                    RCancel_button.Visible = false;
+                    RSave1_button.Visible = false;
+                    RAdd_button.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("Failed to update rule.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void RDelete_button_Click(object sender, EventArgs e)
+        {
+            if (RulesGrid.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Please select a rule to delete.");
+                return;
+            }
+
+            int row_index = RulesGrid.SelectedRows[0].Index;
+            DataGridViewRow row = RulesGrid.Rows[row_index];
+
+            DialogResult dr = MessageBox.Show("Are you sure ?", "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (dr == DialogResult.Yes)
+            {
+                try
+                {
+                    int no = Convert.ToInt32(row.Cells["No"].Value);
+                    Admin ad = new Admin();
+                    int result = ad.DeleteRules(no);
+
+                    if (result == 1)
+                    {
+                        MessageBox.Show("Rule deleted successfully.");
+                        RulesGrid.Rows.RemoveAt(row_index);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete rule.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void searchh_button_Click(object sender, EventArgs e)
+        {
+            RAdd_button.Visible = true;
+            RUpdate_button.Visible = true;
+            RDelete_button.Visible = true;
+            RRefresh_button.Visible = true;
+            RSave1_button.Visible = false;
+            RSave_button.Visible = false;
+            RCancel_button.Visible = false;
+            string search = rulesSearch_text.Text.Trim();
+            Admin ad = new Admin();
+            DataTable dt = ad.SearchRules(search);
+
+            if (dt.Rows.Count > 0)
+            {
+                RulesGrid.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("No matching rules found. Showing previous data.");
+                ShowRulesGrid();
+            }
+
+            foreach (DataGridViewRow row in RulesGrid.Rows)
+            {
+                row.ReadOnly = true;
+            }
+            RulesGrid.ClearSelection();
+        }
+
+        private void RulesGrid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            //searchdatatableRowHeaderMouseClick
+        }
+
+        private void RAdd_button_Click(object sender, EventArgs e)
+        {
+            RSave1_button.Visible = true;
+            RCancel_button.Visible = true;
+            RUpdate_button.Visible = false;
+            RDelete_button.Visible = false;
+
+            RulesGrid.ReadOnly = false;
+            RulesGrid.AllowUserToAddRows = true;
+            foreach (DataGridViewRow row in RulesGrid.Rows)
+            {
+                if (!row.IsNewRow)
+                    row.ReadOnly = true;
+                else
+                    row.ReadOnly = false;
+            }
+            RulesGrid.ClearSelection();
+            int newRowIndex = RulesGrid.Rows.Count - 1;
+            RulesGrid.CurrentCell = RulesGrid.Rows[newRowIndex].Cells[0];
+            RAdd_button.Visible = false;
+            MessageBox.Show("Input in empty row.");
+        }
+        private void RSave1_button_Click(object sender, EventArgs e)
+        {
+            if (RulesGrid.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Please select the new row to save.");
+                return;
+            }
+            rulesSearch_text.Clear();
+            int row_index = RulesGrid.SelectedRows[0].Index;
+            DataGridViewRow row = RulesGrid.Rows[row_index];
+
+            try
+            {
+                RulesGrid.EndEdit();
+                if (row.Cells["No"].Value == null ||
+                    row.Cells["Rules"].Value == null ||
+                    string.IsNullOrWhiteSpace(row.Cells["Rules"].Value.ToString()))
+                {
+                    MessageBox.Show("Please fill in both Rule No and Rule Text.");
+                    return;
+                }
+
+                int no;
+                if (!int.TryParse(row.Cells["No"].Value.ToString(), out no))
+                {
+                    MessageBox.Show("Rule No must be a valid number.");
+                    return;
+                }
+
+                string ruleTextValue = row.Cells["Rules"].Value.ToString().Trim();
+                Admin ad = new Admin();
+                int result = ad.AddRules(no, ruleTextValue);
+
+                if (result == 1)
+                {
+                    MessageBox.Show("Rule added successfully!");
+                    RulesGrid.AllowUserToAddRows = false;
+                    RulesGrid.ReadOnly = true;
+                    row.ReadOnly = true;
+                    RSave1_button.Visible = false;
+                    RCancel_button.Visible = false;
+                    RUpdate_button.Visible = true;
+                    RDelete_button.Visible = true;
+                    RAdd_button.Visible = true;
+                    ShowRulesGrid();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add rule. Rule No might already exist.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ShowPanels(5);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string currPassWord = oldPass.Text.Trim();
+            string newPassWord = newpass.Text.Trim();
+
+            if (string.IsNullOrEmpty(currPassWord) || string.IsNullOrEmpty(newPassWord))
+            {
+                MessageBox.Show("Please enter both current and new passwords.");
+                return;
+            }
+
+            try
+            {
+                Admin ad = new Admin();
+                int adminId = 1;
+
+                bool updated = ad.UpdatePass(adminId, currPassWord, newPassWord);
+
+                if (updated)
+                {
+                    MessageBox.Show("Password updated successfully.");
+                    oldPass.Clear();
+                    newpass.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid current password. Try again.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }

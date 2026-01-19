@@ -277,6 +277,134 @@ namespace Project_one
             }
 
         }
+        public DataTable ShowRules()
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Rules ORDER BY [No]", con))
+                {
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception)
+            {
+            }
+
+            return dt;
+        }
+
+        public int UpdateRules(int no, string ruleText)
+        {
+            string query = "UPDATE Rules SET Rules = @RuleText WHERE [No] = @No";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@No", no);
+                    cmd.Parameters.AddWithValue("@RuleText", ruleText);
+
+                    con.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+
+        public int DeleteRules(int no)
+        {
+            string query = "DELETE FROM Rules WHERE [No] = @No";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@No", no);
+
+                    con.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+
+        public DataTable SearchRules(string searchText)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(@"SELECT * FROM Rules 
+                                                 WHERE CAST([No] AS NVARCHAR) LIKE @search 
+                                                 OR Rules LIKE @search ORDER BY [No]", con))
+                {
+                    cmd.Parameters.AddWithValue("@search", "%" + searchText + "%");
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching rules:\n" + ex.Message);
+            }
+
+            return dt;
+        }
+
+        public int AddRules(int no, string ruleText)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                {
+                    string query = "INSERT INTO Rules (No, Rules) VALUES (@No, @RuleText)";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@No", no);
+                        cmd.Parameters.AddWithValue("@RuleText", ruleText);
+
+                        con.Open();
+                        return cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+
+        public bool UpdatePass(int adminId, string currentPassword, string newPassword)
+        {
+            using (SqlConnection con = new SqlConnection(connection))
+            {
+                con.Open();
+                string query = @"UPDATE Admin_Log_in SET Admin_Password = @NewPass WHERE Admin_Id = @AdminId AND Admin_Password = @CurrentPass";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@NewPass", newPassword);
+                    cmd.Parameters.AddWithValue("@AdminId", adminId);
+                    cmd.Parameters.AddWithValue("@CurrentPass", currentPassword);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+        }
 
     }
 }
