@@ -16,8 +16,7 @@ namespace Project_one
         public Admin_Dashboard()
         {
             InitializeComponent();
-            AdminProfile_panel.Visible = false;
-            adminHireEmployee_panel.Visible = false;
+            ShowPanels(0);
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -29,6 +28,13 @@ namespace Project_one
         {
 
         }
+        void ShowPanels(int panel)
+        {
+            AdminProfile_panel.Visible = panel > 0;
+            adminHireEmployee_panel.Visible = panel > 1;
+            adminEmployee_panel.Visible = panel > 2;
+        }
+
 
         void showProfileLabel(bool value)
         {
@@ -115,8 +121,7 @@ namespace Project_one
 
             else
             {
-                adminHireEmployee_panel.Visible = false;
-                AdminProfile_panel.Visible = true;
+                ShowPanels(1);
             }
         }
 
@@ -158,7 +163,38 @@ namespace Project_one
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            ShowPanels(3);
+            EmployeeUpdate_button.Visible = true;
+            employeeDelete_button.Visible = true;
+            EmployeeCancel_button.Visible = false;
+            EmployeeSave_button.Visible = false;
+            Employee ee = new Employee();
+            Admin ad = new Admin();
+            DataTable dt = ad.ShowAllEmployees(ee);
+            employe_gridView.ReadOnly = false;
+            employe_gridView.DataSource = dt;
+            foreach (DataGridViewRow row in employe_gridView.Rows)
+            {
+                row.ReadOnly = true;
+            }
+            EUId.Visible = false;
+            EUName.Visible = false;
+            EUNickName.Visible = false;
+            EUDesignation.Visible = false;
+            EUNid.Visible = false;
+            EUFatherName.Visible = false;
+            EUMotherName.Visible = false;
+            EUNumber.Visible = false;
+            EUEmergencyNumber.Visible = false;
+            EUGmail.Visible = false;
+            EUAddress.Visible = false;
+            EUParmanentAddress.Visible = false;
+            EUReligion.Visible = false;
+            EUMaritalStatus.Visible = false;
+            EUGender.Visible = false;
+            EUBloodGroup.Visible = false;
+            EUDob.Visible = false;
+
         }
 
         private void adminHireManager_button_Click(object sender, EventArgs e)
@@ -191,9 +227,8 @@ namespace Project_one
 
         private void Hire_Employe_button_Click(object sender, EventArgs e)
         {
-            AdminProfile_panel.Visible = true;
-            adminHireEmployee_panel.Visible = true;
-            
+            ShowPanels(2);
+
         }
 
         private void Profile_Update_Click(object sender, EventArgs e)
@@ -261,5 +296,142 @@ namespace Project_one
         {
             showProfile();
         }
+
+        private void employe_gridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            employe_gridView.ClearSelection();
+            employe_gridView.Rows[e.RowIndex].Selected = true;
+
+        }
+
+        private void EmployeeUpdate_button_Click(object sender, EventArgs e)
+        {
+            if (employe_gridView.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Please select a single row for editing.");
+                return;
+            }
+            employeeDelete_button.Visible = false;
+            EmployeeUpdate_button.Visible = false;
+            EmployeeSave_button.Visible = true;
+            EmployeeCancel_button.Visible = true;
+            foreach (DataGridViewRow row in employe_gridView.Rows)
+            {
+                row.ReadOnly = true;
+            }
+            int row_index = employe_gridView.SelectedRows[0].Index;
+            employe_gridView.Rows[row_index].ReadOnly = false;
+            employe_gridView.Rows[row_index].Cells["E_Id"].ReadOnly = true;
+            MessageBox.Show("You can now edit the selected row.");
+        }
+
+        private void EmployeeSave_button_Click(object sender, EventArgs e)
+        {
+            if (employe_gridView.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Please select a single row to save.");
+                return;
+            }
+
+            int row_index = employe_gridView.SelectedRows[0].Index;
+            DataGridViewRow row = employe_gridView.Rows[row_index];
+
+            try
+            {
+                Employee ee = new Employee
+                {
+                    Id = Convert.ToInt32(row.Cells["E_Id"].Value),
+                    Name = row.Cells["E_Name"].Value.ToString(),
+                    NickName = row.Cells["E_NickName"].Value.ToString(),
+                    Designation = row.Cells["E_Designation"].Value.ToString(),
+                    NID = Convert.ToInt64(row.Cells["E_NID"].Value),
+                    FatherName = row.Cells["E_FatherName"].Value.ToString(),
+                    MotherName = row.Cells["E_MotherName"].Value.ToString(),
+                    PhoneNumber = Convert.ToInt64(row.Cells["E_Number"].Value),
+                    EmergencyNumber = Convert.ToInt64(row.Cells["E_Emergency_Number"].Value),
+                    Gmail = row.Cells["E_Gmail"].Value.ToString(),
+                    Address = row.Cells["E_Address"].Value.ToString(),
+                    ParmanentAddress = row.Cells["E_Parmanent_Address"].Value.ToString(),
+                    Religion = row.Cells["E_Religion"].Value.ToString(),
+                    MaritalStatus = row.Cells["E_MaritalStatus"].Value?.ToString(),
+                    Gender = row.Cells["E_Gender"].Value.ToString(),
+                    BloodGroup = row.Cells["E_BloodGroup"].Value.ToString(),
+                    Dob = Convert.ToDateTime(row.Cells["E_DOB"].Value)
+                };
+                Admin ad = new Admin();
+                int result = ad.UpdateEmployee(ee);
+
+                if (result == 1)
+                {
+                    MessageBox.Show("Employee updated successfully.");
+                    row.ReadOnly = true;
+                    EmployeeUpdate_button.Visible = true;
+                    employeeDelete_button.Visible = true;
+                    EmployeeSave_button.Visible = false;
+                    EmployeeCancel_button.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Employee update failed.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void employeeDelete_button_Click(object sender, EventArgs e)
+        {
+            if (employe_gridView.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Please select a single row to delete.");
+                return;
+            }
+
+            int row_index = employe_gridView.SelectedRows[0].Index;
+            DataGridViewRow row = employe_gridView.Rows[row_index];
+            DialogResult dr = MessageBox.Show(
+                $"Are you sure you want to delete employee '{row.Cells["E_Name"].Value}'?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (dr == DialogResult.Yes)
+            {
+                try
+                {
+                    int id = Convert.ToInt32(row.Cells["E_Id"].Value);
+                    Admin ad = new Admin();
+                    Employee ee = new Employee() { Id = id };
+                    int result = ad.DeleteEmployee(ee);
+
+                    if (result == 1)
+                    {
+                        MessageBox.Show("Employee deleted successfully.");
+                        employe_gridView.Rows.RemoveAt(row_index);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete employee.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void EmployeeCancel_button_Click(object sender, EventArgs e)
+        {
+            EmployeeUpdate_button.Visible = true;
+            employeeDelete_button.Visible = true;
+            EmployeeSave_button.Visible = false;
+            EmployeeCancel_button.Visible = false;
+        }
     }
 }
+
+

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -121,5 +122,126 @@ namespace Project_one
                 return 0;
             }
         }
+
+        public DataTable ShowAllEmployees(Employee ee)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection sqc = new SqlConnection(connection))
+                using (SqlDataAdapter sqd = new SqlDataAdapter("SELECT * FROM Employee", sqc))
+                {
+                    sqd.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading employees:\n" + ex.Message);
+            }
+
+            return dt;
+        }
+
+        public int UpdateEmployee(Employee ee)
+        {
+            string query = @"UPDATE Employee SET 
+                        E_Name=@Name,
+                        E_NickName=@NickName,
+                        E_Designation=@Designation,
+                        E_NID=@NID,
+                        E_FatherName=@FatherName,
+                        E_MotherName=@MotherName,
+                        E_Number=@PhoneNumber,
+                        E_Emergency_Number=@EmergencyNumber,
+                        E_Gmail=@Gmail,
+                        E_Address=@Address,
+                        E_Parmanent_Address=@ParmanentAddress,
+                        E_Religion=@Religion,
+                        E_MaritalStatus=@MaritalStatus,
+                        E_Gender=@Gender,
+                        E_BloodGroup=@BloodGroup,
+                        E_DOB=@Dob
+                     WHERE E_Id=@Id";
+
+            try
+            {
+                using (SqlConnection sqc = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, sqc))
+                {
+                    cmd.Parameters.AddWithValue("@Id", ee.Id);
+                    cmd.Parameters.AddWithValue("@Name", ee.Name);
+                    cmd.Parameters.AddWithValue("@NickName", ee.NickName);
+                    cmd.Parameters.AddWithValue("@Designation", ee.Designation);
+                    cmd.Parameters.AddWithValue("@NID", ee.NID);
+                    cmd.Parameters.AddWithValue("@FatherName", ee.FatherName);
+                    cmd.Parameters.AddWithValue("@MotherName", ee.MotherName);
+                    cmd.Parameters.AddWithValue("@PhoneNumber", ee.PhoneNumber);
+                    cmd.Parameters.AddWithValue("@EmergencyNumber", ee.EmergencyNumber);
+                    cmd.Parameters.AddWithValue("@Gmail", ee.Gmail);
+                    cmd.Parameters.AddWithValue("@Address", ee.Address);
+                    cmd.Parameters.AddWithValue("@ParmanentAddress", ee.ParmanentAddress);
+                    cmd.Parameters.AddWithValue("@Religion", ee.Religion);
+                    cmd.Parameters.AddWithValue("@MaritalStatus", (object)ee.MaritalStatus ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Gender", ee.Gender);
+                    cmd.Parameters.AddWithValue("@BloodGroup", ee.BloodGroup);
+                    cmd.Parameters.AddWithValue("@Dob", ee.Dob);
+
+                    sqc.Open();
+                    return cmd.ExecuteNonQuery();
+                    sqc.Close();
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public int DeleteEmployee(Employee ee)
+        {
+            string query = "DELETE FROM Employee WHERE E_Id = @Id";
+            try
+            {
+                using (SqlConnection sqc = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, sqc))
+                {
+                    cmd.Parameters.AddWithValue("@Id", ee.Id);
+                    sqc.Open();
+                    return cmd.ExecuteNonQuery();
+                    sqc.Close();
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public DataTable SearchEmployees(string search)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection("your_connection_string"))
+                {
+                    con.Open();
+                    string query = @"SELECT * FROM Employee WHERE E_Id LIKE @search OR E_Name LIKE @search OR E_Number LIKE @search OR E_Gmail LIKE @search OR E_Designation LIKE @search";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            return dt;
+        }
+
     }
 }
