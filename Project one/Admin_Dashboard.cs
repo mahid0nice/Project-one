@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -61,7 +62,7 @@ namespace Project_one
             pBlood_text.Visible = value;
             pDob_text.Visible = value;
         }
-        void showProfile()
+        int showProfile()
         {
             try
             {
@@ -71,32 +72,52 @@ namespace Project_one
                 showProfileLabel(true);
                 Admin ad = new Admin();
                 ad = Admin.showAdminDetails(1);
-                adminNameText.Text = ad.Name;
-                adminNidText.Text = ad.NID.ToString();
-                adminFatherText.Text = ad.FatherName;
-                adminMotherText.Text = ad.MotherName;
-                adminPhoneText.Text = ad.PhoneNumber.ToString();
-                adminGmailText.Text = ad.Gmail;
-                adminAddressText.Text = ad.Address;
-                adminReligionText.Text = ad.Religion;
-                adminMaritalText.Text = ad.MaritalStatus;
-                adminBloodText.Text = ad.Gender;
-                adminBloodText.Text = ad.BloodGroup;
-                adminDobText.Text = ad.Dob;
-                adminGenderText.Text = ad.Gender;
-                Profile_Update.Visible = true;
+                if (ad != null)
+                {
+                    adminNameText.Text = ad.Name;
+                    adminNidText.Text = ad.NID.ToString();
+                    adminFatherText.Text = ad.FatherName;
+                    adminMotherText.Text = ad.MotherName;
+                    adminPhoneText.Text = ad.PhoneNumber.ToString();
+                    adminGmailText.Text = ad.Gmail;
+                    adminAddressText.Text = ad.Address;
+                    adminReligionText.Text = ad.Religion;
+                    adminMaritalText.Text = ad.MaritalStatus;
+                    adminBloodText.Text = ad.Gender;
+                    adminBloodText.Text = ad.BloodGroup;
+                    adminDobText.Text = ad.Dob;
+                    adminGenderText.Text = ad.Gender;
+                    Profile_Update.Visible = true;
+                    return 1;
+                }
+
+                else
+                {
+                    return 0;
+                }
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+                return 0;
             }
         }
 
         private void admin_Profile_button_Click(object sender, EventArgs e)
         {
-            showProfile();
-            adminHireEmployee_panel.Visible = false;
-            AdminProfile_panel.Visible = true;
+            int a = 0;
+                a = showProfile();
+            if (a == 0) 
+            {
+                MessageBox.Show("No Admin Found");
+            }
+
+            else
+            {
+                adminHireEmployee_panel.Visible = false;
+                AdminProfile_panel.Visible = true;
+            }
         }
 
         private void Admin_Dashboard_Load(object sender, EventArgs e)

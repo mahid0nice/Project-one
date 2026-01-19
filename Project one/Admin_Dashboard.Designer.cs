@@ -57,6 +57,21 @@
             this.adminProfileMaritalStatus_lebel = new System.Windows.Forms.Label();
             this.adminProfileBloodGroup_label = new System.Windows.Forms.Label();
             this.AdminProfile_panel = new System.Windows.Forms.Panel();
+            this.Profile_Cancel = new System.Windows.Forms.Button();
+            this.pDob_text = new System.Windows.Forms.TextBox();
+            this.pFather_text = new System.Windows.Forms.TextBox();
+            this.pMaritStatus_text = new System.Windows.Forms.TextBox();
+            this.pAddress_text = new System.Windows.Forms.TextBox();
+            this.pGender_text = new System.Windows.Forms.TextBox();
+            this.pGmail_text = new System.Windows.Forms.TextBox();
+            this.pMother_text = new System.Windows.Forms.TextBox();
+            this.pPhone_text = new System.Windows.Forms.TextBox();
+            this.pReligion_text = new System.Windows.Forms.TextBox();
+            this.pBlood_text = new System.Windows.Forms.TextBox();
+            this.pNid_text = new System.Windows.Forms.TextBox();
+            this.pName_text = new System.Windows.Forms.TextBox();
+            this.Profile_Save = new System.Windows.Forms.Button();
+            this.Profile_Update = new System.Windows.Forms.Button();
             this.adminDobText = new System.Windows.Forms.Label();
             this.Dob_label = new System.Windows.Forms.Label();
             this.adminGenderText = new System.Windows.Forms.Label();
@@ -70,21 +85,6 @@
             this.adminFatherText = new System.Windows.Forms.Label();
             this.adminNidText = new System.Windows.Forms.Label();
             this.adminNameText = new System.Windows.Forms.Label();
-            this.Profile_Update = new System.Windows.Forms.Button();
-            this.Profile_Save = new System.Windows.Forms.Button();
-            this.pName_text = new System.Windows.Forms.TextBox();
-            this.pNid_text = new System.Windows.Forms.TextBox();
-            this.pBlood_text = new System.Windows.Forms.TextBox();
-            this.pReligion_text = new System.Windows.Forms.TextBox();
-            this.pPhone_text = new System.Windows.Forms.TextBox();
-            this.pMother_text = new System.Windows.Forms.TextBox();
-            this.pGmail_text = new System.Windows.Forms.TextBox();
-            this.pGender_text = new System.Windows.Forms.TextBox();
-            this.pAddress_text = new System.Windows.Forms.TextBox();
-            this.pMaritStatus_text = new System.Windows.Forms.TextBox();
-            this.pFather_text = new System.Windows.Forms.TextBox();
-            this.pDob_text = new System.Windows.Forms.TextBox();
-            this.Profile_Cancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.adminHireEmployee_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -492,6 +492,132 @@
             this.AdminProfile_panel.Size = new System.Drawing.Size(798, 745);
             this.AdminProfile_panel.TabIndex = 3;
             // 
+            // Profile_Cancel
+            // 
+            this.Profile_Cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Profile_Cancel.BackColor = System.Drawing.Color.CadetBlue;
+            this.Profile_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Profile_Cancel.ForeColor = System.Drawing.Color.Black;
+            this.Profile_Cancel.Location = new System.Drawing.Point(361, 656);
+            this.Profile_Cancel.Name = "Profile_Cancel";
+            this.Profile_Cancel.Size = new System.Drawing.Size(119, 28);
+            this.Profile_Cancel.TabIndex = 97;
+            this.Profile_Cancel.Text = "Cancel";
+            this.Profile_Cancel.UseVisualStyleBackColor = false;
+            this.Profile_Cancel.Click += new System.EventHandler(this.Profile_Cancel_Click);
+            // 
+            // pDob_text
+            // 
+            this.pDob_text.Location = new System.Drawing.Point(328, 601);
+            this.pDob_text.Name = "pDob_text";
+            this.pDob_text.Size = new System.Drawing.Size(170, 20);
+            this.pDob_text.TabIndex = 96;
+            // 
+            // pFather_text
+            // 
+            this.pFather_text.Location = new System.Drawing.Point(328, 269);
+            this.pFather_text.Name = "pFather_text";
+            this.pFather_text.Size = new System.Drawing.Size(170, 20);
+            this.pFather_text.TabIndex = 95;
+            // 
+            // pMaritStatus_text
+            // 
+            this.pMaritStatus_text.Location = new System.Drawing.Point(328, 489);
+            this.pMaritStatus_text.Name = "pMaritStatus_text";
+            this.pMaritStatus_text.Size = new System.Drawing.Size(170, 20);
+            this.pMaritStatus_text.TabIndex = 94;
+            // 
+            // pAddress_text
+            // 
+            this.pAddress_text.Location = new System.Drawing.Point(328, 413);
+            this.pAddress_text.Name = "pAddress_text";
+            this.pAddress_text.Size = new System.Drawing.Size(170, 20);
+            this.pAddress_text.TabIndex = 93;
+            // 
+            // pGender_text
+            // 
+            this.pGender_text.Location = new System.Drawing.Point(328, 523);
+            this.pGender_text.Name = "pGender_text";
+            this.pGender_text.Size = new System.Drawing.Size(170, 20);
+            this.pGender_text.TabIndex = 92;
+            // 
+            // pGmail_text
+            // 
+            this.pGmail_text.Location = new System.Drawing.Point(328, 376);
+            this.pGmail_text.Name = "pGmail_text";
+            this.pGmail_text.Size = new System.Drawing.Size(170, 20);
+            this.pGmail_text.TabIndex = 91;
+            // 
+            // pMother_text
+            // 
+            this.pMother_text.Location = new System.Drawing.Point(328, 303);
+            this.pMother_text.Name = "pMother_text";
+            this.pMother_text.Size = new System.Drawing.Size(170, 20);
+            this.pMother_text.TabIndex = 90;
+            // 
+            // pPhone_text
+            // 
+            this.pPhone_text.Location = new System.Drawing.Point(328, 339);
+            this.pPhone_text.Name = "pPhone_text";
+            this.pPhone_text.Size = new System.Drawing.Size(170, 20);
+            this.pPhone_text.TabIndex = 89;
+            // 
+            // pReligion_text
+            // 
+            this.pReligion_text.Location = new System.Drawing.Point(328, 447);
+            this.pReligion_text.Name = "pReligion_text";
+            this.pReligion_text.Size = new System.Drawing.Size(170, 20);
+            this.pReligion_text.TabIndex = 88;
+            // 
+            // pBlood_text
+            // 
+            this.pBlood_text.Location = new System.Drawing.Point(328, 560);
+            this.pBlood_text.Name = "pBlood_text";
+            this.pBlood_text.Size = new System.Drawing.Size(170, 20);
+            this.pBlood_text.TabIndex = 87;
+            // 
+            // pNid_text
+            // 
+            this.pNid_text.Location = new System.Drawing.Point(328, 233);
+            this.pNid_text.Name = "pNid_text";
+            this.pNid_text.Size = new System.Drawing.Size(170, 20);
+            this.pNid_text.TabIndex = 86;
+            // 
+            // pName_text
+            // 
+            this.pName_text.Location = new System.Drawing.Point(328, 198);
+            this.pName_text.Name = "pName_text";
+            this.pName_text.Size = new System.Drawing.Size(170, 20);
+            this.pName_text.TabIndex = 85;
+            // 
+            // Profile_Save
+            // 
+            this.Profile_Save.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Profile_Save.BackColor = System.Drawing.Color.CadetBlue;
+            this.Profile_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Profile_Save.ForeColor = System.Drawing.Color.Black;
+            this.Profile_Save.Location = new System.Drawing.Point(224, 656);
+            this.Profile_Save.Name = "Profile_Save";
+            this.Profile_Save.Size = new System.Drawing.Size(119, 28);
+            this.Profile_Save.TabIndex = 84;
+            this.Profile_Save.Text = "Save";
+            this.Profile_Save.UseVisualStyleBackColor = false;
+            this.Profile_Save.Click += new System.EventHandler(this.Profile_Save_Click);
+            // 
+            // Profile_Update
+            // 
+            this.Profile_Update.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Profile_Update.BackColor = System.Drawing.Color.CadetBlue;
+            this.Profile_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Profile_Update.ForeColor = System.Drawing.Color.Black;
+            this.Profile_Update.Location = new System.Drawing.Point(306, 656);
+            this.Profile_Update.Name = "Profile_Update";
+            this.Profile_Update.Size = new System.Drawing.Size(123, 28);
+            this.Profile_Update.TabIndex = 83;
+            this.Profile_Update.Text = "Update";
+            this.Profile_Update.UseVisualStyleBackColor = false;
+            this.Profile_Update.Click += new System.EventHandler(this.Profile_Update_Click);
+            // 
             // adminDobText
             // 
             this.adminDobText.BackColor = System.Drawing.Color.Transparent;
@@ -636,132 +762,6 @@
             this.adminNameText.Size = new System.Drawing.Size(235, 21);
             this.adminNameText.TabIndex = 69;
             this.adminNameText.Text = "...";
-            // 
-            // Profile_Update
-            // 
-            this.Profile_Update.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Profile_Update.BackColor = System.Drawing.Color.CadetBlue;
-            this.Profile_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profile_Update.ForeColor = System.Drawing.Color.Black;
-            this.Profile_Update.Location = new System.Drawing.Point(306, 656);
-            this.Profile_Update.Name = "Profile_Update";
-            this.Profile_Update.Size = new System.Drawing.Size(123, 28);
-            this.Profile_Update.TabIndex = 83;
-            this.Profile_Update.Text = "Update";
-            this.Profile_Update.UseVisualStyleBackColor = false;
-            this.Profile_Update.Click += new System.EventHandler(this.Profile_Update_Click);
-            // 
-            // Profile_Save
-            // 
-            this.Profile_Save.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Profile_Save.BackColor = System.Drawing.Color.CadetBlue;
-            this.Profile_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profile_Save.ForeColor = System.Drawing.Color.Black;
-            this.Profile_Save.Location = new System.Drawing.Point(224, 656);
-            this.Profile_Save.Name = "Profile_Save";
-            this.Profile_Save.Size = new System.Drawing.Size(119, 28);
-            this.Profile_Save.TabIndex = 84;
-            this.Profile_Save.Text = "Save";
-            this.Profile_Save.UseVisualStyleBackColor = false;
-            this.Profile_Save.Click += new System.EventHandler(this.Profile_Save_Click);
-            // 
-            // pName_text
-            // 
-            this.pName_text.Location = new System.Drawing.Point(328, 198);
-            this.pName_text.Name = "pName_text";
-            this.pName_text.Size = new System.Drawing.Size(170, 20);
-            this.pName_text.TabIndex = 85;
-            // 
-            // pNid_text
-            // 
-            this.pNid_text.Location = new System.Drawing.Point(328, 233);
-            this.pNid_text.Name = "pNid_text";
-            this.pNid_text.Size = new System.Drawing.Size(170, 20);
-            this.pNid_text.TabIndex = 86;
-            // 
-            // pBlood_text
-            // 
-            this.pBlood_text.Location = new System.Drawing.Point(328, 560);
-            this.pBlood_text.Name = "pBlood_text";
-            this.pBlood_text.Size = new System.Drawing.Size(170, 20);
-            this.pBlood_text.TabIndex = 87;
-            // 
-            // pReligion_text
-            // 
-            this.pReligion_text.Location = new System.Drawing.Point(328, 447);
-            this.pReligion_text.Name = "pReligion_text";
-            this.pReligion_text.Size = new System.Drawing.Size(170, 20);
-            this.pReligion_text.TabIndex = 88;
-            // 
-            // pPhone_text
-            // 
-            this.pPhone_text.Location = new System.Drawing.Point(328, 339);
-            this.pPhone_text.Name = "pPhone_text";
-            this.pPhone_text.Size = new System.Drawing.Size(170, 20);
-            this.pPhone_text.TabIndex = 89;
-            // 
-            // pMother_text
-            // 
-            this.pMother_text.Location = new System.Drawing.Point(328, 303);
-            this.pMother_text.Name = "pMother_text";
-            this.pMother_text.Size = new System.Drawing.Size(170, 20);
-            this.pMother_text.TabIndex = 90;
-            // 
-            // pGmail_text
-            // 
-            this.pGmail_text.Location = new System.Drawing.Point(328, 376);
-            this.pGmail_text.Name = "pGmail_text";
-            this.pGmail_text.Size = new System.Drawing.Size(170, 20);
-            this.pGmail_text.TabIndex = 91;
-            // 
-            // pGender_text
-            // 
-            this.pGender_text.Location = new System.Drawing.Point(328, 523);
-            this.pGender_text.Name = "pGender_text";
-            this.pGender_text.Size = new System.Drawing.Size(170, 20);
-            this.pGender_text.TabIndex = 92;
-            // 
-            // pAddress_text
-            // 
-            this.pAddress_text.Location = new System.Drawing.Point(328, 413);
-            this.pAddress_text.Name = "pAddress_text";
-            this.pAddress_text.Size = new System.Drawing.Size(170, 20);
-            this.pAddress_text.TabIndex = 93;
-            // 
-            // pMaritStatus_text
-            // 
-            this.pMaritStatus_text.Location = new System.Drawing.Point(328, 489);
-            this.pMaritStatus_text.Name = "pMaritStatus_text";
-            this.pMaritStatus_text.Size = new System.Drawing.Size(170, 20);
-            this.pMaritStatus_text.TabIndex = 94;
-            // 
-            // pFather_text
-            // 
-            this.pFather_text.Location = new System.Drawing.Point(328, 269);
-            this.pFather_text.Name = "pFather_text";
-            this.pFather_text.Size = new System.Drawing.Size(170, 20);
-            this.pFather_text.TabIndex = 95;
-            // 
-            // pDob_text
-            // 
-            this.pDob_text.Location = new System.Drawing.Point(328, 601);
-            this.pDob_text.Name = "pDob_text";
-            this.pDob_text.Size = new System.Drawing.Size(170, 20);
-            this.pDob_text.TabIndex = 96;
-            // 
-            // Profile_Cancel
-            // 
-            this.Profile_Cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Profile_Cancel.BackColor = System.Drawing.Color.CadetBlue;
-            this.Profile_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profile_Cancel.ForeColor = System.Drawing.Color.Black;
-            this.Profile_Cancel.Location = new System.Drawing.Point(361, 656);
-            this.Profile_Cancel.Name = "Profile_Cancel";
-            this.Profile_Cancel.Size = new System.Drawing.Size(119, 28);
-            this.Profile_Cancel.TabIndex = 97;
-            this.Profile_Cancel.Text = "Cancel";
-            this.Profile_Cancel.UseVisualStyleBackColor = false;
-            this.Profile_Cancel.Click += new System.EventHandler(this.Profile_Cancel_Click);
             // 
             // Admin_Dashboard
             // 
