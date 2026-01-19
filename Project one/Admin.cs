@@ -223,10 +223,13 @@ namespace Project_one
             DataTable dt = new DataTable();
             try
             {
-                using (SqlConnection con = new SqlConnection("your_connection_string"))
+                using (SqlConnection con = new SqlConnection(connection))
                 {
                     con.Open();
-                    string query = @"SELECT * FROM Employee WHERE E_Id LIKE @search OR E_Name LIKE @search OR E_Number LIKE @search OR E_Gmail LIKE @search OR E_Designation LIKE @search";
+                    string query = @"SELECT * FROM Employee  WHERE CAST(E_Id AS NVARCHAR) LIKE @search OR E_Name LIKE @search OR
+                    CAST(E_Number AS NVARCHAR) LIKE @search OR
+                    E_Gmail LIKE @search OR
+                    E_Designation LIKE @search";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {

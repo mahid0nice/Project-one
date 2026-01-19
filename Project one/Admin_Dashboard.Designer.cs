@@ -62,7 +62,6 @@
             this.EmployeeCancel_button = new System.Windows.Forms.Button();
             this.EmployeeUpdate_button = new System.Windows.Forms.Button();
             this.EUNid = new System.Windows.Forms.TextBox();
-            this.EmployeeSearch_label = new System.Windows.Forms.Label();
             this.employe_gridView = new System.Windows.Forms.DataGridView();
             this.Designation_label = new System.Windows.Forms.Label();
             this.adminHireStaff_button = new System.Windows.Forms.Button();
@@ -110,6 +109,7 @@
             this.adminNameText = new System.Windows.Forms.Label();
             this.pDob_text = new System.Windows.Forms.TextBox();
             this.Profile_Cancel = new System.Windows.Forms.Button();
+            this.EmpSearch_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.adminHireEmployee_panel.SuspendLayout();
             this.adminEmployee_panel.SuspendLayout();
@@ -259,6 +259,7 @@
             // 
             // adminEmployee_panel
             // 
+            this.adminEmployee_panel.Controls.Add(this.EmpSearch_button);
             this.adminEmployee_panel.Controls.Add(this.EmployeeSearch_Text);
             this.adminEmployee_panel.Controls.Add(this.EUMaritalStatus);
             this.adminEmployee_panel.Controls.Add(this.EUGender);
@@ -281,7 +282,6 @@
             this.adminEmployee_panel.Controls.Add(this.EmployeeCancel_button);
             this.adminEmployee_panel.Controls.Add(this.EmployeeUpdate_button);
             this.adminEmployee_panel.Controls.Add(this.EUNid);
-            this.adminEmployee_panel.Controls.Add(this.EmployeeSearch_label);
             this.adminEmployee_panel.Controls.Add(this.employe_gridView);
             this.adminEmployee_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adminEmployee_panel.Location = new System.Drawing.Point(0, 0);
@@ -291,9 +291,9 @@
             // 
             // EmployeeSearch_Text
             // 
-            this.EmployeeSearch_Text.Location = new System.Drawing.Point(209, 74);
+            this.EmployeeSearch_Text.Location = new System.Drawing.Point(532, 82);
             this.EmployeeSearch_Text.Name = "EmployeeSearch_Text";
-            this.EmployeeSearch_Text.Size = new System.Drawing.Size(174, 20);
+            this.EmployeeSearch_Text.Size = new System.Drawing.Size(189, 20);
             this.EmployeeSearch_Text.TabIndex = 23;
             // 
             // EUMaritalStatus
@@ -414,7 +414,7 @@
             this.employeeDelete_button.BackColor = System.Drawing.Color.MediumPurple;
             this.employeeDelete_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeDelete_button.ForeColor = System.Drawing.Color.Black;
-            this.employeeDelete_button.Location = new System.Drawing.Point(421, 680);
+            this.employeeDelete_button.Location = new System.Drawing.Point(393, 680);
             this.employeeDelete_button.Name = "employeeDelete_button";
             this.employeeDelete_button.Size = new System.Drawing.Size(171, 38);
             this.employeeDelete_button.TabIndex = 6;
@@ -428,7 +428,7 @@
             this.EmployeeSave_button.BackColor = System.Drawing.Color.MediumPurple;
             this.EmployeeSave_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeSave_button.ForeColor = System.Drawing.Color.Black;
-            this.EmployeeSave_button.Location = new System.Drawing.Point(63, 680);
+            this.EmployeeSave_button.Location = new System.Drawing.Point(224, 680);
             this.EmployeeSave_button.Name = "EmployeeSave_button";
             this.EmployeeSave_button.Size = new System.Drawing.Size(171, 38);
             this.EmployeeSave_button.TabIndex = 5;
@@ -442,7 +442,7 @@
             this.EmployeeCancel_button.BackColor = System.Drawing.Color.MediumPurple;
             this.EmployeeCancel_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeCancel_button.ForeColor = System.Drawing.Color.Black;
-            this.EmployeeCancel_button.Location = new System.Drawing.Point(613, 680);
+            this.EmployeeCancel_button.Location = new System.Drawing.Point(393, 680);
             this.EmployeeCancel_button.Name = "EmployeeCancel_button";
             this.EmployeeCancel_button.Size = new System.Drawing.Size(171, 38);
             this.EmployeeCancel_button.TabIndex = 4;
@@ -470,17 +470,6 @@
             this.EUNid.Name = "EUNid";
             this.EUNid.Size = new System.Drawing.Size(174, 20);
             this.EUNid.TabIndex = 2;
-            // 
-            // EmployeeSearch_label
-            // 
-            this.EmployeeSearch_label.AutoSize = true;
-            this.EmployeeSearch_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.EmployeeSearch_label.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.EmployeeSearch_label.Location = new System.Drawing.Point(127, 69);
-            this.EmployeeSearch_label.Name = "EmployeeSearch_label";
-            this.EmployeeSearch_label.Size = new System.Drawing.Size(92, 25);
-            this.EmployeeSearch_label.TabIndex = 1;
-            this.EmployeeSearch_label.Text = "Search: ";
             // 
             // employe_gridView
             // 
@@ -1026,6 +1015,20 @@
             this.Profile_Cancel.UseVisualStyleBackColor = false;
             this.Profile_Cancel.Click += new System.EventHandler(this.Profile_Cancel_Click);
             // 
+            // EmpSearch_button
+            // 
+            this.EmpSearch_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EmpSearch_button.BackColor = System.Drawing.Color.Teal;
+            this.EmpSearch_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpSearch_button.ForeColor = System.Drawing.Color.Black;
+            this.EmpSearch_button.Location = new System.Drawing.Point(431, 77);
+            this.EmpSearch_button.Name = "EmpSearch_button";
+            this.EmpSearch_button.Size = new System.Drawing.Size(95, 27);
+            this.EmpSearch_button.TabIndex = 24;
+            this.EmpSearch_button.Text = "Search:";
+            this.EmpSearch_button.UseVisualStyleBackColor = false;
+            this.EmpSearch_button.Click += new System.EventHandler(this.EmpSearch_button_Click);
+            // 
             // Admin_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1109,7 +1112,6 @@
         private System.Windows.Forms.Panel adminEmployee_panel;
         private System.Windows.Forms.DataGridView employe_gridView;
         private System.Windows.Forms.TextBox EUNid;
-        private System.Windows.Forms.Label EmployeeSearch_label;
         private System.Windows.Forms.Button EmployeeSave_button;
         private System.Windows.Forms.Button EmployeeCancel_button;
         private System.Windows.Forms.Button EmployeeUpdate_button;
@@ -1131,5 +1133,6 @@
         private System.Windows.Forms.TextBox EUParmanentAddress;
         private System.Windows.Forms.TextBox EUReligion;
         private System.Windows.Forms.TextBox EmployeeSearch_Text;
+        private System.Windows.Forms.Button EmpSearch_button;
     }
 }

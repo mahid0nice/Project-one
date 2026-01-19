@@ -431,6 +431,26 @@ namespace Project_one
             EmployeeSave_button.Visible = false;
             EmployeeCancel_button.Visible = false;
         }
+
+        private void EmpSearch_button_Click(object sender, EventArgs e)
+        {
+            string search = EmployeeSearch_Text.Text.Trim();
+            Admin ad = new Admin();
+            DataTable dt = ad.SearchEmployees(search);
+
+            if (dt.Rows.Count > 0)
+            {
+                employe_gridView.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("No matching employees found. Showing previous data.");
+                DataTable previousData = ad.ShowAllEmployees(new Employee());
+                employe_gridView.DataSource = previousData;
+            }
+            employe_gridView.ReadOnly = true;
+            employe_gridView.ClearSelection();
+        }
     }
 }
 
