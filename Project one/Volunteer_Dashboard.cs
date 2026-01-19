@@ -46,5 +46,10 @@ namespace Project_one
         {
 
         }
+
+        private void Volunteer_Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
