@@ -36,14 +36,13 @@
             this.labeltime = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.Log_button = new System.Windows.Forms.Button();
             this.Password_textbox = new System.Windows.Forms.TextBox();
             this.Password_label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.user_combobox = new System.Windows.Forms.ComboBox();
-            this.username_textbox = new System.Windows.Forms.TextBox();
-            this.User_name_label = new System.Windows.Forms.Label();
+            this.authorities_combobox = new System.Windows.Forms.ComboBox();
+            this.userId_textbox = new System.Windows.Forms.TextBox();
+            this.User_ID_label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Log_in_panel.SuspendLayout();
@@ -75,14 +74,13 @@
             this.Log_in_panel.Controls.Add(this.labeltime);
             this.Log_in_panel.Controls.Add(this.lblTime);
             this.Log_in_panel.Controls.Add(this.label3);
-            this.Log_in_panel.Controls.Add(this.button1);
             this.Log_in_panel.Controls.Add(this.Log_button);
             this.Log_in_panel.Controls.Add(this.Password_textbox);
             this.Log_in_panel.Controls.Add(this.Password_label);
             this.Log_in_panel.Controls.Add(this.label2);
-            this.Log_in_panel.Controls.Add(this.user_combobox);
-            this.Log_in_panel.Controls.Add(this.username_textbox);
-            this.Log_in_panel.Controls.Add(this.User_name_label);
+            this.Log_in_panel.Controls.Add(this.authorities_combobox);
+            this.Log_in_panel.Controls.Add(this.userId_textbox);
+            this.Log_in_panel.Controls.Add(this.User_ID_label);
             this.Log_in_panel.Controls.Add(this.label1);
             this.Log_in_panel.Location = new System.Drawing.Point(297, 232);
             this.Log_in_panel.Name = "Log_in_panel";
@@ -129,25 +127,16 @@
             this.label3.Size = new System.Drawing.Size(0, 23);
             this.label3.TabIndex = 9;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(349, 362);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 39);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Next";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // Log_button
             // 
             this.Log_button.BackColor = System.Drawing.Color.Transparent;
-            this.Log_button.Location = new System.Drawing.Point(100, 362);
+            this.Log_button.Location = new System.Drawing.Point(197, 359);
             this.Log_button.Name = "Log_button";
             this.Log_button.Size = new System.Drawing.Size(149, 39);
             this.Log_button.TabIndex = 7;
             this.Log_button.Text = "Log In";
             this.Log_button.UseVisualStyleBackColor = false;
+            this.Log_button.Click += new System.EventHandler(this.Log_button_Click);
             // 
             // Password_textbox
             // 
@@ -177,36 +166,39 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Log in as";
             // 
-            // user_combobox
+            // authorities_combobox
             // 
-            this.user_combobox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.user_combobox.FormattingEnabled = true;
-            this.user_combobox.Location = new System.Drawing.Point(380, 138);
-            this.user_combobox.Name = "user_combobox";
-            this.user_combobox.Size = new System.Drawing.Size(144, 32);
-            this.user_combobox.TabIndex = 3;
-            this.user_combobox.Tag = "";
-            this.user_combobox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.authorities_combobox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.authorities_combobox.FormattingEnabled = true;
+            this.authorities_combobox.Items.AddRange(new object[] {
+            "Admin",
+            "Employee"});
+            this.authorities_combobox.Location = new System.Drawing.Point(380, 138);
+            this.authorities_combobox.Name = "authorities_combobox";
+            this.authorities_combobox.Size = new System.Drawing.Size(144, 32);
+            this.authorities_combobox.TabIndex = 3;
+            this.authorities_combobox.Tag = "";
+            this.authorities_combobox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // username_textbox
+            // userId_textbox
             // 
-            this.username_textbox.BackColor = System.Drawing.Color.Gainsboro;
-            this.username_textbox.Location = new System.Drawing.Point(35, 192);
-            this.username_textbox.Name = "username_textbox";
-            this.username_textbox.Size = new System.Drawing.Size(274, 29);
-            this.username_textbox.TabIndex = 2;
-            this.username_textbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.userId_textbox.BackColor = System.Drawing.Color.Gainsboro;
+            this.userId_textbox.Location = new System.Drawing.Point(35, 192);
+            this.userId_textbox.Name = "userId_textbox";
+            this.userId_textbox.Size = new System.Drawing.Size(274, 29);
+            this.userId_textbox.TabIndex = 2;
+            this.userId_textbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // User_name_label
+            // User_ID_label
             // 
-            this.User_name_label.AutoSize = true;
-            this.User_name_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.User_name_label.Location = new System.Drawing.Point(31, 157);
-            this.User_name_label.Name = "User_name_label";
-            this.User_name_label.Size = new System.Drawing.Size(108, 23);
-            this.User_name_label.TabIndex = 1;
-            this.User_name_label.Text = "User name";
-            this.User_name_label.Click += new System.EventHandler(this.label2_Click);
+            this.User_ID_label.AutoSize = true;
+            this.User_ID_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.User_ID_label.Location = new System.Drawing.Point(31, 157);
+            this.User_ID_label.Name = "User_ID_label";
+            this.User_ID_label.Size = new System.Drawing.Size(79, 23);
+            this.User_ID_label.TabIndex = 1;
+            this.User_ID_label.Text = "User Id";
+            this.User_ID_label.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -253,13 +245,12 @@
         private System.Windows.Forms.Label Log_In_page;
         private System.Windows.Forms.Panel Log_in_panel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label User_name_label;
-        private System.Windows.Forms.TextBox username_textbox;
-        private System.Windows.Forms.ComboBox user_combobox;
+        private System.Windows.Forms.Label User_ID_label;
+        private System.Windows.Forms.TextBox userId_textbox;
+        private System.Windows.Forms.ComboBox authorities_combobox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Password_textbox;
         private System.Windows.Forms.Label Password_label;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Log_button;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label label3;

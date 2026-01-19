@@ -7,6 +7,7 @@ namespace Project_one
     internal class Employee
     {
         public int Id { get; set; }
+        public string Password { get; set; }
         public string Designation { get; set; }
         public string Name { get; set; }
         public string NickName { get; set; }
@@ -22,7 +23,7 @@ namespace Project_one
         public string MaritalStatus { get; set; }
         public string Gender { get; set; }
         public string BloodGroup { get; set; }
-        public DateTime Dob { get; set; }
+        public DateTime? Dob { get; set; }
 
         public Employee() { }
         string connection = @"Data Source=(localdb)\MSSQLLocalDB;
@@ -111,5 +112,36 @@ namespace Project_one
             }
             return success;
         }
+
+        public bool CheckValidation()
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                {
+                    string query = @"
+                SELECT COUNT(*)
+                FROM Employee_Log_in E1
+                INNER JOIN Employee E2 ON E1.E_Id = E2.E_Id
+                WHERE E1.E_Id = @EmpId
+                  AND E1.E_Password = @Password";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@EmpId", Id);
+                        cmd.Parameters.AddWithValue("@Password", Password);
+
+                        con.Open();
+                        int count = (int)cmd.ExecuteScalar();
+                        return count == 1;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
     }
 }

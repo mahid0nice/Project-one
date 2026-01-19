@@ -27,6 +27,7 @@ namespace Project_one
         public string MaritalStatus { get; set; }
         public string Gender { get; set; }
         public string BloodGroup { get; set; }
+        public string Password { get; set; }
         public string Dob { get; set; }
         public Admin() { }
         public Admin(int id, string name, long nId, string fatherName, string motherName, long phoneNumber, string gmail, string address, string religion, string maritalStatus, string gender, string bloodGroup)
@@ -244,6 +245,37 @@ namespace Project_one
                 MessageBox.Show("Error: " + ex.Message);
             }
             return dt;
+        }
+
+        public bool CheckValidation()
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                {
+                    string query = @"
+                SELECT COUNT(*)
+                FROM Admin_Log_in A1
+                INNER JOIN Admin A2 ON A1.Admin_Id = A2.Admin_Id
+                WHERE A1.Admin_Id = @AdminId
+                  AND A1.Admin_Password = @Password";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@AdminId", Id);
+                        cmd.Parameters.AddWithValue("@Password", Password);
+
+                        con.Open();
+                        int count = (int)cmd.ExecuteScalar();
+                        return count == 1;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
         }
 
     }

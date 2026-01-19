@@ -110,6 +110,7 @@
             this.pDob_text = new System.Windows.Forms.TextBox();
             this.Profile_Cancel = new System.Windows.Forms.Button();
             this.EmpSearch_button = new System.Windows.Forms.Button();
+            this.EmpRefresh_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.adminHireEmployee_panel.SuspendLayout();
             this.adminEmployee_panel.SuspendLayout();
@@ -259,6 +260,7 @@
             // 
             // adminEmployee_panel
             // 
+            this.adminEmployee_panel.Controls.Add(this.EmpRefresh_button);
             this.adminEmployee_panel.Controls.Add(this.EmpSearch_button);
             this.adminEmployee_panel.Controls.Add(this.EmployeeSearch_Text);
             this.adminEmployee_panel.Controls.Add(this.EUMaritalStatus);
@@ -291,7 +293,7 @@
             // 
             // EmployeeSearch_Text
             // 
-            this.EmployeeSearch_Text.Location = new System.Drawing.Point(532, 82);
+            this.EmployeeSearch_Text.Location = new System.Drawing.Point(494, 61);
             this.EmployeeSearch_Text.Name = "EmployeeSearch_Text";
             this.EmployeeSearch_Text.Size = new System.Drawing.Size(189, 20);
             this.EmployeeSearch_Text.TabIndex = 23;
@@ -414,9 +416,9 @@
             this.employeeDelete_button.BackColor = System.Drawing.Color.MediumPurple;
             this.employeeDelete_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeDelete_button.ForeColor = System.Drawing.Color.Black;
-            this.employeeDelete_button.Location = new System.Drawing.Point(393, 680);
+            this.employeeDelete_button.Location = new System.Drawing.Point(369, 669);
             this.employeeDelete_button.Name = "employeeDelete_button";
-            this.employeeDelete_button.Size = new System.Drawing.Size(171, 38);
+            this.employeeDelete_button.Size = new System.Drawing.Size(156, 38);
             this.employeeDelete_button.TabIndex = 6;
             this.employeeDelete_button.Text = "Delete";
             this.employeeDelete_button.UseVisualStyleBackColor = false;
@@ -428,9 +430,9 @@
             this.EmployeeSave_button.BackColor = System.Drawing.Color.MediumPurple;
             this.EmployeeSave_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeSave_button.ForeColor = System.Drawing.Color.Black;
-            this.EmployeeSave_button.Location = new System.Drawing.Point(224, 680);
+            this.EmployeeSave_button.Location = new System.Drawing.Point(197, 669);
             this.EmployeeSave_button.Name = "EmployeeSave_button";
-            this.EmployeeSave_button.Size = new System.Drawing.Size(171, 38);
+            this.EmployeeSave_button.Size = new System.Drawing.Size(166, 38);
             this.EmployeeSave_button.TabIndex = 5;
             this.EmployeeSave_button.Text = "Save";
             this.EmployeeSave_button.UseVisualStyleBackColor = false;
@@ -442,9 +444,9 @@
             this.EmployeeCancel_button.BackColor = System.Drawing.Color.MediumPurple;
             this.EmployeeCancel_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeCancel_button.ForeColor = System.Drawing.Color.Black;
-            this.EmployeeCancel_button.Location = new System.Drawing.Point(393, 680);
+            this.EmployeeCancel_button.Location = new System.Drawing.Point(369, 668);
             this.EmployeeCancel_button.Name = "EmployeeCancel_button";
-            this.EmployeeCancel_button.Size = new System.Drawing.Size(171, 38);
+            this.EmployeeCancel_button.Size = new System.Drawing.Size(156, 38);
             this.EmployeeCancel_button.TabIndex = 4;
             this.EmployeeCancel_button.Text = "Cancel";
             this.EmployeeCancel_button.UseVisualStyleBackColor = false;
@@ -456,9 +458,9 @@
             this.EmployeeUpdate_button.BackColor = System.Drawing.Color.MediumPurple;
             this.EmployeeUpdate_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeUpdate_button.ForeColor = System.Drawing.Color.Black;
-            this.EmployeeUpdate_button.Location = new System.Drawing.Point(244, 680);
+            this.EmployeeUpdate_button.Location = new System.Drawing.Point(205, 668);
             this.EmployeeUpdate_button.Name = "EmployeeUpdate_button";
-            this.EmployeeUpdate_button.Size = new System.Drawing.Size(171, 38);
+            this.EmployeeUpdate_button.Size = new System.Drawing.Size(158, 38);
             this.EmployeeUpdate_button.TabIndex = 3;
             this.EmployeeUpdate_button.Text = "Update";
             this.EmployeeUpdate_button.UseVisualStyleBackColor = false;
@@ -1021,13 +1023,27 @@
             this.EmpSearch_button.BackColor = System.Drawing.Color.Teal;
             this.EmpSearch_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmpSearch_button.ForeColor = System.Drawing.Color.Black;
-            this.EmpSearch_button.Location = new System.Drawing.Point(431, 77);
+            this.EmpSearch_button.Location = new System.Drawing.Point(393, 56);
             this.EmpSearch_button.Name = "EmpSearch_button";
             this.EmpSearch_button.Size = new System.Drawing.Size(95, 27);
             this.EmpSearch_button.TabIndex = 24;
             this.EmpSearch_button.Text = "Search:";
             this.EmpSearch_button.UseVisualStyleBackColor = false;
             this.EmpSearch_button.Click += new System.EventHandler(this.EmpSearch_button_Click);
+            // 
+            // EmpRefresh_button
+            // 
+            this.EmpRefresh_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EmpRefresh_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.EmpRefresh_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpRefresh_button.ForeColor = System.Drawing.Color.Black;
+            this.EmpRefresh_button.Location = new System.Drawing.Point(531, 670);
+            this.EmpRefresh_button.Name = "EmpRefresh_button";
+            this.EmpRefresh_button.Size = new System.Drawing.Size(163, 36);
+            this.EmpRefresh_button.TabIndex = 25;
+            this.EmpRefresh_button.Text = "Refresh";
+            this.EmpRefresh_button.UseVisualStyleBackColor = false;
+            this.EmpRefresh_button.Click += new System.EventHandler(this.EmpRefresh_button_Click);
             // 
             // Admin_Dashboard
             // 
@@ -1134,5 +1150,6 @@
         private System.Windows.Forms.TextBox EUReligion;
         private System.Windows.Forms.TextBox EmployeeSearch_Text;
         private System.Windows.Forms.Button EmpSearch_button;
+        private System.Windows.Forms.Button EmpRefresh_button;
     }
 }
