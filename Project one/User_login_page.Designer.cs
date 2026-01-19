@@ -65,7 +65,7 @@
             this.Log_in_Page_panel.Controls.Add(this.Username_label_for_user_label);
             this.Log_in_Page_panel.Controls.Add(this.Time2_label);
             this.Log_in_Page_panel.Controls.Add(this.Timer_3_label);
-            this.Log_in_Page_panel.Location = new System.Drawing.Point(285, 208);
+            this.Log_in_Page_panel.Location = new System.Drawing.Point(129, 208);
             this.Log_in_Page_panel.Name = "Log_in_Page_panel";
             this.Log_in_Page_panel.Size = new System.Drawing.Size(494, 481);
             this.Log_in_Page_panel.TabIndex = 0;
@@ -228,7 +228,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Project_one.Properties.Resources._360_F_588241010_cdQJ2QTsyDtt36jZsAFR45aAXICnPAzR1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1104, 839);
+            this.ClientSize = new System.Drawing.Size(793, 839);
             this.Controls.Add(this.Log_in_Page_panel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
