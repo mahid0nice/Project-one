@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project_one
@@ -109,10 +102,10 @@ namespace Project_one
 
         }
 
- 
+
         private void adminHireEmployeeStaff_button_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void HireEmployee_panel_Paint(object sender, PaintEventArgs e)
@@ -137,7 +130,7 @@ namespace Project_one
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void adminHireManager_button_Click(object sender, EventArgs e)
@@ -172,7 +165,7 @@ namespace Project_one
         {
             AdminProfile_panel.Visible = true;
             adminHireEmployee_panel.Visible = true;
-            
+
         }
 
         private void Profile_Update_Click(object sender, EventArgs e)
@@ -225,8 +218,8 @@ namespace Project_one
                     showProfile();
                     showProfileTextBox(false);
                     showProfileLabel(true);
-                    
-                }    
+
+                }
                 else
                     MessageBox.Show("Record cannot be updated.");
             }

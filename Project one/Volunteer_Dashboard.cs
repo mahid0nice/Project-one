@@ -15,7 +15,12 @@ namespace Project_one
         public Volunteer_Dashboard()
         {
             InitializeComponent();
+            
+
+
         }
+        
+        
 
         private void volunteer_profile_view_panel_Paint(object sender, PaintEventArgs e)
         {
@@ -48,6 +53,23 @@ namespace Project_one
         }
 
         private void Volunteer_Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Volunteer_Profile_Button_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Job_list_button_Click(object sender, EventArgs e)
+        {
+            
+
+
+        }
+
+        private void Job_apply_Search_panel_Paint(object sender, PaintEventArgs e)
         {
 
         }
