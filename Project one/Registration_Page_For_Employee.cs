@@ -165,6 +165,8 @@ namespace Project_one
 
             if (insertDB == 1)
             {
+                new Admin_Dashboard().Show();
+                this.Hide();
                 MessageBox.Show("Registration Successfully");
                 first_name_textbox.Clear();
                 last_name_textbox.Clear();
@@ -188,6 +190,7 @@ namespace Project_one
                 Female_radioButton.Checked = false;
                 others_gender_radiobutton.Checked = false;
                 maskedTextBox1.Clear();
+
             }
             else if (insertDB == 2)
             {
@@ -205,6 +208,12 @@ namespace Project_one
             {
                 MessageBox.Show("Unexpected error occurred.\n");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Admin_Dashboard().Show();
+            this.Hide();
         }
     }
 }

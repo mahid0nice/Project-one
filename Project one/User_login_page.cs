@@ -36,5 +36,11 @@ namespace Project_one
         {
 
         }
+
+        private void volunteer_sign_up_button_Click(object sender, EventArgs e)
+        {
+            new Registration_Page_for_volunteer().Show();
+            this.Hide();
+        }
     }
 }

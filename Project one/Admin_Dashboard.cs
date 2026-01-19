@@ -36,6 +36,7 @@ namespace Project_one
             adminEmployee_panel.Visible = panel > 2;
             Rules_panel.Visible = panel > 3;
             UpdatePassword.Visible = panel > 4;
+            VolunteerPanel.Visible = panel > 5;
         }
 
 
@@ -819,6 +820,213 @@ namespace Project_one
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void LoadVolunteers()
+        {
+            Admin ad = new Admin();
+            v_dataGridView1.DataSource = ad.ShowAllVolunteers();
+
+            foreach (DataGridViewRow row in v_dataGridView1.Rows)
+            { row.ReadOnly = true; }
+
+            v_dataGridView1.ClearSelection();
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            vCancel.Visible = false;
+            vSave.Visible = false;
+            vRefresh.Visible = false;
+            vUpdate.Visible = true;
+            vDelete.Visible = true;
+            Admin ad = new Admin();
+            v_dataGridView1.DataSource = ad.ShowAllVolunteers();
+            LoadVolunteers();
+            v_dataGridView1.ClearSelection();
+            v_NameText.Visible = false;
+            V_IdText.Visible = false;
+            V_PhoneText.Visible = false;
+            V_DobText.Visible = false;
+            V_Address.Visible = false;
+            V_GmailText.Visible = false;
+            V_NIDTEXT.Visible = false;
+            V_ReligionText.Visible = false;
+            V_FatherName.Visible = false;
+            V_MotherName.Visible = false;
+            V_Skill1.Visible = false;
+            V_Skill2.Visible = false;
+            V_Gender.Visible = false;
+            ShowPanels(6);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        { 
+            vRefresh.Visible = true;
+            string search = v_searchText.Text.Trim();
+            Admin ad = new Admin();
+
+            DataTable dt = ad.SearchVolunteers(search);
+
+            if (dt.Rows.Count > 0)
+                v_dataGridView1.DataSource = dt;
+            else
+            {
+                MessageBox.Show("No volunteers found.");
+                LoadVolunteers();
+            }
+
+            foreach (DataGridViewRow row in v_dataGridView1.Rows)
+                row.ReadOnly = true;
+
+            v_dataGridView1.ClearSelection();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (v_dataGridView1.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Select one volunteer to update.");
+                return;
+            }
+            vCancel.Visible = true;
+            vSave.Visible = true;
+            vUpdate.Visible = false;
+            vDelete.Visible = false;
+            foreach (DataGridViewRow row in v_dataGridView1.Rows)
+                row.ReadOnly = true;
+
+            int index = v_dataGridView1.SelectedRows[0].Index;
+            v_dataGridView1.Rows[index].ReadOnly = false;
+            v_dataGridView1.Rows[index].Cells["V_Id"].ReadOnly = true;
+
+            MessageBox.Show("You can now edit the selected volunteer.");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            vCancel.Visible = false;
+            vSave.Visible = false;
+            vUpdate.Visible = true;
+            vDelete.Visible = true;
+            foreach (DataGridViewRow row in v_dataGridView1.Rows)
+                row.ReadOnly = true;
+
+            v_dataGridView1.ClearSelection();
+            LoadVolunteers();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (v_dataGridView1.SelectedRows.Count != 1)
+                return;
+
+            DataGridViewRow row = v_dataGridView1.SelectedRows[0];
+
+            Volunteer v = new Volunteer
+            {
+                Id = Convert.ToInt32(row.Cells["V_Id"].Value),
+                Name = row.Cells["V_Name"].Value.ToString(),
+                PhoneNumber = Convert.ToInt64(row.Cells["V_PhoneNumber"].Value),
+                Dob = Convert.ToDateTime(row.Cells["V_DOB"].Value),
+                Address = row.Cells["V_Address"].Value.ToString(),
+                Gmail = row.Cells["V_Gmail"].Value.ToString(),
+                NID = Convert.ToInt64(row.Cells["V_NID"].Value),
+                Religion = row.Cells["V_Religion"].Value.ToString(),
+                FatherName = row.Cells["V_FatherName"].Value.ToString(),
+                MotherName = row.Cells["V_MotherName"].Value.ToString(),
+                Skill1 = row.Cells["V_Skill1"].Value.ToString(),
+                Skill2 = row.Cells["V_Skill2"].Value?.ToString(),
+                Gender = row.Cells["V_Gender"].Value.ToString()
+            };
+
+            Admin ad = new Admin();
+            int result = ad.UpdateVolunteer(v);
+
+            if (result == 1)
+            {
+                MessageBox.Show("Volunteer updated successfully.");
+                LoadVolunteers();
+                vCancel.Visible = false;
+                vSave.Visible = false;
+                vUpdate.Visible = true;
+                vDelete.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Volunteer update failed.");
+            }
+        }
+        private void v_DeleteButton_Click(object sender, EventArgs e)
+        {
+            if (v_dataGridView1.SelectedRows.Count != 1)
+                return;
+
+            int id = Convert.ToInt32(
+                v_dataGridView1.SelectedRows[0].Cells["V_Id"].Value);
+
+            DialogResult dr = MessageBox.Show(
+                "Are you sure you want to delete this volunteer?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (dr == DialogResult.Yes)
+            {
+                Admin ad = new Admin();
+                int result = ad.DeleteVolunteer(id);
+
+                if (result == 1)
+                {
+                    MessageBox.Show("Volunteer deleted successfully.");
+                    LoadVolunteers();
+                }
+                else
+                {
+                    MessageBox.Show("Delete failed.");
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            vCancel.Visible = false;
+            vSave.Visible = false;
+            vRefresh.Visible = false;
+            vUpdate.Visible = true;
+            vDelete.Visible = true;
+            v_searchText.Clear();
+            LoadVolunteers();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (v_dataGridView1.SelectedRows.Count != 1)
+                return;
+
+            int id = Convert.ToInt32(
+                v_dataGridView1.SelectedRows[0].Cells["V_Id"].Value);
+
+            DialogResult dr = MessageBox.Show(
+                "Are you sure you want to delete this volunteer?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (dr == DialogResult.Yes)
+            {
+                Admin ad = new Admin();
+                int result = ad.DeleteVolunteer(id);
+
+                if (result == 1)
+                {
+                    MessageBox.Show("Volunteer deleted successfully.");
+                    LoadVolunteers();
+                }
+                else
+                {
+                    MessageBox.Show("Delete failed.");
+                }
             }
         }
     }

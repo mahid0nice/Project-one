@@ -80,6 +80,7 @@
             this.volunteer_sign_up_button.TabIndex = 12;
             this.volunteer_sign_up_button.Text = "volunteer sign up";
             this.volunteer_sign_up_button.UseVisualStyleBackColor = false;
+            this.volunteer_sign_up_button.Click += new System.EventHandler(this.volunteer_sign_up_button_Click);
             // 
             // customer_sign_up_button
             // 

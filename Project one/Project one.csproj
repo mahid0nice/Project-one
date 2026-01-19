@@ -80,6 +80,7 @@
     <Compile Include="Registration_Page_for_volunteer.Designer.cs">
       <DependentUpon>Registration_Page_for_volunteer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Volunteer.cs" />
     <Compile Include="Volunteer_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>

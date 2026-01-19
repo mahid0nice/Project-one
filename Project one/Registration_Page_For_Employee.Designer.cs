@@ -77,6 +77,7 @@
             this.Lastname_label = new System.Windows.Forms.Label();
             this.Registration_lebel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.registration_panel.SuspendLayout();
             this.Gender_groupbox.SuspendLayout();
@@ -146,6 +147,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.registration_panel.BackgroundImage = global::Project_one.Properties.Resources.light;
+            this.registration_panel.Controls.Add(this.button1);
             this.registration_panel.Controls.Add(this.DobPicker);
             this.registration_panel.Controls.Add(this.submit_button);
             this.registration_panel.Controls.Add(this.DesignationText);
@@ -201,7 +203,7 @@
             // 
             this.submit_button.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.submit_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submit_button.Location = new System.Drawing.Point(257, 691);
+            this.submit_button.Location = new System.Drawing.Point(132, 708);
             this.submit_button.Name = "submit_button";
             this.submit_button.Size = new System.Drawing.Size(157, 41);
             this.submit_button.TabIndex = 43;
@@ -628,6 +630,18 @@
             this.panel1.Size = new System.Drawing.Size(365, 839);
             this.panel1.TabIndex = 10;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(313, 708);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 41);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Registration_Page_For_Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -703,5 +717,6 @@
         private System.Windows.Forms.Label employee_id;
         private System.Windows.Forms.Button submit_button;
         private System.Windows.Forms.DateTimePicker DobPicker;
+        private System.Windows.Forms.Button button1;
     }
 }
