@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,6 +27,7 @@ namespace Project_one
         public string MaritalStatus { get; set; }
         public string Gender { get; set; }
         public string BloodGroup { get; set; }
+        public string Password { get; set; }
         public string Dob { get; set; }
         public Admin() { }
         public Admin(int id, string name, long nId, string fatherName, string motherName, long phoneNumber, string gmail, string address, string religion, string maritalStatus, string gender, string bloodGroup)
@@ -121,5 +123,288 @@ namespace Project_one
                 return 0;
             }
         }
+
+        public DataTable ShowAllEmployees(Employee ee)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection sqc = new SqlConnection(connection))
+                using (SqlDataAdapter sqd = new SqlDataAdapter("SELECT * FROM Employee", sqc))
+                {
+                    sqd.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading employees:\n" + ex.Message);
+            }
+
+            return dt;
+        }
+
+        public int UpdateEmployee(Employee ee)
+        {
+            string query = @"UPDATE Employee SET 
+                        E_Name=@Name,
+                        E_NickName=@NickName,
+                        E_Designation=@Designation,
+                        E_NID=@NID,
+                        E_FatherName=@FatherName,
+                        E_MotherName=@MotherName,
+                        E_Number=@PhoneNumber,
+                        E_Emergency_Number=@EmergencyNumber,
+                        E_Gmail=@Gmail,
+                        E_Address=@Address,
+                        E_Parmanent_Address=@ParmanentAddress,
+                        E_Religion=@Religion,
+                        E_MaritalStatus=@MaritalStatus,
+                        E_Gender=@Gender,
+                        E_BloodGroup=@BloodGroup,
+                        E_DOB=@Dob
+                     WHERE E_Id=@Id";
+
+            try
+            {
+                using (SqlConnection sqc = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, sqc))
+                {
+                    cmd.Parameters.AddWithValue("@Id", ee.Id);
+                    cmd.Parameters.AddWithValue("@Name", ee.Name);
+                    cmd.Parameters.AddWithValue("@NickName", ee.NickName);
+                    cmd.Parameters.AddWithValue("@Designation", ee.Designation);
+                    cmd.Parameters.AddWithValue("@NID", ee.NID);
+                    cmd.Parameters.AddWithValue("@FatherName", ee.FatherName);
+                    cmd.Parameters.AddWithValue("@MotherName", ee.MotherName);
+                    cmd.Parameters.AddWithValue("@PhoneNumber", ee.PhoneNumber);
+                    cmd.Parameters.AddWithValue("@EmergencyNumber", ee.EmergencyNumber);
+                    cmd.Parameters.AddWithValue("@Gmail", ee.Gmail);
+                    cmd.Parameters.AddWithValue("@Address", ee.Address);
+                    cmd.Parameters.AddWithValue("@ParmanentAddress", ee.ParmanentAddress);
+                    cmd.Parameters.AddWithValue("@Religion", ee.Religion);
+                    cmd.Parameters.AddWithValue("@MaritalStatus", (object)ee.MaritalStatus ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Gender", ee.Gender);
+                    cmd.Parameters.AddWithValue("@BloodGroup", ee.BloodGroup);
+                    cmd.Parameters.AddWithValue("@Dob", ee.Dob);
+
+                    sqc.Open();
+                    return cmd.ExecuteNonQuery();
+                    sqc.Close();
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public int DeleteEmployee(Employee ee)
+        {
+            string query = "DELETE FROM Employee WHERE E_Id = @Id";
+            try
+            {
+                using (SqlConnection sqc = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, sqc))
+                {
+                    cmd.Parameters.AddWithValue("@Id", ee.Id);
+                    sqc.Open();
+                    return cmd.ExecuteNonQuery();
+                    sqc.Close();
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public DataTable SearchEmployees(string search)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                {
+                    con.Open();
+                    string query = @"SELECT * FROM Employee  WHERE CAST(E_Id AS NVARCHAR) LIKE @search OR E_Name LIKE @search OR
+                    CAST(E_Number AS NVARCHAR) LIKE @search OR
+                    E_Gmail LIKE @search OR
+                    E_Designation LIKE @search";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            return dt;
+        }
+
+        public bool CheckValidation()
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                {
+                    string query = @"
+                SELECT COUNT(*)
+                FROM Admin_Log_in A1
+                INNER JOIN Admin A2 ON A1.Admin_Id = A2.Admin_Id
+                WHERE A1.Admin_Id = @AdminId
+                  AND A1.Admin_Password = @Password";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@AdminId", Id);
+                        cmd.Parameters.AddWithValue("@Password", Password);
+
+                        con.Open();
+                        int count = (int)cmd.ExecuteScalar();
+                        return count == 1;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
+        public DataTable ShowRules()
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Rules ORDER BY [No]", con))
+                {
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception)
+            {
+            }
+
+            return dt;
+        }
+
+        public int UpdateRules(int no, string ruleText)
+        {
+            string query = "UPDATE Rules SET Rules = @RuleText WHERE [No] = @No";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@No", no);
+                    cmd.Parameters.AddWithValue("@RuleText", ruleText);
+
+                    con.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+
+        public int DeleteRules(int no)
+        {
+            string query = "DELETE FROM Rules WHERE [No] = @No";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@No", no);
+
+                    con.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+
+        public DataTable SearchRules(string searchText)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(@"SELECT * FROM Rules 
+                                                 WHERE CAST([No] AS NVARCHAR) LIKE @search 
+                                                 OR Rules LIKE @search ORDER BY [No]", con))
+                {
+                    cmd.Parameters.AddWithValue("@search", "%" + searchText + "%");
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching rules:\n" + ex.Message);
+            }
+
+            return dt;
+        }
+
+        public int AddRules(int no, string ruleText)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                {
+                    string query = "INSERT INTO Rules (No, Rules) VALUES (@No, @RuleText)";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@No", no);
+                        cmd.Parameters.AddWithValue("@RuleText", ruleText);
+
+                        con.Open();
+                        return cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+
+        public bool UpdatePass(int adminId, string currentPassword, string newPassword)
+        {
+            using (SqlConnection con = new SqlConnection(connection))
+            {
+                con.Open();
+                string query = @"UPDATE Admin_Log_in SET Admin_Password = @NewPass WHERE Admin_Id = @AdminId AND Admin_Password = @CurrentPass";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@NewPass", newPassword);
+                    cmd.Parameters.AddWithValue("@AdminId", adminId);
+                    cmd.Parameters.AddWithValue("@CurrentPass", currentPassword);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+        }
+
     }
 }

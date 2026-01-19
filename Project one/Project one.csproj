@@ -95,6 +95,9 @@
     <EmbeddedResource Include="Admin_Dashboard.resx">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Dashboard.resx">
+      <DependentUpon>Employee_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login_authority.resx">
       <DependentUpon>Login_authority.cs</DependentUpon>
     </EmbeddedResource>

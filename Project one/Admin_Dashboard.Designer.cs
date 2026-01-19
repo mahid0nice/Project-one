@@ -31,19 +31,56 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Dashboard));
             this.admin_Profile_button = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.LogOut_button = new System.Windows.Forms.Button();
+            this.RulesButton = new System.Windows.Forms.Button();
+            this.Hire_Employe_button = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.Employee_button = new System.Windows.Forms.Button();
             this.adminHireEmployee_panel = new System.Windows.Forms.Panel();
+            this.adminEmployee_panel = new System.Windows.Forms.Panel();
+            this.Rules_panel = new System.Windows.Forms.Panel();
+            this.no_text = new System.Windows.Forms.TextBox();
+            this.rulesText = new System.Windows.Forms.TextBox();
+            this.RRefresh_button = new System.Windows.Forms.Button();
+            this.RSearch_button = new System.Windows.Forms.Button();
+            this.rulesSearch_text = new System.Windows.Forms.TextBox();
+            this.RDelete_button = new System.Windows.Forms.Button();
+            this.RSave_button = new System.Windows.Forms.Button();
+            this.RCancel_button = new System.Windows.Forms.Button();
+            this.RUpdate_button = new System.Windows.Forms.Button();
+            this.RulesGrid = new System.Windows.Forms.DataGridView();
+            this.EmpRefresh_button = new System.Windows.Forms.Button();
+            this.EmpSearch_button = new System.Windows.Forms.Button();
+            this.EmployeeSearch_Text = new System.Windows.Forms.TextBox();
+            this.EUMaritalStatus = new System.Windows.Forms.TextBox();
+            this.EUGender = new System.Windows.Forms.TextBox();
+            this.EUDob = new System.Windows.Forms.TextBox();
+            this.EUBloodGroup = new System.Windows.Forms.TextBox();
+            this.EUGmail = new System.Windows.Forms.TextBox();
+            this.EUAddress = new System.Windows.Forms.TextBox();
+            this.EUParmanentAddress = new System.Windows.Forms.TextBox();
+            this.EUReligion = new System.Windows.Forms.TextBox();
+            this.EUId = new System.Windows.Forms.TextBox();
+            this.EUFatherName = new System.Windows.Forms.TextBox();
+            this.EUMotherName = new System.Windows.Forms.TextBox();
+            this.EUNumber = new System.Windows.Forms.TextBox();
+            this.EUEmergencyNumber = new System.Windows.Forms.TextBox();
+            this.EUDesignation = new System.Windows.Forms.TextBox();
+            this.EUNickName = new System.Windows.Forms.TextBox();
+            this.EUName = new System.Windows.Forms.TextBox();
+            this.employeeDelete_button = new System.Windows.Forms.Button();
+            this.EmployeeSave_button = new System.Windows.Forms.Button();
+            this.EmployeeCancel_button = new System.Windows.Forms.Button();
+            this.EmployeeUpdate_button = new System.Windows.Forms.Button();
+            this.EUNid = new System.Windows.Forms.TextBox();
+            this.employe_gridView = new System.Windows.Forms.DataGridView();
             this.Designation_label = new System.Windows.Forms.Label();
             this.adminHireStaff_button = new System.Windows.Forms.Button();
             this.adminHireTeamLeader_button = new System.Windows.Forms.Button();
             this.adminHireSupervisor_button = new System.Windows.Forms.Button();
             this.adminHireManager_button = new System.Windows.Forms.Button();
-            this.Hire_Employe_button = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.adminProfileName_label = new System.Windows.Forms.Label();
             this.adminProfileNumber_label = new System.Windows.Forms.Label();
             this.adminProfileGmail_label = new System.Windows.Forms.Label();
@@ -57,8 +94,6 @@
             this.adminProfileMaritalStatus_lebel = new System.Windows.Forms.Label();
             this.adminProfileBloodGroup_label = new System.Windows.Forms.Label();
             this.AdminProfile_panel = new System.Windows.Forms.Panel();
-            this.Profile_Cancel = new System.Windows.Forms.Button();
-            this.pDob_text = new System.Windows.Forms.TextBox();
             this.pFather_text = new System.Windows.Forms.TextBox();
             this.pMaritStatus_text = new System.Windows.Forms.TextBox();
             this.pAddress_text = new System.Windows.Forms.TextBox();
@@ -85,10 +120,25 @@
             this.adminFatherText = new System.Windows.Forms.Label();
             this.adminNidText = new System.Windows.Forms.Label();
             this.adminNameText = new System.Windows.Forms.Label();
+            this.pDob_text = new System.Windows.Forms.TextBox();
+            this.Profile_Cancel = new System.Windows.Forms.Button();
+            this.RAdd_button = new System.Windows.Forms.Button();
+            this.RSave1_button = new System.Windows.Forms.Button();
+            this.UpdatePassword = new System.Windows.Forms.Panel();
+            this.Password = new System.Windows.Forms.Label();
+            this.newpass = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.oldPassWord = new System.Windows.Forms.Label();
+            this.oldPass = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.adminHireEmployee_panel.SuspendLayout();
+            this.adminEmployee_panel.SuspendLayout();
+            this.Rules_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RulesGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employe_gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.AdminProfile_panel.SuspendLayout();
+            this.UpdatePassword.SuspendLayout();
             this.SuspendLayout();
             // 
             // admin_Profile_button
@@ -108,15 +158,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.adminHireEmployee_panel);
+            this.panel1.Controls.Add(this.LogOut_button);
+            this.panel1.Controls.Add(this.RulesButton);
             this.panel1.Controls.Add(this.Hire_Employe_button);
             this.panel1.Controls.Add(this.admin_Profile_button);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.Employee_button);
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
@@ -124,110 +173,33 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button8
+            // LogOut_button
             // 
-            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8.BackColor = System.Drawing.Color.SteelBlue;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Location = new System.Drawing.Point(48, 578);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(217, 43);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = false;
+            this.LogOut_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LogOut_button.BackColor = System.Drawing.Color.SteelBlue;
+            this.LogOut_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOut_button.ForeColor = System.Drawing.Color.Black;
+            this.LogOut_button.Location = new System.Drawing.Point(48, 578);
+            this.LogOut_button.Name = "LogOut_button";
+            this.LogOut_button.Size = new System.Drawing.Size(217, 43);
+            this.LogOut_button.TabIndex = 7;
+            this.LogOut_button.Text = "Log Out";
+            this.LogOut_button.UseVisualStyleBackColor = false;
+            this.LogOut_button.Click += new System.EventHandler(this.LogOut_button_Click);
             // 
-            // button7
+            // RulesButton
             // 
-            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button7.BackColor = System.Drawing.Color.SteelBlue;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(48, 520);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(217, 41);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // adminHireEmployee_panel
-            // 
-            this.adminHireEmployee_panel.Controls.Add(this.Designation_label);
-            this.adminHireEmployee_panel.Controls.Add(this.adminHireStaff_button);
-            this.adminHireEmployee_panel.Controls.Add(this.adminHireTeamLeader_button);
-            this.adminHireEmployee_panel.Controls.Add(this.adminHireSupervisor_button);
-            this.adminHireEmployee_panel.Controls.Add(this.adminHireManager_button);
-            this.adminHireEmployee_panel.Location = new System.Drawing.Point(61, 257);
-            this.adminHireEmployee_panel.Name = "adminHireEmployee_panel";
-            this.adminHireEmployee_panel.Size = new System.Drawing.Size(157, 90);
-            this.adminHireEmployee_panel.TabIndex = 3;
-            // 
-            // Designation_label
-            // 
-            this.Designation_label.BackColor = System.Drawing.Color.Transparent;
-            this.Designation_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Designation_label.ForeColor = System.Drawing.Color.Black;
-            this.Designation_label.Location = new System.Drawing.Point(119, 251);
-            this.Designation_label.Name = "Designation_label";
-            this.Designation_label.Size = new System.Drawing.Size(211, 28);
-            this.Designation_label.TabIndex = 42;
-            this.Designation_label.Text = "Select Designation :";
-            // 
-            // adminHireStaff_button
-            // 
-            this.adminHireStaff_button.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.adminHireStaff_button.BackColor = System.Drawing.Color.SteelBlue;
-            this.adminHireStaff_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminHireStaff_button.ForeColor = System.Drawing.Color.Black;
-            this.adminHireStaff_button.Location = new System.Drawing.Point(48, 96);
-            this.adminHireStaff_button.Name = "adminHireStaff_button";
-            this.adminHireStaff_button.Size = new System.Drawing.Size(217, 38);
-            this.adminHireStaff_button.TabIndex = 8;
-            this.adminHireStaff_button.Text = "Staff";
-            this.adminHireStaff_button.UseVisualStyleBackColor = false;
-            this.adminHireStaff_button.Click += new System.EventHandler(this.adminHireStaff_button_Click);
-            // 
-            // adminHireTeamLeader_button
-            // 
-            this.adminHireTeamLeader_button.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.adminHireTeamLeader_button.BackColor = System.Drawing.Color.SteelBlue;
-            this.adminHireTeamLeader_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminHireTeamLeader_button.ForeColor = System.Drawing.Color.Black;
-            this.adminHireTeamLeader_button.Location = new System.Drawing.Point(-191, 96);
-            this.adminHireTeamLeader_button.Name = "adminHireTeamLeader_button";
-            this.adminHireTeamLeader_button.Size = new System.Drawing.Size(217, 38);
-            this.adminHireTeamLeader_button.TabIndex = 7;
-            this.adminHireTeamLeader_button.Text = "Team Leader";
-            this.adminHireTeamLeader_button.UseVisualStyleBackColor = false;
-            this.adminHireTeamLeader_button.Click += new System.EventHandler(this.adminHireTeamLeader_button_Click);
-            // 
-            // adminHireSupervisor_button
-            // 
-            this.adminHireSupervisor_button.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.adminHireSupervisor_button.BackColor = System.Drawing.Color.SteelBlue;
-            this.adminHireSupervisor_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminHireSupervisor_button.ForeColor = System.Drawing.Color.Black;
-            this.adminHireSupervisor_button.Location = new System.Drawing.Point(48, 9);
-            this.adminHireSupervisor_button.Name = "adminHireSupervisor_button";
-            this.adminHireSupervisor_button.Size = new System.Drawing.Size(217, 38);
-            this.adminHireSupervisor_button.TabIndex = 6;
-            this.adminHireSupervisor_button.Text = "Supervisor";
-            this.adminHireSupervisor_button.UseVisualStyleBackColor = false;
-            this.adminHireSupervisor_button.Click += new System.EventHandler(this.adminHireSupervisor_button_Click);
-            // 
-            // adminHireManager_button
-            // 
-            this.adminHireManager_button.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.adminHireManager_button.BackColor = System.Drawing.Color.SteelBlue;
-            this.adminHireManager_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminHireManager_button.ForeColor = System.Drawing.Color.Black;
-            this.adminHireManager_button.Location = new System.Drawing.Point(-191, 8);
-            this.adminHireManager_button.Name = "adminHireManager_button";
-            this.adminHireManager_button.Size = new System.Drawing.Size(217, 38);
-            this.adminHireManager_button.TabIndex = 5;
-            this.adminHireManager_button.Text = "Manager";
-            this.adminHireManager_button.UseVisualStyleBackColor = false;
-            this.adminHireManager_button.Click += new System.EventHandler(this.adminHireManager_button_Click);
+            this.RulesButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RulesButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.RulesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RulesButton.ForeColor = System.Drawing.Color.Black;
+            this.RulesButton.Location = new System.Drawing.Point(48, 520);
+            this.RulesButton.Name = "RulesButton";
+            this.RulesButton.Size = new System.Drawing.Size(217, 41);
+            this.RulesButton.TabIndex = 6;
+            this.RulesButton.Text = "Rules";
+            this.RulesButton.UseVisualStyleBackColor = false;
+            this.RulesButton.Click += new System.EventHandler(this.RulesButton_Click);
             // 
             // Hire_Employe_button
             // 
@@ -253,8 +225,9 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(217, 39);
             this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
+            this.button6.Text = "Update Password";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -282,19 +255,488 @@
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // Employee_button
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.SteelBlue;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(48, 300);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(217, 39);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Employee_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Employee_button.BackColor = System.Drawing.Color.SteelBlue;
+            this.Employee_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Employee_button.ForeColor = System.Drawing.Color.Black;
+            this.Employee_button.Location = new System.Drawing.Point(48, 300);
+            this.Employee_button.Name = "Employee_button";
+            this.Employee_button.Size = new System.Drawing.Size(217, 39);
+            this.Employee_button.TabIndex = 2;
+            this.Employee_button.Text = "Employee";
+            this.Employee_button.UseVisualStyleBackColor = false;
+            this.Employee_button.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // adminHireEmployee_panel
+            // 
+            this.adminHireEmployee_panel.Controls.Add(this.adminEmployee_panel);
+            this.adminHireEmployee_panel.Controls.Add(this.Designation_label);
+            this.adminHireEmployee_panel.Controls.Add(this.adminHireStaff_button);
+            this.adminHireEmployee_panel.Controls.Add(this.adminHireTeamLeader_button);
+            this.adminHireEmployee_panel.Controls.Add(this.adminHireSupervisor_button);
+            this.adminHireEmployee_panel.Controls.Add(this.adminHireManager_button);
+            this.adminHireEmployee_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminHireEmployee_panel.Location = new System.Drawing.Point(0, 0);
+            this.adminHireEmployee_panel.Name = "adminHireEmployee_panel";
+            this.adminHireEmployee_panel.Size = new System.Drawing.Size(798, 745);
+            this.adminHireEmployee_panel.TabIndex = 3;
+            // 
+            // adminEmployee_panel
+            // 
+            this.adminEmployee_panel.Controls.Add(this.Rules_panel);
+            this.adminEmployee_panel.Controls.Add(this.EmpRefresh_button);
+            this.adminEmployee_panel.Controls.Add(this.EmpSearch_button);
+            this.adminEmployee_panel.Controls.Add(this.EmployeeSearch_Text);
+            this.adminEmployee_panel.Controls.Add(this.EUMaritalStatus);
+            this.adminEmployee_panel.Controls.Add(this.EUGender);
+            this.adminEmployee_panel.Controls.Add(this.EUDob);
+            this.adminEmployee_panel.Controls.Add(this.EUBloodGroup);
+            this.adminEmployee_panel.Controls.Add(this.EUGmail);
+            this.adminEmployee_panel.Controls.Add(this.EUAddress);
+            this.adminEmployee_panel.Controls.Add(this.EUParmanentAddress);
+            this.adminEmployee_panel.Controls.Add(this.EUReligion);
+            this.adminEmployee_panel.Controls.Add(this.EUId);
+            this.adminEmployee_panel.Controls.Add(this.EUFatherName);
+            this.adminEmployee_panel.Controls.Add(this.EUMotherName);
+            this.adminEmployee_panel.Controls.Add(this.EUNumber);
+            this.adminEmployee_panel.Controls.Add(this.EUEmergencyNumber);
+            this.adminEmployee_panel.Controls.Add(this.EUDesignation);
+            this.adminEmployee_panel.Controls.Add(this.EUNickName);
+            this.adminEmployee_panel.Controls.Add(this.EUName);
+            this.adminEmployee_panel.Controls.Add(this.employeeDelete_button);
+            this.adminEmployee_panel.Controls.Add(this.EmployeeSave_button);
+            this.adminEmployee_panel.Controls.Add(this.EmployeeCancel_button);
+            this.adminEmployee_panel.Controls.Add(this.EmployeeUpdate_button);
+            this.adminEmployee_panel.Controls.Add(this.EUNid);
+            this.adminEmployee_panel.Controls.Add(this.employe_gridView);
+            this.adminEmployee_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminEmployee_panel.Location = new System.Drawing.Point(0, 0);
+            this.adminEmployee_panel.Name = "adminEmployee_panel";
+            this.adminEmployee_panel.Size = new System.Drawing.Size(798, 745);
+            this.adminEmployee_panel.TabIndex = 43;
+            // 
+            // Rules_panel
+            // 
+            this.Rules_panel.Controls.Add(this.UpdatePassword);
+            this.Rules_panel.Controls.Add(this.RSave1_button);
+            this.Rules_panel.Controls.Add(this.RAdd_button);
+            this.Rules_panel.Controls.Add(this.no_text);
+            this.Rules_panel.Controls.Add(this.rulesText);
+            this.Rules_panel.Controls.Add(this.RRefresh_button);
+            this.Rules_panel.Controls.Add(this.RSearch_button);
+            this.Rules_panel.Controls.Add(this.rulesSearch_text);
+            this.Rules_panel.Controls.Add(this.RDelete_button);
+            this.Rules_panel.Controls.Add(this.RSave_button);
+            this.Rules_panel.Controls.Add(this.RCancel_button);
+            this.Rules_panel.Controls.Add(this.RUpdate_button);
+            this.Rules_panel.Controls.Add(this.RulesGrid);
+            this.Rules_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Rules_panel.Location = new System.Drawing.Point(0, 0);
+            this.Rules_panel.Name = "Rules_panel";
+            this.Rules_panel.Size = new System.Drawing.Size(798, 745);
+            this.Rules_panel.TabIndex = 26;
+            // 
+            // no_text
+            // 
+            this.no_text.Location = new System.Drawing.Point(158, 56);
+            this.no_text.Name = "no_text";
+            this.no_text.Size = new System.Drawing.Size(189, 20);
+            this.no_text.TabIndex = 35;
+            // 
+            // rulesText
+            // 
+            this.rulesText.Location = new System.Drawing.Point(154, 85);
+            this.rulesText.Name = "rulesText";
+            this.rulesText.Size = new System.Drawing.Size(189, 20);
+            this.rulesText.TabIndex = 34;
+            // 
+            // RRefresh_button
+            // 
+            this.RRefresh_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RRefresh_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.RRefresh_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RRefresh_button.ForeColor = System.Drawing.Color.Black;
+            this.RRefresh_button.Location = new System.Drawing.Point(39, 93);
+            this.RRefresh_button.Name = "RRefresh_button";
+            this.RRefresh_button.Size = new System.Drawing.Size(119, 36);
+            this.RRefresh_button.TabIndex = 33;
+            this.RRefresh_button.Text = "Refresh";
+            this.RRefresh_button.UseVisualStyleBackColor = false;
+            this.RRefresh_button.Click += new System.EventHandler(this.RRefresh_button_Click);
+            // 
+            // RSearch_button
+            // 
+            this.RSearch_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RSearch_button.BackColor = System.Drawing.Color.Teal;
+            this.RSearch_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RSearch_button.ForeColor = System.Drawing.Color.Black;
+            this.RSearch_button.Location = new System.Drawing.Point(393, 78);
+            this.RSearch_button.Name = "RSearch_button";
+            this.RSearch_button.Size = new System.Drawing.Size(95, 27);
+            this.RSearch_button.TabIndex = 32;
+            this.RSearch_button.Text = "Search:";
+            this.RSearch_button.UseVisualStyleBackColor = false;
+            this.RSearch_button.Click += new System.EventHandler(this.searchh_button_Click);
+            // 
+            // rulesSearch_text
+            // 
+            this.rulesSearch_text.Location = new System.Drawing.Point(494, 83);
+            this.rulesSearch_text.Name = "rulesSearch_text";
+            this.rulesSearch_text.Size = new System.Drawing.Size(189, 20);
+            this.rulesSearch_text.TabIndex = 31;
+            // 
+            // RDelete_button
+            // 
+            this.RDelete_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RDelete_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.RDelete_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RDelete_button.ForeColor = System.Drawing.Color.Black;
+            this.RDelete_button.Location = new System.Drawing.Point(455, 646);
+            this.RDelete_button.Name = "RDelete_button";
+            this.RDelete_button.Size = new System.Drawing.Size(156, 38);
+            this.RDelete_button.TabIndex = 30;
+            this.RDelete_button.Text = "Delete";
+            this.RDelete_button.UseVisualStyleBackColor = false;
+            this.RDelete_button.Click += new System.EventHandler(this.RDelete_button_Click);
+            // 
+            // RSave_button
+            // 
+            this.RSave_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RSave_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.RSave_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RSave_button.ForeColor = System.Drawing.Color.Black;
+            this.RSave_button.Location = new System.Drawing.Point(167, 646);
+            this.RSave_button.Name = "RSave_button";
+            this.RSave_button.Size = new System.Drawing.Size(166, 38);
+            this.RSave_button.TabIndex = 29;
+            this.RSave_button.Text = "Save";
+            this.RSave_button.UseVisualStyleBackColor = false;
+            this.RSave_button.Click += new System.EventHandler(this.RSave_button_Click);
+            // 
+            // RCancel_button
+            // 
+            this.RCancel_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RCancel_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.RCancel_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RCancel_button.ForeColor = System.Drawing.Color.Black;
+            this.RCancel_button.Location = new System.Drawing.Point(361, 646);
+            this.RCancel_button.Name = "RCancel_button";
+            this.RCancel_button.Size = new System.Drawing.Size(156, 38);
+            this.RCancel_button.TabIndex = 28;
+            this.RCancel_button.Text = "Cancel";
+            this.RCancel_button.UseVisualStyleBackColor = false;
+            this.RCancel_button.Click += new System.EventHandler(this.RCancel_button_Click);
+            // 
+            // RUpdate_button
+            // 
+            this.RUpdate_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RUpdate_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.RUpdate_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RUpdate_button.ForeColor = System.Drawing.Color.Black;
+            this.RUpdate_button.Location = new System.Drawing.Point(282, 646);
+            this.RUpdate_button.Name = "RUpdate_button";
+            this.RUpdate_button.Size = new System.Drawing.Size(158, 38);
+            this.RUpdate_button.TabIndex = 27;
+            this.RUpdate_button.Text = "Update";
+            this.RUpdate_button.UseVisualStyleBackColor = false;
+            this.RUpdate_button.Click += new System.EventHandler(this.RUpdate_button_Click);
+            // 
+            // RulesGrid
+            // 
+            this.RulesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RulesGrid.Location = new System.Drawing.Point(8, 135);
+            this.RulesGrid.Name = "RulesGrid";
+            this.RulesGrid.Size = new System.Drawing.Size(776, 494);
+            this.RulesGrid.TabIndex = 26;
+            this.RulesGrid.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.RulesGrid_RowHeaderMouseClick);
+            // 
+            // EmpRefresh_button
+            // 
+            this.EmpRefresh_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EmpRefresh_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.EmpRefresh_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpRefresh_button.ForeColor = System.Drawing.Color.Black;
+            this.EmpRefresh_button.Location = new System.Drawing.Point(531, 670);
+            this.EmpRefresh_button.Name = "EmpRefresh_button";
+            this.EmpRefresh_button.Size = new System.Drawing.Size(163, 36);
+            this.EmpRefresh_button.TabIndex = 25;
+            this.EmpRefresh_button.Text = "Refresh";
+            this.EmpRefresh_button.UseVisualStyleBackColor = false;
+            this.EmpRefresh_button.Click += new System.EventHandler(this.EmpRefresh_button_Click);
+            // 
+            // EmpSearch_button
+            // 
+            this.EmpSearch_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EmpSearch_button.BackColor = System.Drawing.Color.Teal;
+            this.EmpSearch_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpSearch_button.ForeColor = System.Drawing.Color.Black;
+            this.EmpSearch_button.Location = new System.Drawing.Point(393, 56);
+            this.EmpSearch_button.Name = "EmpSearch_button";
+            this.EmpSearch_button.Size = new System.Drawing.Size(95, 27);
+            this.EmpSearch_button.TabIndex = 24;
+            this.EmpSearch_button.Text = "Search:";
+            this.EmpSearch_button.UseVisualStyleBackColor = false;
+            this.EmpSearch_button.Click += new System.EventHandler(this.EmpSearch_button_Click);
+            // 
+            // EmployeeSearch_Text
+            // 
+            this.EmployeeSearch_Text.Location = new System.Drawing.Point(494, 61);
+            this.EmployeeSearch_Text.Name = "EmployeeSearch_Text";
+            this.EmployeeSearch_Text.Size = new System.Drawing.Size(189, 20);
+            this.EmployeeSearch_Text.TabIndex = 23;
+            // 
+            // EUMaritalStatus
+            // 
+            this.EUMaritalStatus.Location = new System.Drawing.Point(18, 12);
+            this.EUMaritalStatus.Name = "EUMaritalStatus";
+            this.EUMaritalStatus.Size = new System.Drawing.Size(174, 20);
+            this.EUMaritalStatus.TabIndex = 22;
+            // 
+            // EUGender
+            // 
+            this.EUGender.Location = new System.Drawing.Point(18, 12);
+            this.EUGender.Name = "EUGender";
+            this.EUGender.Size = new System.Drawing.Size(174, 20);
+            this.EUGender.TabIndex = 21;
+            // 
+            // EUDob
+            // 
+            this.EUDob.Location = new System.Drawing.Point(18, 12);
+            this.EUDob.Name = "EUDob";
+            this.EUDob.Size = new System.Drawing.Size(174, 20);
+            this.EUDob.TabIndex = 20;
+            // 
+            // EUBloodGroup
+            // 
+            this.EUBloodGroup.Location = new System.Drawing.Point(18, 12);
+            this.EUBloodGroup.Name = "EUBloodGroup";
+            this.EUBloodGroup.Size = new System.Drawing.Size(174, 20);
+            this.EUBloodGroup.TabIndex = 19;
+            // 
+            // EUGmail
+            // 
+            this.EUGmail.Location = new System.Drawing.Point(18, 12);
+            this.EUGmail.Name = "EUGmail";
+            this.EUGmail.Size = new System.Drawing.Size(174, 20);
+            this.EUGmail.TabIndex = 18;
+            // 
+            // EUAddress
+            // 
+            this.EUAddress.Location = new System.Drawing.Point(18, 12);
+            this.EUAddress.Name = "EUAddress";
+            this.EUAddress.Size = new System.Drawing.Size(174, 20);
+            this.EUAddress.TabIndex = 17;
+            // 
+            // EUParmanentAddress
+            // 
+            this.EUParmanentAddress.Location = new System.Drawing.Point(18, 12);
+            this.EUParmanentAddress.Name = "EUParmanentAddress";
+            this.EUParmanentAddress.Size = new System.Drawing.Size(174, 20);
+            this.EUParmanentAddress.TabIndex = 16;
+            // 
+            // EUReligion
+            // 
+            this.EUReligion.Location = new System.Drawing.Point(18, 12);
+            this.EUReligion.Name = "EUReligion";
+            this.EUReligion.Size = new System.Drawing.Size(174, 20);
+            this.EUReligion.TabIndex = 15;
+            // 
+            // EUId
+            // 
+            this.EUId.Location = new System.Drawing.Point(18, 12);
+            this.EUId.Name = "EUId";
+            this.EUId.Size = new System.Drawing.Size(174, 20);
+            this.EUId.TabIndex = 14;
+            // 
+            // EUFatherName
+            // 
+            this.EUFatherName.Location = new System.Drawing.Point(18, 12);
+            this.EUFatherName.Name = "EUFatherName";
+            this.EUFatherName.Size = new System.Drawing.Size(174, 20);
+            this.EUFatherName.TabIndex = 13;
+            // 
+            // EUMotherName
+            // 
+            this.EUMotherName.Location = new System.Drawing.Point(18, 12);
+            this.EUMotherName.Name = "EUMotherName";
+            this.EUMotherName.Size = new System.Drawing.Size(174, 20);
+            this.EUMotherName.TabIndex = 12;
+            // 
+            // EUNumber
+            // 
+            this.EUNumber.Location = new System.Drawing.Point(18, 12);
+            this.EUNumber.Name = "EUNumber";
+            this.EUNumber.Size = new System.Drawing.Size(174, 20);
+            this.EUNumber.TabIndex = 11;
+            // 
+            // EUEmergencyNumber
+            // 
+            this.EUEmergencyNumber.Location = new System.Drawing.Point(18, 12);
+            this.EUEmergencyNumber.Name = "EUEmergencyNumber";
+            this.EUEmergencyNumber.Size = new System.Drawing.Size(174, 20);
+            this.EUEmergencyNumber.TabIndex = 10;
+            // 
+            // EUDesignation
+            // 
+            this.EUDesignation.Location = new System.Drawing.Point(18, 12);
+            this.EUDesignation.Name = "EUDesignation";
+            this.EUDesignation.Size = new System.Drawing.Size(174, 20);
+            this.EUDesignation.TabIndex = 9;
+            // 
+            // EUNickName
+            // 
+            this.EUNickName.Location = new System.Drawing.Point(18, 12);
+            this.EUNickName.Name = "EUNickName";
+            this.EUNickName.Size = new System.Drawing.Size(174, 20);
+            this.EUNickName.TabIndex = 8;
+            // 
+            // EUName
+            // 
+            this.EUName.Location = new System.Drawing.Point(18, 12);
+            this.EUName.Name = "EUName";
+            this.EUName.Size = new System.Drawing.Size(174, 20);
+            this.EUName.TabIndex = 7;
+            // 
+            // employeeDelete_button
+            // 
+            this.employeeDelete_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.employeeDelete_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.employeeDelete_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeDelete_button.ForeColor = System.Drawing.Color.Black;
+            this.employeeDelete_button.Location = new System.Drawing.Point(369, 669);
+            this.employeeDelete_button.Name = "employeeDelete_button";
+            this.employeeDelete_button.Size = new System.Drawing.Size(156, 38);
+            this.employeeDelete_button.TabIndex = 6;
+            this.employeeDelete_button.Text = "Delete";
+            this.employeeDelete_button.UseVisualStyleBackColor = false;
+            this.employeeDelete_button.Click += new System.EventHandler(this.employeeDelete_button_Click);
+            // 
+            // EmployeeSave_button
+            // 
+            this.EmployeeSave_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EmployeeSave_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.EmployeeSave_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeSave_button.ForeColor = System.Drawing.Color.Black;
+            this.EmployeeSave_button.Location = new System.Drawing.Point(197, 669);
+            this.EmployeeSave_button.Name = "EmployeeSave_button";
+            this.EmployeeSave_button.Size = new System.Drawing.Size(166, 38);
+            this.EmployeeSave_button.TabIndex = 5;
+            this.EmployeeSave_button.Text = "Save";
+            this.EmployeeSave_button.UseVisualStyleBackColor = false;
+            this.EmployeeSave_button.Click += new System.EventHandler(this.EmployeeSave_button_Click);
+            // 
+            // EmployeeCancel_button
+            // 
+            this.EmployeeCancel_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EmployeeCancel_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.EmployeeCancel_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeCancel_button.ForeColor = System.Drawing.Color.Black;
+            this.EmployeeCancel_button.Location = new System.Drawing.Point(369, 668);
+            this.EmployeeCancel_button.Name = "EmployeeCancel_button";
+            this.EmployeeCancel_button.Size = new System.Drawing.Size(156, 38);
+            this.EmployeeCancel_button.TabIndex = 4;
+            this.EmployeeCancel_button.Text = "Cancel";
+            this.EmployeeCancel_button.UseVisualStyleBackColor = false;
+            this.EmployeeCancel_button.Click += new System.EventHandler(this.EmployeeCancel_button_Click);
+            // 
+            // EmployeeUpdate_button
+            // 
+            this.EmployeeUpdate_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EmployeeUpdate_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.EmployeeUpdate_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeUpdate_button.ForeColor = System.Drawing.Color.Black;
+            this.EmployeeUpdate_button.Location = new System.Drawing.Point(205, 668);
+            this.EmployeeUpdate_button.Name = "EmployeeUpdate_button";
+            this.EmployeeUpdate_button.Size = new System.Drawing.Size(158, 38);
+            this.EmployeeUpdate_button.TabIndex = 3;
+            this.EmployeeUpdate_button.Text = "Update";
+            this.EmployeeUpdate_button.UseVisualStyleBackColor = false;
+            this.EmployeeUpdate_button.Click += new System.EventHandler(this.EmployeeUpdate_button_Click);
+            // 
+            // EUNid
+            // 
+            this.EUNid.Location = new System.Drawing.Point(18, 12);
+            this.EUNid.Name = "EUNid";
+            this.EUNid.Size = new System.Drawing.Size(174, 20);
+            this.EUNid.TabIndex = 2;
+            // 
+            // employe_gridView
+            // 
+            this.employe_gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.employe_gridView.Location = new System.Drawing.Point(8, 113);
+            this.employe_gridView.Name = "employe_gridView";
+            this.employe_gridView.Size = new System.Drawing.Size(776, 549);
+            this.employe_gridView.TabIndex = 0;
+            this.employe_gridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.employe_gridView_RowHeaderMouseClick);
+            // 
+            // Designation_label
+            // 
+            this.Designation_label.BackColor = System.Drawing.Color.Transparent;
+            this.Designation_label.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Designation_label.ForeColor = System.Drawing.Color.Black;
+            this.Designation_label.Location = new System.Drawing.Point(125, 267);
+            this.Designation_label.Name = "Designation_label";
+            this.Designation_label.Size = new System.Drawing.Size(290, 51);
+            this.Designation_label.TabIndex = 42;
+            this.Designation_label.Text = "Select Designation :";
+            // 
+            // adminHireStaff_button
+            // 
+            this.adminHireStaff_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.adminHireStaff_button.BackColor = System.Drawing.Color.SteelBlue;
+            this.adminHireStaff_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminHireStaff_button.ForeColor = System.Drawing.Color.Black;
+            this.adminHireStaff_button.Location = new System.Drawing.Point(369, 423);
+            this.adminHireStaff_button.Name = "adminHireStaff_button";
+            this.adminHireStaff_button.Size = new System.Drawing.Size(217, 38);
+            this.adminHireStaff_button.TabIndex = 8;
+            this.adminHireStaff_button.Text = "Staff";
+            this.adminHireStaff_button.UseVisualStyleBackColor = false;
+            this.adminHireStaff_button.Click += new System.EventHandler(this.adminHireStaff_button_Click);
+            // 
+            // adminHireTeamLeader_button
+            // 
+            this.adminHireTeamLeader_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.adminHireTeamLeader_button.BackColor = System.Drawing.Color.SteelBlue;
+            this.adminHireTeamLeader_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminHireTeamLeader_button.ForeColor = System.Drawing.Color.Black;
+            this.adminHireTeamLeader_button.Location = new System.Drawing.Point(130, 423);
+            this.adminHireTeamLeader_button.Name = "adminHireTeamLeader_button";
+            this.adminHireTeamLeader_button.Size = new System.Drawing.Size(217, 38);
+            this.adminHireTeamLeader_button.TabIndex = 7;
+            this.adminHireTeamLeader_button.Text = "Team Leader";
+            this.adminHireTeamLeader_button.UseVisualStyleBackColor = false;
+            this.adminHireTeamLeader_button.Click += new System.EventHandler(this.adminHireTeamLeader_button_Click);
+            // 
+            // adminHireSupervisor_button
+            // 
+            this.adminHireSupervisor_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.adminHireSupervisor_button.BackColor = System.Drawing.Color.SteelBlue;
+            this.adminHireSupervisor_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminHireSupervisor_button.ForeColor = System.Drawing.Color.Black;
+            this.adminHireSupervisor_button.Location = new System.Drawing.Point(369, 336);
+            this.adminHireSupervisor_button.Name = "adminHireSupervisor_button";
+            this.adminHireSupervisor_button.Size = new System.Drawing.Size(217, 38);
+            this.adminHireSupervisor_button.TabIndex = 6;
+            this.adminHireSupervisor_button.Text = "Supervisor";
+            this.adminHireSupervisor_button.UseVisualStyleBackColor = false;
+            this.adminHireSupervisor_button.Click += new System.EventHandler(this.adminHireSupervisor_button_Click);
+            // 
+            // adminHireManager_button
+            // 
+            this.adminHireManager_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.adminHireManager_button.BackColor = System.Drawing.Color.SteelBlue;
+            this.adminHireManager_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminHireManager_button.ForeColor = System.Drawing.Color.Black;
+            this.adminHireManager_button.Location = new System.Drawing.Point(130, 335);
+            this.adminHireManager_button.Name = "adminHireManager_button";
+            this.adminHireManager_button.Size = new System.Drawing.Size(217, 38);
+            this.adminHireManager_button.TabIndex = 5;
+            this.adminHireManager_button.Text = "Manager";
+            this.adminHireManager_button.UseVisualStyleBackColor = false;
+            this.adminHireManager_button.Click += new System.EventHandler(this.adminHireManager_button_Click);
             // 
             // adminProfileName_label
             // 
@@ -447,8 +889,7 @@
             // AdminProfile_panel
             // 
             this.AdminProfile_panel.BackColor = System.Drawing.Color.Tan;
-            this.AdminProfile_panel.Controls.Add(this.Profile_Cancel);
-            this.AdminProfile_panel.Controls.Add(this.pDob_text);
+            this.AdminProfile_panel.Controls.Add(this.adminHireEmployee_panel);
             this.AdminProfile_panel.Controls.Add(this.pFather_text);
             this.AdminProfile_panel.Controls.Add(this.pMaritStatus_text);
             this.AdminProfile_panel.Controls.Add(this.pAddress_text);
@@ -487,31 +928,12 @@
             this.AdminProfile_panel.Controls.Add(this.adminProfileGmail_label);
             this.AdminProfile_panel.Controls.Add(this.adminProfileNumber_label);
             this.AdminProfile_panel.Controls.Add(this.adminProfileName_label);
+            this.AdminProfile_panel.Controls.Add(this.pDob_text);
+            this.AdminProfile_panel.Controls.Add(this.Profile_Cancel);
             this.AdminProfile_panel.Location = new System.Drawing.Point(308, 0);
             this.AdminProfile_panel.Name = "AdminProfile_panel";
             this.AdminProfile_panel.Size = new System.Drawing.Size(798, 745);
             this.AdminProfile_panel.TabIndex = 3;
-            // 
-            // Profile_Cancel
-            // 
-            this.Profile_Cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Profile_Cancel.BackColor = System.Drawing.Color.CadetBlue;
-            this.Profile_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profile_Cancel.ForeColor = System.Drawing.Color.Black;
-            this.Profile_Cancel.Location = new System.Drawing.Point(361, 656);
-            this.Profile_Cancel.Name = "Profile_Cancel";
-            this.Profile_Cancel.Size = new System.Drawing.Size(119, 28);
-            this.Profile_Cancel.TabIndex = 97;
-            this.Profile_Cancel.Text = "Cancel";
-            this.Profile_Cancel.UseVisualStyleBackColor = false;
-            this.Profile_Cancel.Click += new System.EventHandler(this.Profile_Cancel_Click);
-            // 
-            // pDob_text
-            // 
-            this.pDob_text.Location = new System.Drawing.Point(328, 601);
-            this.pDob_text.Name = "pDob_text";
-            this.pDob_text.Size = new System.Drawing.Size(170, 20);
-            this.pDob_text.TabIndex = 96;
             // 
             // pFather_text
             // 
@@ -763,6 +1185,118 @@
             this.adminNameText.TabIndex = 69;
             this.adminNameText.Text = "...";
             // 
+            // pDob_text
+            // 
+            this.pDob_text.Location = new System.Drawing.Point(328, 601);
+            this.pDob_text.Name = "pDob_text";
+            this.pDob_text.Size = new System.Drawing.Size(170, 20);
+            this.pDob_text.TabIndex = 96;
+            // 
+            // Profile_Cancel
+            // 
+            this.Profile_Cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Profile_Cancel.BackColor = System.Drawing.Color.CadetBlue;
+            this.Profile_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Profile_Cancel.ForeColor = System.Drawing.Color.Black;
+            this.Profile_Cancel.Location = new System.Drawing.Point(361, 656);
+            this.Profile_Cancel.Name = "Profile_Cancel";
+            this.Profile_Cancel.Size = new System.Drawing.Size(119, 28);
+            this.Profile_Cancel.TabIndex = 97;
+            this.Profile_Cancel.Text = "Cancel";
+            this.Profile_Cancel.UseVisualStyleBackColor = false;
+            this.Profile_Cancel.Click += new System.EventHandler(this.Profile_Cancel_Click);
+            // 
+            // RAdd_button
+            // 
+            this.RAdd_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RAdd_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.RAdd_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RAdd_button.ForeColor = System.Drawing.Color.Black;
+            this.RAdd_button.Location = new System.Drawing.Point(101, 646);
+            this.RAdd_button.Name = "RAdd_button";
+            this.RAdd_button.Size = new System.Drawing.Size(166, 38);
+            this.RAdd_button.TabIndex = 36;
+            this.RAdd_button.Text = "Add";
+            this.RAdd_button.UseVisualStyleBackColor = false;
+            this.RAdd_button.Click += new System.EventHandler(this.RAdd_button_Click);
+            // 
+            // RSave1_button
+            // 
+            this.RSave1_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RSave1_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.RSave1_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RSave1_button.ForeColor = System.Drawing.Color.Black;
+            this.RSave1_button.Location = new System.Drawing.Point(167, 646);
+            this.RSave1_button.Name = "RSave1_button";
+            this.RSave1_button.Size = new System.Drawing.Size(166, 38);
+            this.RSave1_button.TabIndex = 37;
+            this.RSave1_button.Text = "Save";
+            this.RSave1_button.UseVisualStyleBackColor = false;
+            this.RSave1_button.Click += new System.EventHandler(this.RSave1_button_Click);
+            // 
+            // UpdatePassword
+            // 
+            this.UpdatePassword.Controls.Add(this.oldPass);
+            this.UpdatePassword.Controls.Add(this.oldPassWord);
+            this.UpdatePassword.Controls.Add(this.button1);
+            this.UpdatePassword.Controls.Add(this.newpass);
+            this.UpdatePassword.Controls.Add(this.Password);
+            this.UpdatePassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UpdatePassword.Location = new System.Drawing.Point(0, 0);
+            this.UpdatePassword.Name = "UpdatePassword";
+            this.UpdatePassword.Size = new System.Drawing.Size(798, 745);
+            this.UpdatePassword.TabIndex = 38;
+            // 
+            // Password
+            // 
+            this.Password.AutoSize = true;
+            this.Password.BackColor = System.Drawing.Color.Tan;
+            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.Location = new System.Drawing.Point(106, 392);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(217, 31);
+            this.Password.TabIndex = 0;
+            this.Password.Text = "New Password:";
+            // 
+            // newpass
+            // 
+            this.newpass.Location = new System.Drawing.Point(333, 402);
+            this.newpass.Name = "newpass";
+            this.newpass.Size = new System.Drawing.Size(217, 20);
+            this.newpass.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.MediumPurple;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(280, 464);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 38);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Submit";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // oldPassWord
+            // 
+            this.oldPassWord.AutoSize = true;
+            this.oldPassWord.BackColor = System.Drawing.Color.Tan;
+            this.oldPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oldPassWord.Location = new System.Drawing.Point(111, 337);
+            this.oldPassWord.Name = "oldPassWord";
+            this.oldPassWord.Size = new System.Drawing.Size(204, 31);
+            this.oldPassWord.TabIndex = 3;
+            this.oldPassWord.Text = "Old Password:";
+            // 
+            // oldPass
+            // 
+            this.oldPass.Location = new System.Drawing.Point(333, 346);
+            this.oldPass.Name = "oldPass";
+            this.oldPass.Size = new System.Drawing.Size(217, 20);
+            this.oldPass.TabIndex = 4;
+            // 
             // Admin_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -776,9 +1310,17 @@
             this.Load += new System.EventHandler(this.Admin_Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.adminHireEmployee_panel.ResumeLayout(false);
+            this.adminEmployee_panel.ResumeLayout(false);
+            this.adminEmployee_panel.PerformLayout();
+            this.Rules_panel.ResumeLayout(false);
+            this.Rules_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RulesGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employe_gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.AdminProfile_panel.ResumeLayout(false);
             this.AdminProfile_panel.PerformLayout();
+            this.UpdatePassword.ResumeLayout(false);
+            this.UpdatePassword.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -786,12 +1328,12 @@
         #endregion
         private System.Windows.Forms.Button admin_Profile_button;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button LogOut_button;
+        private System.Windows.Forms.Button RulesButton;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Employee_button;
         private System.Windows.Forms.Button Hire_Employe_button;
         private System.Windows.Forms.Panel adminHireEmployee_panel;
         private System.Windows.Forms.Button adminHireStaff_button;
@@ -840,5 +1382,50 @@
         private System.Windows.Forms.TextBox pNid_text;
         private System.Windows.Forms.TextBox pName_text;
         private System.Windows.Forms.Button Profile_Cancel;
+        private System.Windows.Forms.Panel adminEmployee_panel;
+        private System.Windows.Forms.DataGridView employe_gridView;
+        private System.Windows.Forms.TextBox EUNid;
+        private System.Windows.Forms.Button EmployeeSave_button;
+        private System.Windows.Forms.Button EmployeeCancel_button;
+        private System.Windows.Forms.Button EmployeeUpdate_button;
+        private System.Windows.Forms.Button employeeDelete_button;
+        private System.Windows.Forms.TextBox EUName;
+        private System.Windows.Forms.TextBox EUNickName;
+        private System.Windows.Forms.TextBox EUDesignation;
+        private System.Windows.Forms.TextBox EUId;
+        private System.Windows.Forms.TextBox EUFatherName;
+        private System.Windows.Forms.TextBox EUMotherName;
+        private System.Windows.Forms.TextBox EUNumber;
+        private System.Windows.Forms.TextBox EUEmergencyNumber;
+        private System.Windows.Forms.TextBox EUMaritalStatus;
+        private System.Windows.Forms.TextBox EUGender;
+        private System.Windows.Forms.TextBox EUDob;
+        private System.Windows.Forms.TextBox EUBloodGroup;
+        private System.Windows.Forms.TextBox EUGmail;
+        private System.Windows.Forms.TextBox EUAddress;
+        private System.Windows.Forms.TextBox EUParmanentAddress;
+        private System.Windows.Forms.TextBox EUReligion;
+        private System.Windows.Forms.TextBox EmployeeSearch_Text;
+        private System.Windows.Forms.Button EmpSearch_button;
+        private System.Windows.Forms.Button EmpRefresh_button;
+        private System.Windows.Forms.Panel Rules_panel;
+        private System.Windows.Forms.Button RRefresh_button;
+        private System.Windows.Forms.Button RSearch_button;
+        private System.Windows.Forms.TextBox rulesSearch_text;
+        private System.Windows.Forms.Button RDelete_button;
+        private System.Windows.Forms.Button RSave_button;
+        private System.Windows.Forms.Button RCancel_button;
+        private System.Windows.Forms.Button RUpdate_button;
+        private System.Windows.Forms.DataGridView RulesGrid;
+        private System.Windows.Forms.TextBox no_text;
+        private System.Windows.Forms.TextBox rulesText;
+        private System.Windows.Forms.Button RAdd_button;
+        private System.Windows.Forms.Button RSave1_button;
+        private System.Windows.Forms.Panel UpdatePassword;
+        private System.Windows.Forms.Label oldPassWord;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox newpass;
+        private System.Windows.Forms.Label Password;
+        private System.Windows.Forms.TextBox oldPass;
     }
 }
