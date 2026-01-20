@@ -115,9 +115,9 @@ namespace Project_one
 
         private void admin_Profile_button_Click(object sender, EventArgs e)
         {
-            int a = 0;
-                a = showProfile();
-            if (a == 0) 
+            int test = 0;
+                test = showProfile();
+            if (test == 0) 
             {
                 MessageBox.Show("No Admin Found");
             }

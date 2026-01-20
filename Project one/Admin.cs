@@ -12,9 +12,11 @@ namespace Project_one
     internal class Admin
     {
         string connection = @"Data Source=(localdb)\MSSQLLocalDB;
-                           Initial Catalog=Project-One-DB;
-                           Integrated Security=True;
-                           TrustServerCertificate=True";
+      AttachDbFilename=C:\Users\fahim\source\repos\Project-one\Project Database.mdf;
+      Integrated Security=True;
+      Connect Timeout=30;
+      TrustServerCertificate=True;
+      Pooling=False";
         public int Id { get; set; }
         public string Name { get; set; }
         public long NID { get; set; }
@@ -50,9 +52,11 @@ namespace Project_one
         {
             string query = "SELECT * FROM Admin WHERE Admin_Id = @ID";
             string connectionn = @"Data Source=(localdb)\MSSQLLocalDB;
-                           Initial Catalog=Project-One-DB;
-                           Integrated Security=True;
-                           TrustServerCertificate=True";
+      AttachDbFilename=C:\Users\fahim\source\repos\Project-one\Project Database.mdf;
+      Integrated Security=True;
+      Connect Timeout=30;
+      TrustServerCertificate=True;
+      Pooling=False";
             try
             {
                 using (SqlConnection con = new SqlConnection(connectionn))

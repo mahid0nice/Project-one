@@ -13,9 +13,11 @@ namespace Project_one
     internal class Volunteer
     {
         string connection = @"Data Source=(localdb)\MSSQLLocalDB;
-                           Initial Catalog=Project-One-DB;
-                           Integrated Security=True;
-                           TrustServerCertificate=True";
+      AttachDbFilename=C:\Users\fahim\source\repos\Project-one\Project Database.mdf;
+      Integrated Security=True;
+      Connect Timeout=30;
+      TrustServerCertificate=True;
+      Pooling=False";
         public int Id { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
