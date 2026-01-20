@@ -65,6 +65,7 @@ namespace Project_one
                                 @Number, @EmergencyNumber, @Gmail, @Address, @ParmanentAddress,
                                 @Religion, @MaritalStatus, @Gender, @DOB, @BloodGroup
                             )";
+                string q2 = @"INSERT INTO Employee_Log_in (E_Id, E_Password) VALUES (@Id, '@@@@')";
 
                 sqc.Open();
                 SqlCommand cmd = new SqlCommand(q, sqc);
@@ -91,6 +92,9 @@ namespace Project_one
                 if (row > 0)
                 {
                     success = 1;
+                    SqlCommand cmd2 = new SqlCommand(q2, sqc);
+                    cmd2.ExecuteNonQuery();
+
                 }
             }
             catch (SqlException)
@@ -240,5 +244,202 @@ namespace Project_one
             }
         }
 
+        public int UpdateVolunteer(Volunteer v)
+        {
+            string query = @"UPDATE Volunteer SET V_Name=@Name, V_PhoneNumber=@Phone, V_DOB=@Dob,
+                        V_Address=@Address, V_Gmail=@Gmail, V_NID=@NID, V_Religion=@Religion, V_FatherName=@Father,
+                        V_MotherName=@Mother, V_Skill1=@Skill1, V_Skill2=@Skill2,
+                        V_Gender=@Gender WHERE V_Id=@Id";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Id", v.Id);
+                    cmd.Parameters.AddWithValue("@Name", v.Name);
+                    cmd.Parameters.AddWithValue("@Phone", v.PhoneNumber);
+                    cmd.Parameters.AddWithValue("@Dob", v.Dob);
+                    cmd.Parameters.AddWithValue("@Address", v.Address);
+                    cmd.Parameters.AddWithValue("@Gmail", v.Gmail);
+                    cmd.Parameters.AddWithValue("@NID", v.NID);
+                    cmd.Parameters.AddWithValue("@Religion", v.Religion);
+                    cmd.Parameters.AddWithValue("@Father", v.FatherName);
+                    cmd.Parameters.AddWithValue("@Mother", v.MotherName);
+                    cmd.Parameters.AddWithValue("@Skill1", v.Skill1);
+                    cmd.Parameters.AddWithValue("@Skill2", (object)v.Skill2 ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Gender", v.Gender);
+
+                    con.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+        public int DeleteVolunteer(int id)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(
+                    "DELETE FROM Volunteer WHERE V_Id=@Id", con))
+                {
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    con.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+        public DataTable SearchVolunteers(string search)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                {
+                    string query = @"SELECT V_Id, V_Name, V_PhoneNumber, V_DOB, V_Address, V_Gmail, V_NID, V_Religion, V_FatherName, V_MotherName, V_Skill1, V_Skill2, V_Gender
+                                         FROM Volunteer WHERE V_Status = 'Active' AND (
+                                         CAST(V_Id AS NVARCHAR) LIKE @search
+                                         OR V_Name LIKE @search
+                                         OR CAST(V_PhoneNumber AS NVARCHAR) LIKE @search
+                                         OR V_Gmail LIKE @search)";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching volunteers:\n" + ex.Message);
+            }
+            return dt;
+        }
+
+        public DataTable ShowAllVolunteers()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlDataAdapter da = new SqlDataAdapter(
+                    @"SELECT V_Id, V_Name, V_PhoneNumber, V_DOB, V_Address, V_Gmail, V_NID, V_Religion, V_FatherName, V_MotherName,
+                V_Skill1, V_Skill2, V_Gender FROM Volunteer where V_Status = 'Active'", con))
+                {
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading volunteers:\n" + ex.Message);
+            }
+            return dt;
+        }
+
+        public DataTable ShowAllInactiveVolunteers()
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlDataAdapter da = new SqlDataAdapter(
+                    @"SELECT 
+                V_Id, V_Name, V_PhoneNumber, V_DOB, V_Address, V_Gmail,
+                V_NID, V_Religion, V_FatherName, V_MotherName,
+                V_Skill1, V_Skill2, V_Gender
+              FROM Volunteer
+              WHERE V_Status = 'Inactive'", con))
+                {
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception)
+            {
+            }
+
+            return dt;
+        }
+
+        public DataTable SearchInactiveVolunteers(string search)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                {
+                    string query = @"SELECT V_Id, V_Name, V_PhoneNumber, V_DOB, V_Address, V_Gmail, V_NID, V_Religion, V_FatherName, V_MotherName, V_Skill1, V_Skill2, V_Gender
+                                         FROM Volunteer WHERE V_Status = 'Inactive' AND (
+                                         CAST(V_Id AS NVARCHAR) LIKE @search
+                                         OR V_Name LIKE @search
+                                         OR CAST(V_PhoneNumber AS NVARCHAR) LIKE @search
+                                         OR V_Gmail LIKE @search)";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching volunteers:\n" + ex.Message);
+            }
+            return dt;
+        }
+
+        public int AcceptVolunteer(int id)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(
+                    "UPDATE Volunteer SET V_Status = 'Active' WHERE V_Id = @Id;", con))
+                {
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    con.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public bool UpdatePass(int empId, string currentPassword, string newPassword)
+        {
+            using (SqlConnection con = new SqlConnection(connection))
+            {
+                con.Open();
+
+                string query = @"UPDATE Employee_Log_in
+                         SET E_Password = @NewPass
+                         WHERE E_Id = @EmpId
+                           AND E_Password = @CurrentPass";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@NewPass", newPassword);
+                    cmd.Parameters.AddWithValue("@EmpId", empId);
+                    cmd.Parameters.AddWithValue("@CurrentPass", currentPassword);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+        }
     }
 }

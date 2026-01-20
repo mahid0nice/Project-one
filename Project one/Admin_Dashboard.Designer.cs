@@ -35,13 +35,34 @@
             this.RulesButton = new System.Windows.Forms.Button();
             this.Hire_Employe_button = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.Employee_button = new System.Windows.Forms.Button();
             this.adminHireEmployee_panel = new System.Windows.Forms.Panel();
             this.adminEmployee_panel = new System.Windows.Forms.Panel();
             this.Rules_panel = new System.Windows.Forms.Panel();
             this.UpdatePassword = new System.Windows.Forms.Panel();
+            this.VolunteerPanel = new System.Windows.Forms.Panel();
+            this.V_Skill2 = new System.Windows.Forms.TextBox();
+            this.vRefresh = new System.Windows.Forms.Button();
+            this.vSearch = new System.Windows.Forms.Button();
+            this.v_searchText = new System.Windows.Forms.TextBox();
+            this.V_ReligionText = new System.Windows.Forms.TextBox();
+            this.V_NIDTEXT = new System.Windows.Forms.TextBox();
+            this.V_IdText = new System.Windows.Forms.TextBox();
+            this.V_Skill1 = new System.Windows.Forms.TextBox();
+            this.V_MotherName = new System.Windows.Forms.TextBox();
+            this.V_Gender = new System.Windows.Forms.TextBox();
+            this.V_FatherName = new System.Windows.Forms.TextBox();
+            this.V_DobText = new System.Windows.Forms.TextBox();
+            this.V_GmailText = new System.Windows.Forms.TextBox();
+            this.V_Address = new System.Windows.Forms.TextBox();
+            this.V_PhoneText = new System.Windows.Forms.TextBox();
+            this.vDelete = new System.Windows.Forms.Button();
+            this.vSave = new System.Windows.Forms.Button();
+            this.vCancel = new System.Windows.Forms.Button();
+            this.vUpdate = new System.Windows.Forms.Button();
+            this.v_NameText = new System.Windows.Forms.TextBox();
+            this.v_dataGridView1 = new System.Windows.Forms.DataGridView();
             this.oldPass = new System.Windows.Forms.TextBox();
             this.oldPassWord = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -130,39 +151,17 @@
             this.adminNameText = new System.Windows.Forms.Label();
             this.pDob_text = new System.Windows.Forms.TextBox();
             this.Profile_Cancel = new System.Windows.Forms.Button();
-            this.VolunteerPanel = new System.Windows.Forms.Panel();
-            this.vRefresh = new System.Windows.Forms.Button();
-            this.vSearch = new System.Windows.Forms.Button();
-            this.v_searchText = new System.Windows.Forms.TextBox();
-            this.V_ReligionText = new System.Windows.Forms.TextBox();
-            this.V_NIDTEXT = new System.Windows.Forms.TextBox();
-            this.V_IdText = new System.Windows.Forms.TextBox();
-            this.V_MotherName = new System.Windows.Forms.TextBox();
-            this.V_Gender = new System.Windows.Forms.TextBox();
-            this.V_FatherName = new System.Windows.Forms.TextBox();
-            this.V_DobText = new System.Windows.Forms.TextBox();
-            this.V_GmailText = new System.Windows.Forms.TextBox();
-            this.V_Address = new System.Windows.Forms.TextBox();
-            this.V_PhoneText = new System.Windows.Forms.TextBox();
-            this.vDelete = new System.Windows.Forms.Button();
-            this.vSave = new System.Windows.Forms.Button();
-            this.vCancel = new System.Windows.Forms.Button();
-            this.vUpdate = new System.Windows.Forms.Button();
-            this.v_NameText = new System.Windows.Forms.TextBox();
-            this.v_dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.V_Skill1 = new System.Windows.Forms.TextBox();
-            this.V_Skill2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.adminHireEmployee_panel.SuspendLayout();
             this.adminEmployee_panel.SuspendLayout();
             this.Rules_panel.SuspendLayout();
             this.UpdatePassword.SuspendLayout();
+            this.VolunteerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.v_dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RulesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employe_gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.AdminProfile_panel.SuspendLayout();
-            this.VolunteerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.v_dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // admin_Profile_button
@@ -187,7 +186,6 @@
             this.panel1.Controls.Add(this.Hire_Employe_button);
             this.panel1.Controls.Add(this.admin_Profile_button);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.Employee_button);
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
@@ -203,7 +201,7 @@
             this.LogOut_button.BackColor = System.Drawing.Color.SteelBlue;
             this.LogOut_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOut_button.ForeColor = System.Drawing.Color.Black;
-            this.LogOut_button.Location = new System.Drawing.Point(48, 578);
+            this.LogOut_button.Location = new System.Drawing.Point(48, 538);
             this.LogOut_button.Name = "LogOut_button";
             this.LogOut_button.Size = new System.Drawing.Size(217, 43);
             this.LogOut_button.TabIndex = 7;
@@ -217,7 +215,7 @@
             this.RulesButton.BackColor = System.Drawing.Color.SteelBlue;
             this.RulesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RulesButton.ForeColor = System.Drawing.Color.Black;
-            this.RulesButton.Location = new System.Drawing.Point(48, 520);
+            this.RulesButton.Location = new System.Drawing.Point(48, 477);
             this.RulesButton.Name = "RulesButton";
             this.RulesButton.Size = new System.Drawing.Size(217, 41);
             this.RulesButton.TabIndex = 6;
@@ -245,26 +243,13 @@
             this.button6.BackColor = System.Drawing.Color.SteelBlue;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(48, 463);
+            this.button6.Location = new System.Drawing.Point(48, 413);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(217, 39);
             this.button6.TabIndex = 5;
             this.button6.Text = "Update Password";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button5
-            // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.BackColor = System.Drawing.Color.SteelBlue;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(48, 408);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(217, 38);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -376,6 +361,225 @@
             this.UpdatePassword.Name = "UpdatePassword";
             this.UpdatePassword.Size = new System.Drawing.Size(798, 745);
             this.UpdatePassword.TabIndex = 38;
+            // 
+            // VolunteerPanel
+            // 
+            this.VolunteerPanel.Controls.Add(this.V_Skill2);
+            this.VolunteerPanel.Controls.Add(this.vRefresh);
+            this.VolunteerPanel.Controls.Add(this.vSearch);
+            this.VolunteerPanel.Controls.Add(this.v_searchText);
+            this.VolunteerPanel.Controls.Add(this.V_ReligionText);
+            this.VolunteerPanel.Controls.Add(this.V_NIDTEXT);
+            this.VolunteerPanel.Controls.Add(this.V_IdText);
+            this.VolunteerPanel.Controls.Add(this.V_Skill1);
+            this.VolunteerPanel.Controls.Add(this.V_MotherName);
+            this.VolunteerPanel.Controls.Add(this.V_Gender);
+            this.VolunteerPanel.Controls.Add(this.V_FatherName);
+            this.VolunteerPanel.Controls.Add(this.V_DobText);
+            this.VolunteerPanel.Controls.Add(this.V_GmailText);
+            this.VolunteerPanel.Controls.Add(this.V_Address);
+            this.VolunteerPanel.Controls.Add(this.V_PhoneText);
+            this.VolunteerPanel.Controls.Add(this.vDelete);
+            this.VolunteerPanel.Controls.Add(this.vSave);
+            this.VolunteerPanel.Controls.Add(this.vCancel);
+            this.VolunteerPanel.Controls.Add(this.vUpdate);
+            this.VolunteerPanel.Controls.Add(this.v_NameText);
+            this.VolunteerPanel.Controls.Add(this.v_dataGridView1);
+            this.VolunteerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.VolunteerPanel.Location = new System.Drawing.Point(0, 0);
+            this.VolunteerPanel.Name = "VolunteerPanel";
+            this.VolunteerPanel.Size = new System.Drawing.Size(798, 745);
+            this.VolunteerPanel.TabIndex = 5;
+            // 
+            // V_Skill2
+            // 
+            this.V_Skill2.Location = new System.Drawing.Point(39, 28);
+            this.V_Skill2.Name = "V_Skill2";
+            this.V_Skill2.Size = new System.Drawing.Size(174, 20);
+            this.V_Skill2.TabIndex = 51;
+            // 
+            // vRefresh
+            // 
+            this.vRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.vRefresh.BackColor = System.Drawing.Color.MediumPurple;
+            this.vRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vRefresh.ForeColor = System.Drawing.Color.Black;
+            this.vRefresh.Location = new System.Drawing.Point(70, 83);
+            this.vRefresh.Name = "vRefresh";
+            this.vRefresh.Size = new System.Drawing.Size(111, 36);
+            this.vRefresh.TabIndex = 50;
+            this.vRefresh.Text = "Refresh";
+            this.vRefresh.UseVisualStyleBackColor = false;
+            this.vRefresh.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // vSearch
+            // 
+            this.vSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.vSearch.BackColor = System.Drawing.Color.Teal;
+            this.vSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vSearch.ForeColor = System.Drawing.Color.Black;
+            this.vSearch.Location = new System.Drawing.Point(396, 69);
+            this.vSearch.Name = "vSearch";
+            this.vSearch.Size = new System.Drawing.Size(95, 27);
+            this.vSearch.TabIndex = 49;
+            this.vSearch.Text = "Search:";
+            this.vSearch.UseVisualStyleBackColor = false;
+            this.vSearch.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // v_searchText
+            // 
+            this.v_searchText.Location = new System.Drawing.Point(497, 74);
+            this.v_searchText.Name = "v_searchText";
+            this.v_searchText.Size = new System.Drawing.Size(189, 20);
+            this.v_searchText.TabIndex = 48;
+            // 
+            // V_ReligionText
+            // 
+            this.V_ReligionText.Location = new System.Drawing.Point(39, 28);
+            this.V_ReligionText.Name = "V_ReligionText";
+            this.V_ReligionText.Size = new System.Drawing.Size(174, 20);
+            this.V_ReligionText.TabIndex = 47;
+            // 
+            // V_NIDTEXT
+            // 
+            this.V_NIDTEXT.Location = new System.Drawing.Point(39, 28);
+            this.V_NIDTEXT.Name = "V_NIDTEXT";
+            this.V_NIDTEXT.Size = new System.Drawing.Size(174, 20);
+            this.V_NIDTEXT.TabIndex = 46;
+            // 
+            // V_IdText
+            // 
+            this.V_IdText.Location = new System.Drawing.Point(39, 28);
+            this.V_IdText.Name = "V_IdText";
+            this.V_IdText.Size = new System.Drawing.Size(174, 20);
+            this.V_IdText.TabIndex = 45;
+            // 
+            // V_Skill1
+            // 
+            this.V_Skill1.Location = new System.Drawing.Point(39, 28);
+            this.V_Skill1.Name = "V_Skill1";
+            this.V_Skill1.Size = new System.Drawing.Size(174, 20);
+            this.V_Skill1.TabIndex = 44;
+            // 
+            // V_MotherName
+            // 
+            this.V_MotherName.Location = new System.Drawing.Point(39, 28);
+            this.V_MotherName.Name = "V_MotherName";
+            this.V_MotherName.Size = new System.Drawing.Size(174, 20);
+            this.V_MotherName.TabIndex = 42;
+            // 
+            // V_Gender
+            // 
+            this.V_Gender.Location = new System.Drawing.Point(39, 28);
+            this.V_Gender.Name = "V_Gender";
+            this.V_Gender.Size = new System.Drawing.Size(174, 20);
+            this.V_Gender.TabIndex = 41;
+            // 
+            // V_FatherName
+            // 
+            this.V_FatherName.Location = new System.Drawing.Point(39, 28);
+            this.V_FatherName.Name = "V_FatherName";
+            this.V_FatherName.Size = new System.Drawing.Size(174, 20);
+            this.V_FatherName.TabIndex = 37;
+            // 
+            // V_DobText
+            // 
+            this.V_DobText.Location = new System.Drawing.Point(39, 28);
+            this.V_DobText.Name = "V_DobText";
+            this.V_DobText.Size = new System.Drawing.Size(174, 20);
+            this.V_DobText.TabIndex = 36;
+            // 
+            // V_GmailText
+            // 
+            this.V_GmailText.Location = new System.Drawing.Point(39, 28);
+            this.V_GmailText.Name = "V_GmailText";
+            this.V_GmailText.Size = new System.Drawing.Size(174, 20);
+            this.V_GmailText.TabIndex = 35;
+            // 
+            // V_Address
+            // 
+            this.V_Address.Location = new System.Drawing.Point(39, 28);
+            this.V_Address.Name = "V_Address";
+            this.V_Address.Size = new System.Drawing.Size(174, 20);
+            this.V_Address.TabIndex = 34;
+            // 
+            // V_PhoneText
+            // 
+            this.V_PhoneText.Location = new System.Drawing.Point(39, 28);
+            this.V_PhoneText.Name = "V_PhoneText";
+            this.V_PhoneText.Size = new System.Drawing.Size(174, 20);
+            this.V_PhoneText.TabIndex = 33;
+            // 
+            // vDelete
+            // 
+            this.vDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.vDelete.BackColor = System.Drawing.Color.MediumPurple;
+            this.vDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vDelete.ForeColor = System.Drawing.Color.Black;
+            this.vDelete.Location = new System.Drawing.Point(393, 681);
+            this.vDelete.Name = "vDelete";
+            this.vDelete.Size = new System.Drawing.Size(156, 38);
+            this.vDelete.TabIndex = 31;
+            this.vDelete.Text = "Delete";
+            this.vDelete.UseVisualStyleBackColor = false;
+            this.vDelete.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // vSave
+            // 
+            this.vSave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.vSave.BackColor = System.Drawing.Color.MediumPurple;
+            this.vSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vSave.ForeColor = System.Drawing.Color.Black;
+            this.vSave.Location = new System.Drawing.Point(205, 681);
+            this.vSave.Name = "vSave";
+            this.vSave.Size = new System.Drawing.Size(166, 38);
+            this.vSave.TabIndex = 30;
+            this.vSave.Text = "Save";
+            this.vSave.UseVisualStyleBackColor = false;
+            this.vSave.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // vCancel
+            // 
+            this.vCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.vCancel.BackColor = System.Drawing.Color.MediumPurple;
+            this.vCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vCancel.ForeColor = System.Drawing.Color.Black;
+            this.vCancel.Location = new System.Drawing.Point(391, 681);
+            this.vCancel.Name = "vCancel";
+            this.vCancel.Size = new System.Drawing.Size(156, 38);
+            this.vCancel.TabIndex = 29;
+            this.vCancel.Text = "Cancel";
+            this.vCancel.UseVisualStyleBackColor = false;
+            this.vCancel.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // vUpdate
+            // 
+            this.vUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.vUpdate.BackColor = System.Drawing.Color.MediumPurple;
+            this.vUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vUpdate.ForeColor = System.Drawing.Color.Black;
+            this.vUpdate.Location = new System.Drawing.Point(208, 681);
+            this.vUpdate.Name = "vUpdate";
+            this.vUpdate.Size = new System.Drawing.Size(158, 38);
+            this.vUpdate.TabIndex = 28;
+            this.vUpdate.Text = "Update";
+            this.vUpdate.UseVisualStyleBackColor = false;
+            this.vUpdate.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // v_NameText
+            // 
+            this.v_NameText.Location = new System.Drawing.Point(39, 28);
+            this.v_NameText.Name = "v_NameText";
+            this.v_NameText.Size = new System.Drawing.Size(174, 20);
+            this.v_NameText.TabIndex = 27;
+            // 
+            // v_dataGridView1
+            // 
+            this.v_dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.v_dataGridView1.Location = new System.Drawing.Point(11, 126);
+            this.v_dataGridView1.Name = "v_dataGridView1";
+            this.v_dataGridView1.Size = new System.Drawing.Size(776, 549);
+            this.v_dataGridView1.TabIndex = 26;
             // 
             // oldPass
             // 
@@ -1323,225 +1527,6 @@
             this.Profile_Cancel.UseVisualStyleBackColor = false;
             this.Profile_Cancel.Click += new System.EventHandler(this.Profile_Cancel_Click);
             // 
-            // VolunteerPanel
-            // 
-            this.VolunteerPanel.Controls.Add(this.V_Skill2);
-            this.VolunteerPanel.Controls.Add(this.vRefresh);
-            this.VolunteerPanel.Controls.Add(this.vSearch);
-            this.VolunteerPanel.Controls.Add(this.v_searchText);
-            this.VolunteerPanel.Controls.Add(this.V_ReligionText);
-            this.VolunteerPanel.Controls.Add(this.V_NIDTEXT);
-            this.VolunteerPanel.Controls.Add(this.V_IdText);
-            this.VolunteerPanel.Controls.Add(this.V_Skill1);
-            this.VolunteerPanel.Controls.Add(this.V_MotherName);
-            this.VolunteerPanel.Controls.Add(this.V_Gender);
-            this.VolunteerPanel.Controls.Add(this.V_FatherName);
-            this.VolunteerPanel.Controls.Add(this.V_DobText);
-            this.VolunteerPanel.Controls.Add(this.V_GmailText);
-            this.VolunteerPanel.Controls.Add(this.V_Address);
-            this.VolunteerPanel.Controls.Add(this.V_PhoneText);
-            this.VolunteerPanel.Controls.Add(this.vDelete);
-            this.VolunteerPanel.Controls.Add(this.vSave);
-            this.VolunteerPanel.Controls.Add(this.vCancel);
-            this.VolunteerPanel.Controls.Add(this.vUpdate);
-            this.VolunteerPanel.Controls.Add(this.v_NameText);
-            this.VolunteerPanel.Controls.Add(this.v_dataGridView1);
-            this.VolunteerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.VolunteerPanel.Location = new System.Drawing.Point(0, 0);
-            this.VolunteerPanel.Name = "VolunteerPanel";
-            this.VolunteerPanel.Size = new System.Drawing.Size(798, 745);
-            this.VolunteerPanel.TabIndex = 5;
-            // 
-            // vRefresh
-            // 
-            this.vRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vRefresh.BackColor = System.Drawing.Color.MediumPurple;
-            this.vRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vRefresh.ForeColor = System.Drawing.Color.Black;
-            this.vRefresh.Location = new System.Drawing.Point(534, 683);
-            this.vRefresh.Name = "vRefresh";
-            this.vRefresh.Size = new System.Drawing.Size(163, 36);
-            this.vRefresh.TabIndex = 50;
-            this.vRefresh.Text = "Refresh";
-            this.vRefresh.UseVisualStyleBackColor = false;
-            this.vRefresh.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // vSearch
-            // 
-            this.vSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vSearch.BackColor = System.Drawing.Color.Teal;
-            this.vSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vSearch.ForeColor = System.Drawing.Color.Black;
-            this.vSearch.Location = new System.Drawing.Point(396, 69);
-            this.vSearch.Name = "vSearch";
-            this.vSearch.Size = new System.Drawing.Size(95, 27);
-            this.vSearch.TabIndex = 49;
-            this.vSearch.Text = "Search:";
-            this.vSearch.UseVisualStyleBackColor = false;
-            this.vSearch.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // v_searchText
-            // 
-            this.v_searchText.Location = new System.Drawing.Point(497, 74);
-            this.v_searchText.Name = "v_searchText";
-            this.v_searchText.Size = new System.Drawing.Size(189, 20);
-            this.v_searchText.TabIndex = 48;
-            // 
-            // V_ReligionText
-            // 
-            this.V_ReligionText.Location = new System.Drawing.Point(39, 28);
-            this.V_ReligionText.Name = "V_ReligionText";
-            this.V_ReligionText.Size = new System.Drawing.Size(174, 20);
-            this.V_ReligionText.TabIndex = 47;
-            // 
-            // V_NIDTEXT
-            // 
-            this.V_NIDTEXT.Location = new System.Drawing.Point(39, 28);
-            this.V_NIDTEXT.Name = "V_NIDTEXT";
-            this.V_NIDTEXT.Size = new System.Drawing.Size(174, 20);
-            this.V_NIDTEXT.TabIndex = 46;
-            // 
-            // V_IdText
-            // 
-            this.V_IdText.Location = new System.Drawing.Point(39, 28);
-            this.V_IdText.Name = "V_IdText";
-            this.V_IdText.Size = new System.Drawing.Size(174, 20);
-            this.V_IdText.TabIndex = 45;
-            // 
-            // V_MotherName
-            // 
-            this.V_MotherName.Location = new System.Drawing.Point(39, 28);
-            this.V_MotherName.Name = "V_MotherName";
-            this.V_MotherName.Size = new System.Drawing.Size(174, 20);
-            this.V_MotherName.TabIndex = 42;
-            // 
-            // V_Gender
-            // 
-            this.V_Gender.Location = new System.Drawing.Point(39, 28);
-            this.V_Gender.Name = "V_Gender";
-            this.V_Gender.Size = new System.Drawing.Size(174, 20);
-            this.V_Gender.TabIndex = 41;
-            // 
-            // V_FatherName
-            // 
-            this.V_FatherName.Location = new System.Drawing.Point(39, 28);
-            this.V_FatherName.Name = "V_FatherName";
-            this.V_FatherName.Size = new System.Drawing.Size(174, 20);
-            this.V_FatherName.TabIndex = 37;
-            // 
-            // V_DobText
-            // 
-            this.V_DobText.Location = new System.Drawing.Point(39, 28);
-            this.V_DobText.Name = "V_DobText";
-            this.V_DobText.Size = new System.Drawing.Size(174, 20);
-            this.V_DobText.TabIndex = 36;
-            // 
-            // V_GmailText
-            // 
-            this.V_GmailText.Location = new System.Drawing.Point(39, 28);
-            this.V_GmailText.Name = "V_GmailText";
-            this.V_GmailText.Size = new System.Drawing.Size(174, 20);
-            this.V_GmailText.TabIndex = 35;
-            // 
-            // V_Address
-            // 
-            this.V_Address.Location = new System.Drawing.Point(39, 28);
-            this.V_Address.Name = "V_Address";
-            this.V_Address.Size = new System.Drawing.Size(174, 20);
-            this.V_Address.TabIndex = 34;
-            // 
-            // V_PhoneText
-            // 
-            this.V_PhoneText.Location = new System.Drawing.Point(39, 28);
-            this.V_PhoneText.Name = "V_PhoneText";
-            this.V_PhoneText.Size = new System.Drawing.Size(174, 20);
-            this.V_PhoneText.TabIndex = 33;
-            // 
-            // vDelete
-            // 
-            this.vDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vDelete.BackColor = System.Drawing.Color.MediumPurple;
-            this.vDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vDelete.ForeColor = System.Drawing.Color.Black;
-            this.vDelete.Location = new System.Drawing.Point(372, 683);
-            this.vDelete.Name = "vDelete";
-            this.vDelete.Size = new System.Drawing.Size(156, 38);
-            this.vDelete.TabIndex = 31;
-            this.vDelete.Text = "Delete";
-            this.vDelete.UseVisualStyleBackColor = false;
-            this.vDelete.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // vSave
-            // 
-            this.vSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vSave.BackColor = System.Drawing.Color.MediumPurple;
-            this.vSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vSave.ForeColor = System.Drawing.Color.Black;
-            this.vSave.Location = new System.Drawing.Point(200, 681);
-            this.vSave.Name = "vSave";
-            this.vSave.Size = new System.Drawing.Size(166, 38);
-            this.vSave.TabIndex = 30;
-            this.vSave.Text = "Save";
-            this.vSave.UseVisualStyleBackColor = false;
-            this.vSave.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // vCancel
-            // 
-            this.vCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vCancel.BackColor = System.Drawing.Color.MediumPurple;
-            this.vCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vCancel.ForeColor = System.Drawing.Color.Black;
-            this.vCancel.Location = new System.Drawing.Point(372, 681);
-            this.vCancel.Name = "vCancel";
-            this.vCancel.Size = new System.Drawing.Size(156, 38);
-            this.vCancel.TabIndex = 29;
-            this.vCancel.Text = "Cancel";
-            this.vCancel.UseVisualStyleBackColor = false;
-            this.vCancel.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // vUpdate
-            // 
-            this.vUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vUpdate.BackColor = System.Drawing.Color.MediumPurple;
-            this.vUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vUpdate.ForeColor = System.Drawing.Color.Black;
-            this.vUpdate.Location = new System.Drawing.Point(208, 681);
-            this.vUpdate.Name = "vUpdate";
-            this.vUpdate.Size = new System.Drawing.Size(158, 38);
-            this.vUpdate.TabIndex = 28;
-            this.vUpdate.Text = "Update";
-            this.vUpdate.UseVisualStyleBackColor = false;
-            this.vUpdate.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // v_NameText
-            // 
-            this.v_NameText.Location = new System.Drawing.Point(39, 28);
-            this.v_NameText.Name = "v_NameText";
-            this.v_NameText.Size = new System.Drawing.Size(174, 20);
-            this.v_NameText.TabIndex = 27;
-            // 
-            // v_dataGridView1
-            // 
-            this.v_dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.v_dataGridView1.Location = new System.Drawing.Point(11, 126);
-            this.v_dataGridView1.Name = "v_dataGridView1";
-            this.v_dataGridView1.Size = new System.Drawing.Size(776, 549);
-            this.v_dataGridView1.TabIndex = 26;
-            // 
-            // V_Skill1
-            // 
-            this.V_Skill1.Location = new System.Drawing.Point(39, 28);
-            this.V_Skill1.Name = "V_Skill1";
-            this.V_Skill1.Size = new System.Drawing.Size(174, 20);
-            this.V_Skill1.TabIndex = 44;
-            // 
-            // V_Skill2
-            // 
-            this.V_Skill2.Location = new System.Drawing.Point(39, 28);
-            this.V_Skill2.Name = "V_Skill2";
-            this.V_Skill2.Size = new System.Drawing.Size(174, 20);
-            this.V_Skill2.TabIndex = 51;
-            // 
             // Admin_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1561,14 +1546,14 @@
             this.Rules_panel.PerformLayout();
             this.UpdatePassword.ResumeLayout(false);
             this.UpdatePassword.PerformLayout();
+            this.VolunteerPanel.ResumeLayout(false);
+            this.VolunteerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.v_dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RulesGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employe_gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.AdminProfile_panel.ResumeLayout(false);
             this.AdminProfile_panel.PerformLayout();
-            this.VolunteerPanel.ResumeLayout(false);
-            this.VolunteerPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.v_dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1579,7 +1564,6 @@
         private System.Windows.Forms.Button LogOut_button;
         private System.Windows.Forms.Button RulesButton;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button Employee_button;
         private System.Windows.Forms.Button Hire_Employe_button;

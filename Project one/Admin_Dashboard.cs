@@ -503,7 +503,6 @@ namespace Project_one
         private void RulesButton_Click(object sender, EventArgs e)
         {
             ShowPanels(4);
-            ShowPanels(4);
             ShowRulesGrid();
         }
         private void ShowRulesGrid()
@@ -946,6 +945,7 @@ namespace Project_one
             if (result == 1)
             {
                 MessageBox.Show("Volunteer updated successfully.");
+                vRefresh.Visible = false;
                 LoadVolunteers();
                 vCancel.Visible = false;
                 vSave.Visible = false;
@@ -987,7 +987,6 @@ namespace Project_one
                 }
             }
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             vCancel.Visible = false;

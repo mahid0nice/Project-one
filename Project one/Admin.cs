@@ -418,7 +418,7 @@ namespace Project_one
                 using (SqlConnection con = new SqlConnection(connection))
                 using (SqlDataAdapter da = new SqlDataAdapter(
                     @"SELECT V_Id, V_Name, V_PhoneNumber, V_DOB, V_Address, V_Gmail, V_NID, V_Religion, V_FatherName, V_MotherName,
-                V_Skill1, V_Skill2, V_Gender FROM Volunteer", con))
+                V_Skill1, V_Skill2, V_Gender, V_Status FROM Volunteer", con))
                 {
                     da.Fill(dt);
                 }
@@ -492,7 +492,7 @@ namespace Project_one
                     string query = @"SELECT 
                                 V_Id, V_Name, V_PhoneNumber, V_DOB, V_Address, V_Gmail,
                                 V_NID, V_Religion, V_FatherName, V_MotherName,
-                                V_Skill1, V_Skill2, V_Gender
+                                V_Skill1, V_Skill2, V_Gender, V_Status
                              FROM Volunteer
                              WHERE CAST(V_Id AS NVARCHAR) LIKE @search
                                 OR V_Name LIKE @search

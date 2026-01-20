@@ -42,5 +42,10 @@ namespace Project_one
             new Registration_Page_for_volunteer().Show();
             this.Hide();
         }
+
+        private void customer_sign_up_button_Click(object sender, EventArgs e)
+        {
+            //last
+        }
     }
 }

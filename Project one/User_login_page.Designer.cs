@@ -92,6 +92,7 @@
             this.customer_sign_up_button.TabIndex = 11;
             this.customer_sign_up_button.Text = "Customer sign up";
             this.customer_sign_up_button.UseVisualStyleBackColor = false;
+            this.customer_sign_up_button.Click += new System.EventHandler(this.customer_sign_up_button_Click);
             // 
             // label1
             // 
