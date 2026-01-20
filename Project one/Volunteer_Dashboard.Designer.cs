@@ -69,6 +69,24 @@
             this.current_Job_panel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.job_label = new System.Windows.Forms.Label();
+            this.Job_request_button = new System.Windows.Forms.Button();
+            this.Job_request_panel = new System.Windows.Forms.Panel();
+            this.company_name_label = new System.Windows.Forms.Label();
+            this.showing_company_name_label = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.job_request_label = new System.Windows.Forms.Label();
+            this.Job_type_label = new System.Windows.Forms.Label();
+            this.job_type_showing_label = new System.Windows.Forms.Label();
+            this.Schedule_label = new System.Windows.Forms.Label();
+            this.Schedule_showing_label = new System.Windows.Forms.Label();
+            this.Salary_label = new System.Windows.Forms.Label();
+            this.Salary_showing_label = new System.Windows.Forms.Label();
+            this.Requirement_label = new System.Windows.Forms.Label();
+            this.Requirement_showing_label = new System.Windows.Forms.Label();
+            this.Accept_button = new System.Windows.Forms.Button();
+            this.Cancel_button = new System.Windows.Forms.Button();
+            this.rules_regulation_button = new System.Windows.Forms.Button();
+            this.Log_out_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.volunteer_profile_view_panel.SuspendLayout();
             this.Job_apply_Search_panel.SuspendLayout();
@@ -78,6 +96,8 @@
             this.welcome_panel.SuspendLayout();
             this.current_Job_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Job_request_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -87,6 +107,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.Log_out_button);
+            this.panel1.Controls.Add(this.rules_regulation_button);
+            this.panel1.Controls.Add(this.Job_request_button);
             this.panel1.Controls.Add(this.current_Job_panel);
             this.panel1.Controls.Add(this.welcome_panel);
             this.panel1.Controls.Add(this.finsihed_job_button);
@@ -102,9 +125,9 @@
             // 
             this.finsihed_job_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.finsihed_job_button.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.finsihed_job_button.Location = new System.Drawing.Point(39, 354);
+            this.finsihed_job_button.Location = new System.Drawing.Point(26, 328);
             this.finsihed_job_button.Name = "finsihed_job_button";
-            this.finsihed_job_button.Size = new System.Drawing.Size(185, 37);
+            this.finsihed_job_button.Size = new System.Drawing.Size(210, 37);
             this.finsihed_job_button.TabIndex = 4;
             this.finsihed_job_button.Text = "Current job ";
             this.finsihed_job_button.UseVisualStyleBackColor = false;
@@ -113,9 +136,9 @@
             // 
             this.Job_list_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Job_list_button.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Job_list_button.Location = new System.Drawing.Point(39, 298);
+            this.Job_list_button.Location = new System.Drawing.Point(26, 259);
             this.Job_list_button.Name = "Job_list_button";
-            this.Job_list_button.Size = new System.Drawing.Size(185, 37);
+            this.Job_list_button.Size = new System.Drawing.Size(210, 37);
             this.Job_list_button.TabIndex = 3;
             this.Job_list_button.Text = "Job Apply";
             this.Job_list_button.UseVisualStyleBackColor = false;
@@ -125,9 +148,9 @@
             // 
             this.CV_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.CV_button.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CV_button.Location = new System.Drawing.Point(39, 240);
+            this.CV_button.Location = new System.Drawing.Point(26, 187);
             this.CV_button.Name = "CV_button";
-            this.CV_button.Size = new System.Drawing.Size(185, 37);
+            this.CV_button.Size = new System.Drawing.Size(210, 37);
             this.CV_button.TabIndex = 2;
             this.CV_button.Text = "CV";
             this.CV_button.UseVisualStyleBackColor = false;
@@ -139,9 +162,9 @@
             this.Volunteer_Profile_Button.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Volunteer_Profile_Button.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Volunteer_Profile_Button.Image = global::Project_one.Properties.Resources.p;
-            this.Volunteer_Profile_Button.Location = new System.Drawing.Point(39, 184);
+            this.Volunteer_Profile_Button.Location = new System.Drawing.Point(48, 127);
             this.Volunteer_Profile_Button.Name = "Volunteer_Profile_Button";
-            this.Volunteer_Profile_Button.Size = new System.Drawing.Size(185, 33);
+            this.Volunteer_Profile_Button.Size = new System.Drawing.Size(179, 33);
             this.Volunteer_Profile_Button.TabIndex = 0;
             this.Volunteer_Profile_Button.UseVisualStyleBackColor = false;
             this.Volunteer_Profile_Button.Click += new System.EventHandler(this.Volunteer_Profile_Button_Click);
@@ -535,6 +558,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.current_Job_panel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.current_Job_panel.Controls.Add(this.Job_request_panel);
             this.current_Job_panel.Controls.Add(this.job_label);
             this.current_Job_panel.Controls.Add(this.dataGridView1);
             this.current_Job_panel.Location = new System.Drawing.Point(258, 0);
@@ -562,6 +586,202 @@
             this.job_label.TabIndex = 1;
             this.job_label.Text = "Completed Task";
             // 
+            // Job_request_button
+            // 
+            this.Job_request_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Job_request_button.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Job_request_button.Location = new System.Drawing.Point(26, 398);
+            this.Job_request_button.Name = "Job_request_button";
+            this.Job_request_button.Size = new System.Drawing.Size(210, 37);
+            this.Job_request_button.TabIndex = 7;
+            this.Job_request_button.Text = "Job Request";
+            this.Job_request_button.UseVisualStyleBackColor = false;
+            // 
+            // Job_request_panel
+            // 
+            this.Job_request_panel.Controls.Add(this.Cancel_button);
+            this.Job_request_panel.Controls.Add(this.Accept_button);
+            this.Job_request_panel.Controls.Add(this.Requirement_showing_label);
+            this.Job_request_panel.Controls.Add(this.Requirement_label);
+            this.Job_request_panel.Controls.Add(this.Salary_showing_label);
+            this.Job_request_panel.Controls.Add(this.Salary_label);
+            this.Job_request_panel.Controls.Add(this.Schedule_showing_label);
+            this.Job_request_panel.Controls.Add(this.Schedule_label);
+            this.Job_request_panel.Controls.Add(this.job_type_showing_label);
+            this.Job_request_panel.Controls.Add(this.Job_type_label);
+            this.Job_request_panel.Controls.Add(this.job_request_label);
+            this.Job_request_panel.Controls.Add(this.dataGridView2);
+            this.Job_request_panel.Controls.Add(this.showing_company_name_label);
+            this.Job_request_panel.Controls.Add(this.company_name_label);
+            this.Job_request_panel.Location = new System.Drawing.Point(0, 0);
+            this.Job_request_panel.Name = "Job_request_panel";
+            this.Job_request_panel.Size = new System.Drawing.Size(828, 743);
+            this.Job_request_panel.TabIndex = 2;
+            // 
+            // company_name_label
+            // 
+            this.company_name_label.AutoSize = true;
+            this.company_name_label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.company_name_label.Location = new System.Drawing.Point(250, 342);
+            this.company_name_label.Name = "company_name_label";
+            this.company_name_label.Size = new System.Drawing.Size(133, 16);
+            this.company_name_label.TabIndex = 0;
+            this.company_name_label.Text = "Company Name :";
+            // 
+            // showing_company_name_label
+            // 
+            this.showing_company_name_label.AutoSize = true;
+            this.showing_company_name_label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showing_company_name_label.Location = new System.Drawing.Point(429, 342);
+            this.showing_company_name_label.Name = "showing_company_name_label";
+            this.showing_company_name_label.Size = new System.Drawing.Size(141, 16);
+            this.showing_company_name_label.TabIndex = 1;
+            this.showing_company_name_label.Text = "Company Name!!!";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(181, 127);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(476, 150);
+            this.dataGridView2.TabIndex = 2;
+            // 
+            // job_request_label
+            // 
+            this.job_request_label.AutoSize = true;
+            this.job_request_label.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.job_request_label.Location = new System.Drawing.Point(349, 63);
+            this.job_request_label.Name = "job_request_label";
+            this.job_request_label.Size = new System.Drawing.Size(159, 29);
+            this.job_request_label.TabIndex = 3;
+            this.job_request_label.Text = "Job Request";
+            // 
+            // Job_type_label
+            // 
+            this.Job_type_label.AutoSize = true;
+            this.Job_type_label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Job_type_label.Location = new System.Drawing.Point(251, 375);
+            this.Job_type_label.Name = "Job_type_label";
+            this.Job_type_label.Size = new System.Drawing.Size(84, 16);
+            this.Job_type_label.TabIndex = 4;
+            this.Job_type_label.Text = "Job Type :";
+            // 
+            // job_type_showing_label
+            // 
+            this.job_type_showing_label.AutoSize = true;
+            this.job_type_showing_label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.job_type_showing_label.Location = new System.Drawing.Point(431, 375);
+            this.job_type_showing_label.Name = "job_type_showing_label";
+            this.job_type_showing_label.Size = new System.Drawing.Size(93, 16);
+            this.job_type_showing_label.TabIndex = 5;
+            this.job_type_showing_label.Text = "JobType!!!!";
+            // 
+            // Schedule_label
+            // 
+            this.Schedule_label.AutoSize = true;
+            this.Schedule_label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Schedule_label.Location = new System.Drawing.Point(251, 408);
+            this.Schedule_label.Name = "Schedule_label";
+            this.Schedule_label.Size = new System.Drawing.Size(83, 16);
+            this.Schedule_label.TabIndex = 6;
+            this.Schedule_label.Text = "Schedule :";
+            // 
+            // Schedule_showing_label
+            // 
+            this.Schedule_showing_label.AutoSize = true;
+            this.Schedule_showing_label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Schedule_showing_label.Location = new System.Drawing.Point(431, 408);
+            this.Schedule_showing_label.Name = "Schedule_showing_label";
+            this.Schedule_showing_label.Size = new System.Drawing.Size(91, 16);
+            this.Schedule_showing_label.TabIndex = 7;
+            this.Schedule_showing_label.Text = "Schedule!!!";
+            // 
+            // Salary_label
+            // 
+            this.Salary_label.AutoSize = true;
+            this.Salary_label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Salary_label.Location = new System.Drawing.Point(252, 445);
+            this.Salary_label.Name = "Salary_label";
+            this.Salary_label.Size = new System.Drawing.Size(63, 16);
+            this.Salary_label.TabIndex = 8;
+            this.Salary_label.Text = "Salary :";
+            // 
+            // Salary_showing_label
+            // 
+            this.Salary_showing_label.AutoSize = true;
+            this.Salary_showing_label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Salary_showing_label.Location = new System.Drawing.Point(431, 445);
+            this.Salary_showing_label.Name = "Salary_showing_label";
+            this.Salary_showing_label.Size = new System.Drawing.Size(77, 16);
+            this.Salary_showing_label.TabIndex = 9;
+            this.Salary_showing_label.Text = "Salary!!!!";
+            // 
+            // Requirement_label
+            // 
+            this.Requirement_label.AutoSize = true;
+            this.Requirement_label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Requirement_label.Location = new System.Drawing.Point(252, 484);
+            this.Requirement_label.Name = "Requirement_label";
+            this.Requirement_label.Size = new System.Drawing.Size(109, 16);
+            this.Requirement_label.TabIndex = 10;
+            this.Requirement_label.Text = "Requirement :";
+            this.Requirement_label.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Requirement_showing_label
+            // 
+            this.Requirement_showing_label.AutoSize = true;
+            this.Requirement_showing_label.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Requirement_showing_label.Location = new System.Drawing.Point(429, 484);
+            this.Requirement_showing_label.Name = "Requirement_showing_label";
+            this.Requirement_showing_label.Size = new System.Drawing.Size(186, 16);
+            this.Requirement_showing_label.TabIndex = 11;
+            this.Requirement_showing_label.Text = "Showing Requirement!!!";
+            // 
+            // Accept_button
+            // 
+            this.Accept_button.BackColor = System.Drawing.Color.DarkGreen;
+            this.Accept_button.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Accept_button.Location = new System.Drawing.Point(168, 556);
+            this.Accept_button.Name = "Accept_button";
+            this.Accept_button.Size = new System.Drawing.Size(185, 37);
+            this.Accept_button.TabIndex = 8;
+            this.Accept_button.Text = "Accept ";
+            this.Accept_button.UseVisualStyleBackColor = false;
+            // 
+            // Cancel_button
+            // 
+            this.Cancel_button.BackColor = System.Drawing.Color.Red;
+            this.Cancel_button.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel_button.Location = new System.Drawing.Point(434, 556);
+            this.Cancel_button.Name = "Cancel_button";
+            this.Cancel_button.Size = new System.Drawing.Size(185, 37);
+            this.Cancel_button.TabIndex = 12;
+            this.Cancel_button.Text = "Cancel";
+            this.Cancel_button.UseVisualStyleBackColor = false;
+            // 
+            // rules_regulation_button
+            // 
+            this.rules_regulation_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.rules_regulation_button.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rules_regulation_button.Location = new System.Drawing.Point(26, 463);
+            this.rules_regulation_button.Name = "rules_regulation_button";
+            this.rules_regulation_button.Size = new System.Drawing.Size(210, 37);
+            this.rules_regulation_button.TabIndex = 8;
+            this.rules_regulation_button.Text = "Rules And Regulation";
+            this.rules_regulation_button.UseVisualStyleBackColor = false;
+            this.rules_regulation_button.Click += new System.EventHandler(this.rules_regulation_button_Click);
+            // 
+            // Log_out_button
+            // 
+            this.Log_out_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Log_out_button.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Log_out_button.Location = new System.Drawing.Point(26, 539);
+            this.Log_out_button.Name = "Log_out_button";
+            this.Log_out_button.Size = new System.Drawing.Size(210, 37);
+            this.Log_out_button.TabIndex = 9;
+            this.Log_out_button.Text = "Log Out";
+            this.Log_out_button.UseVisualStyleBackColor = false;
+            // 
             // Volunteer_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -584,6 +804,9 @@
             this.current_Job_panel.ResumeLayout(false);
             this.current_Job_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Job_request_panel.ResumeLayout(false);
+            this.Job_request_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -629,5 +852,23 @@
         private System.Windows.Forms.Panel current_Job_panel;
         private System.Windows.Forms.Label job_label;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button Job_request_button;
+        private System.Windows.Forms.Panel Job_request_panel;
+        private System.Windows.Forms.Label showing_company_name_label;
+        private System.Windows.Forms.Label company_name_label;
+        private System.Windows.Forms.Label Schedule_showing_label;
+        private System.Windows.Forms.Label Schedule_label;
+        private System.Windows.Forms.Label job_type_showing_label;
+        private System.Windows.Forms.Label Job_type_label;
+        private System.Windows.Forms.Label job_request_label;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label Salary_showing_label;
+        private System.Windows.Forms.Label Salary_label;
+        private System.Windows.Forms.Label Requirement_label;
+        private System.Windows.Forms.Label Requirement_showing_label;
+        private System.Windows.Forms.Button rules_regulation_button;
+        private System.Windows.Forms.Button Cancel_button;
+        private System.Windows.Forms.Button Accept_button;
+        private System.Windows.Forms.Button Log_out_button;
     }
 }

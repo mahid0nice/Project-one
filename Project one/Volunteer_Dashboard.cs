@@ -73,5 +73,15 @@ namespace Project_one
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rules_regulation_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
