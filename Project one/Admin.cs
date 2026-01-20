@@ -279,7 +279,6 @@ namespace Project_one
             {
                 return false;
             }
-
         }
         public DataTable ShowRules()
         {

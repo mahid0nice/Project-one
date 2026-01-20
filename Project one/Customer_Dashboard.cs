@@ -7,22 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Project_one
 {
-    public partial class Volunteer_Dashboard : Form
+    public partial class Customer_Dashboard : Form
     {
-        public Volunteer_Dashboard()
+        public Customer_Dashboard()
         {
             InitializeComponent();
             ShowPanel(0);
         }
         internal int duplicateId;
-        public Volunteer_Dashboard(int duplicateId)
+        public Customer_Dashboard(int duplicateId)
         {
             InitializeComponent();
+            ShowPanel(0);
             this.duplicateId = duplicateId;
-             ShowPanel(0);
         }
 
         void ShowPanel(int panel)
@@ -30,13 +31,64 @@ namespace Project_one
 
             IdPassPanel.Visible = panel >= 1;
             rulesPanel.Visible = panel >= 2;
-            Profile_Panel.Visible = panel >=3;
+            Profile_Panel.Visible = panel >= 3;
         }
+
+        private void btn_profile_Click(object sender, EventArgs e)
+        {
+            int result = showCustomerProfile();
+            if (result == 0)
+            {
+                MessageBox.Show("No Admin Found");
+            }
+
+            else
+            {
+                ShowPanel(3);
+            }
+        }
+
+        int showCustomerProfile()
+        {
+            try
+            {
+                Customer cc = new Customer();
+                cc = cc.showCustomerDetails(duplicateId);
+                if (cc != null)
+                {
+                    adminNameText.Text = cc.C_Name;
+                    adminNidText.Text = cc.C_NID.ToString();
+                    adminFatherText.Text = cc.C_Company;
+                    adminMotherText.Text = cc.C_Position;
+                    adminPhoneText.Text = cc.C_PhoneNumber.ToString();
+                    adminGmailText.Text = cc.C_Email;
+                    adminAddressText.Text = cc.C_Address;
+                    adminGenderText.Text = cc.C_Gender;
+                    adminDobText.Text = cc.C_DOB?.ToString("dd-MM-yyyy") ?? "";
+
+                    return 1;
+                }
+
+                else
+                {
+                    return 0;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                return 0;
+            }
+        }
+
+
+
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string currPassWord = oldPass.Text.Trim();
-            string newPassWord = newpass.Text.Trim();
+            string currPassWord = oldPass.Text;
+            string newPassWord = newpass.Text;
 
             if (string.IsNullOrEmpty(currPassWord) || string.IsNullOrEmpty(newPassWord))
             {
@@ -46,9 +98,9 @@ namespace Project_one
 
             try
             {
-                Volunteer vol = new Volunteer();
+                Customer cus = new Customer();
 
-                bool updated = vol.UpdatePass(duplicateId, currPassWord, newPassWord);
+                bool updated = cus.UpdatePass(duplicateId, currPassWord, newPassWord);
 
                 if (updated)
                 {
@@ -67,7 +119,23 @@ namespace Project_one
             }
         }
 
-  
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ShowPanel(1);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new User_login_page().Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ShowRulesGrid();
+            rulesSearch_text.Text = "";
+            ShowPanel(2);
+        }
         private void ShowRulesGrid()
         {
             try
@@ -76,7 +144,7 @@ namespace Project_one
                 DataTable dt = vv.ShowRules();
                 RulesGrid.DataSource = dt;
                 RRefresh_button.Visible = false;
-                rulesSearch_text.Clear();
+
                 foreach (DataGridViewRow row in RulesGrid.Rows)
                 {
                     row.ReadOnly = true;
@@ -121,73 +189,6 @@ namespace Project_one
                 row.ReadOnly = true;
             }
             RulesGrid.ClearSelection();
-        }
-
-
-        int showVolunteerProfile()
-        {
-            try
-            {
-                Volunteer vv = new Volunteer();
-                vv = vv.ShowVolunteerDetails(duplicateId);
-                if (vv != null)
-                {
-                    adminNameText.Text = vv.Name;
-                    adminNidText.Text = vv.NID.ToString();
-                    adminFatherText.Text = vv.FatherName;
-                    adminMotherText.Text = vv.MotherName;
-                    adminPhoneText.Text = vv.PhoneNumber.ToString();
-                    adminGmailText.Text = vv.Gmail;
-                    adminAddressText.Text = vv.Address;
-                    adminGenderText.Text = vv.Skill1;
-                    adminDobText.Text = vv.Dob?.ToString("dd-MM-yyyy") ?? "";
-
-                    return 1;
-                }
-
-                else
-                {
-                    return 0;
-                }
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-                return 0;
-            }
-        }
-
-        private void btn_profile_Click_1(object sender, EventArgs e)
-        {
-            int result = showVolunteerProfile();
-            if (result == 0)
-            {
-                MessageBox.Show("No Admin Found");
-            }
-
-            else
-            {
-                ShowPanel(3);
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ShowRulesGrid();
-            rulesSearch_text.Text = "";
-            ShowPanel(2);
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            ShowPanel(1);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            new User_login_page().Show();
-            this.Hide();
         }
     }
 }

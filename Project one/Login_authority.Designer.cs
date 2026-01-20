@@ -56,7 +56,7 @@
             this.Log_In_page.Cursor = System.Windows.Forms.Cursors.Cross;
             this.Log_In_page.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Log_In_page.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Log_In_page.Location = new System.Drawing.Point(271, 115);
+            this.Log_In_page.Location = new System.Drawing.Point(50, 37);
             this.Log_In_page.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Log_In_page.Name = "Log_In_page";
             this.Log_In_page.Size = new System.Drawing.Size(580, 55);
@@ -82,9 +82,9 @@
             this.Log_in_panel.Controls.Add(this.userId_textbox);
             this.Log_in_panel.Controls.Add(this.User_ID_label);
             this.Log_in_panel.Controls.Add(this.label1);
-            this.Log_in_panel.Location = new System.Drawing.Point(297, 232);
+            this.Log_in_panel.Location = new System.Drawing.Point(142, 155);
             this.Log_in_panel.Name = "Log_in_panel";
-            this.Log_in_panel.Size = new System.Drawing.Size(538, 515);
+            this.Log_in_panel.Size = new System.Drawing.Size(548, 459);
             this.Log_in_panel.TabIndex = 3;
             this.Log_in_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
@@ -130,7 +130,7 @@
             // Log_button
             // 
             this.Log_button.BackColor = System.Drawing.Color.Transparent;
-            this.Log_button.Location = new System.Drawing.Point(197, 359);
+            this.Log_button.Location = new System.Drawing.Point(199, 324);
             this.Log_button.Name = "Log_button";
             this.Log_button.Size = new System.Drawing.Size(149, 39);
             this.Log_button.TabIndex = 7;
@@ -141,7 +141,7 @@
             // Password_textbox
             // 
             this.Password_textbox.BackColor = System.Drawing.Color.Gainsboro;
-            this.Password_textbox.Location = new System.Drawing.Point(35, 266);
+            this.Password_textbox.Location = new System.Drawing.Point(35, 247);
             this.Password_textbox.Name = "Password_textbox";
             this.Password_textbox.Size = new System.Drawing.Size(274, 29);
             this.Password_textbox.TabIndex = 6;
@@ -150,7 +150,7 @@
             // 
             this.Password_label.AutoSize = true;
             this.Password_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password_label.Location = new System.Drawing.Point(31, 240);
+            this.Password_label.Location = new System.Drawing.Point(31, 221);
             this.Password_label.Name = "Password_label";
             this.Password_label.Size = new System.Drawing.Size(99, 23);
             this.Password_label.TabIndex = 5;
@@ -160,7 +160,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(376, 101);
+            this.label2.Location = new System.Drawing.Point(356, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 23);
             this.label2.TabIndex = 4;
@@ -173,7 +173,7 @@
             this.authorities_combobox.Items.AddRange(new object[] {
             "Admin",
             "Employee"});
-            this.authorities_combobox.Location = new System.Drawing.Point(380, 138);
+            this.authorities_combobox.Location = new System.Drawing.Point(360, 106);
             this.authorities_combobox.Name = "authorities_combobox";
             this.authorities_combobox.Size = new System.Drawing.Size(144, 32);
             this.authorities_combobox.TabIndex = 3;
@@ -183,7 +183,7 @@
             // userId_textbox
             // 
             this.userId_textbox.BackColor = System.Drawing.Color.Gainsboro;
-            this.userId_textbox.Location = new System.Drawing.Point(35, 192);
+            this.userId_textbox.Location = new System.Drawing.Point(35, 173);
             this.userId_textbox.Name = "userId_textbox";
             this.userId_textbox.Size = new System.Drawing.Size(274, 29);
             this.userId_textbox.TabIndex = 2;
@@ -193,7 +193,7 @@
             // 
             this.User_ID_label.AutoSize = true;
             this.User_ID_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.User_ID_label.Location = new System.Drawing.Point(31, 157);
+            this.User_ID_label.Location = new System.Drawing.Point(31, 138);
             this.User_ID_label.Name = "User_ID_label";
             this.User_ID_label.Size = new System.Drawing.Size(79, 23);
             this.User_ID_label.TabIndex = 1;
@@ -223,7 +223,7 @@
             this.AutoSize = true;
             this.BackgroundImage = global::Project_one.Properties.Resources._360_F_588241010_cdQJ2QTsyDtt36jZsAFR45aAXICnPAzR;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1104, 839);
+            this.ClientSize = new System.Drawing.Size(901, 703);
             this.Controls.Add(this.Log_In_page);
             this.Controls.Add(this.Log_in_panel);
             this.Cursor = System.Windows.Forms.Cursors.Default;

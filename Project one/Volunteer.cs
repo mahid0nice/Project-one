@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace Project_one
@@ -92,6 +93,138 @@ namespace Project_one
             }
             return success;
         }
+
+        public bool UpdatePass(int volunteerId, string currentPassword, string newPassword)
+        {
+            using (SqlConnection con = new SqlConnection(connection))
+            {
+                con.Open();
+
+                string query = @"UPDATE Volunteer
+                             SET V_Password = @NewPass
+                             WHERE V_Id = @VolId
+                               AND V_Password = @CurrentPass";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@NewPass", newPassword);
+                    cmd.Parameters.AddWithValue("@VolId", volunteerId);
+                    cmd.Parameters.AddWithValue("@CurrentPass", currentPassword);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+        }
+        public DataTable SearchRules(string searchText)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(@"SELECT * FROM Rules 
+                                                 WHERE CAST([No] AS NVARCHAR) LIKE @search 
+                                                 OR Rules LIKE @search ORDER BY [No]", con))
+                {
+                    cmd.Parameters.AddWithValue("@search", "%" + searchText + "%");
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching rules:\n" + ex.Message);
+            }
+
+            return dt;
+        }
+        public DataTable ShowRules()
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Rules ORDER BY [No]", con))
+                {
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception)
+            {
+            }
+
+            return dt;
+        }
+
+        public bool CheckValidation()
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                {
+                    string query = @"SELECT COUNT(*) FROM Volunteer WHERE V_Id = @Id AND V_Password = @Password and V_Status = 'Active'";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@Id", Id);
+                        cmd.Parameters.AddWithValue("@Password", Password);
+
+                        con.Open();
+                        int count = (int)cmd.ExecuteScalar();
+                        return count == 1;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        public Volunteer ShowVolunteerDetails(int id)
+        {
+            string query = "SELECT * FROM Volunteer WHERE V_Id = @Id";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlDataAdapter da = new SqlDataAdapter(query, con))
+                {
+                    da.SelectCommand.Parameters.AddWithValue("@Id", id);
+
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    if (dt.Rows.Count == 0)
+                        return null;
+
+                    DataRow row = dt.Rows[0];
+
+                    return new Volunteer
+                    {
+                        Id = Convert.ToInt32(row["V_Id"]),
+                        Name = row["V_Name"].ToString(),
+                        PhoneNumber = Convert.ToInt64(row["V_PhoneNumber"]),
+                        Dob = row["V_DOB"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(row["V_DOB"]),
+                        Address = row["V_Address"] == DBNull.Value ? null : row["V_Address"].ToString(),
+                        Gmail = row["V_Gmail"].ToString(),
+                        NID = Convert.ToInt64(row["V_NID"]),
+                        FatherName = row["V_FatherName"] == DBNull.Value ? null : row["V_FatherName"].ToString(),
+                        MotherName = row["V_MotherName"] == DBNull.Value ? null : row["V_MotherName"].ToString(),
+                        Skill1 = row["V_Skill1"] == DBNull.Value ? null : row["V_Skill1"].ToString()
+                    };
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+
+
 
     }
 }

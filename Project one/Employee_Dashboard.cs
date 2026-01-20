@@ -35,6 +35,8 @@ namespace Project_one
             inactiveVolunteer.Visible = panel >= 3;
             IdPassPanel.Visible = panel >= 4;
             rulesPanel.Visible = panel >= 5;
+            CustomerPanel.Visible = panel >= 6;
+            inactiveCusPanel.Visible = panel >= 7;
         }
         void showProfileLabel(bool value)
         {
@@ -359,6 +361,7 @@ namespace Project_one
         private void btn_vol_details_Click(object sender, EventArgs e)
         {
             //vol baton
+            v_searchText.Text = "";
             vCancel.Visible = false;
             vSave.Visible = false;
             vRefresh.Visible = false;
@@ -386,7 +389,7 @@ namespace Project_one
 
         private void btn_vol_request_Click(object sender, EventArgs e)
         {
-
+            v_searchText2.Text = "";
             v_dataGridView2.DataSource =  new Employee().ShowAllInactiveVolunteers();
             LoadInActiveVolunteers();
             ShowPanel(3);
@@ -565,6 +568,7 @@ namespace Project_one
 
         private void button4_Click(object sender, EventArgs e)
         {
+
             ShowPanel(5);
             ShowRulesGrid();
         }
@@ -573,8 +577,8 @@ namespace Project_one
         {
             try
             {
-                Admin ad = new Admin();
-                DataTable dt = ad.ShowRules();
+                Employee ee = new Employee();
+                DataTable dt = ee.ShowRules();
                 RulesGrid.DataSource = dt;
                 RRefresh_button.Visible = false;
 
@@ -604,8 +608,8 @@ namespace Project_one
         {
             RRefresh_button.Visible = true;
             string search = rulesSearch_text.Text.Trim();
-            Admin ad = new Admin();
-            DataTable dt = ad.SearchRules(search);
+            Employee ee = new Employee();
+            DataTable dt = ee.SearchRules(search);
 
             if (dt.Rows.Count > 0)
             {
@@ -613,7 +617,7 @@ namespace Project_one
             }
             else
             {
-                MessageBox.Show("No matching rules found. Showing previous data.");
+                MessageBox.Show("No matching rules found.");
                 ShowRulesGrid();
             }
 
@@ -622,6 +626,291 @@ namespace Project_one
                 row.ReadOnly = true;
             }
             RulesGrid.ClearSelection();
+        }
+
+        private void btn_customer_details_Click(object sender, EventArgs e)
+        {
+            C_searchText.Text = "";
+            CCancel.Visible = false;
+            CSave.Visible = false;
+            CRefresh.Visible = false;
+            CUpdate.Visible = true;
+            CDelete.Visible = true;
+            Employee ee = new Employee();
+            C_dataGridView1.DataSource = ee.ShowAllCustomers();
+            C_dataGridView1.ClearSelection();
+            ShowPanel(6);
+        }
+        private void CustomerLoad()
+        {
+            Employee ee = new Employee();
+            C_dataGridView1.DataSource = ee.ShowAllCustomers();
+
+            foreach (DataGridViewRow row in C_dataGridView1.Rows)
+            { row.ReadOnly = true; }
+
+            C_dataGridView1.ClearSelection();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            //cusSearch
+            CRefresh.Visible = true;
+            string search = C_searchText.Text.Trim();
+            Employee ee = new Employee();
+
+            DataTable dt = ee.SearchCustomers(search);
+
+            if (dt.Rows.Count > 0)
+            {
+                C_dataGridView1.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("No customers found.");
+                CustomerLoad();
+                CCancel.Visible = false;
+                CSave.Visible = false;
+                CRefresh.Visible = false;
+                CUpdate.Visible = true;
+                CDelete.Visible = true;
+            }
+
+            foreach (DataGridViewRow row in C_dataGridView1.Rows)
+                row.ReadOnly = true;
+
+            C_dataGridView1.ClearSelection();
+        }
+
+        private void CRefresh_Click(object sender, EventArgs e)
+        {
+            //CRefresh
+            CCancel.Visible = false;
+            CSave.Visible = false;
+            CRefresh.Visible = false;
+            CUpdate.Visible = true;
+            CDelete.Visible = true;
+            CustomerLoad();
+        }
+
+        private void CSave_Click(object sender, EventArgs e)
+        {
+            //CSave
+
+            if (C_dataGridView1.SelectedRows.Count != 1)
+                return;
+
+            DataGridViewRow row = C_dataGridView1.SelectedRows[0];
+
+            Customer c = new Customer
+            {
+                C_Id = Convert.ToInt32(row.Cells["C_Id"].Value),
+                C_Name = row.Cells["C_Name"].Value.ToString(),
+                C_PhoneNumber = Convert.ToInt64(row.Cells["C_PhoneNumber"].Value),
+                C_DOB = row.Cells["C_DOB"].Value == DBNull.Value
+                            ? (DateTime?)null
+                            : Convert.ToDateTime(row.Cells["C_DOB"].Value),
+                C_Address = row.Cells["C_Address"].Value?.ToString(),
+                C_Email = row.Cells["C_Email"].Value.ToString(),
+                C_NID = Convert.ToInt64(row.Cells["C_NID"].Value),
+                C_Gender = row.Cells["C_Gender"].Value.ToString(),
+                C_Company = row.Cells["C_Company"].Value?.ToString(),
+                C_Position = row.Cells["C_Position"].Value?.ToString()
+            };
+
+            Employee ee = new Employee();
+            int result = ee.UpdateCustomer(c);
+
+            if (result == 1)
+            {
+                MessageBox.Show("Customer updated successfully.");
+                CustomerLoad();
+                CCancel.Visible = false;
+                CSave.Visible = false;
+                CUpdate.Visible = true;
+                CDelete.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Customer update failed.");
+            }
+        }
+
+        private void CDelete_Click(object sender, EventArgs e)
+        {
+            //CDelete
+            if (C_dataGridView1.SelectedRows.Count != 1)
+                return;
+
+            int id = Convert.ToInt32(
+                C_dataGridView1.SelectedRows[0].Cells["C_Id"].Value);
+
+            DialogResult dr = MessageBox.Show(
+                "Are you sure you want to delete this customer?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (dr == DialogResult.Yes)
+            {
+                Employee ee = new Employee();
+                int result = ee.DeleteCustomer(id);
+
+                if (result == 1)
+                {
+                    MessageBox.Show("Customer deleted successfully.");
+                    CustomerLoad();
+                }
+                else
+                {
+                    MessageBox.Show("Delete failed.");
+                }
+            }
+        }
+
+        private void CUpdate_Click(object sender, EventArgs e)
+        {
+            //CUpdate
+            if (C_dataGridView1.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Select one volunteer to update.");
+                return;
+            }
+            CCancel.Visible = true;
+            CSave.Visible = true;
+            CUpdate.Visible = false;
+            CDelete.Visible = false;
+            foreach (DataGridViewRow row in C_dataGridView1.Rows)
+                row.ReadOnly = true;
+
+            int index = C_dataGridView1.SelectedRows[0].Index;
+            C_dataGridView1.Rows[index].ReadOnly = false;
+            C_dataGridView1.Rows[index].Cells["C_Id"].ReadOnly = true;
+
+            MessageBox.Show("You can now edit the selected volunteer.");
+        }
+
+        private void CCancel_Click(object sender, EventArgs e)
+        {
+            //CCancel
+            CCancel.Visible = false;
+            CSave.Visible = false;
+            CUpdate.Visible = true;
+            CDelete.Visible = true;
+            foreach (DataGridViewRow row in C_dataGridView1.Rows)
+                row.ReadOnly = true;
+        }
+
+        private void btn_customer_request_Click(object sender, EventArgs e)
+        {
+            LoadInCustomers();
+            C_searchText.Text = "";
+            ShowPanel(7);
+        }
+
+        private void LoadInCustomers()
+        {
+            //inactive customer load
+            Employee ee = new Employee();
+            C_dataGridView2.DataSource = ee.ShowInactiveCustomers();
+
+            foreach (DataGridViewRow row in C_dataGridView2.Rows)
+            { row.ReadOnly = true; }
+
+            C_dataGridView2.ClearSelection();
+            CIRefresh.Visible = false;
+        }
+
+        private void CIRefresh_Click(object sender, EventArgs e)
+        {
+            LoadInCustomers();
+        }
+
+        private void C1Search_Click(object sender, EventArgs e)
+        {
+            string search = C_searchText2.Text.Trim();
+            Employee ee = new Employee();
+
+            DataTable dt = ee.InactiveSearchCustomers(search);
+
+            if (dt.Rows.Count > 0)
+            {
+                C_dataGridView2.DataSource = dt;
+                CIRefresh.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("No customers found.");
+                CustomerLoad();
+
+            }
+
+            foreach (DataGridViewRow row in C_dataGridView2.Rows)
+                row.ReadOnly = true;
+
+            C_dataGridView2.ClearSelection();
+        }
+        //delete inactive customer
+        private void ICDelete_Click(object sender, EventArgs e)
+        {
+            if (C_dataGridView2.SelectedRows.Count != 1)
+                return;
+
+            int id = Convert.ToInt32(
+                C_dataGridView2.SelectedRows[0].Cells["C_Id"].Value);
+
+            DialogResult dr = MessageBox.Show(
+                "Are you sure you want to delete this customer?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (dr == DialogResult.Yes)
+            {
+                Employee ee = new Employee();
+                int result = ee.DeleteInactiveCustomer(id);
+
+                if (result == 1)
+                {
+                    MessageBox.Show("Customer deleted successfully.");
+                    LoadInCustomers();
+                }
+                else
+                {
+                    MessageBox.Show("Delete failed.");
+                }
+            }
+        }
+
+        private void ICActive_Click(object sender, EventArgs e)
+        {
+            if (C_dataGridView2.SelectedRows.Count != 1)
+                return;
+
+            int id = Convert.ToInt32(
+                C_dataGridView2.SelectedRows[0].Cells["C_Id"].Value);
+
+            DialogResult dr = MessageBox.Show(
+                "Are you sure you want to accept this customer?",
+                "Confirm Accept",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (dr == DialogResult.Yes)
+            {
+                Employee ee = new Employee();
+                int result = ee.AcceptInactiveCustomer(id);
+
+                if (result == 1)
+                {
+                    MessageBox.Show("Customer accepted successfully.");
+                    LoadInCustomers();
+                }
+                else
+                {
+                    MessageBox.Show("Accept failed.");
+                }
+            }
         }
     }
 }

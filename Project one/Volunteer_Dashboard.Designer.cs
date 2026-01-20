@@ -28,414 +28,586 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Volunteer_Dashboard));
+            this.IdPassPanel = new System.Windows.Forms.Panel();
+            this.oldPassWord = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.newpass = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.Label();
+            this.rulesPanel = new System.Windows.Forms.Panel();
+            this.RulesGrid = new System.Windows.Forms.DataGridView();
+            this.RRefresh_button = new System.Windows.Forms.Button();
+            this.RSearch_button = new System.Windows.Forms.Button();
+            this.rulesSearch_text = new System.Windows.Forms.TextBox();
+            this.oldPass = new System.Windows.Forms.TextBox();
+            this.Profile_Panel = new System.Windows.Forms.Panel();
+            this.adminDobText = new System.Windows.Forms.Label();
+            this.Dob_label = new System.Windows.Forms.Label();
+            this.adminGenderText = new System.Windows.Forms.Label();
+            this.adminAddressText = new System.Windows.Forms.Label();
+            this.adminGmailText = new System.Windows.Forms.Label();
+            this.adminPhoneText = new System.Windows.Forms.Label();
+            this.adminMotherText = new System.Windows.Forms.Label();
+            this.adminFatherText = new System.Windows.Forms.Label();
+            this.adminNidText = new System.Windows.Forms.Label();
+            this.adminNameText = new System.Windows.Forms.Label();
+            this.adminProfileGender_label = new System.Windows.Forms.Label();
+            this.adminProfileMotherName_label = new System.Windows.Forms.Label();
+            this.adminProfileFatherName_label = new System.Windows.Forms.Label();
+            this.adminProfileAddress_label = new System.Windows.Forms.Label();
+            this.adminProfileNid_label = new System.Windows.Forms.Label();
+            this.adminProfileGmail_label = new System.Windows.Forms.Label();
+            this.adminProfileNumber_label = new System.Windows.Forms.Label();
+            this.adminProfileName_label = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Volunteer_Profile_Button = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.volunteer_profile_view_panel = new System.Windows.Forms.Panel();
-            this.Religion_label = new System.Windows.Forms.Label();
-            this.Nationality_label = new System.Windows.Forms.Label();
-            this.Emergency_Phone_label = new System.Windows.Forms.Label();
-            this.Mother_Name_label = new System.Windows.Forms.Label();
-            this.Father_Name_label = new System.Windows.Forms.Label();
-            this.Address_label = new System.Windows.Forms.Label();
-            this.Gender_label = new System.Windows.Forms.Label();
-            this.Phone_label = new System.Windows.Forms.Label();
-            this.Gmail_label = new System.Windows.Forms.Label();
-            this.Volunteer_Name_Show_label = new System.Windows.Forms.Label();
-            this.volunteer_picture_showbox = new System.Windows.Forms.PictureBox();
-            this.N_label = new System.Windows.Forms.Label();
-            this.Em_label = new System.Windows.Forms.Label();
-            this.num_label = new System.Windows.Forms.Label();
-            this.gen_label = new System.Windows.Forms.Label();
-            this.add_label = new System.Windows.Forms.Label();
-            this.fa_label = new System.Windows.Forms.Label();
-            this.Moth_label = new System.Windows.Forms.Label();
-            this.emr_num_label = new System.Windows.Forms.Label();
-            this.nat_label = new System.Windows.Forms.Label();
-            this.reli_label = new System.Windows.Forms.Label();
-            this.update_volunter_profile_button = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Registration_lebel = new System.Windows.Forms.Label();
+            this.btn_profile = new System.Windows.Forms.Button();
+            this.btn_vol_request = new System.Windows.Forms.Button();
+            this.btn_vol_details = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.IdPassPanel.SuspendLayout();
+            this.rulesPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RulesGrid)).BeginInit();
+            this.Profile_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.volunteer_profile_view_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.volunteer_picture_showbox)).BeginInit();
             this.SuspendLayout();
+            // 
+            // IdPassPanel
+            // 
+            this.IdPassPanel.BackColor = System.Drawing.Color.LightSlateGray;
+            this.IdPassPanel.Controls.Add(this.rulesPanel);
+            this.IdPassPanel.Controls.Add(this.oldPassWord);
+            this.IdPassPanel.Controls.Add(this.button3);
+            this.IdPassPanel.Controls.Add(this.newpass);
+            this.IdPassPanel.Controls.Add(this.Password);
+            this.IdPassPanel.Controls.Add(this.oldPass);
+            this.IdPassPanel.Location = new System.Drawing.Point(312, -2);
+            this.IdPassPanel.Name = "IdPassPanel";
+            this.IdPassPanel.Size = new System.Drawing.Size(709, 609);
+            this.IdPassPanel.TabIndex = 81;
+            // 
+            // oldPassWord
+            // 
+            this.oldPassWord.AutoSize = true;
+            this.oldPassWord.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.oldPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oldPassWord.Location = new System.Drawing.Point(108, 272);
+            this.oldPassWord.Name = "oldPassWord";
+            this.oldPassWord.Size = new System.Drawing.Size(206, 25);
+            this.oldPassWord.TabIndex = 8;
+            this.oldPassWord.Text = "Current Password:";
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.BackColor = System.Drawing.Color.MediumPurple;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(269, 384);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(144, 38);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Submit";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // newpass
+            // 
+            this.newpass.Location = new System.Drawing.Point(331, 319);
+            this.newpass.Name = "newpass";
+            this.newpass.Size = new System.Drawing.Size(219, 20);
+            this.newpass.TabIndex = 6;
+            // 
+            // Password
+            // 
+            this.Password.AutoSize = true;
+            this.Password.BackColor = System.Drawing.SystemColors.GrayText;
+            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.Location = new System.Drawing.Point(130, 314);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(173, 25);
+            this.Password.TabIndex = 5;
+            this.Password.Text = "New Password:";
+            // 
+            // rulesPanel
+            // 
+            this.rulesPanel.BackColor = System.Drawing.Color.LightSlateGray;
+            this.rulesPanel.Controls.Add(this.Profile_Panel);
+            this.rulesPanel.Controls.Add(this.RulesGrid);
+            this.rulesPanel.Controls.Add(this.RRefresh_button);
+            this.rulesPanel.Controls.Add(this.RSearch_button);
+            this.rulesPanel.Controls.Add(this.rulesSearch_text);
+            this.rulesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rulesPanel.Location = new System.Drawing.Point(0, 0);
+            this.rulesPanel.Name = "rulesPanel";
+            this.rulesPanel.Size = new System.Drawing.Size(709, 609);
+            this.rulesPanel.TabIndex = 10;
+            // 
+            // RulesGrid
+            // 
+            this.RulesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RulesGrid.Location = new System.Drawing.Point(3, 99);
+            this.RulesGrid.Name = "RulesGrid";
+            this.RulesGrid.Size = new System.Drawing.Size(703, 473);
+            this.RulesGrid.TabIndex = 41;
+            // 
+            // RRefresh_button
+            // 
+            this.RRefresh_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RRefresh_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.RRefresh_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RRefresh_button.ForeColor = System.Drawing.Color.Black;
+            this.RRefresh_button.Location = new System.Drawing.Point(25, 65);
+            this.RRefresh_button.Name = "RRefresh_button";
+            this.RRefresh_button.Size = new System.Drawing.Size(65, 29);
+            this.RRefresh_button.TabIndex = 38;
+            this.RRefresh_button.Text = "Refresh";
+            this.RRefresh_button.UseVisualStyleBackColor = false;
+            this.RRefresh_button.Click += new System.EventHandler(this.RRefresh_button_Click);
+            // 
+            // RSearch_button
+            // 
+            this.RSearch_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RSearch_button.BackColor = System.Drawing.Color.Teal;
+            this.RSearch_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RSearch_button.ForeColor = System.Drawing.Color.Black;
+            this.RSearch_button.Location = new System.Drawing.Point(377, 66);
+            this.RSearch_button.Name = "RSearch_button";
+            this.RSearch_button.Size = new System.Drawing.Size(84, 27);
+            this.RSearch_button.TabIndex = 37;
+            this.RSearch_button.Text = "Search:";
+            this.RSearch_button.UseVisualStyleBackColor = false;
+            this.RSearch_button.Click += new System.EventHandler(this.RSearch_button_Click);
+            // 
+            // rulesSearch_text
+            // 
+            this.rulesSearch_text.Location = new System.Drawing.Point(467, 70);
+            this.rulesSearch_text.Name = "rulesSearch_text";
+            this.rulesSearch_text.Size = new System.Drawing.Size(189, 20);
+            this.rulesSearch_text.TabIndex = 36;
+            // 
+            // oldPass
+            // 
+            this.oldPass.Location = new System.Drawing.Point(331, 272);
+            this.oldPass.Name = "oldPass";
+            this.oldPass.Size = new System.Drawing.Size(217, 20);
+            this.oldPass.TabIndex = 9;
+            // 
+            // Profile_Panel
+            // 
+            this.Profile_Panel.Controls.Add(this.pictureBox1);
+            this.Profile_Panel.Controls.Add(this.adminDobText);
+            this.Profile_Panel.Controls.Add(this.Dob_label);
+            this.Profile_Panel.Controls.Add(this.adminGenderText);
+            this.Profile_Panel.Controls.Add(this.adminAddressText);
+            this.Profile_Panel.Controls.Add(this.adminGmailText);
+            this.Profile_Panel.Controls.Add(this.adminPhoneText);
+            this.Profile_Panel.Controls.Add(this.adminMotherText);
+            this.Profile_Panel.Controls.Add(this.adminFatherText);
+            this.Profile_Panel.Controls.Add(this.adminNidText);
+            this.Profile_Panel.Controls.Add(this.adminNameText);
+            this.Profile_Panel.Controls.Add(this.adminProfileGender_label);
+            this.Profile_Panel.Controls.Add(this.adminProfileMotherName_label);
+            this.Profile_Panel.Controls.Add(this.adminProfileFatherName_label);
+            this.Profile_Panel.Controls.Add(this.adminProfileAddress_label);
+            this.Profile_Panel.Controls.Add(this.adminProfileNid_label);
+            this.Profile_Panel.Controls.Add(this.adminProfileGmail_label);
+            this.Profile_Panel.Controls.Add(this.adminProfileNumber_label);
+            this.Profile_Panel.Controls.Add(this.adminProfileName_label);
+            this.Profile_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Profile_Panel.Location = new System.Drawing.Point(0, 0);
+            this.Profile_Panel.Name = "Profile_Panel";
+            this.Profile_Panel.Size = new System.Drawing.Size(709, 609);
+            this.Profile_Panel.TabIndex = 42;
+            // 
+            // adminDobText
+            // 
+            this.adminDobText.BackColor = System.Drawing.Color.Transparent;
+            this.adminDobText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminDobText.ForeColor = System.Drawing.Color.Black;
+            this.adminDobText.Location = new System.Drawing.Point(316, 440);
+            this.adminDobText.Name = "adminDobText";
+            this.adminDobText.Size = new System.Drawing.Size(233, 21);
+            this.adminDobText.TabIndex = 120;
+            this.adminDobText.Text = "...";
+            // 
+            // Dob_label
+            // 
+            this.Dob_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Dob_label.AutoSize = true;
+            this.Dob_label.BackColor = System.Drawing.Color.Transparent;
+            this.Dob_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dob_label.ForeColor = System.Drawing.Color.Black;
+            this.Dob_label.Location = new System.Drawing.Point(186, 440);
+            this.Dob_label.Name = "Dob_label";
+            this.Dob_label.Size = new System.Drawing.Size(112, 21);
+            this.Dob_label.TabIndex = 119;
+            this.Dob_label.Text = "Date of Birth :";
+            // 
+            // adminGenderText
+            // 
+            this.adminGenderText.BackColor = System.Drawing.Color.Transparent;
+            this.adminGenderText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminGenderText.ForeColor = System.Drawing.Color.Black;
+            this.adminGenderText.Location = new System.Drawing.Point(314, 475);
+            this.adminGenderText.Name = "adminGenderText";
+            this.adminGenderText.Size = new System.Drawing.Size(235, 21);
+            this.adminGenderText.TabIndex = 118;
+            this.adminGenderText.Text = "...";
+            // 
+            // adminAddressText
+            // 
+            this.adminAddressText.BackColor = System.Drawing.Color.Transparent;
+            this.adminAddressText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminAddressText.ForeColor = System.Drawing.Color.Black;
+            this.adminAddressText.Location = new System.Drawing.Point(314, 408);
+            this.adminAddressText.Name = "adminAddressText";
+            this.adminAddressText.Size = new System.Drawing.Size(235, 21);
+            this.adminAddressText.TabIndex = 114;
+            this.adminAddressText.Text = "...";
+            // 
+            // adminGmailText
+            // 
+            this.adminGmailText.BackColor = System.Drawing.Color.Transparent;
+            this.adminGmailText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminGmailText.ForeColor = System.Drawing.Color.Black;
+            this.adminGmailText.Location = new System.Drawing.Point(316, 372);
+            this.adminGmailText.Name = "adminGmailText";
+            this.adminGmailText.Size = new System.Drawing.Size(235, 21);
+            this.adminGmailText.TabIndex = 113;
+            this.adminGmailText.Text = "...";
+            // 
+            // adminPhoneText
+            // 
+            this.adminPhoneText.BackColor = System.Drawing.Color.Transparent;
+            this.adminPhoneText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminPhoneText.ForeColor = System.Drawing.Color.Black;
+            this.adminPhoneText.Location = new System.Drawing.Point(316, 340);
+            this.adminPhoneText.Name = "adminPhoneText";
+            this.adminPhoneText.Size = new System.Drawing.Size(235, 21);
+            this.adminPhoneText.TabIndex = 112;
+            this.adminPhoneText.Text = "...";
+            // 
+            // adminMotherText
+            // 
+            this.adminMotherText.BackColor = System.Drawing.Color.Transparent;
+            this.adminMotherText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminMotherText.ForeColor = System.Drawing.Color.Black;
+            this.adminMotherText.Location = new System.Drawing.Point(314, 299);
+            this.adminMotherText.Name = "adminMotherText";
+            this.adminMotherText.Size = new System.Drawing.Size(235, 21);
+            this.adminMotherText.TabIndex = 111;
+            this.adminMotherText.Text = "...";
+            // 
+            // adminFatherText
+            // 
+            this.adminFatherText.BackColor = System.Drawing.Color.Transparent;
+            this.adminFatherText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminFatherText.ForeColor = System.Drawing.Color.Black;
+            this.adminFatherText.Location = new System.Drawing.Point(314, 264);
+            this.adminFatherText.Name = "adminFatherText";
+            this.adminFatherText.Size = new System.Drawing.Size(235, 21);
+            this.adminFatherText.TabIndex = 110;
+            this.adminFatherText.Text = "...";
+            // 
+            // adminNidText
+            // 
+            this.adminNidText.BackColor = System.Drawing.Color.Transparent;
+            this.adminNidText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminNidText.ForeColor = System.Drawing.Color.Black;
+            this.adminNidText.Location = new System.Drawing.Point(314, 229);
+            this.adminNidText.Name = "adminNidText";
+            this.adminNidText.Size = new System.Drawing.Size(235, 21);
+            this.adminNidText.TabIndex = 109;
+            this.adminNidText.Text = "...";
+            // 
+            // adminNameText
+            // 
+            this.adminNameText.BackColor = System.Drawing.Color.Transparent;
+            this.adminNameText.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminNameText.ForeColor = System.Drawing.Color.Black;
+            this.adminNameText.Location = new System.Drawing.Point(314, 199);
+            this.adminNameText.Name = "adminNameText";
+            this.adminNameText.Size = new System.Drawing.Size(235, 21);
+            this.adminNameText.TabIndex = 108;
+            this.adminNameText.Text = "...";
+            // 
+            // adminProfileGender_label
+            // 
+            this.adminProfileGender_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminProfileGender_label.AutoSize = true;
+            this.adminProfileGender_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileGender_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileGender_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileGender_label.Location = new System.Drawing.Point(206, 484);
+            this.adminProfileGender_label.Name = "adminProfileGender_label";
+            this.adminProfileGender_label.Size = new System.Drawing.Size(53, 21);
+            this.adminProfileGender_label.TabIndex = 104;
+            this.adminProfileGender_label.Text = "Skill :";
+            // 
+            // adminProfileMotherName_label
+            // 
+            this.adminProfileMotherName_label.AutoSize = true;
+            this.adminProfileMotherName_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileMotherName_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileMotherName_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileMotherName_label.Location = new System.Drawing.Point(186, 299);
+            this.adminProfileMotherName_label.Name = "adminProfileMotherName_label";
+            this.adminProfileMotherName_label.Size = new System.Drawing.Size(126, 21);
+            this.adminProfileMotherName_label.TabIndex = 103;
+            this.adminProfileMotherName_label.Text = "Mothers Name :";
+            // 
+            // adminProfileFatherName_label
+            // 
+            this.adminProfileFatherName_label.AutoSize = true;
+            this.adminProfileFatherName_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileFatherName_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileFatherName_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileFatherName_label.Location = new System.Drawing.Point(186, 264);
+            this.adminProfileFatherName_label.Name = "adminProfileFatherName_label";
+            this.adminProfileFatherName_label.Size = new System.Drawing.Size(118, 21);
+            this.adminProfileFatherName_label.TabIndex = 102;
+            this.adminProfileFatherName_label.Text = "Fathers Name :";
+            // 
+            // adminProfileAddress_label
+            // 
+            this.adminProfileAddress_label.AutoSize = true;
+            this.adminProfileAddress_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileAddress_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileAddress_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileAddress_label.Location = new System.Drawing.Point(188, 408);
+            this.adminProfileAddress_label.Name = "adminProfileAddress_label";
+            this.adminProfileAddress_label.Size = new System.Drawing.Size(78, 21);
+            this.adminProfileAddress_label.TabIndex = 101;
+            this.adminProfileAddress_label.Text = "Address :";
+            // 
+            // adminProfileNid_label
+            // 
+            this.adminProfileNid_label.AutoSize = true;
+            this.adminProfileNid_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileNid_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileNid_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileNid_label.Location = new System.Drawing.Point(186, 233);
+            this.adminProfileNid_label.Name = "adminProfileNid_label";
+            this.adminProfileNid_label.Size = new System.Drawing.Size(80, 21);
+            this.adminProfileNid_label.TabIndex = 100;
+            this.adminProfileNid_label.Text = "NID NO :";
+            // 
+            // adminProfileGmail_label
+            // 
+            this.adminProfileGmail_label.AutoSize = true;
+            this.adminProfileGmail_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileGmail_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileGmail_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileGmail_label.Location = new System.Drawing.Point(186, 372);
+            this.adminProfileGmail_label.Name = "adminProfileGmail_label";
+            this.adminProfileGmail_label.Size = new System.Drawing.Size(63, 21);
+            this.adminProfileGmail_label.TabIndex = 99;
+            this.adminProfileGmail_label.Text = "Gmail :";
+            // 
+            // adminProfileNumber_label
+            // 
+            this.adminProfileNumber_label.AutoSize = true;
+            this.adminProfileNumber_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileNumber_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileNumber_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileNumber_label.Location = new System.Drawing.Point(186, 341);
+            this.adminProfileNumber_label.Name = "adminProfileNumber_label";
+            this.adminProfileNumber_label.Size = new System.Drawing.Size(130, 21);
+            this.adminProfileNumber_label.TabIndex = 98;
+            this.adminProfileNumber_label.Text = "Phone Number :";
+            // 
+            // adminProfileName_label
+            // 
+            this.adminProfileName_label.AutoSize = true;
+            this.adminProfileName_label.BackColor = System.Drawing.Color.Transparent;
+            this.adminProfileName_label.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminProfileName_label.ForeColor = System.Drawing.Color.Black;
+            this.adminProfileName_label.Location = new System.Drawing.Point(186, 199);
+            this.adminProfileName_label.Name = "adminProfileName_label";
+            this.adminProfileName_label.Size = new System.Drawing.Size(61, 21);
+            this.adminProfileName_label.TabIndex = 97;
+            this.adminProfileName_label.Text = "Name :";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::Project_one.Properties.Resources._new;
+            this.pictureBox1.Location = new System.Drawing.Point(303, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 118);
+            this.pictureBox1.TabIndex = 133;
+            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.Volunteer_Profile_Button);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btn_vol_details);
+            this.panel1.Controls.Add(this.btn_vol_request);
+            this.panel1.Controls.Add(this.btn_profile);
+            this.panel1.Controls.Add(this.Registration_lebel);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Location = new System.Drawing.Point(1, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(276, 769);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(305, 609);
+            this.panel1.TabIndex = 82;
             // 
-            // Volunteer_Profile_Button
+            // button2
             // 
-            this.Volunteer_Profile_Button.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Volunteer_Profile_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Volunteer_Profile_Button.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Volunteer_Profile_Button.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Volunteer_Profile_Button.Image = global::Project_one.Properties.Resources.p;
-            this.Volunteer_Profile_Button.Location = new System.Drawing.Point(25, 34);
-            this.Volunteer_Profile_Button.Name = "Volunteer_Profile_Button";
-            this.Volunteer_Profile_Button.Size = new System.Drawing.Size(185, 33);
-            this.Volunteer_Profile_Button.TabIndex = 0;
-            this.Volunteer_Profile_Button.UseVisualStyleBackColor = false;
+            this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(54, 450);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(179, 33);
+            this.button2.TabIndex = 35;
+            this.button2.Text = "Log Out";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // imageList1
+            // Registration_lebel
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.Registration_lebel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Registration_lebel.AutoSize = true;
+            this.Registration_lebel.BackColor = System.Drawing.Color.Transparent;
+            this.Registration_lebel.Font = new System.Drawing.Font("Lucida Bright", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Registration_lebel.Location = new System.Drawing.Point(31, 65);
+            this.Registration_lebel.Name = "Registration_lebel";
+            this.Registration_lebel.Size = new System.Drawing.Size(243, 24);
+            this.Registration_lebel.TabIndex = 30;
+            this.Registration_lebel.Text = "Volunteer Dashboard";
             // 
-            // volunteer_profile_view_panel
+            // btn_profile
             // 
-            this.volunteer_profile_view_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.volunteer_profile_view_panel.BackgroundImage = global::Project_one.Properties.Resources.light;
-            this.volunteer_profile_view_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.volunteer_profile_view_panel.Controls.Add(this.update_volunter_profile_button);
-            this.volunteer_profile_view_panel.Controls.Add(this.reli_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.nat_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.emr_num_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.Moth_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.fa_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.add_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.gen_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.num_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.Em_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.N_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.Religion_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.Nationality_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.Emergency_Phone_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.Mother_Name_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.Father_Name_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.Address_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.Gender_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.Phone_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.Gmail_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.Volunteer_Name_Show_label);
-            this.volunteer_profile_view_panel.Controls.Add(this.volunteer_picture_showbox);
-            this.volunteer_profile_view_panel.Location = new System.Drawing.Point(273, 0);
-            this.volunteer_profile_view_panel.Name = "volunteer_profile_view_panel";
-            this.volunteer_profile_view_panel.Size = new System.Drawing.Size(840, 762);
-            this.volunteer_profile_view_panel.TabIndex = 1;
+            this.btn_profile.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btn_profile.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_profile.Location = new System.Drawing.Point(54, 174);
+            this.btn_profile.Name = "btn_profile";
+            this.btn_profile.Size = new System.Drawing.Size(179, 33);
+            this.btn_profile.TabIndex = 31;
+            this.btn_profile.Text = "Profile";
+            this.btn_profile.UseVisualStyleBackColor = false;
+            this.btn_profile.Click += new System.EventHandler(this.btn_profile_Click_1);
             // 
-            // Religion_label
+            // btn_vol_request
             // 
-            this.Religion_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Religion_label.AutoSize = true;
-            this.Religion_label.BackColor = System.Drawing.Color.Transparent;
-            this.Religion_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold);
-            this.Religion_label.Location = new System.Drawing.Point(468, 622);
-            this.Religion_label.Name = "Religion_label";
-            this.Religion_label.Size = new System.Drawing.Size(92, 23);
-            this.Religion_label.TabIndex = 10;
-            this.Religion_label.Text = "Religion";
+            this.btn_vol_request.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btn_vol_request.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_vol_request.Location = new System.Drawing.Point(54, 296);
+            this.btn_vol_request.Name = "btn_vol_request";
+            this.btn_vol_request.Size = new System.Drawing.Size(179, 33);
+            this.btn_vol_request.TabIndex = 32;
+            this.btn_vol_request.Text = "Volunteer Request";
+            this.btn_vol_request.UseVisualStyleBackColor = false;
             // 
-            // Nationality_label
+            // btn_vol_details
             // 
-            this.Nationality_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Nationality_label.AutoSize = true;
-            this.Nationality_label.BackColor = System.Drawing.Color.Transparent;
-            this.Nationality_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold);
-            this.Nationality_label.Location = new System.Drawing.Point(468, 582);
-            this.Nationality_label.Name = "Nationality_label";
-            this.Nationality_label.Size = new System.Drawing.Size(117, 23);
-            this.Nationality_label.TabIndex = 9;
-            this.Nationality_label.Text = "Nationality";
+            this.btn_vol_details.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btn_vol_details.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_vol_details.Location = new System.Drawing.Point(54, 239);
+            this.btn_vol_details.Name = "btn_vol_details";
+            this.btn_vol_details.Size = new System.Drawing.Size(179, 33);
+            this.btn_vol_details.TabIndex = 33;
+            this.btn_vol_details.Text = "Volunteer Details";
+            this.btn_vol_details.UseVisualStyleBackColor = false;
             // 
-            // Emergency_Phone_label
+            // button4
             // 
-            this.Emergency_Phone_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Emergency_Phone_label.AutoSize = true;
-            this.Emergency_Phone_label.BackColor = System.Drawing.Color.Transparent;
-            this.Emergency_Phone_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold);
-            this.Emergency_Phone_label.Location = new System.Drawing.Point(468, 542);
-            this.Emergency_Phone_label.Name = "Emergency_Phone_label";
-            this.Emergency_Phone_label.Size = new System.Drawing.Size(192, 23);
-            this.Emergency_Phone_label.TabIndex = 8;
-            this.Emergency_Phone_label.Text = "Emergency number";
+            this.button4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button4.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(54, 395);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(179, 33);
+            this.button4.TabIndex = 36;
+            this.button4.Text = "Rules";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Mother_Name_label
+            // button1
             // 
-            this.Mother_Name_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Mother_Name_label.AutoSize = true;
-            this.Mother_Name_label.BackColor = System.Drawing.Color.Transparent;
-            this.Mother_Name_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold);
-            this.Mother_Name_label.Location = new System.Drawing.Point(468, 502);
-            this.Mother_Name_label.Name = "Mother_Name_label";
-            this.Mother_Name_label.Size = new System.Drawing.Size(152, 23);
-            this.Mother_Name_label.TabIndex = 7;
-            this.Mother_Name_label.Text = "Mother\'s Name";
-            // 
-            // Father_Name_label
-            // 
-            this.Father_Name_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Father_Name_label.AutoSize = true;
-            this.Father_Name_label.BackColor = System.Drawing.Color.Transparent;
-            this.Father_Name_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold);
-            this.Father_Name_label.Location = new System.Drawing.Point(468, 461);
-            this.Father_Name_label.Name = "Father_Name_label";
-            this.Father_Name_label.Size = new System.Drawing.Size(143, 23);
-            this.Father_Name_label.TabIndex = 6;
-            this.Father_Name_label.Text = "Father\'s Name";
-            // 
-            // Address_label
-            // 
-            this.Address_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Address_label.AutoSize = true;
-            this.Address_label.BackColor = System.Drawing.Color.Transparent;
-            this.Address_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold);
-            this.Address_label.Location = new System.Drawing.Point(468, 422);
-            this.Address_label.Name = "Address_label";
-            this.Address_label.Size = new System.Drawing.Size(86, 23);
-            this.Address_label.TabIndex = 5;
-            this.Address_label.Text = "Address";
-            // 
-            // Gender_label
-            // 
-            this.Gender_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Gender_label.AutoSize = true;
-            this.Gender_label.BackColor = System.Drawing.Color.Transparent;
-            this.Gender_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gender_label.Location = new System.Drawing.Point(468, 382);
-            this.Gender_label.Name = "Gender_label";
-            this.Gender_label.Size = new System.Drawing.Size(78, 23);
-            this.Gender_label.TabIndex = 4;
-            this.Gender_label.Text = "Gender";
-            this.Gender_label.Click += new System.EventHandler(this.Gender_label_Click);
-            // 
-            // Phone_label
-            // 
-            this.Phone_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Phone_label.AutoSize = true;
-            this.Phone_label.BackColor = System.Drawing.Color.Transparent;
-            this.Phone_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Phone_label.Location = new System.Drawing.Point(468, 342);
-            this.Phone_label.Name = "Phone_label";
-            this.Phone_label.Size = new System.Drawing.Size(150, 23);
-            this.Phone_label.TabIndex = 3;
-            this.Phone_label.Text = "Phone Number";
-            // 
-            // Gmail_label
-            // 
-            this.Gmail_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Gmail_label.AutoSize = true;
-            this.Gmail_label.BackColor = System.Drawing.Color.Transparent;
-            this.Gmail_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gmail_label.Location = new System.Drawing.Point(468, 303);
-            this.Gmail_label.Name = "Gmail_label";
-            this.Gmail_label.Size = new System.Drawing.Size(97, 23);
-            this.Gmail_label.TabIndex = 2;
-            this.Gmail_label.Text = "Email Id ";
-            this.Gmail_label.Click += new System.EventHandler(this.Gmail_label_Click);
-            // 
-            // Volunteer_Name_Show_label
-            // 
-            this.Volunteer_Name_Show_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Volunteer_Name_Show_label.AutoSize = true;
-            this.Volunteer_Name_Show_label.BackColor = System.Drawing.Color.Transparent;
-            this.Volunteer_Name_Show_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Volunteer_Name_Show_label.Location = new System.Drawing.Point(468, 264);
-            this.Volunteer_Name_Show_label.Name = "Volunteer_Name_Show_label";
-            this.Volunteer_Name_Show_label.Size = new System.Drawing.Size(137, 23);
-            this.Volunteer_Name_Show_label.TabIndex = 1;
-            this.Volunteer_Name_Show_label.Text = "Your name!!!";
-            this.Volunteer_Name_Show_label.Click += new System.EventHandler(this.Volunteer_Name_Show_label_Click);
-            // 
-            // volunteer_picture_showbox
-            // 
-            this.volunteer_picture_showbox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.volunteer_picture_showbox.Image = global::Project_one.Properties.Resources._new;
-            this.volunteer_picture_showbox.Location = new System.Drawing.Point(333, 34);
-            this.volunteer_picture_showbox.Name = "volunteer_picture_showbox";
-            this.volunteer_picture_showbox.Size = new System.Drawing.Size(154, 153);
-            this.volunteer_picture_showbox.TabIndex = 0;
-            this.volunteer_picture_showbox.TabStop = false;
-            // 
-            // N_label
-            // 
-            this.N_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.N_label.AutoSize = true;
-            this.N_label.BackColor = System.Drawing.Color.Transparent;
-            this.N_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.N_label.Location = new System.Drawing.Point(193, 264);
-            this.N_label.Name = "N_label";
-            this.N_label.Size = new System.Drawing.Size(76, 23);
-            this.N_label.TabIndex = 12;
-            this.N_label.Text = "Name :";
-            // 
-            // Em_label
-            // 
-            this.Em_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Em_label.AutoSize = true;
-            this.Em_label.BackColor = System.Drawing.Color.Transparent;
-            this.Em_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Em_label.Location = new System.Drawing.Point(193, 303);
-            this.Em_label.Name = "Em_label";
-            this.Em_label.Size = new System.Drawing.Size(78, 23);
-            this.Em_label.TabIndex = 13;
-            this.Em_label.Text = "Email :";
-            // 
-            // num_label
-            // 
-            this.num_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.num_label.AutoSize = true;
-            this.num_label.BackColor = System.Drawing.Color.Transparent;
-            this.num_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num_label.Location = new System.Drawing.Point(193, 342);
-            this.num_label.Name = "num_label";
-            this.num_label.Size = new System.Drawing.Size(163, 23);
-            this.num_label.TabIndex = 14;
-            this.num_label.Text = "Phone Number :";
-            this.num_label.Click += new System.EventHandler(this.num_label_Click);
-            // 
-            // gen_label
-            // 
-            this.gen_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gen_label.AutoSize = true;
-            this.gen_label.BackColor = System.Drawing.Color.Transparent;
-            this.gen_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gen_label.Location = new System.Drawing.Point(193, 382);
-            this.gen_label.Name = "gen_label";
-            this.gen_label.Size = new System.Drawing.Size(91, 23);
-            this.gen_label.TabIndex = 15;
-            this.gen_label.Text = "Gender :";
-            // 
-            // add_label
-            // 
-            this.add_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.add_label.AutoSize = true;
-            this.add_label.BackColor = System.Drawing.Color.Transparent;
-            this.add_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add_label.Location = new System.Drawing.Point(193, 422);
-            this.add_label.Name = "add_label";
-            this.add_label.Size = new System.Drawing.Size(99, 23);
-            this.add_label.TabIndex = 16;
-            this.add_label.Text = "Address :";
-            // 
-            // fa_label
-            // 
-            this.fa_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.fa_label.AutoSize = true;
-            this.fa_label.BackColor = System.Drawing.Color.Transparent;
-            this.fa_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold);
-            this.fa_label.Location = new System.Drawing.Point(193, 461);
-            this.fa_label.Name = "fa_label";
-            this.fa_label.Size = new System.Drawing.Size(156, 23);
-            this.fa_label.TabIndex = 17;
-            this.fa_label.Text = "Father\'s Name :";
-            // 
-            // Moth_label
-            // 
-            this.Moth_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Moth_label.AutoSize = true;
-            this.Moth_label.BackColor = System.Drawing.Color.Transparent;
-            this.Moth_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold);
-            this.Moth_label.Location = new System.Drawing.Point(193, 502);
-            this.Moth_label.Name = "Moth_label";
-            this.Moth_label.Size = new System.Drawing.Size(165, 23);
-            this.Moth_label.TabIndex = 18;
-            this.Moth_label.Text = "Mother\'s Name :";
-            // 
-            // emr_num_label
-            // 
-            this.emr_num_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.emr_num_label.AutoSize = true;
-            this.emr_num_label.BackColor = System.Drawing.Color.Transparent;
-            this.emr_num_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold);
-            this.emr_num_label.Location = new System.Drawing.Point(193, 542);
-            this.emr_num_label.Name = "emr_num_label";
-            this.emr_num_label.Size = new System.Drawing.Size(270, 23);
-            this.emr_num_label.TabIndex = 19;
-            this.emr_num_label.Text = "Emergency Phone number :";
-            // 
-            // nat_label
-            // 
-            this.nat_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.nat_label.AutoSize = true;
-            this.nat_label.BackColor = System.Drawing.Color.Transparent;
-            this.nat_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold);
-            this.nat_label.Location = new System.Drawing.Point(193, 582);
-            this.nat_label.Name = "nat_label";
-            this.nat_label.Size = new System.Drawing.Size(130, 23);
-            this.nat_label.TabIndex = 21;
-            this.nat_label.Text = "Nationality :";
-            // 
-            // reli_label
-            // 
-            this.reli_label.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.reli_label.AutoSize = true;
-            this.reli_label.BackColor = System.Drawing.Color.Transparent;
-            this.reli_label.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold);
-            this.reli_label.Location = new System.Drawing.Point(193, 622);
-            this.reli_label.Name = "reli_label";
-            this.reli_label.Size = new System.Drawing.Size(105, 23);
-            this.reli_label.TabIndex = 22;
-            this.reli_label.Text = "Religion :";
-            // 
-            // update_volunter_profile_button
-            // 
-            this.update_volunter_profile_button.BackColor = System.Drawing.Color.Aquamarine;
-            this.update_volunter_profile_button.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.update_volunter_profile_button.Location = new System.Drawing.Point(290, 676);
-            this.update_volunter_profile_button.Name = "update_volunter_profile_button";
-            this.update_volunter_profile_button.Size = new System.Drawing.Size(214, 36);
-            this.update_volunter_profile_button.TabIndex = 24;
-            this.update_volunter_profile_button.Text = "Update Profile";
-            this.update_volunter_profile_button.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(54, 347);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(179, 33);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Update Password";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Volunteer_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 761);
-            this.Controls.Add(this.volunteer_profile_view_panel);
+            this.BackColor = System.Drawing.SystemColors.GrayText;
+            this.ClientSize = new System.Drawing.Size(1022, 607);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.IdPassPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Volunteer_Dashboard";
             this.Text = "Volunteer_Dashboard";
+            this.IdPassPanel.ResumeLayout(false);
+            this.IdPassPanel.PerformLayout();
+            this.rulesPanel.ResumeLayout(false);
+            this.rulesPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RulesGrid)).EndInit();
+            this.Profile_Panel.ResumeLayout(false);
+            this.Profile_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.volunteer_profile_view_panel.ResumeLayout(false);
-            this.volunteer_profile_view_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.volunteer_picture_showbox)).EndInit();
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel IdPassPanel;
+        private System.Windows.Forms.Label oldPassWord;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox newpass;
+        private System.Windows.Forms.Label Password;
+        private System.Windows.Forms.Panel rulesPanel;
+        private System.Windows.Forms.DataGridView RulesGrid;
+        private System.Windows.Forms.Button RRefresh_button;
+        private System.Windows.Forms.Button RSearch_button;
+        private System.Windows.Forms.TextBox rulesSearch_text;
+        private System.Windows.Forms.TextBox oldPass;
+        private System.Windows.Forms.Panel Profile_Panel;
+        private System.Windows.Forms.Label adminDobText;
+        private System.Windows.Forms.Label Dob_label;
+        private System.Windows.Forms.Label adminGenderText;
+        private System.Windows.Forms.Label adminAddressText;
+        private System.Windows.Forms.Label adminGmailText;
+        private System.Windows.Forms.Label adminPhoneText;
+        private System.Windows.Forms.Label adminMotherText;
+        private System.Windows.Forms.Label adminFatherText;
+        private System.Windows.Forms.Label adminNidText;
+        private System.Windows.Forms.Label adminNameText;
+        private System.Windows.Forms.Label adminProfileGender_label;
+        private System.Windows.Forms.Label adminProfileMotherName_label;
+        private System.Windows.Forms.Label adminProfileFatherName_label;
+        private System.Windows.Forms.Label adminProfileAddress_label;
+        private System.Windows.Forms.Label adminProfileNid_label;
+        private System.Windows.Forms.Label adminProfileGmail_label;
+        private System.Windows.Forms.Label adminProfileNumber_label;
+        private System.Windows.Forms.Label adminProfileName_label;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Volunteer_Profile_Button;
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Panel volunteer_profile_view_panel;
-        private System.Windows.Forms.PictureBox volunteer_picture_showbox;
-        private System.Windows.Forms.Label Volunteer_Name_Show_label;
-        private System.Windows.Forms.Label Gmail_label;
-        private System.Windows.Forms.Label Phone_label;
-        private System.Windows.Forms.Label Gender_label;
-        private System.Windows.Forms.Label Address_label;
-        private System.Windows.Forms.Label Father_Name_label;
-        private System.Windows.Forms.Label Mother_Name_label;
-        private System.Windows.Forms.Label Emergency_Phone_label;
-        private System.Windows.Forms.Label Nationality_label;
-        private System.Windows.Forms.Label Religion_label;
-        private System.Windows.Forms.Label N_label;
-        private System.Windows.Forms.Label num_label;
-        private System.Windows.Forms.Label Em_label;
-        private System.Windows.Forms.Label gen_label;
-        private System.Windows.Forms.Label add_label;
-        private System.Windows.Forms.Label reli_label;
-        private System.Windows.Forms.Label nat_label;
-        private System.Windows.Forms.Label emr_num_label;
-        private System.Windows.Forms.Label Moth_label;
-        private System.Windows.Forms.Label fa_label;
-        private System.Windows.Forms.Button update_volunter_profile_button;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_vol_details;
+        private System.Windows.Forms.Button btn_vol_request;
+        private System.Windows.Forms.Button btn_profile;
+        private System.Windows.Forms.Label Registration_lebel;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -28,6 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee_Dashboard));
             this.Registration_lebel = new System.Windows.Forms.Label();
             this.btn_profile = new System.Windows.Forms.Button();
@@ -38,6 +45,17 @@
             this.Employee_profile = new System.Windows.Forms.Panel();
             this.Volunteer_panel = new System.Windows.Forms.Panel();
             this.inactiveVolunteer = new System.Windows.Forms.Panel();
+            this.IdPassPanel = new System.Windows.Forms.Panel();
+            this.rulesPanel = new System.Windows.Forms.Panel();
+            this.RulesGrid = new System.Windows.Forms.DataGridView();
+            this.RRefresh_button = new System.Windows.Forms.Button();
+            this.RSearch_button = new System.Windows.Forms.Button();
+            this.rulesSearch_text = new System.Windows.Forms.TextBox();
+            this.oldPass = new System.Windows.Forms.TextBox();
+            this.oldPassWord = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.newpass = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.Label();
             this.VIRefresh = new System.Windows.Forms.Button();
             this.IVDelete = new System.Windows.Forms.Button();
             this.IVActive = new System.Windows.Forms.Button();
@@ -107,27 +125,36 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.IdPassPanel = new System.Windows.Forms.Panel();
-            this.oldPass = new System.Windows.Forms.TextBox();
-            this.oldPassWord = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.newpass = new System.Windows.Forms.TextBox();
-            this.Password = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.rulesPanel = new System.Windows.Forms.Panel();
-            this.RRefresh_button = new System.Windows.Forms.Button();
-            this.RSearch_button = new System.Windows.Forms.Button();
-            this.rulesSearch_text = new System.Windows.Forms.TextBox();
-            this.RulesGrid = new System.Windows.Forms.DataGridView();
+            this.CustomerPanel = new System.Windows.Forms.Panel();
+            this.CRefresh = new System.Windows.Forms.Button();
+            this.CDelete = new System.Windows.Forms.Button();
+            this.CSave = new System.Windows.Forms.Button();
+            this.CCancel = new System.Windows.Forms.Button();
+            this.CUpdate = new System.Windows.Forms.Button();
+            this.C_dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button11 = new System.Windows.Forms.Button();
+            this.C_searchText = new System.Windows.Forms.TextBox();
+            this.inactiveCusPanel = new System.Windows.Forms.Panel();
+            this.CIRefresh = new System.Windows.Forms.Button();
+            this.ICDelete = new System.Windows.Forms.Button();
+            this.ICActive = new System.Windows.Forms.Button();
+            this.C_dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.C1Search = new System.Windows.Forms.Button();
+            this.C_searchText2 = new System.Windows.Forms.TextBox();
             this.Employee_profile.SuspendLayout();
             this.Volunteer_panel.SuspendLayout();
             this.inactiveVolunteer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.v_dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.v_dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.IdPassPanel.SuspendLayout();
             this.rulesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RulesGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v_dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v_dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.CustomerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.C_dataGridView1)).BeginInit();
+            this.inactiveCusPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.C_dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // Registration_lebel
@@ -188,6 +215,7 @@
             this.btn_customer_request.TabIndex = 14;
             this.btn_customer_request.Text = "Customer Request";
             this.btn_customer_request.UseVisualStyleBackColor = false;
+            this.btn_customer_request.Click += new System.EventHandler(this.btn_customer_request_Click);
             // 
             // btn_customer_details
             // 
@@ -199,6 +227,7 @@
             this.btn_customer_details.TabIndex = 15;
             this.btn_customer_details.Text = "Customer Details";
             this.btn_customer_details.UseVisualStyleBackColor = false;
+            this.btn_customer_details.Click += new System.EventHandler(this.btn_customer_details_Click);
             // 
             // Employee_profile
             // 
@@ -296,6 +325,127 @@
             this.inactiveVolunteer.Size = new System.Drawing.Size(674, 596);
             this.inactiveVolunteer.TabIndex = 73;
             // 
+            // IdPassPanel
+            // 
+            this.IdPassPanel.BackColor = System.Drawing.Color.CadetBlue;
+            this.IdPassPanel.Controls.Add(this.rulesPanel);
+            this.IdPassPanel.Controls.Add(this.oldPass);
+            this.IdPassPanel.Controls.Add(this.oldPassWord);
+            this.IdPassPanel.Controls.Add(this.button3);
+            this.IdPassPanel.Controls.Add(this.newpass);
+            this.IdPassPanel.Controls.Add(this.Password);
+            this.IdPassPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.IdPassPanel.Location = new System.Drawing.Point(0, 0);
+            this.IdPassPanel.Name = "IdPassPanel";
+            this.IdPassPanel.Size = new System.Drawing.Size(674, 596);
+            this.IdPassPanel.TabIndex = 81;
+            // 
+            // rulesPanel
+            // 
+            this.rulesPanel.Controls.Add(this.CustomerPanel);
+            this.rulesPanel.Controls.Add(this.RulesGrid);
+            this.rulesPanel.Controls.Add(this.RRefresh_button);
+            this.rulesPanel.Controls.Add(this.RSearch_button);
+            this.rulesPanel.Controls.Add(this.rulesSearch_text);
+            this.rulesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rulesPanel.Location = new System.Drawing.Point(0, 0);
+            this.rulesPanel.Name = "rulesPanel";
+            this.rulesPanel.Size = new System.Drawing.Size(674, 596);
+            this.rulesPanel.TabIndex = 10;
+            // 
+            // RulesGrid
+            // 
+            this.RulesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RulesGrid.Location = new System.Drawing.Point(3, 98);
+            this.RulesGrid.Name = "RulesGrid";
+            this.RulesGrid.Size = new System.Drawing.Size(668, 485);
+            this.RulesGrid.TabIndex = 41;
+            // 
+            // RRefresh_button
+            // 
+            this.RRefresh_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RRefresh_button.BackColor = System.Drawing.Color.MediumPurple;
+            this.RRefresh_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RRefresh_button.ForeColor = System.Drawing.Color.Black;
+            this.RRefresh_button.Location = new System.Drawing.Point(33, 56);
+            this.RRefresh_button.Name = "RRefresh_button";
+            this.RRefresh_button.Size = new System.Drawing.Size(106, 36);
+            this.RRefresh_button.TabIndex = 38;
+            this.RRefresh_button.Text = "Refresh";
+            this.RRefresh_button.UseVisualStyleBackColor = false;
+            this.RRefresh_button.Click += new System.EventHandler(this.RRefresh_button_Click);
+            // 
+            // RSearch_button
+            // 
+            this.RSearch_button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RSearch_button.BackColor = System.Drawing.Color.Teal;
+            this.RSearch_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RSearch_button.ForeColor = System.Drawing.Color.Black;
+            this.RSearch_button.Location = new System.Drawing.Point(374, 60);
+            this.RSearch_button.Name = "RSearch_button";
+            this.RSearch_button.Size = new System.Drawing.Size(95, 27);
+            this.RSearch_button.TabIndex = 37;
+            this.RSearch_button.Text = "Search:";
+            this.RSearch_button.UseVisualStyleBackColor = false;
+            this.RSearch_button.Click += new System.EventHandler(this.RSearch_button_Click);
+            // 
+            // rulesSearch_text
+            // 
+            this.rulesSearch_text.Location = new System.Drawing.Point(475, 61);
+            this.rulesSearch_text.Name = "rulesSearch_text";
+            this.rulesSearch_text.Size = new System.Drawing.Size(189, 28);
+            this.rulesSearch_text.TabIndex = 36;
+            // 
+            // oldPass
+            // 
+            this.oldPass.Location = new System.Drawing.Point(331, 261);
+            this.oldPass.Name = "oldPass";
+            this.oldPass.Size = new System.Drawing.Size(217, 28);
+            this.oldPass.TabIndex = 9;
+            // 
+            // oldPassWord
+            // 
+            this.oldPassWord.AutoSize = true;
+            this.oldPassWord.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.oldPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oldPassWord.Location = new System.Drawing.Point(97, 264);
+            this.oldPassWord.Name = "oldPassWord";
+            this.oldPassWord.Size = new System.Drawing.Size(228, 29);
+            this.oldPassWord.TabIndex = 8;
+            this.oldPassWord.Text = "Current Password:";
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.BackColor = System.Drawing.Color.MediumPurple;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(252, 378);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(144, 38);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Submit";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // newpass
+            // 
+            this.newpass.Location = new System.Drawing.Point(331, 319);
+            this.newpass.Name = "newpass";
+            this.newpass.Size = new System.Drawing.Size(219, 28);
+            this.newpass.TabIndex = 6;
+            // 
+            // Password
+            // 
+            this.Password.AutoSize = true;
+            this.Password.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.Location = new System.Drawing.Point(118, 319);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(195, 29);
+            this.Password.TabIndex = 5;
+            this.Password.Text = "New Password:";
+            // 
             // VIRefresh
             // 
             this.VIRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -340,8 +490,26 @@
             // 
             // v_dataGridView2
             // 
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.v_dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
             this.v_dataGridView2.BackgroundColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.v_dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.v_dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.v_dataGridView2.DefaultCellStyle = dataGridViewCellStyle31;
             this.v_dataGridView2.Location = new System.Drawing.Point(6, 118);
             this.v_dataGridView2.Name = "v_dataGridView2";
             this.v_dataGridView2.Size = new System.Drawing.Size(668, 382);
@@ -440,10 +608,36 @@
             // 
             // v_dataGridView1
             // 
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.v_dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle32;
             this.v_dataGridView1.BackgroundColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.v_dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.v_dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.v_dataGridView1.DefaultCellStyle = dataGridViewCellStyle34;
             this.v_dataGridView1.Location = new System.Drawing.Point(3, 121);
             this.v_dataGridView1.Name = "v_dataGridView1";
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.v_dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
             this.v_dataGridView1.Size = new System.Drawing.Size(668, 359);
             this.v_dataGridView1.TabIndex = 67;
             // 
@@ -1027,71 +1221,6 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // IdPassPanel
-            // 
-            this.IdPassPanel.BackColor = System.Drawing.Color.CadetBlue;
-            this.IdPassPanel.Controls.Add(this.rulesPanel);
-            this.IdPassPanel.Controls.Add(this.oldPass);
-            this.IdPassPanel.Controls.Add(this.oldPassWord);
-            this.IdPassPanel.Controls.Add(this.button3);
-            this.IdPassPanel.Controls.Add(this.newpass);
-            this.IdPassPanel.Controls.Add(this.Password);
-            this.IdPassPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IdPassPanel.Location = new System.Drawing.Point(0, 0);
-            this.IdPassPanel.Name = "IdPassPanel";
-            this.IdPassPanel.Size = new System.Drawing.Size(674, 596);
-            this.IdPassPanel.TabIndex = 81;
-            // 
-            // oldPass
-            // 
-            this.oldPass.Location = new System.Drawing.Point(331, 261);
-            this.oldPass.Name = "oldPass";
-            this.oldPass.Size = new System.Drawing.Size(217, 28);
-            this.oldPass.TabIndex = 9;
-            // 
-            // oldPassWord
-            // 
-            this.oldPassWord.AutoSize = true;
-            this.oldPassWord.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.oldPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.oldPassWord.Location = new System.Drawing.Point(97, 264);
-            this.oldPassWord.Name = "oldPassWord";
-            this.oldPassWord.Size = new System.Drawing.Size(228, 29);
-            this.oldPassWord.TabIndex = 8;
-            this.oldPassWord.Text = "Current Password:";
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.MediumPurple;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(252, 378);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 38);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Submit";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // newpass
-            // 
-            this.newpass.Location = new System.Drawing.Point(331, 319);
-            this.newpass.Name = "newpass";
-            this.newpass.Size = new System.Drawing.Size(219, 28);
-            this.newpass.TabIndex = 6;
-            // 
-            // Password
-            // 
-            this.Password.AutoSize = true;
-            this.Password.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(118, 319);
-            this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(195, 29);
-            this.Password.TabIndex = 5;
-            this.Password.Text = "New Password:";
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -1104,60 +1233,208 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // rulesPanel
+            // CustomerPanel
             // 
-            this.rulesPanel.Controls.Add(this.RulesGrid);
-            this.rulesPanel.Controls.Add(this.RRefresh_button);
-            this.rulesPanel.Controls.Add(this.RSearch_button);
-            this.rulesPanel.Controls.Add(this.rulesSearch_text);
-            this.rulesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rulesPanel.Location = new System.Drawing.Point(0, 0);
-            this.rulesPanel.Name = "rulesPanel";
-            this.rulesPanel.Size = new System.Drawing.Size(674, 596);
-            this.rulesPanel.TabIndex = 10;
+            this.CustomerPanel.Controls.Add(this.inactiveCusPanel);
+            this.CustomerPanel.Controls.Add(this.CRefresh);
+            this.CustomerPanel.Controls.Add(this.CDelete);
+            this.CustomerPanel.Controls.Add(this.CSave);
+            this.CustomerPanel.Controls.Add(this.CCancel);
+            this.CustomerPanel.Controls.Add(this.CUpdate);
+            this.CustomerPanel.Controls.Add(this.C_dataGridView1);
+            this.CustomerPanel.Controls.Add(this.button11);
+            this.CustomerPanel.Controls.Add(this.C_searchText);
+            this.CustomerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CustomerPanel.Location = new System.Drawing.Point(0, 0);
+            this.CustomerPanel.Name = "CustomerPanel";
+            this.CustomerPanel.Size = new System.Drawing.Size(674, 596);
+            this.CustomerPanel.TabIndex = 42;
             // 
-            // RRefresh_button
+            // CRefresh
             // 
-            this.RRefresh_button.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RRefresh_button.BackColor = System.Drawing.Color.MediumPurple;
-            this.RRefresh_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RRefresh_button.ForeColor = System.Drawing.Color.Black;
-            this.RRefresh_button.Location = new System.Drawing.Point(35, 102);
-            this.RRefresh_button.Name = "RRefresh_button";
-            this.RRefresh_button.Size = new System.Drawing.Size(106, 36);
-            this.RRefresh_button.TabIndex = 38;
-            this.RRefresh_button.Text = "Refresh";
-            this.RRefresh_button.UseVisualStyleBackColor = false;
-            this.RRefresh_button.Click += new System.EventHandler(this.RRefresh_button_Click);
+            this.CRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CRefresh.BackColor = System.Drawing.Color.MediumPurple;
+            this.CRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CRefresh.ForeColor = System.Drawing.Color.Black;
+            this.CRefresh.Location = new System.Drawing.Point(19, 99);
+            this.CRefresh.Name = "CRefresh";
+            this.CRefresh.Size = new System.Drawing.Size(75, 36);
+            this.CRefresh.TabIndex = 93;
+            this.CRefresh.Text = "Refresh";
+            this.CRefresh.UseVisualStyleBackColor = false;
+            this.CRefresh.Click += new System.EventHandler(this.CRefresh_Click);
             // 
-            // RSearch_button
+            // CDelete
             // 
-            this.RSearch_button.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RSearch_button.BackColor = System.Drawing.Color.Teal;
-            this.RSearch_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RSearch_button.ForeColor = System.Drawing.Color.Black;
-            this.RSearch_button.Location = new System.Drawing.Point(374, 102);
-            this.RSearch_button.Name = "RSearch_button";
-            this.RSearch_button.Size = new System.Drawing.Size(95, 27);
-            this.RSearch_button.TabIndex = 37;
-            this.RSearch_button.Text = "Search:";
-            this.RSearch_button.UseVisualStyleBackColor = false;
-            this.RSearch_button.Click += new System.EventHandler(this.RSearch_button_Click);
+            this.CDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CDelete.BackColor = System.Drawing.Color.MediumPurple;
+            this.CDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CDelete.ForeColor = System.Drawing.Color.Black;
+            this.CDelete.Location = new System.Drawing.Point(325, 526);
+            this.CDelete.Name = "CDelete";
+            this.CDelete.Size = new System.Drawing.Size(106, 38);
+            this.CDelete.TabIndex = 92;
+            this.CDelete.Text = "Delete";
+            this.CDelete.UseVisualStyleBackColor = false;
+            this.CDelete.Click += new System.EventHandler(this.CDelete_Click);
             // 
-            // rulesSearch_text
+            // CSave
             // 
-            this.rulesSearch_text.Location = new System.Drawing.Point(475, 102);
-            this.rulesSearch_text.Name = "rulesSearch_text";
-            this.rulesSearch_text.Size = new System.Drawing.Size(189, 28);
-            this.rulesSearch_text.TabIndex = 36;
+            this.CSave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CSave.BackColor = System.Drawing.Color.MediumPurple;
+            this.CSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CSave.ForeColor = System.Drawing.Color.Black;
+            this.CSave.Location = new System.Drawing.Point(199, 526);
+            this.CSave.Name = "CSave";
+            this.CSave.Size = new System.Drawing.Size(106, 38);
+            this.CSave.TabIndex = 91;
+            this.CSave.Text = "Save";
+            this.CSave.UseVisualStyleBackColor = false;
+            this.CSave.Click += new System.EventHandler(this.CSave_Click);
             // 
-            // RulesGrid
+            // CCancel
             // 
-            this.RulesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RulesGrid.Location = new System.Drawing.Point(6, 158);
-            this.RulesGrid.Name = "RulesGrid";
-            this.RulesGrid.Size = new System.Drawing.Size(658, 409);
-            this.RulesGrid.TabIndex = 41;
+            this.CCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CCancel.BackColor = System.Drawing.Color.MediumPurple;
+            this.CCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CCancel.ForeColor = System.Drawing.Color.Black;
+            this.CCancel.Location = new System.Drawing.Point(325, 526);
+            this.CCancel.Name = "CCancel";
+            this.CCancel.Size = new System.Drawing.Size(100, 38);
+            this.CCancel.TabIndex = 90;
+            this.CCancel.Text = "Cancel";
+            this.CCancel.UseVisualStyleBackColor = false;
+            this.CCancel.Click += new System.EventHandler(this.CCancel_Click);
+            // 
+            // CUpdate
+            // 
+            this.CUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CUpdate.BackColor = System.Drawing.Color.MediumPurple;
+            this.CUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CUpdate.ForeColor = System.Drawing.Color.Black;
+            this.CUpdate.Location = new System.Drawing.Point(199, 526);
+            this.CUpdate.Name = "CUpdate";
+            this.CUpdate.Size = new System.Drawing.Size(108, 38);
+            this.CUpdate.TabIndex = 89;
+            this.CUpdate.Text = "Update";
+            this.CUpdate.UseVisualStyleBackColor = false;
+            this.CUpdate.Click += new System.EventHandler(this.CUpdate_Click);
+            // 
+            // C_dataGridView1
+            // 
+            this.C_dataGridView1.BackgroundColor = System.Drawing.Color.Gray;
+            this.C_dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.C_dataGridView1.Location = new System.Drawing.Point(3, 141);
+            this.C_dataGridView1.Name = "C_dataGridView1";
+            this.C_dataGridView1.Size = new System.Drawing.Size(668, 359);
+            this.C_dataGridView1.TabIndex = 88;
+            // 
+            // button11
+            // 
+            this.button11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button11.BackColor = System.Drawing.Color.Teal;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.Black;
+            this.button11.Location = new System.Drawing.Point(362, 81);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(89, 27);
+            this.button11.TabIndex = 86;
+            this.button11.Text = "Search:";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // C_searchText
+            // 
+            this.C_searchText.Location = new System.Drawing.Point(457, 80);
+            this.C_searchText.Name = "C_searchText";
+            this.C_searchText.Size = new System.Drawing.Size(183, 28);
+            this.C_searchText.TabIndex = 85;
+            // 
+            // inactiveCusPanel
+            // 
+            this.inactiveCusPanel.Controls.Add(this.CIRefresh);
+            this.inactiveCusPanel.Controls.Add(this.ICDelete);
+            this.inactiveCusPanel.Controls.Add(this.ICActive);
+            this.inactiveCusPanel.Controls.Add(this.C_dataGridView2);
+            this.inactiveCusPanel.Controls.Add(this.C1Search);
+            this.inactiveCusPanel.Controls.Add(this.C_searchText2);
+            this.inactiveCusPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inactiveCusPanel.Location = new System.Drawing.Point(0, 0);
+            this.inactiveCusPanel.Name = "inactiveCusPanel";
+            this.inactiveCusPanel.Size = new System.Drawing.Size(674, 596);
+            this.inactiveCusPanel.TabIndex = 94;
+            // 
+            // CIRefresh
+            // 
+            this.CIRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CIRefresh.BackColor = System.Drawing.Color.MediumPurple;
+            this.CIRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CIRefresh.ForeColor = System.Drawing.Color.Black;
+            this.CIRefresh.Location = new System.Drawing.Point(16, 70);
+            this.CIRefresh.Name = "CIRefresh";
+            this.CIRefresh.Size = new System.Drawing.Size(75, 36);
+            this.CIRefresh.TabIndex = 98;
+            this.CIRefresh.Text = "Refresh";
+            this.CIRefresh.UseVisualStyleBackColor = false;
+            this.CIRefresh.Click += new System.EventHandler(this.CIRefresh_Click);
+            // 
+            // ICDelete
+            // 
+            this.ICDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ICDelete.BackColor = System.Drawing.Color.MediumPurple;
+            this.ICDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ICDelete.ForeColor = System.Drawing.Color.Black;
+            this.ICDelete.Location = new System.Drawing.Point(347, 508);
+            this.ICDelete.Name = "ICDelete";
+            this.ICDelete.Size = new System.Drawing.Size(127, 38);
+            this.ICDelete.TabIndex = 97;
+            this.ICDelete.Text = "Delete";
+            this.ICDelete.UseVisualStyleBackColor = false;
+            this.ICDelete.Click += new System.EventHandler(this.ICDelete_Click);
+            // 
+            // ICActive
+            // 
+            this.ICActive.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ICActive.BackColor = System.Drawing.Color.MediumPurple;
+            this.ICActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ICActive.ForeColor = System.Drawing.Color.Black;
+            this.ICActive.Location = new System.Drawing.Point(196, 508);
+            this.ICActive.Name = "ICActive";
+            this.ICActive.Size = new System.Drawing.Size(126, 38);
+            this.ICActive.TabIndex = 96;
+            this.ICActive.Text = "Accept";
+            this.ICActive.UseVisualStyleBackColor = false;
+            this.ICActive.Click += new System.EventHandler(this.ICActive_Click);
+            // 
+            // C_dataGridView2
+            // 
+            this.C_dataGridView2.BackgroundColor = System.Drawing.Color.Gray;
+            this.C_dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.C_dataGridView2.Location = new System.Drawing.Point(3, 113);
+            this.C_dataGridView2.Name = "C_dataGridView2";
+            this.C_dataGridView2.Size = new System.Drawing.Size(668, 382);
+            this.C_dataGridView2.TabIndex = 95;
+            // 
+            // C1Search
+            // 
+            this.C1Search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.C1Search.BackColor = System.Drawing.Color.Teal;
+            this.C1Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C1Search.ForeColor = System.Drawing.Color.Black;
+            this.C1Search.Location = new System.Drawing.Point(359, 52);
+            this.C1Search.Name = "C1Search";
+            this.C1Search.Size = new System.Drawing.Size(89, 27);
+            this.C1Search.TabIndex = 94;
+            this.C1Search.Text = "Search:";
+            this.C1Search.UseVisualStyleBackColor = false;
+            this.C1Search.Click += new System.EventHandler(this.C1Search_Click);
+            // 
+            // C_searchText2
+            // 
+            this.C_searchText2.Location = new System.Drawing.Point(454, 51);
+            this.C_searchText2.Name = "C_searchText2";
+            this.C_searchText2.Size = new System.Drawing.Size(183, 28);
+            this.C_searchText2.TabIndex = 93;
             // 
             // Employee_Dashboard
             // 
@@ -1184,14 +1461,20 @@
             this.Volunteer_panel.PerformLayout();
             this.inactiveVolunteer.ResumeLayout(false);
             this.inactiveVolunteer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.v_dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.v_dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.IdPassPanel.ResumeLayout(false);
             this.IdPassPanel.PerformLayout();
             this.rulesPanel.ResumeLayout(false);
             this.rulesPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RulesGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v_dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v_dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.CustomerPanel.ResumeLayout(false);
+            this.CustomerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.C_dataGridView1)).EndInit();
+            this.inactiveCusPanel.ResumeLayout(false);
+            this.inactiveCusPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.C_dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1289,5 +1572,21 @@
         private System.Windows.Forms.Button RSearch_button;
         private System.Windows.Forms.TextBox rulesSearch_text;
         private System.Windows.Forms.DataGridView RulesGrid;
+        private System.Windows.Forms.Panel CustomerPanel;
+        private System.Windows.Forms.Button CRefresh;
+        private System.Windows.Forms.Button CDelete;
+        private System.Windows.Forms.Button CSave;
+        private System.Windows.Forms.Button CCancel;
+        private System.Windows.Forms.Button CUpdate;
+        private System.Windows.Forms.DataGridView C_dataGridView1;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TextBox C_searchText;
+        private System.Windows.Forms.Panel inactiveCusPanel;
+        private System.Windows.Forms.Button CIRefresh;
+        private System.Windows.Forms.Button ICDelete;
+        private System.Windows.Forms.Button ICActive;
+        private System.Windows.Forms.DataGridView C_dataGridView2;
+        private System.Windows.Forms.Button C1Search;
+        private System.Windows.Forms.TextBox C_searchText2;
     }
 }

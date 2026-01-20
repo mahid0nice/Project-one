@@ -441,5 +441,249 @@ namespace Project_one
                 }
             }
         }
+        public DataTable SearchRules(string searchText)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(@"SELECT * FROM Rules 
+                                                 WHERE CAST([No] AS NVARCHAR) LIKE @search 
+                                                 OR Rules LIKE @search ORDER BY [No]", con))
+                {
+                    cmd.Parameters.AddWithValue("@search", "%" + searchText + "%");
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching rules:\n" + ex.Message);
+            }
+
+            return dt;
+        }
+        public DataTable ShowRules()
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Rules ORDER BY [No]", con))
+                {
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return dt;
+        }
+
+        public DataTable ShowAllCustomers()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlDataAdapter da = new SqlDataAdapter(
+                    @"SELECT C_Id, C_Name, C_PhoneNumber, C_DOB, C_Address, C_Email, C_NID, C_Gender, 
+                     C_Company, C_Position 
+              FROM Customer 
+              WHERE C_Status = 'Active'", con))
+                {
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading customers:\n" + ex.Message);
+            }
+            return dt;
+        }
+
+        public DataTable SearchCustomers(string search)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                {
+                    string query = @"SELECT C_Id, C_Name, C_PhoneNumber, C_DOB, C_Address, C_Email, C_NID, C_Gender, C_Company, C_Position
+                FROM Customer WHERE C_Status = 'Active' AND (
+                    CAST(C_Id AS NVARCHAR) LIKE @search
+                    OR C_Name LIKE @search
+                    OR CAST(C_PhoneNumber AS NVARCHAR) LIKE @search
+                    OR C_Email LIKE @search
+                )";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching customers:\n" + ex.Message);
+            }
+            return dt;
+
+        }
+
+        public int UpdateCustomer(Customer c)
+        {
+            string query = @"UPDATE Customer SET 
+                        C_Name = @Name,
+                        C_PhoneNumber = @Phone,
+                        C_DOB = @Dob,
+                        C_Address = @Address,
+                        C_Email = @Email,
+                        C_NID = @NID,
+                        C_Gender = @Gender,
+                        C_Company = @Company,
+                        C_Position = @Position
+                     WHERE C_Id = @Id";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Id", c.C_Id);
+                    cmd.Parameters.AddWithValue("@Name", c.C_Name);
+                    cmd.Parameters.AddWithValue("@Phone", c.C_PhoneNumber);
+                    cmd.Parameters.AddWithValue("@Dob", (object)c.C_DOB ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Address", (object)c.C_Address ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Email", c.C_Email);
+                    cmd.Parameters.AddWithValue("@NID", c.C_NID);
+                    cmd.Parameters.AddWithValue("@Gender", c.C_Gender);
+                    cmd.Parameters.AddWithValue("@Company", (object)c.C_Company ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Position", (object)c.C_Position ?? DBNull.Value);
+
+                    con.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public int DeleteCustomer(int id)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM Customer WHERE C_Id=@Id", con))
+                {
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    con.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public DataTable ShowInactiveCustomers()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlDataAdapter da = new SqlDataAdapter(
+                    @"SELECT C_Id, C_Name, C_PhoneNumber, C_DOB, C_Address, C_Email, C_NID, C_Gender, 
+                     C_Company, C_Position 
+              FROM Customer 
+              WHERE C_Status = 'Inactive'", con))
+                {
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading customers:\n" + ex.Message);
+            }
+            return dt;
+        }
+
+        public DataTable InactiveSearchCustomers(string search)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                {
+                    string query = @"SELECT C_Id, C_Name, C_PhoneNumber, C_DOB, C_Address, C_Email, C_NID, C_Gender, C_Company, C_Position
+                FROM Customer WHERE C_Status = 'Inactive' AND (
+                    CAST(C_Id AS NVARCHAR) LIKE @search
+                    OR C_Name LIKE @search
+                    OR CAST(C_PhoneNumber AS NVARCHAR) LIKE @search
+                    OR C_Email LIKE @search
+                )";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching customers:\n" + ex.Message);
+            }
+            return dt;
+
+        }
+
+        public int DeleteInactiveCustomer(int id)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM Customer WHERE C_Id=@Id", con))
+                {
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    con.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public int AcceptInactiveCustomer(int id)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(
+                    "UPDATE Customer SET C_Status='Active' WHERE C_Id=@Id", con))
+                {
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    con.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+
     }
 }

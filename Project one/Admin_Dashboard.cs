@@ -166,6 +166,7 @@ namespace Project_one
 
         private void button3_Click(object sender, EventArgs e)
         {
+            EmployeeSearch_Text.Text = "";
             EmpRefresh_button.Visible = false;
             ShowPanels(3);
             EmployeeUpdate_button.Visible = true;
@@ -504,6 +505,7 @@ namespace Project_one
         {
             ShowPanels(4);
             ShowRulesGrid();
+            rulesSearch_text.Text = "";
         }
         private void ShowRulesGrid()
         {
@@ -834,6 +836,7 @@ namespace Project_one
         }
         private void button4_Click(object sender, EventArgs e)
         {
+            v_searchText.Text = "";
             vCancel.Visible = false;
             vSave.Visible = false;
             vRefresh.Visible = false;

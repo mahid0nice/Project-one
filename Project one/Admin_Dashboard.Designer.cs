@@ -170,7 +170,7 @@
             this.admin_Profile_button.BackColor = System.Drawing.Color.SteelBlue;
             this.admin_Profile_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admin_Profile_button.ForeColor = System.Drawing.Color.Black;
-            this.admin_Profile_button.Location = new System.Drawing.Point(48, 193);
+            this.admin_Profile_button.Location = new System.Drawing.Point(48, 145);
             this.admin_Profile_button.Name = "admin_Profile_button";
             this.admin_Profile_button.Size = new System.Drawing.Size(217, 38);
             this.admin_Profile_button.TabIndex = 0;
@@ -191,7 +191,7 @@
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(309, 839);
+            this.panel1.Size = new System.Drawing.Size(309, 742);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -201,7 +201,7 @@
             this.LogOut_button.BackColor = System.Drawing.Color.SteelBlue;
             this.LogOut_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOut_button.ForeColor = System.Drawing.Color.Black;
-            this.LogOut_button.Location = new System.Drawing.Point(48, 538);
+            this.LogOut_button.Location = new System.Drawing.Point(48, 490);
             this.LogOut_button.Name = "LogOut_button";
             this.LogOut_button.Size = new System.Drawing.Size(217, 43);
             this.LogOut_button.TabIndex = 7;
@@ -215,7 +215,7 @@
             this.RulesButton.BackColor = System.Drawing.Color.SteelBlue;
             this.RulesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RulesButton.ForeColor = System.Drawing.Color.Black;
-            this.RulesButton.Location = new System.Drawing.Point(48, 477);
+            this.RulesButton.Location = new System.Drawing.Point(48, 429);
             this.RulesButton.Name = "RulesButton";
             this.RulesButton.Size = new System.Drawing.Size(217, 41);
             this.RulesButton.TabIndex = 6;
@@ -229,7 +229,7 @@
             this.Hire_Employe_button.BackColor = System.Drawing.Color.SteelBlue;
             this.Hire_Employe_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hire_Employe_button.ForeColor = System.Drawing.Color.Black;
-            this.Hire_Employe_button.Location = new System.Drawing.Point(48, 247);
+            this.Hire_Employe_button.Location = new System.Drawing.Point(48, 199);
             this.Hire_Employe_button.Name = "Hire_Employe_button";
             this.Hire_Employe_button.Size = new System.Drawing.Size(217, 38);
             this.Hire_Employe_button.TabIndex = 1;
@@ -243,7 +243,7 @@
             this.button6.BackColor = System.Drawing.Color.SteelBlue;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(48, 413);
+            this.button6.Location = new System.Drawing.Point(48, 365);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(217, 39);
             this.button6.TabIndex = 5;
@@ -257,7 +257,7 @@
             this.button4.BackColor = System.Drawing.Color.SteelBlue;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(48, 354);
+            this.button4.Location = new System.Drawing.Point(48, 306);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(217, 39);
             this.button4.TabIndex = 3;
@@ -271,7 +271,7 @@
             this.Employee_button.BackColor = System.Drawing.Color.SteelBlue;
             this.Employee_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Employee_button.ForeColor = System.Drawing.Color.Black;
-            this.Employee_button.Location = new System.Drawing.Point(48, 300);
+            this.Employee_button.Location = new System.Drawing.Point(48, 252);
             this.Employee_button.Name = "Employee_button";
             this.Employee_button.Size = new System.Drawing.Size(217, 39);
             this.Employee_button.TabIndex = 2;
