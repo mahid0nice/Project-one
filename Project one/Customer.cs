@@ -281,6 +281,38 @@ namespace Project_one
                 return 0;
             }
         }
+        public int PostJob(int jobId, string jobName, int customerId, decimal payment)
+        {
+            string query = @"INSERT INTO Job_Assignment
+        (Job_Id, Job_Name, C_Id, Payment, V_Id)
+        VALUES
+        (@Job_Id, @Job_Name, @C_Id, @Payment, NULL)";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.Add("@Job_Id", SqlDbType.Int).Value = jobId;
+                    cmd.Parameters.Add("@Job_Name", SqlDbType.NVarChar, 200).Value = jobName;
+                    cmd.Parameters.Add("@C_Id", SqlDbType.Int).Value = customerId;
+
+                    SqlParameter paymentParam = cmd.Parameters.Add("@Payment", SqlDbType.Decimal);
+                    paymentParam.Precision = 18;
+                    paymentParam.Scale = 2;
+                    paymentParam.Value = payment;
+
+                    con.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Database Error: " + ex.Message);
+                return 0;
+            }
+        }
+
     }
 }
 

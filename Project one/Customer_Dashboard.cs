@@ -313,5 +313,59 @@ namespace Project_one
         {
             ShowPanel(5); 
         }
+
+
+
+        private void SubmitJob_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!int.TryParse(jobidText.Text.Trim(), out int jobId))
+                {
+                    MessageBox.Show("Invalid Job ID.");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(jobText.Text))
+                {
+                    MessageBox.Show("Job name is required.");
+                    return;
+                }
+
+                if (!decimal.TryParse(paymentTextBox.Text.Trim(), out decimal payment))
+                {
+                    MessageBox.Show("Invalid payment amount.");
+                    return;
+                }
+
+                DialogResult dr = MessageBox.Show(
+                    "Are you sure you want to submit this job?",
+                    "Confirm Job Submission",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (dr != DialogResult.Yes)
+                    return;
+
+                Customer cs = new Customer();
+                int result = cs.PostJob(jobId, jobText.Text.Trim(), duplicateId, payment);
+
+                if (result > 0)
+                {
+                    MessageBox.Show("Job posted successfully.");
+                    jobidText.Clear();
+                    jobText.Clear();
+                    paymentTextBox.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Job post failed. Job ID may already exist.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unexpected error: " + ex.Message);
+            }
+        }
     }
 }
