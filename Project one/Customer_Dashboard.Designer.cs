@@ -68,12 +68,18 @@
             this.IdPassPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CurrentJob_panel = new System.Windows.Forms.Panel();
-            this.CIRefresh = new System.Windows.Forms.Button();
+            this.RRRefresh = new System.Windows.Forms.Button();
             this.ICDelete = new System.Windows.Forms.Button();
-            this.ICActive = new System.Windows.Forms.Button();
-            this.C_dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.C1Search = new System.Windows.Forms.Button();
-            this.C_searchText2 = new System.Windows.Forms.TextBox();
+            this.search_text = new System.Windows.Forms.TextBox();
+            this.JobPostPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SubmitJob = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.jobText = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.jobidText = new System.Windows.Forms.TextBox();
             this.rulesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RulesGrid)).BeginInit();
             this.Profile_Panel.SuspendLayout();
@@ -81,7 +87,8 @@
             this.IdPassPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.CurrentJob_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.C_dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.JobPostPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // button4
@@ -106,6 +113,7 @@
             this.btn_vol_details.TabIndex = 85;
             this.btn_vol_details.Text = "Post Job";
             this.btn_vol_details.UseVisualStyleBackColor = false;
+            this.btn_vol_details.Click += new System.EventHandler(this.btn_vol_details_Click);
             // 
             // Registration_lebel
             // 
@@ -113,7 +121,7 @@
             this.Registration_lebel.AutoSize = true;
             this.Registration_lebel.BackColor = System.Drawing.Color.Transparent;
             this.Registration_lebel.Font = new System.Drawing.Font("Lucida Bright", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registration_lebel.Location = new System.Drawing.Point(27, 42);
+            this.Registration_lebel.Location = new System.Drawing.Point(28, 46);
             this.Registration_lebel.Name = "Registration_lebel";
             this.Registration_lebel.Size = new System.Drawing.Size(241, 24);
             this.Registration_lebel.TabIndex = 82;
@@ -555,30 +563,31 @@
             // 
             // CurrentJob_panel
             // 
-            this.CurrentJob_panel.Controls.Add(this.CIRefresh);
+            this.CurrentJob_panel.Controls.Add(this.JobPostPanel);
+            this.CurrentJob_panel.Controls.Add(this.RRRefresh);
             this.CurrentJob_panel.Controls.Add(this.ICDelete);
-            this.CurrentJob_panel.Controls.Add(this.ICActive);
-            this.CurrentJob_panel.Controls.Add(this.C_dataGridView2);
+            this.CurrentJob_panel.Controls.Add(this.dataGridView1);
             this.CurrentJob_panel.Controls.Add(this.C1Search);
-            this.CurrentJob_panel.Controls.Add(this.C_searchText2);
+            this.CurrentJob_panel.Controls.Add(this.search_text);
             this.CurrentJob_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CurrentJob_panel.Location = new System.Drawing.Point(0, 0);
             this.CurrentJob_panel.Name = "CurrentJob_panel";
             this.CurrentJob_panel.Size = new System.Drawing.Size(709, 609);
             this.CurrentJob_panel.TabIndex = 135;
             // 
-            // CIRefresh
+            // RRRefresh
             // 
-            this.CIRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CIRefresh.BackColor = System.Drawing.Color.MediumPurple;
-            this.CIRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CIRefresh.ForeColor = System.Drawing.Color.Black;
-            this.CIRefresh.Location = new System.Drawing.Point(33, 76);
-            this.CIRefresh.Name = "CIRefresh";
-            this.CIRefresh.Size = new System.Drawing.Size(75, 36);
-            this.CIRefresh.TabIndex = 104;
-            this.CIRefresh.Text = "Refresh";
-            this.CIRefresh.UseVisualStyleBackColor = false;
+            this.RRRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RRRefresh.BackColor = System.Drawing.Color.MediumPurple;
+            this.RRRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RRRefresh.ForeColor = System.Drawing.Color.Black;
+            this.RRRefresh.Location = new System.Drawing.Point(33, 82);
+            this.RRRefresh.Name = "RRRefresh";
+            this.RRRefresh.Size = new System.Drawing.Size(76, 30);
+            this.RRRefresh.TabIndex = 104;
+            this.RRRefresh.Text = "Refresh";
+            this.RRRefresh.UseVisualStyleBackColor = false;
+            this.RRRefresh.Click += new System.EventHandler(this.RRRefresh_Click);
             // 
             // ICDelete
             // 
@@ -586,35 +595,22 @@
             this.ICDelete.BackColor = System.Drawing.Color.MediumPurple;
             this.ICDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ICDelete.ForeColor = System.Drawing.Color.Black;
-            this.ICDelete.Location = new System.Drawing.Point(368, 512);
+            this.ICDelete.Location = new System.Drawing.Point(266, 520);
             this.ICDelete.Name = "ICDelete";
             this.ICDelete.Size = new System.Drawing.Size(127, 38);
             this.ICDelete.TabIndex = 103;
             this.ICDelete.Text = "Delete";
             this.ICDelete.UseVisualStyleBackColor = false;
+            this.ICDelete.Click += new System.EventHandler(this.ICDelete_Click);
             // 
-            // ICActive
+            // dataGridView1
             // 
-            this.ICActive.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ICActive.BackColor = System.Drawing.Color.MediumPurple;
-            this.ICActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ICActive.ForeColor = System.Drawing.Color.Black;
-            this.ICActive.Location = new System.Drawing.Point(216, 512);
-            this.ICActive.Name = "ICActive";
-            this.ICActive.Size = new System.Drawing.Size(126, 38);
-            this.ICActive.TabIndex = 102;
-            this.ICActive.Text = "Accept";
-            this.ICActive.UseVisualStyleBackColor = false;
-            this.ICActive.Click += new System.EventHandler(this.ICActive_Click);
-            // 
-            // C_dataGridView2
-            // 
-            this.C_dataGridView2.BackgroundColor = System.Drawing.Color.Gray;
-            this.C_dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.C_dataGridView2.Location = new System.Drawing.Point(20, 119);
-            this.C_dataGridView2.Name = "C_dataGridView2";
-            this.C_dataGridView2.Size = new System.Drawing.Size(668, 382);
-            this.C_dataGridView2.TabIndex = 101;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gray;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(20, 119);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(668, 382);
+            this.dataGridView1.TabIndex = 101;
             // 
             // C1Search
             // 
@@ -628,13 +624,89 @@
             this.C1Search.TabIndex = 100;
             this.C1Search.Text = "Search:";
             this.C1Search.UseVisualStyleBackColor = false;
+            this.C1Search.Click += new System.EventHandler(this.C1Search_Click);
             // 
-            // C_searchText2
+            // search_text
             // 
-            this.C_searchText2.Location = new System.Drawing.Point(473, 65);
-            this.C_searchText2.Name = "C_searchText2";
-            this.C_searchText2.Size = new System.Drawing.Size(183, 20);
-            this.C_searchText2.TabIndex = 99;
+            this.search_text.Location = new System.Drawing.Point(473, 65);
+            this.search_text.Name = "search_text";
+            this.search_text.Size = new System.Drawing.Size(183, 20);
+            this.search_text.TabIndex = 99;
+            // 
+            // JobPostPanel
+            // 
+            this.JobPostPanel.Controls.Add(this.label2);
+            this.JobPostPanel.Controls.Add(this.jobText);
+            this.JobPostPanel.Controls.Add(this.label3);
+            this.JobPostPanel.Controls.Add(this.jobidText);
+            this.JobPostPanel.Controls.Add(this.SubmitJob);
+            this.JobPostPanel.Controls.Add(this.label1);
+            this.JobPostPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.JobPostPanel.Location = new System.Drawing.Point(0, 0);
+            this.JobPostPanel.Name = "JobPostPanel";
+            this.JobPostPanel.Size = new System.Drawing.Size(709, 609);
+            this.JobPostPanel.TabIndex = 105;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(156, 147);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(344, 33);
+            this.label1.TabIndex = 83;
+            this.label1.Text = "Create Job Assignment";
+            // 
+            // SubmitJob
+            // 
+            this.SubmitJob.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SubmitJob.BackColor = System.Drawing.Color.MediumPurple;
+            this.SubmitJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitJob.ForeColor = System.Drawing.Color.Black;
+            this.SubmitJob.Location = new System.Drawing.Point(251, 393);
+            this.SubmitJob.Name = "SubmitJob";
+            this.SubmitJob.Size = new System.Drawing.Size(111, 36);
+            this.SubmitJob.TabIndex = 84;
+            this.SubmitJob.Text = "Submit";
+            this.SubmitJob.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(130, 329);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 25);
+            this.label2.TabIndex = 87;
+            this.label2.Text = "Job Details:";
+            // 
+            // jobText
+            // 
+            this.jobText.Location = new System.Drawing.Point(278, 333);
+            this.jobText.Name = "jobText";
+            this.jobText.Size = new System.Drawing.Size(272, 20);
+            this.jobText.TabIndex = 86;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(130, 282);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 25);
+            this.label3.TabIndex = 85;
+            this.label3.Text = "Job Id:";
+            // 
+            // jobidText
+            // 
+            this.jobidText.Location = new System.Drawing.Point(278, 287);
+            this.jobidText.Name = "jobidText";
+            this.jobidText.Size = new System.Drawing.Size(157, 20);
+            this.jobidText.TabIndex = 88;
             // 
             // Customer_Dashboard
             // 
@@ -657,7 +729,9 @@
             this.panel1.PerformLayout();
             this.CurrentJob_panel.ResumeLayout(false);
             this.CurrentJob_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.C_dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.JobPostPanel.ResumeLayout(false);
+            this.JobPostPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -704,11 +778,17 @@
         private System.Windows.Forms.Panel IdPassPanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel CurrentJob_panel;
-        private System.Windows.Forms.Button CIRefresh;
+        private System.Windows.Forms.Button RRRefresh;
         private System.Windows.Forms.Button ICDelete;
-        private System.Windows.Forms.Button ICActive;
-        private System.Windows.Forms.DataGridView C_dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button C1Search;
-        private System.Windows.Forms.TextBox C_searchText2;
+        private System.Windows.Forms.TextBox search_text;
+        private System.Windows.Forms.Panel JobPostPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button SubmitJob;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox jobText;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox jobidText;
     }
 }

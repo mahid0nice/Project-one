@@ -32,6 +32,8 @@ namespace Project_one
             IdPassPanel.Visible = panel >= 1;
             rulesPanel.Visible = panel >= 2;
             Profile_Panel.Visible = panel >= 3;
+            CurrentJob_panel.Visible = panel >= 4;
+            JobPostPanel.Visible = panel >= 5;
         }
 
         private void btn_profile_Click(object sender, EventArgs e)
@@ -192,12 +194,124 @@ namespace Project_one
 
         private void btn_vol_request_Click(object sender, EventArgs e)
         {
+            LoadCustomerJobs();
+            ShowPanel(4);
+        }
 
+        private void LoadCustomerJobs()
+        {
+            Customer cus = new Customer();
+            dataGridView1.DataSource = cus.ShowMyJobs(duplicateId);
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.ReadOnly = true;
+            }
+
+            dataGridView1.ClearSelection();
+            RRRefresh.Visible = false;
+            search_text.Text = "";
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+            foreach (DataGridViewColumn col in dataGridView1.Columns)
+            {
+                col.ReadOnly = true;
+            }
         }
 
         private void ICActive_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void C1Search_Click(object sender, EventArgs e)
+        {
+            string search = search_text.Text.Trim();
+
+            try
+            {
+                Customer cus = new Customer();
+                DataTable dt = cus.SearchMyJobs(search, duplicateId);
+
+                if (dt.Rows.Count > 0)
+                {
+                    dataGridView1.DataSource = dt;
+                    RRRefresh.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("No jobs found.");
+                }
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                    row.ReadOnly = true;
+
+                dataGridView1.ClearSelection();
+
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+                foreach (DataGridViewColumn col in dataGridView1.Columns)
+                    col.ReadOnly = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while searching jobs: " + ex.Message);
+            }
+
+        }
+
+        private void ICDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.SelectedRows.Count != 1)
+                    return;
+
+                int jobId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Job_Id"].Value);
+
+                DialogResult dr = MessageBox.Show(
+                    "Are you sure you want to delete this job?",
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (dr == DialogResult.Yes)
+                {
+                    Customer cc = new Customer();
+                    int result = cc.DeleteJob(jobId);
+
+                    if (result == 1)
+                    {
+                        MessageBox.Show("Job deleted successfully.");
+                        LoadCustomerJobs();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Delete failed. Job may not exist.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while deleting the job: " + ex.Message);
+            }
+
+        }
+
+        private void RRRefresh_Click(object sender, EventArgs e)
+        {
+
+            LoadCustomerJobs();
+        }
+
+        private void btn_vol_details_Click(object sender, EventArgs e)
+        {
+            ShowPanel(5); 
         }
     }
 }

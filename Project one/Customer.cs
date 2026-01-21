@@ -195,7 +195,92 @@ namespace Project_one
                 return null;
             }
         }
+        public DataTable ShowMyJobs(int customerId)
+        {
+            string query = @"SELECT 
+                        Job_Id,
+                        Job_Name,
+                        Payment,
+                        CASE 
+                            WHEN V_Id IS NULL THEN 'Unassigned'
+                            ELSE CAST(V_Id AS NVARCHAR)
+                        END AS V_Status
+                     FROM Job_Assignment
+                     WHERE C_Id = @C_Id";
 
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.Add("@C_Id", SqlDbType.Int).Value = customerId;
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch
+            {
+                return null;
+            }
+
+            return dt;
+        }
+        public DataTable SearchMyJobs(string search, int customerId)
+        {
+            string query = @"SELECT Job_Id, Job_Name, Payment, CASE WHEN V_Id IS NULL THEN 'Unassigned' ELSE CAST(V_Id AS NVARCHAR) END AS V_Status
+                 FROM Job_Assignment WHERE C_Id = @C_Id AND (CAST(Job_Id AS NVARCHAR) LIKE @Search OR Job_Name LIKE @Search OR CAST(Payment AS NVARCHAR) LIKE @Search OR CASE WHEN V_Id IS NULL THEN 'Unassigned' ELSE CAST(V_Id AS NVARCHAR) END LIKE @Search)";
+
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.Add("@C_Id", SqlDbType.Int).Value = customerId;
+                    cmd.Parameters.Add("@Search", SqlDbType.NVarChar).Value = "%" + search + "%";
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch
+            {
+                return new DataTable();
+            }
+
+            return dt;
+        }
+
+        public int DeleteJob(int jobId)
+        {
+            string query = "DELETE FROM Job_Assignment WHERE Job_Id = @Job_Id";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Job_Id", jobId);
+                    con.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    con.Close();
+                    return rowsAffected;
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+        }
     }
 }
 
