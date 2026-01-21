@@ -198,14 +198,6 @@ namespace Project_one
             }
             else if (insertDB == 3)
             {
-                MessageBox.Show("Data type mismatch while reading admin data.");
-            }
-            else if (insertDB == 4)
-            {
-                MessageBox.Show("Required admin data is missing.\n");
-            }
-            else if (insertDB == 5)
-            {
                 MessageBox.Show("Unexpected error occurred.\n");
             }
         }

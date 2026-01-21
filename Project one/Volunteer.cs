@@ -222,9 +222,139 @@ namespace Project_one
                 return null;
             }
         }
+        public DataTable ShowMyJob(int volunteerId)
+        {
+            string query = @"SELECT Job_Id, Job_Name, C_Id, Payment
+                     FROM Job_Assignment
+                     WHERE V_Id = @V_Id";
 
+            DataTable dt = new DataTable();
 
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.Add("@V_Id", SqlDbType.Int).Value = volunteerId;
 
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch
+            {
+                return null;
+            }
 
+            return dt;
+        }
+        public int AcceptJob(int jobId, int volunteerId)
+        {
+            string query = @"UPDATE Job_Assignment
+                     SET V_Id = @V_Id
+                     WHERE Job_Id = @Job_Id
+                     AND V_Id IS NULL";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@V_Id", volunteerId);
+                    cmd.Parameters.AddWithValue("@Job_Id", jobId);
+
+                    con.Open();
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+        public DataTable SearchMyJobs(string search, int volunteerId)
+        {
+            string query = @"SELECT Job_Id, Job_Name, C_Id, Payment FROM Job_Assignment WHERE V_Id = @V_Id AND Job_Name LIKE @Search";
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@V_Id", volunteerId);
+                    cmd.Parameters.AddWithValue("@Search", "%" + search + "%");
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch
+            {
+                return new DataTable();
+            }
+
+            return dt;
+        }
+
+        public DataTable SearchAvailableJobs(string search)
+        {
+            string query = @"SELECT Job_Id, Job_Name, C_Id, Payment 
+                     FROM Job_Assignment 
+                     WHERE V_Id IS NULL 
+                     AND Job_Name LIKE @Search";
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Search", "%" + search + "%");
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch
+            {
+                return new DataTable();
+            }
+
+            return dt;
+        }
+
+        public DataTable GetAvailableJobs()
+        {
+            string query = @"SELECT Job_Id, Job_Name, C_Id, Payment
+                     FROM Job_Assignment
+                     WHERE V_Id IS NULL";
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+            }
+            catch
+            {
+                return new DataTable();
+            }
+
+            return dt;
+        }
     }
 }

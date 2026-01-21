@@ -52,73 +52,59 @@ namespace Project_one
         public int insert(Employee ee)
         {
             int success = 0;
-            SqlConnection sqc = new SqlConnection(connection);
 
-            try
+            using (SqlConnection sqc = new SqlConnection(connection))
             {
-                string q = @"INSERT INTO Employee (
-                                E_Id, E_Name, E_NickName, E_Designation, E_NID, E_FatherName, E_MotherName,
-                                E_Number, E_Emergency_Number, E_Gmail, E_Address, E_Parmanent_Address,
-                                E_Religion, E_MaritalStatus, E_Gender, E_DOB, E_BloodGroup
-                            ) VALUES (
-                                @Id, @Name, @NickName, @Designation, @NID, @FatherName, @MotherName,
-                                @Number, @EmergencyNumber, @Gmail, @Address, @ParmanentAddress,
-                                @Religion, @MaritalStatus, @Gender, @DOB, @BloodGroup
-                            )";
-                string q2 = @"INSERT INTO Employee_Log_in (E_Id, E_Password) VALUES (@Id, '@@@@')";
-
-                sqc.Open();
-                SqlCommand cmd = new SqlCommand(q, sqc);
-
-                cmd.Parameters.AddWithValue("@Id", ee.Id);
-                cmd.Parameters.AddWithValue("@Name", ee.Name);
-                cmd.Parameters.AddWithValue("@NickName", ee.NickName);
-                cmd.Parameters.AddWithValue("@Designation", ee.Designation);
-                cmd.Parameters.Add("@NID", SqlDbType.BigInt).Value = ee.NID;
-                cmd.Parameters.AddWithValue("@FatherName", ee.FatherName);
-                cmd.Parameters.AddWithValue("@MotherName", ee.MotherName);
-                cmd.Parameters.Add("@Number", SqlDbType.BigInt).Value = ee.PhoneNumber;
-                cmd.Parameters.Add("@EmergencyNumber", SqlDbType.BigInt).Value = ee.EmergencyNumber;
-                cmd.Parameters.AddWithValue("@Gmail", ee.Gmail);
-                cmd.Parameters.AddWithValue("@Address", ee.Address);
-                cmd.Parameters.AddWithValue("@ParmanentAddress", ee.ParmanentAddress);
-                cmd.Parameters.AddWithValue("@Religion", ee.Religion);
-                cmd.Parameters.AddWithValue("@MaritalStatus", ee.MaritalStatus);
-                cmd.Parameters.AddWithValue("@Gender", ee.Gender);
-                cmd.Parameters.Add("@DOB", SqlDbType.Date).Value = ee.Dob;
-                cmd.Parameters.AddWithValue("@BloodGroup", ee.BloodGroup);
-
-                int row = cmd.ExecuteNonQuery();
-                if (row > 0)
+                try
                 {
-                    success = 1;
-                    SqlCommand cmd2 = new SqlCommand(q2, sqc);
-                    cmd2.ExecuteNonQuery();
+                    string query = @"INSERT INTO Employee
+            (E_Id, E_Name, E_NickName, E_Designation, E_NID, E_FatherName, E_MotherName,
+             E_Number, E_Emergency_Number, E_Gmail, E_Address, E_Parmanent_Address,
+             E_Religion, E_MaritalStatus, E_Gender, E_BloodGroup, E_DOB)
+            VALUES
+            (@Id, @Name, @NickName, @Designation, @NID, @FatherName, @MotherName,
+             @Number, @EmergencyNumber, @Gmail, @Address, @ParmanentAddress,
+             @Religion, @MaritalStatus, @Gender, @BloodGroup, @DOB)";
 
+                    SqlCommand cmd = new SqlCommand(query, sqc);
+
+                    cmd.Parameters.AddWithValue("@Id", ee.Id);
+                    cmd.Parameters.AddWithValue("@Name", ee.Name);
+                    cmd.Parameters.AddWithValue("@NickName", (object)ee.NickName ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Designation", ee.Designation);
+                    cmd.Parameters.Add("@NID", SqlDbType.BigInt).Value = ee.NID;
+                    cmd.Parameters.AddWithValue("@FatherName", (object)ee.FatherName ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@MotherName", (object)ee.MotherName ?? DBNull.Value);
+                    cmd.Parameters.Add("@Number", SqlDbType.BigInt).Value = ee.PhoneNumber;
+                    cmd.Parameters.Add("@EmergencyNumber", SqlDbType.BigInt).Value =
+                        ee.EmergencyNumber == 0 ? (object)DBNull.Value : ee.EmergencyNumber;
+                    cmd.Parameters.AddWithValue("@Gmail", ee.Gmail);
+                    cmd.Parameters.AddWithValue("@Address", (object)ee.Address ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@ParmanentAddress", (object)ee.ParmanentAddress ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Religion", ee.Religion);
+                    cmd.Parameters.AddWithValue("@MaritalStatus", (object)ee.MaritalStatus ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Gender", ee.Gender);
+                    cmd.Parameters.AddWithValue("@BloodGroup", ee.BloodGroup);
+                    cmd.Parameters.Add("@DOB", SqlDbType.Date).Value =
+                        ee.Dob == null ? (object)DBNull.Value : ee.Dob;
+
+                    sqc.Open();
+                    int rows = cmd.ExecuteNonQuery();
+                    success = rows > 0 ? 1 : 0;
+                }
+                catch (SqlException)
+                {
+                    return 2;
+                }
+                catch (Exception)
+                {
+                    return 3;
                 }
             }
-            catch (SqlException)
-            {
-                return 2;
-            }
-            catch (InvalidCastException)
-            {
-                return 3;
-            }
-            catch (NullReferenceException)
-            {
-                return 4;
-            }
-            catch (Exception)
-            {
-                return 5;
-            }
-            finally
-            {
-                sqc.Close();
-            }
+
             return success;
         }
+
 
         public bool CheckValidation()
         {

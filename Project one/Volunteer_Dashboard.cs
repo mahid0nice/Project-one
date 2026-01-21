@@ -31,6 +31,8 @@ namespace Project_one
             IdPassPanel.Visible = panel >= 1;
             rulesPanel.Visible = panel >= 2;
             Profile_Panel.Visible = panel >=3;
+            CurrentJob_panel.Visible = panel >= 4;
+            Available_JobLabel.Visible = panel >= 5;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -101,7 +103,6 @@ namespace Project_one
 
         private void RSearch_button_Click(object sender, EventArgs e)
         {
-            RRefresh_button.Visible = true;
             string search = rulesSearch_text.Text.Trim();
             Volunteer vv = new Volunteer();
             DataTable dt = vv.SearchRules(search);
@@ -109,11 +110,11 @@ namespace Project_one
             if (dt.Rows.Count > 0)
             {
                 RulesGrid.DataSource = dt;
+                RRefresh_button.Visible = true;
             }
             else
             {
-                MessageBox.Show("No matching rules found. Showing previous data.");
-                ShowRulesGrid();
+                MessageBox.Show("No matching rules found.");
             }
 
             foreach (DataGridViewRow row in RulesGrid.Rows)
@@ -188,6 +189,181 @@ namespace Project_one
         {
             new User_login_page().Show();
             this.Hide();
+        }
+
+        private void ICActive_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.SelectedRows.Count != 1)
+                    return;
+
+                int jobId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Job_Id"].Value);
+
+                DialogResult dr = MessageBox.Show(
+                    "Are you sure you want to accept this job?",
+                    "Confirm Accept",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (dr == DialogResult.Yes)
+                {
+                    Volunteer vol = new Volunteer();
+                    int result = vol.AcceptJob(jobId, duplicateId); 
+
+                    if (result == 1)
+                    {
+                        MessageBox.Show("Job accepted successfully.");
+                        AvailableJob();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Accept failed.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while accepting the job: " + ex.Message);
+            }
+        }
+
+        private void btn_vol_details_Click(object sender, EventArgs e)
+        {
+            LoadCurrentJob();
+            C_searchText2.Text = "";
+            ShowPanel(4);
+        }
+        private void LoadCurrentJob()
+        {
+            Volunteer vol = new Volunteer();
+            C_dataGridView2.DataSource = vol.ShowMyJob(duplicateId);
+
+            foreach (DataGridViewRow row in C_dataGridView2.Rows)
+            {
+                row.ReadOnly = true;
+            }
+
+            C_dataGridView2.ClearSelection();
+            CIRefresh.Visible = false;
+
+            C_dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            C_dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            C_dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+            foreach (DataGridViewColumn col in C_dataGridView2.Columns)
+            {
+                col.ReadOnly = true;
+            }
+        }
+        private void CIRefresh_Click(object sender, EventArgs e)
+        {
+            LoadCurrentJob();
+            C_searchText2.Text = "";
+        }
+
+
+
+        private void C1Search_Click(object sender, EventArgs e)
+        {
+            string search = C_searchText2.Text.Trim();
+
+            Volunteer vol = new Volunteer();
+            DataTable dt = vol.SearchMyJobs(search, duplicateId);
+
+            if (dt.Rows.Count > 0)
+            {
+                C_dataGridView2.DataSource = dt;
+                CIRefresh.Visible = true;
+                C_searchText2.Text="";
+            }
+            else
+            {
+                MessageBox.Show("No jobs found.");
+            }
+
+            foreach (DataGridViewRow row in C_dataGridView2.Rows)
+                row.ReadOnly = true;
+
+            C_dataGridView2.ClearSelection();
+
+            C_dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            C_dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            C_dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+            foreach (DataGridViewColumn col in C_dataGridView2.Columns)
+                col.ReadOnly = true;
+        }
+
+        private void btn_vol_request_Click(object sender, EventArgs e)
+        {
+            AvailableJob();
+            C_searchText2.Text = "";
+            ShowPanel(5);
+        }
+
+        private void AvailableJob()
+        {
+            Volunteer vol = new Volunteer();
+            dataGridView1.DataSource = vol.GetAvailableJobs();
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.ReadOnly = true;
+            }
+            search_text.Text= "";
+            dataGridView1.ClearSelection();
+            RRRefresh.Visible = false;
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+            foreach (DataGridViewColumn col in dataGridView1.Columns)
+            {
+                col.ReadOnly = true;
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string search = search_text.Text.Trim();
+
+            try
+            {
+                Volunteer vol = new Volunteer();
+                DataTable dt = vol.SearchAvailableJobs(search);
+
+                if (dt.Rows.Count > 0)
+                {
+                    dataGridView1.DataSource = dt;
+                    RRRefresh.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("No jobs found.");
+                }
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                    row.ReadOnly = true;
+                dataGridView1.ClearSelection();
+
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+                foreach (DataGridViewColumn col in dataGridView1.Columns)
+                    col.ReadOnly = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while searching jobs: " + ex.Message);
+            }
+        }
+
+        private void RRRefresh_Click(object sender, EventArgs e)
+        {
+            AvailableJob();
         }
     }
 }

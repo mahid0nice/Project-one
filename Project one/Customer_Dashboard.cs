@@ -169,7 +169,6 @@ namespace Project_one
 
         private void RSearch_button_Click(object sender, EventArgs e)
         {
-            RRefresh_button.Visible = true;
             string search = rulesSearch_text.Text.Trim();
             Volunteer vv = new Volunteer();
             DataTable dt = vv.SearchRules(search);
@@ -177,11 +176,11 @@ namespace Project_one
             if (dt.Rows.Count > 0)
             {
                 RulesGrid.DataSource = dt;
+                RRefresh_button.Visible = true;
             }
             else
             {
-                MessageBox.Show("No matching rules found. Showing previous data.");
-                ShowRulesGrid();
+                MessageBox.Show("No matching rules found.");
             }
 
             foreach (DataGridViewRow row in RulesGrid.Rows)
@@ -189,6 +188,16 @@ namespace Project_one
                 row.ReadOnly = true;
             }
             RulesGrid.ClearSelection();
+        }
+
+        private void btn_vol_request_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ICActive_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

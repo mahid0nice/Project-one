@@ -257,12 +257,8 @@ namespace Project_one
             {
                 using (SqlConnection con = new SqlConnection(connection))
                 {
-                    string query = @"
-                SELECT COUNT(*)
-                FROM Admin_Log_in A1
-                INNER JOIN Admin A2 ON A1.Admin_Id = A2.Admin_Id
-                WHERE A1.Admin_Id = @AdminId
-                  AND A1.Admin_Password = @Password";
+                    string query = @"SELECT COUNT(*) FROM Admin_Log_in A1 INNER JOIN Admin A2 ON A1.Admin_Id = A2.Admin_Id WHERE A1.Admin_Id = @AdminId
+                                   AND A1.Admin_Password = @Password";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
@@ -488,16 +484,7 @@ namespace Project_one
             {
                 using (SqlConnection con = new SqlConnection(connection))
                 {
-                    string query = @"SELECT 
-                                V_Id, V_Name, V_PhoneNumber, V_DOB, V_Address, V_Gmail,
-                                V_NID, V_Religion, V_FatherName, V_MotherName,
-                                V_Skill1, V_Skill2, V_Gender, V_Status
-                             FROM Volunteer
-                             WHERE CAST(V_Id AS NVARCHAR) LIKE @search
-                                OR V_Name LIKE @search
-                                OR CAST(V_PhoneNumber AS NVARCHAR) LIKE @search
-                                OR V_Gmail LIKE @search";
-
+                    string query = @"SELECT V_Id, V_Name, V_PhoneNumber, V_DOB, V_Address, V_Gmail, V_NID, V_Religion, V_FatherName, V_MotherName, V_Skill1, V_Skill2, V_Gender, V_Status FROM Volunteer WHERE CAST(V_Id AS NVARCHAR) LIKE @search OR V_Name LIKE @search OR CAST(V_PhoneNumber AS NVARCHAR) LIKE @search OR V_Gmail LIKE @search OR V_Status LIKE @search";
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         cmd.Parameters.AddWithValue("@search", "%" + search + "%");

@@ -9,6 +9,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Project_one
 {
@@ -461,8 +462,6 @@ namespace Project_one
             else
             {
                 MessageBox.Show("No matching employees found. Showing previous data.");
-                DataTable previousData = ad.ShowAllEmployees(new Employee());
-                employe_gridView.DataSource = previousData;
             }
             foreach (DataGridViewRow row in employe_gridView.Rows)
             {
@@ -514,7 +513,7 @@ namespace Project_one
                 Admin ad = new Admin();
                 DataTable dt = ad.ShowRules();
                 RulesGrid.DataSource = dt;
-
+                rulesSearch_text.Clear();
                 no_text.Visible = false;
                 rulesText.Visible = false;
                 RRefresh_button.Visible = false;
@@ -529,6 +528,8 @@ namespace Project_one
                 RSave_button.Visible = false;
                 RCancel_button.Visible = false;
                 RSave1_button.Visible = false;
+                RAdd_button.Visible = true;
+
                 RulesGrid.Columns["No"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 RulesGrid.Columns["Rules"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 RulesGrid.Columns["Rules"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
@@ -616,6 +617,7 @@ namespace Project_one
                     RCancel_button.Visible = false;
                     RSave1_button.Visible = false;
                     RAdd_button.Visible = true;
+
                 }
                 else
                 {
@@ -671,13 +673,13 @@ namespace Project_one
 
         private void searchh_button_Click(object sender, EventArgs e)
         {
-            RAdd_button.Visible = true;
-            RUpdate_button.Visible = true;
-            RDelete_button.Visible = true;
-            RRefresh_button.Visible = true;
-            RSave1_button.Visible = false;
-            RSave_button.Visible = false;
-            RCancel_button.Visible = false;
+            //RAdd_button.Visible = true;
+            //RUpdate_button.Visible = true;
+            //RDelete_button.Visible = true;
+            
+           // RSave1_button.Visible = false;
+           // RSave_button.Visible = false;
+           // RCancel_button.Visible = false;
             string search = rulesSearch_text.Text.Trim();
             Admin ad = new Admin();
             DataTable dt = ad.SearchRules(search);
@@ -685,11 +687,11 @@ namespace Project_one
             if (dt.Rows.Count > 0)
             {
                 RulesGrid.DataSource = dt;
+                RRefresh_button.Visible = true;
             }
             else
             {
                 MessageBox.Show("No matching rules found. Showing previous data.");
-                ShowRulesGrid();
             }
 
             foreach (DataGridViewRow row in RulesGrid.Rows)
@@ -838,6 +840,7 @@ namespace Project_one
         {
             v_searchText.Text = "";
             vCancel.Visible = false;
+            v_searchText.Text = "";
             vSave.Visible = false;
             vRefresh.Visible = false;
             vUpdate.Visible = true;
@@ -863,19 +866,21 @@ namespace Project_one
         }
 
         private void button3_Click_1(object sender, EventArgs e)
-        { 
-            vRefresh.Visible = true;
+        {
             string search = v_searchText.Text.Trim();
             Admin ad = new Admin();
 
             DataTable dt = ad.SearchVolunteers(search);
 
             if (dt.Rows.Count > 0)
+            {
                 v_dataGridView1.DataSource = dt;
+                vRefresh.Visible = true;
+            }
+                
             else
             {
                 MessageBox.Show("No volunteers found.");
-                LoadVolunteers();
             }
 
             foreach (DataGridViewRow row in v_dataGridView1.Rows)

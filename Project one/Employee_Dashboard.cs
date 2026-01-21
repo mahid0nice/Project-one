@@ -236,18 +236,19 @@ namespace Project_one
         private void vSearch_Click(object sender, EventArgs e)
         {
             //volunteer search
-            vRefresh.Visible = true;
             string search = v_searchText.Text.Trim();
             Employee ee = new Employee();
 
             DataTable dt = ee.SearchVolunteers(search);
 
             if (dt.Rows.Count > 0)
+            {
                 v_dataGridView1.DataSource = dt;
+                vRefresh.Visible = true;
+            }
             else
             {
                 MessageBox.Show("No volunteers found.");
-                LoadVolunteers();
             }
 
             foreach (DataGridViewRow row in v_dataGridView1.Rows)
@@ -397,18 +398,19 @@ namespace Project_one
 
         private void button6_Click(object sender, EventArgs e)
         {
-            VIRefresh.Visible = true;
             string search = v_searchText2.Text.Trim();
             Employee ee = new Employee();
 
             DataTable dt = ee.SearchInactiveVolunteers(search);
 
             if (dt.Rows.Count > 0)
+            {
                 v_dataGridView2.DataSource = dt;
+                VIRefresh.Visible = true;
+            }
             else
             {
                 MessageBox.Show("No volunteers found.");
-                LoadInActiveVolunteers();
             }
 
             foreach (DataGridViewRow row in v_dataGridView2.Rows)
@@ -449,7 +451,7 @@ namespace Project_one
                 v_dataGridView2.SelectedRows[0].Cells["V_Id"].Value);
 
             DialogResult dr = MessageBox.Show(
-                "Are you sure you want to delete this volunteer?",
+                "Are you sure you want to accept this volunteer?",
                 "Confirm Delete",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning);
@@ -517,7 +519,7 @@ namespace Project_one
 
         private void IVSearch_Click(object sender, EventArgs e)
         {
-            v_searchText.Clear();
+            v_searchText2.Clear();
             LoadInActiveVolunteers();
         }
 
@@ -606,7 +608,6 @@ namespace Project_one
 
         private void RSearch_button_Click(object sender, EventArgs e)
         {
-            RRefresh_button.Visible = true;
             string search = rulesSearch_text.Text.Trim();
             Employee ee = new Employee();
             DataTable dt = ee.SearchRules(search);
@@ -614,11 +615,11 @@ namespace Project_one
             if (dt.Rows.Count > 0)
             {
                 RulesGrid.DataSource = dt;
+                RRefresh_button.Visible = true;
             }
             else
             {
                 MessageBox.Show("No matching rules found.");
-                ShowRulesGrid();
             }
 
             foreach (DataGridViewRow row in RulesGrid.Rows)
@@ -655,7 +656,6 @@ namespace Project_one
         private void button11_Click(object sender, EventArgs e)
         {
             //cusSearch
-            CRefresh.Visible = true;
             string search = C_searchText.Text.Trim();
             Employee ee = new Employee();
 
@@ -664,16 +664,12 @@ namespace Project_one
             if (dt.Rows.Count > 0)
             {
                 C_dataGridView1.DataSource = dt;
+                CRefresh.Visible = true;
             }
             else
             {
                 MessageBox.Show("No customers found.");
-                CustomerLoad();
-                CCancel.Visible = false;
-                CSave.Visible = false;
-                CRefresh.Visible = false;
-                CUpdate.Visible = true;
-                CDelete.Visible = true;
+
             }
 
             foreach (DataGridViewRow row in C_dataGridView1.Rows)
@@ -691,6 +687,7 @@ namespace Project_one
             CUpdate.Visible = true;
             CDelete.Visible = true;
             CustomerLoad();
+            C_searchText.Text = "";
         }
 
         private void CSave_Click(object sender, EventArgs e)
@@ -824,6 +821,7 @@ namespace Project_one
         private void CIRefresh_Click(object sender, EventArgs e)
         {
             LoadInCustomers();
+            C_searchText2.Text = "";
         }
 
         private void C1Search_Click(object sender, EventArgs e)
@@ -841,7 +839,6 @@ namespace Project_one
             else
             {
                 MessageBox.Show("No customers found.");
-                CustomerLoad();
 
             }
 

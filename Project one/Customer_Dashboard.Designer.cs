@@ -67,12 +67,21 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.IdPassPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CurrentJob_panel = new System.Windows.Forms.Panel();
+            this.CIRefresh = new System.Windows.Forms.Button();
+            this.ICDelete = new System.Windows.Forms.Button();
+            this.ICActive = new System.Windows.Forms.Button();
+            this.C_dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.C1Search = new System.Windows.Forms.Button();
+            this.C_searchText2 = new System.Windows.Forms.TextBox();
             this.rulesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RulesGrid)).BeginInit();
             this.Profile_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.IdPassPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.CurrentJob_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.C_dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -95,7 +104,7 @@
             this.btn_vol_details.Name = "btn_vol_details";
             this.btn_vol_details.Size = new System.Drawing.Size(179, 33);
             this.btn_vol_details.TabIndex = 85;
-            this.btn_vol_details.Text = "Volunteer Details";
+            this.btn_vol_details.Text = "Post Job";
             this.btn_vol_details.UseVisualStyleBackColor = false;
             // 
             // Registration_lebel
@@ -104,7 +113,7 @@
             this.Registration_lebel.AutoSize = true;
             this.Registration_lebel.BackColor = System.Drawing.Color.Transparent;
             this.Registration_lebel.Font = new System.Drawing.Font("Lucida Bright", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registration_lebel.Location = new System.Drawing.Point(11, 27);
+            this.Registration_lebel.Location = new System.Drawing.Point(27, 42);
             this.Registration_lebel.Name = "Registration_lebel";
             this.Registration_lebel.Size = new System.Drawing.Size(241, 24);
             this.Registration_lebel.TabIndex = 82;
@@ -130,8 +139,9 @@
             this.btn_vol_request.Name = "btn_vol_request";
             this.btn_vol_request.Size = new System.Drawing.Size(179, 33);
             this.btn_vol_request.TabIndex = 84;
-            this.btn_vol_request.Text = "Volunteer Request";
+            this.btn_vol_request.Text = "Current Job";
             this.btn_vol_request.UseVisualStyleBackColor = false;
+            this.btn_vol_request.Click += new System.EventHandler(this.btn_vol_request_Click);
             // 
             // button2
             // 
@@ -266,6 +276,7 @@
             // 
             // Profile_Panel
             // 
+            this.Profile_Panel.Controls.Add(this.CurrentJob_panel);
             this.Profile_Panel.Controls.Add(this.pictureBox1);
             this.Profile_Panel.Controls.Add(this.adminDobText);
             this.Profile_Panel.Controls.Add(this.Dob_label);
@@ -542,6 +553,89 @@
             this.panel1.Size = new System.Drawing.Size(295, 609);
             this.panel1.TabIndex = 90;
             // 
+            // CurrentJob_panel
+            // 
+            this.CurrentJob_panel.Controls.Add(this.CIRefresh);
+            this.CurrentJob_panel.Controls.Add(this.ICDelete);
+            this.CurrentJob_panel.Controls.Add(this.ICActive);
+            this.CurrentJob_panel.Controls.Add(this.C_dataGridView2);
+            this.CurrentJob_panel.Controls.Add(this.C1Search);
+            this.CurrentJob_panel.Controls.Add(this.C_searchText2);
+            this.CurrentJob_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CurrentJob_panel.Location = new System.Drawing.Point(0, 0);
+            this.CurrentJob_panel.Name = "CurrentJob_panel";
+            this.CurrentJob_panel.Size = new System.Drawing.Size(709, 609);
+            this.CurrentJob_panel.TabIndex = 135;
+            // 
+            // CIRefresh
+            // 
+            this.CIRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CIRefresh.BackColor = System.Drawing.Color.MediumPurple;
+            this.CIRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CIRefresh.ForeColor = System.Drawing.Color.Black;
+            this.CIRefresh.Location = new System.Drawing.Point(33, 76);
+            this.CIRefresh.Name = "CIRefresh";
+            this.CIRefresh.Size = new System.Drawing.Size(75, 36);
+            this.CIRefresh.TabIndex = 104;
+            this.CIRefresh.Text = "Refresh";
+            this.CIRefresh.UseVisualStyleBackColor = false;
+            // 
+            // ICDelete
+            // 
+            this.ICDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ICDelete.BackColor = System.Drawing.Color.MediumPurple;
+            this.ICDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ICDelete.ForeColor = System.Drawing.Color.Black;
+            this.ICDelete.Location = new System.Drawing.Point(368, 512);
+            this.ICDelete.Name = "ICDelete";
+            this.ICDelete.Size = new System.Drawing.Size(127, 38);
+            this.ICDelete.TabIndex = 103;
+            this.ICDelete.Text = "Delete";
+            this.ICDelete.UseVisualStyleBackColor = false;
+            // 
+            // ICActive
+            // 
+            this.ICActive.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ICActive.BackColor = System.Drawing.Color.MediumPurple;
+            this.ICActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ICActive.ForeColor = System.Drawing.Color.Black;
+            this.ICActive.Location = new System.Drawing.Point(216, 512);
+            this.ICActive.Name = "ICActive";
+            this.ICActive.Size = new System.Drawing.Size(126, 38);
+            this.ICActive.TabIndex = 102;
+            this.ICActive.Text = "Accept";
+            this.ICActive.UseVisualStyleBackColor = false;
+            this.ICActive.Click += new System.EventHandler(this.ICActive_Click);
+            // 
+            // C_dataGridView2
+            // 
+            this.C_dataGridView2.BackgroundColor = System.Drawing.Color.Gray;
+            this.C_dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.C_dataGridView2.Location = new System.Drawing.Point(20, 119);
+            this.C_dataGridView2.Name = "C_dataGridView2";
+            this.C_dataGridView2.Size = new System.Drawing.Size(668, 382);
+            this.C_dataGridView2.TabIndex = 101;
+            // 
+            // C1Search
+            // 
+            this.C1Search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.C1Search.BackColor = System.Drawing.Color.Teal;
+            this.C1Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C1Search.ForeColor = System.Drawing.Color.Black;
+            this.C1Search.Location = new System.Drawing.Point(372, 60);
+            this.C1Search.Name = "C1Search";
+            this.C1Search.Size = new System.Drawing.Size(89, 27);
+            this.C1Search.TabIndex = 100;
+            this.C1Search.Text = "Search:";
+            this.C1Search.UseVisualStyleBackColor = false;
+            // 
+            // C_searchText2
+            // 
+            this.C_searchText2.Location = new System.Drawing.Point(473, 65);
+            this.C_searchText2.Name = "C_searchText2";
+            this.C_searchText2.Size = new System.Drawing.Size(183, 20);
+            this.C_searchText2.TabIndex = 99;
+            // 
             // Customer_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,7 +644,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.IdPassPanel);
             this.Name = "Customer_Dashboard";
-            this.Text = "Csutomer_Dashboard";
+            this.Text = "Customer_Dashboard";
             this.rulesPanel.ResumeLayout(false);
             this.rulesPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RulesGrid)).EndInit();
@@ -561,6 +655,9 @@
             this.IdPassPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.CurrentJob_panel.ResumeLayout(false);
+            this.CurrentJob_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.C_dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -606,5 +703,12 @@
         private System.Windows.Forms.TextBox rulesSearch_text;
         private System.Windows.Forms.Panel IdPassPanel;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel CurrentJob_panel;
+        private System.Windows.Forms.Button CIRefresh;
+        private System.Windows.Forms.Button ICDelete;
+        private System.Windows.Forms.Button ICActive;
+        private System.Windows.Forms.DataGridView C_dataGridView2;
+        private System.Windows.Forms.Button C1Search;
+        private System.Windows.Forms.TextBox C_searchText2;
     }
 }

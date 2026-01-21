@@ -232,7 +232,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Admin_Login";
-            this.Text = "Log in page";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Admin_Login_Load);
             this.Log_in_panel.ResumeLayout(false);
             this.Log_in_panel.PerformLayout();

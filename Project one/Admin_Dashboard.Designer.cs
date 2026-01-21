@@ -777,11 +777,11 @@
             // 
             this.EmpRefresh_button.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.EmpRefresh_button.BackColor = System.Drawing.Color.MediumPurple;
-            this.EmpRefresh_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpRefresh_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmpRefresh_button.ForeColor = System.Drawing.Color.Black;
-            this.EmpRefresh_button.Location = new System.Drawing.Point(531, 670);
+            this.EmpRefresh_button.Location = new System.Drawing.Point(18, 71);
             this.EmpRefresh_button.Name = "EmpRefresh_button";
-            this.EmpRefresh_button.Size = new System.Drawing.Size(163, 36);
+            this.EmpRefresh_button.Size = new System.Drawing.Size(83, 36);
             this.EmpRefresh_button.TabIndex = 25;
             this.EmpRefresh_button.Text = "Refresh";
             this.EmpRefresh_button.UseVisualStyleBackColor = false;
@@ -793,7 +793,7 @@
             this.EmpSearch_button.BackColor = System.Drawing.Color.Teal;
             this.EmpSearch_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmpSearch_button.ForeColor = System.Drawing.Color.Black;
-            this.EmpSearch_button.Location = new System.Drawing.Point(393, 56);
+            this.EmpSearch_button.Location = new System.Drawing.Point(403, 71);
             this.EmpSearch_button.Name = "EmpSearch_button";
             this.EmpSearch_button.Size = new System.Drawing.Size(95, 27);
             this.EmpSearch_button.TabIndex = 24;
@@ -803,7 +803,7 @@
             // 
             // EmployeeSearch_Text
             // 
-            this.EmployeeSearch_Text.Location = new System.Drawing.Point(494, 61);
+            this.EmployeeSearch_Text.Location = new System.Drawing.Point(504, 76);
             this.EmployeeSearch_Text.Name = "EmployeeSearch_Text";
             this.EmployeeSearch_Text.Size = new System.Drawing.Size(189, 20);
             this.EmployeeSearch_Text.TabIndex = 23;
