@@ -106,12 +106,6 @@
     <Compile Include="User_login_page.Designer.cs">
       <DependentUpon>User_login_page.cs</DependentUpon>
     </Compile>
-    <Compile Include="Volunteer_registration_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Volunteer_registration_form.Designer.cs">
-      <DependentUpon>Volunteer_registration_form.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Admin_Dashboard.resx">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
