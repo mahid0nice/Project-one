@@ -143,9 +143,6 @@
     <EmbeddedResource Include="User_login_page.resx">
       <DependentUpon>User_login_page.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Volunteer_registration_form.resx">
-      <DependentUpon>Volunteer_registration_form.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
